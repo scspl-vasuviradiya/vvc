@@ -433,17 +433,18 @@
       align-items: center;
       gap: 8px;
       text-decoration: none;
-      color: #333;
-      border: 1px solid #eee;
+      color: #8b1538;
+      border: 1px solid #8b1538;
       padding: 8px 12px;
       border-radius: 999px;
       margin: 6px 6px 0 0;
-      transition: transform .25s var(--a-ease), box-shadow .25s var(--a-ease), background .25s var(--a-ease);
+      transition: transform .25s var(--a-ease), box-shadow .25s var(--a-ease);
     }
 
     .social a:hover {
       transform: translateY(-2px);
-      background: #fff;
+      background: #8b1538;
+      color: white;
       box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
     }
 
