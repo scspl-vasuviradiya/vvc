@@ -424,6 +424,8 @@
       loadGallery();
     }
 
+    
+
 
     const gallery = document.getElementById("slider");
     const left = document.getElementsByClassName("left")[0];
@@ -442,7 +444,7 @@
         }
         var image = document.createElement("img");
         image.src = galleryImages[i];
-        image.style.width = "500px";
+        image.style.height = "500px";
         imageWrapper.appendChild(image);
         var mirrored = image.cloneNode();
         mirrored.classList.add("flipped");
