@@ -94,7 +94,7 @@
   <!-- About -->
   <section id="about">
     <div class="wrap">
-      <h2 class="section-title" data-anim="fade-up">About Vivah Villa Collection</h2>
+      <h2 class="section-title" data-anim="fade-up" style="--d:120ms">About Vivah Villa Collection</h2>
       <p class="section-sub" data-anim="fade-up">
         We are a boutique offering premium wedding attire — perfect for weddings and festive events.
       </p>
@@ -115,7 +115,7 @@
   <!-- Collections -->
   <section id="collections" aria-labelledby="collections-title" style="background: var(--vv-cream);">
     <div class="wrap">
-      <h2 id="collections-title" class="section-title" data-anim="fade-up">Collections</h2>
+      <h2 id="collections-title" class="section-title" data-anim="fade-up" style="--d:120ms">Collections</h2>
       <p class="section-sub" data-anim="fade-up" style="--d:100ms">Browse by gender and style. All pieces are available
         for rent and can be pre-booked for your dates.</p>
 
@@ -215,13 +215,13 @@
     <div class="wrap">
       <div class="gallery_title_div">
         <div>
-          <h2 class="section-title" data-anim="fade-up">Gallery</h2>
+          <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Gallery</h2>
           <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.
           </p>
         </div>
         <div>
           <div class="theme-switch">
-            <input type="checkbox" id="theme-checkbox" />
+            <input type="checkbox" id="theme-checkbox" onchange="checkboxChanged();" />
             <label for="theme-checkbox">
               <div></div>
               <span>
@@ -260,7 +260,7 @@
   <!-- Why Choose Us -->
   <section id="why" style="background: var(--vv-cream);">
     <div class="wrap">
-      <h2 class="section-title" data-anim="fade-up">Why Choose Us</h2>
+      <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Why Choose Us</h2>
       <p class="section-sub" data-anim="fade-up" style="--d:120ms">Traditional aesthetics, modern convenience,
         budget-friendly elegance.</p>
       <div class="why stagger">
@@ -284,7 +284,7 @@
   <section id="contact">
     <div class="wrap contact">
       <div>
-        <h2 class="section-title" data-anim="fade-up">Contact Us</h2>
+        <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Contact Us</h2>
         <p class="section-sub" data-anim="fade-up" style="--d:120ms">Have a date in mind? Book a trial or ask about
           availability.</p>
         <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" data-anim="zoom-in" style="--d:160ms">
@@ -390,18 +390,18 @@
   <script src="animations.js"></script>
 
   <script>
-    const galleryImages = [];
+    var galleryImages = [];
     let i = 1;
-    let genderType = "Female";
-
+    
     function checkImageExists(url, callback) {
       const img = new Image();
       img.onload = () => callback(true);
       img.onerror = () => callback(false);
       img.src = url;
     }
-
+    
     function loadGallery() {
+      let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
       const url = `img/gallery/${genderType}/${i}.jpg`;
       checkImageExists(url, exists => {
         if (exists) {
@@ -416,11 +416,17 @@
     }
 
     loadGallery();
+    function checkboxChanged() {
+      gallery.innerHTML = "";
+      galleryImages = [];
+      i=1;
+      selected = 1;
+      loadGallery();
+    }
 
 
     const gallery = document.getElementById("slider");
     const left = document.getElementsByClassName("left")[0];
-    left.classList.add("disabled");
     const right = document.getElementsByClassName("right")[0];
     var images = galleryImages.length;
     var selected = 1;
@@ -450,7 +456,7 @@
     right.onclick = function () {
       selected++;
       if (selected > images - 1) {
-        selected = images - 1;
+        selected = 0; // Loop to first image
       }
       handleSelection();
     };
@@ -458,31 +464,22 @@
     left.onclick = function () {
       selected--;
       if (selected < 0) {
-        selected = 0;
+        selected = images - 1; // Loop to last image
       }
       handleSelection();
     };
 
     function handleSelection() {
-      var images = document.getElementsByClassName("wrapper");
-      if (selected === images.length - 1) {
-        right.classList.add("disabled");
-      } else {
-        right.classList.remove("disabled");
+      var wrappers = document.getElementsByClassName("wrapper");
+      for (var i = 0; i < wrappers.length; i++) {
+        wrappers[i].classList.remove("selected", "next", "prev");
       }
-      if (selected === 0) {
-        left.classList.add("disabled");
-      } else {
-        left.classList.remove("disabled");
-      }
-      for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        if (img.id === `image_${selected}`) {
-          img.classList.add("selected");
-        } else {
-          img.classList.remove("selected");
-        }
-      }
+      // Mark selected
+      wrappers[selected].classList.add("selected");
+      // Mark next (wrap to first if at end)
+      wrappers[(selected + 1) % images].classList.add("next");
+      // Mark prev (wrap to last if at start)
+      wrappers[(selected - 1 + images) % images].classList.add("prev");
     }
 
   </script>
