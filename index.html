@@ -13,103 +13,104 @@
 
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <!-- Header -->
-<!-- ...existing code... -->
-<header class="topbar" data-anim="fade-down">
-  <nav class="nav" aria-label="Primary">
-    <a class="brand" href="#home" data-anim="fade-right">
-      <img src="img/logo/logo.png" alt="Vivah Villa Collection logo" />
-      <div>
-        <div class="title">Vivah Villa Collection</div>
-        <div class="subtitle">Elegance</div>
+  <!-- ...existing code... -->
+  <header class="topbar" data-anim="fade-down">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#home" data-anim="fade-right">
+        <img src="img/logo/logo.png" alt="Vivah Villa Collection logo" />
+        <div>
+          <div class="title">Vivah Villa Collection</div>
+          <div class="subtitle">Elegance</div>
+        </div>
+      </a>
+      <!-- Hamburger for mobile -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+        <a class="link" href="#about" data-anim="fade-left">About</a>
+        <a class="link" href="#collections" data-anim="fade-left">Collections</a>
+        <a class="link" href="#gallery" data-anim="fade-left">Gallery</a>
+        <a class="link" href="#why" data-anim="fade-left">Why Us</a>
+        <a class="link" href="#contact" data-anim="fade-left">Contact</a>
+        <a class="cta"
+          href="https://wa.me/91xxxxxxxxxx?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
+          target="_blank" rel="noopener" data-anim="zoom-in">WhatsApp</a>
       </div>
-    </a>
-    <!-- Hamburger for mobile -->
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
-      <a class="link" href="#about" data-anim="fade-left">About</a>
-      <a class="link" href="#collections" data-anim="fade-left">Collections</a>
-      <a class="link" href="#gallery" data-anim="fade-left">Gallery</a>
-      <a class="link" href="#why" data-anim="fade-left">Why Us</a>
-      <a class="link" href="#contact" data-anim="fade-left">Contact</a>
-      <a class="cta"
-         href="https://wa.me/91xxxxxxxxxx?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
-         target="_blank" rel="noopener" data-anim="zoom-in">WhatsApp</a>
-    </div>
-  </nav>
-</header>
-<!-- ...existing code... -->
+    </nav>
+  </header>
+  <!-- ...existing code... -->
 
 
   <!-- Hero -->
   <section id="home" class="hero">
-  <div class="hero-wrap">
-    <div>
-      <span class="badge1" data-anim="fade-up">Premium Wedding Attire</span>
-      <h1 class="h1" data-anim="fade-up">
-        Look your best for weddings & festive events—
-        <span class="accent">without the high cost</span>.
-      </h1>
-      <p class="lead" data-anim="fade-up">
-        Rent elegant <strong>suits</strong>, <strong>sherwanis</strong>, 
-        <strong>lehengas</strong>, <strong>kurtis</strong>, and <strong>cholis</strong>.
-      </p>
-      <div class="hero-cards stagger">
-        <div class="card" data-anim="tilt-in">
-          <h4>Flexible Rental Plans</h4>
-          <div class="muted">Daily or weekend packages with easy pickup & returns.</div>
+    <div class="hero-wrap">
+      <div>
+        <span class="badge1" data-anim="fade-up">Premium Wedding Attire</span>
+        <h1 class="h1" data-anim="fade-up">
+          Look your best for weddings & festive events—
+          <span class="accent">without the high cost</span>.
+        </h1>
+        <p class="lead" data-anim="fade-up">
+          Rent elegant <strong>suits</strong>, <strong>sherwanis</strong>,
+          <strong>lehengas</strong>, <strong>kurtis</strong>, and <strong>cholis</strong>.
+        </p>
+        <div class="hero-cards stagger">
+          <div class="card" data-anim="tilt-in">
+            <h4>Flexible Rental Plans</h4>
+            <div class="muted">Daily or weekend packages with easy pickup & returns.</div>
+          </div>
+          <div class="card" data-anim="tilt-in">
+            <h4>Sizes & Tailoring</h4>
+            <div class="muted">Inclusive sizes with quick-fit alterations available.</div>
+          </div>
+          <div class="card" data-anim="tilt-in">
+            <h4>Hygenic & Ready-to-Wear</h4>
+            <div class="muted">Professionally cleaned and steamed after each use.</div>
+          </div>
+          <div class="card" data-anim="tilt-in">
+            <h4>Try Before You Rent</h4>
+            <div class="muted">Book an appointment for in-store trial.</div>
+          </div>
         </div>
-        <div class="card" data-anim="tilt-in">
-          <h4>Sizes & Tailoring</h4>
-          <div class="muted">Inclusive sizes with quick-fit alterations available.</div>
-        </div>
-        <div class="card" data-anim="tilt-in">
-          <h4>Hygenic & Ready-to-Wear</h4>
-          <div class="muted">Professionally cleaned and steamed after each use.</div>
-        </div>
-        <div class="card" data-anim="tilt-in">
-          <h4>Try Before You Rent</h4>
-          <div class="muted">Book an appointment for in-store trial.</div>
+      </div>
+      <div class="hero-img">
+        <div class="frame" aria-label="Showcase image" data-anim="zoom-in"></div>
+        <div class="floating" data-anim="fade-left">
+          Over <strong>200+</strong> outfits • Men & Women
         </div>
       </div>
     </div>
-    <div class="hero-img">
-      <div class="frame" aria-label="Showcase image" data-anim="zoom-in"></div>
-      <div class="floating" data-anim="fade-left">
-        Over <strong>200+</strong> outfits • Men & Women
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- About -->
   <section id="about">
-  <div class="wrap">
-    <h2 class="section-title" data-anim="fade-up">About Vivah Villa Collection</h2>
-    <p class="section-sub" data-anim="fade-up">
-      We are a boutique offering premium wedding attire — perfect for weddings and festive events.
-    </p>
-    <div class="why stagger">
-      <div class="c" data-anim="flip-up"><strong>Our Promise</strong><br>
-        <span class="muted">Premium designs • Affordable rentals • Hassle-free experience</span>
-      </div>
-      <div class="c" data-anim="flip-up"><strong>Timings</strong><br>
-        <span class="muted">Mon–Sun: 10:00 AM – 8:00 PM</span>
-      </div>
-      <div class="c" data-anim="flip-up"><strong>Services</strong><br>
-        <span class="muted">Alterations • Outfit Styling • Delivery (local) • Express Cleaning</span>
+    <div class="wrap">
+      <h2 class="section-title" data-anim="fade-up">About Vivah Villa Collection</h2>
+      <p class="section-sub" data-anim="fade-up">
+        We are a boutique offering premium wedding attire — perfect for weddings and festive events.
+      </p>
+      <div class="why stagger">
+        <div class="c" data-anim="flip-up"><strong>Our Promise</strong><br>
+          <span class="muted">Premium designs • Affordable rentals • Hassle-free experience</span>
+        </div>
+        <div class="c" data-anim="flip-up"><strong>Timings</strong><br>
+          <span class="muted">Mon–Sun: 10:00 AM – 8:00 PM</span>
+        </div>
+        <div class="c" data-anim="flip-up"><strong>Services</strong><br>
+          <span class="muted">Alterations • Outfit Styling • Delivery (local) • Express Cleaning</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Collections -->
   <section id="collections" aria-labelledby="collections-title" style="background: var(--vv-cream);">
@@ -210,25 +211,51 @@
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" style="background: burlywood;">
-  <div class="wrap">
-    <h2 class="section-title" data-anim="fade-up">Gallery</h2>
-    <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.</p>
-    <div class="gallery-slider row justify-content-center align-items-center">
-      <button class="gallery-arrow gallery-arrow-prev col-auto" aria-label="Previous" style="background:none;border:none;font-size:2rem;cursor:pointer;">&lt;</button>
-      <div class="gallery-prev col-auto" style="cursor:pointer;">
-        <img src="img/gallery/1.jpg" alt="Previous photo" class="img-fluid rounded" />
+  <section id="gallery" style="background: burlywood;overflow: hidden;padding: 100px;">
+    <div class="wrap">
+      <div class="gallery_title_div">
+        <div>
+          <h2 class="section-title" data-anim="fade-up">Gallery</h2>
+          <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.
+          </p>
+        </div>
+        <div>
+          <div class="theme-switch">
+            <input type="checkbox" id="theme-checkbox" />
+            <label for="theme-checkbox">
+              <div></div>
+              <span>
+                <i class="fa fa-female" aria-hidden="true"></i>
+              </span>
+              <span>
+                <i class="fa fa-male" aria-hidden="true"></i>
+              </span>
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="gallery-main col-8 col-md-6">
-        <img src="img/gallery/2.jpg" alt="Main photo" class="img-fluid rounded" />
+
+
+      <div class="gallery">
+        <div id="slider" class="slider">
+        </div>
+        <div class="arrows">
+          <div class="left">
+            <svg viewBox="0 0 512 512" width="100" title="chevron-circle-left">
+              <path
+                d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+            </svg>
+          </div>
+          <div class="right">
+            <svg viewBox="0 0 512 512" width="100" title="chevron-circle-right">
+              <path
+                d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div class="gallery-next col-auto" style="cursor:pointer;">
-        <img src="img/gallery/3.jpg" alt="Next photo" class="img-fluid rounded" />
-      </div>
-      <button class="gallery-arrow gallery-arrow-next col-auto" aria-label="Next" style="background:none;border:none;font-size:2rem;cursor:pointer;">&gt;</button>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Why Choose Us -->
   <section id="why" style="background: var(--vv-cream);">
@@ -361,127 +388,104 @@
   </script>
 
   <script src="animations.js"></script>
-  
-<script>
-const galleryImages = [];
-let i = 1;
 
-function checkImageExists(url, callback) {
-  const img = new Image();
-  img.onload = () => callback(true);
-  img.onerror = () => callback(false);
-  img.src = url;
-}
+  <script>
+    const galleryImages = [];
+    let i = 1;
+    let genderType = "Female";
 
-function loadGallery() {
-  const url = `img/gallery/${i}.jpg`;
-  checkImageExists(url, exists => {
-    if (exists) {
-      galleryImages.push(url);
-      i++;
-      loadGallery();
-    } else {
-      loadphoto();
-      console.log('All images loaded:', galleryImages);
+    function checkImageExists(url, callback) {
+      const img = new Image();
+      img.onload = () => callback(true);
+      img.onerror = () => callback(false);
+      img.src = url;
     }
-  });
-}
 
-loadGallery();
+    function loadGallery() {
+      const url = `img/gallery/${genderType}/${i}.jpg`;
+      checkImageExists(url, exists => {
+        if (exists) {
+          galleryImages.push(url);
+          i++;
+          loadGallery();
+        } else {
+          init();
+          console.log('All images loaded:', galleryImages);
+        }
+      });
+    }
 
-let current = 1;
-let autoTimer;
+    loadGallery();
 
-function animateMainImage(newSrc, direction) {
-  const mainImg = document.querySelector('.gallery-main img');
-  const prevImg = document.querySelector('.gallery-prev img');
-  const nextImg = document.querySelector('.gallery-next img');
 
-  // Prepare animation classes
-  if (direction === 'next') {
-    // Main image slides left, next image slides in
-    mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
-    nextImg.style.transition = 'transform 0.5s, opacity 0.5s';
+    const gallery = document.getElementById("slider");
+    const left = document.getElementsByClassName("left")[0];
+    left.classList.add("disabled");
+    const right = document.getElementsByClassName("right")[0];
+    var images = galleryImages.length;
+    var selected = 1;
 
-    mainImg.style.transform = 'translateX(-100%) scale(0.7)';
-    mainImg.style.opacity = '0';
+    function init() {
+      images = galleryImages.length;
+      for (var i = 0; i < galleryImages.length; i++) {
+        var imageWrapper = document.createElement("div");
+        imageWrapper.id = `image_${i}`;
+        imageWrapper.classList.add("wrapper");
+        if (i === selected) {
+          imageWrapper.classList.add("selected");
+        }
+        var image = document.createElement("img");
+        image.src = galleryImages[i];
+        image.style.width = "500px";
+        imageWrapper.appendChild(image);
+        var mirrored = image.cloneNode();
+        mirrored.classList.add("flipped");
+        imageWrapper.appendChild(mirrored);
+        gallery.appendChild(imageWrapper);
+      }
+    }
 
-    nextImg.style.transform = 'translateX(0) scale(1)';
-    nextImg.style.opacity = '1';
 
-    setTimeout(() => {
-      mainImg.src = newSrc;
-      mainImg.style.transition = 'none';
-      mainImg.style.transform = 'translateX(100%) scale(0.7)';
-      mainImg.style.opacity = '0';
 
-      setTimeout(() => {
-        mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
-        mainImg.style.transform = 'translateX(0) scale(1)';
-        mainImg.style.opacity = '1';
-      }, 20);
-    }, 500);
-  } else {
-    // Main image slides right, prev image slides in
-    mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
-    prevImg.style.transition = 'transform 0.5s, opacity 0.5s';
+    right.onclick = function () {
+      selected++;
+      if (selected > images - 1) {
+        selected = images - 1;
+      }
+      handleSelection();
+    };
 
-    mainImg.style.transform = 'translateX(100%) scale(0.7)';
-    mainImg.style.opacity = '0';
+    left.onclick = function () {
+      selected--;
+      if (selected < 0) {
+        selected = 0;
+      }
+      handleSelection();
+    };
 
-    prevImg.style.transform = 'translateX(0) scale(1)';
-    prevImg.style.opacity = '1';
+    function handleSelection() {
+      var images = document.getElementsByClassName("wrapper");
+      if (selected === images.length - 1) {
+        right.classList.add("disabled");
+      } else {
+        right.classList.remove("disabled");
+      }
+      if (selected === 0) {
+        left.classList.add("disabled");
+      } else {
+        left.classList.remove("disabled");
+      }
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        if (img.id === `image_${selected}`) {
+          img.classList.add("selected");
+        } else {
+          img.classList.remove("selected");
+        }
+      }
+    }
 
-    setTimeout(() => {
-      mainImg.src = newSrc;
-      mainImg.style.transition = 'none';
-      mainImg.style.transform = 'translateX(-100%) scale(0.7)';
-      mainImg.style.opacity = '0';
-
-      setTimeout(() => {
-        mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
-        mainImg.style.transform = 'translateX(0) scale(1)';
-        mainImg.style.opacity = '1';
-      }, 20);
-    }, 500);
-  }
-}
-
-function updateGallery(direction = 'next') {
-  document.querySelector('.gallery-prev img').src = galleryImages[(current - 1 + galleryImages.length) % galleryImages.length];
-  animateMainImage(galleryImages[current], direction);
-  document.querySelector('.gallery-next img').src = galleryImages[(current + 1) % galleryImages.length];
-}
-
-function nextPhoto() {
-  current = (current + 1) % galleryImages.length;
-  updateGallery('next');
-}
-
-function prevPhoto() {
-  current = (current - 1 + galleryImages.length) % galleryImages.length;
-  updateGallery('prev');
-}
-
-function startAutoNext() {
-  clearInterval(autoTimer);
-  autoTimer = setInterval(nextPhoto, 6000);
-}
-
-function loadphoto() {
-  document.querySelector('.gallery-prev').onclick = prevPhoto;
-  document.querySelector('.gallery-next').onclick = nextPhoto;
-  document.querySelector('.gallery-arrow-next').onclick = nextPhoto;
-  document.querySelector('.gallery-arrow-prev').onclick = prevPhoto;
-
-  // Initial load
-  document.querySelector('.gallery-prev img').src = galleryImages[0];
-  document.querySelector('.gallery-main img').src = galleryImages[1];
-  document.querySelector('.gallery-next img').src = galleryImages[2];
-
-  startAutoNext();
-}
-</script>
+  </script>
 </body>
 
 </html>
