@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivah Villa Collection — Premium Wedding Attire</title>
+  <meta name="description"
+    content="Vivah Villa Collection offers premium wedding attire — elegant suits, sherwanis, lehengas, kurtis, and cholis. Traditional style with affordability for weddings and festive events." />
+  <meta name="theme-color" content="#8b1538" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+<!-- ...existing code... -->
+<header class="topbar" data-anim="fade-down">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="#home" data-anim="fade-right">
+      <img src="img/logo/logo.png" alt="Vivah Villa Collection logo" />
+      <div>
+        <div class="title">Vivah Villa Collection</div>
+        <div class="subtitle">Elegance</div>
+      </div>
+    </a>
+    <!-- Hamburger for mobile -->
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+      <a class="link" href="#about" data-anim="fade-left">About</a>
+      <a class="link" href="#collections" data-anim="fade-left">Collections</a>
+      <a class="link" href="#gallery" data-anim="fade-left">Gallery</a>
+      <a class="link" href="#why" data-anim="fade-left">Why Us</a>
+      <a class="link" href="#contact" data-anim="fade-left">Contact</a>
+      <a class="cta"
+         href="https://wa.me/91xxxxxxxxxx?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
+         target="_blank" rel="noopener" data-anim="zoom-in">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+<!-- ...existing code... -->
+
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+  <div class="hero-wrap">
+    <div>
+      <span class="badge1" data-anim="fade-up">Premium Wedding Attire</span>
+      <h1 class="h1" data-anim="fade-up">
+        Look your best for weddings & festive events—
+        <span class="accent">without the high cost</span>.
+      </h1>
+      <p class="lead" data-anim="fade-up">
+        Rent elegant <strong>suits</strong>, <strong>sherwanis</strong>, 
+        <strong>lehengas</strong>, <strong>kurtis</strong>, and <strong>cholis</strong>.
+      </p>
+      <div class="hero-cards stagger">
+        <div class="card" data-anim="tilt-in">
+          <h4>Flexible Rental Plans</h4>
+          <div class="muted">Daily or weekend packages with easy pickup & returns.</div>
+        </div>
+        <div class="card" data-anim="tilt-in">
+          <h4>Sizes & Tailoring</h4>
+          <div class="muted">Inclusive sizes with quick-fit alterations available.</div>
+        </div>
+        <div class="card" data-anim="tilt-in">
+          <h4>Hygenic & Ready-to-Wear</h4>
+          <div class="muted">Professionally cleaned and steamed after each use.</div>
+        </div>
+        <div class="card" data-anim="tilt-in">
+          <h4>Try Before You Rent</h4>
+          <div class="muted">Book an appointment for in-store trial.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="frame" aria-label="Showcase image" data-anim="zoom-in"></div>
+      <div class="floating" data-anim="fade-left">
+        Over <strong>200+</strong> outfits • Men & Women
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about">
+  <div class="wrap">
+    <h2 class="section-title" data-anim="fade-up">About Vivah Villa Collection</h2>
+    <p class="section-sub" data-anim="fade-up">
+      We are a boutique offering premium wedding attire — perfect for weddings and festive events.
+    </p>
+    <div class="why stagger">
+      <div class="c" data-anim="flip-up"><strong>Our Promise</strong><br>
+        <span class="muted">Premium designs • Affordable rentals • Hassle-free experience</span>
+      </div>
+      <div class="c" data-anim="flip-up"><strong>Timings</strong><br>
+        <span class="muted">Mon–Sun: 10:00 AM – 8:00 PM</span>
+      </div>
+      <div class="c" data-anim="flip-up"><strong>Services</strong><br>
+        <span class="muted">Alterations • Outfit Styling • Delivery (local) • Express Cleaning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Collections -->
+  <section id="collections" aria-labelledby="collections-title" style="background: var(--vv-cream);">
+    <div class="wrap">
+      <h2 id="collections-title" class="section-title" data-anim="fade-up">Collections</h2>
+      <p class="section-sub" data-anim="fade-up" style="--d:100ms">Browse by gender and style. All pieces are available
+        for rent and can be pre-booked for your dates.</p>
+
+      <div class="tabs" role="tablist" aria-label="Collection filters">
+        <button class="tab active" data-filter="all" role="tab" aria-selected="true" data-anim="fade-right"
+          style="--d:0ms">All</button>
+        <button class="tab" data-filter="men" role="tab" data-anim="fade-right" style="--d:40ms">Men</button>
+        <button class="tab" data-filter="women" role="tab" data-anim="fade-right" style="--d:80ms">Women</button>
+        <button class="tab" data-filter="suits" role="tab" data-anim="fade-right" style="--d:120ms">Suits</button>
+        <button class="tab" data-filter="sherwani" role="tab" data-anim="fade-right"
+          style="--d:160ms">Sherwanis</button>
+        <button class="tab" data-filter="lehenga" role="tab" data-anim="fade-right" style="--d:200ms">Lehengas</button>
+        <button class="tab" data-filter="kurti" role="tab" data-anim="fade-right" style="--d:240ms">Kurtis</button>
+        <button class="tab" data-filter="choli" role="tab" data-anim="fade-right" style="--d:280ms">Cholis</button>
+      </div>
+
+      <div class="grid" id="items">
+        <!-- Item template examples (replace background-image URLs with your photos) -->
+        <article class="item" data-tags="men suits" data-anim="fade-up" style="--d:60ms">
+          <div class="img" style="background-image:url('img/collections/men-suit-1.jpg')" role="img"
+            aria-label="Men's tuxedo in navy"></div>
+          <div class="body">
+            <h4>Classic Navy Suit</h4>
+            <div class="muted">Tailored fit • 2-piece</div>
+            <div class="price">₹1499/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="men sherwani" data-anim="fade-up" style="--d:100ms">
+          <div class="img" style="background-image:url('img/collections/men-sherwani-1.jpg')" role="img"
+            aria-label="Men's cream sherwani"></div>
+          <div class="body">
+            <h4>Regal Cream Sherwani</h4>
+            <div class="muted">Zari work • Dupatta</div>
+            <div class="price">₹1999/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="women lehenga" data-anim="fade-up" style="--d:140ms">
+          <div class="img" style="background-image:url('img/collections/women-lehenga-1.jpg')" role="img"
+            aria-label="Women's maroon lehenga"></div>
+          <div class="body">
+            <h4>Maroon Bridal Lehenga</h4>
+            <div class="muted">Thread & sequin work</div>
+            <div class="price">₹2499/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="women kurti" data-anim="fade-up" style="--d:180ms">
+          <div class="img" style="background-image:url('img/collections/women-kurti-1.jpg')" role="img"
+            aria-label="Women's festive kurti"></div>
+          <div class="body">
+            <h4>Festive Kurti Set</h4>
+            <div class="muted">Comfort fit • Dupatta</div>
+            <div class="price">₹899/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="women choli" data-anim="fade-up" style="--d:220ms">
+          <div class="img" style="background-image:url('img/collections/women-choli-1.jpg')" role="img"
+            aria-label="Women's choli"></div>
+          <div class="body">
+            <h4>Embroidered Choli</h4>
+            <div class="muted">Mirror accents</div>
+            <div class="price">₹799/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="men suits" data-anim="fade-up" style="--d:260ms">
+          <div class="img" style="background-image:url('img/collections/men-suit-2.jpg')" role="img"
+            aria-label="Men's charcoal suit"></div>
+          <div class="body">
+            <h4>Charcoal Suit</h4>
+            <div class="muted">Slim fit • 2-piece</div>
+            <div class="price">₹1499/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="men sherwani" data-anim="fade-up" style="--d:300ms">
+          <div class="img" style="background-image:url('img/collections/men-sherwani-2.jpg')" role="img"
+            aria-label="Men's maroon sherwani"></div>
+          <div class="body">
+            <h4>Maroon Royal Sherwani</h4>
+            <div class="muted">Hand embroidery</div>
+            <div class="price">₹2199/day</div>
+          </div>
+        </article>
+        <article class="item" data-tags="women lehenga" data-anim="fade-up" style="--d:340ms">
+          <div class="img" style="background-image:url('img/collections/women-lehenga-2.jpg')" role="img"
+            aria-label="Women's pastel lehenga"></div>
+          <div class="body">
+            <h4>Pastel Garden Lehenga</h4>
+            <div class="muted">Floral motifs</div>
+            <div class="price">₹2199/day</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" style="background: burlywood;">
+  <div class="wrap">
+    <h2 class="section-title" data-anim="fade-up">Gallery</h2>
+    <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.</p>
+    <div class="gallery-slider row justify-content-center align-items-center">
+      <button class="gallery-arrow gallery-arrow-prev col-auto" aria-label="Previous" style="background:none;border:none;font-size:2rem;cursor:pointer;">&lt;</button>
+      <div class="gallery-prev col-auto" style="cursor:pointer;">
+        <img src="img/gallery/1.jpg" alt="Previous photo" class="img-fluid rounded" />
+      </div>
+      <div class="gallery-main col-8 col-md-6">
+        <img src="img/gallery/2.jpg" alt="Main photo" class="img-fluid rounded" />
+      </div>
+      <div class="gallery-next col-auto" style="cursor:pointer;">
+        <img src="img/gallery/3.jpg" alt="Next photo" class="img-fluid rounded" />
+      </div>
+      <button class="gallery-arrow gallery-arrow-next col-auto" aria-label="Next" style="background:none;border:none;font-size:2rem;cursor:pointer;">&gt;</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Why Choose Us -->
+  <section id="why" style="background: var(--vv-cream);">
+    <div class="wrap">
+      <h2 class="section-title" data-anim="fade-up">Why Choose Us</h2>
+      <p class="section-sub" data-anim="fade-up" style="--d:120ms">Traditional aesthetics, modern convenience,
+        budget-friendly elegance.</p>
+      <div class="why stagger">
+        <div class="c" data-anim="fade-right" style="--i:0">
+          <h4>Affordable Luxury</h4>
+          <p class="muted">Premium outfits at rental prices so you can save for the big day.</p>
+        </div>
+        <div class="c" data-anim="fade-up" style="--i:1">
+          <h4>Curated Collections</h4>
+          <p class="muted">Handpicked designs for brides, grooms, families, and guests.</p>
+        </div>
+        <div class="c" data-anim="fade-left" style="--i:2">
+          <h4>Seamless Process</h4>
+          <p class="muted">Browse, try, book, wear, return — we keep it simple and delightful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2 class="section-title" data-anim="fade-up">Contact Us</h2>
+        <p class="section-sub" data-anim="fade-up" style="--d:120ms">Have a date in mind? Book a trial or ask about
+          availability.</p>
+        <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" data-anim="zoom-in" style="--d:160ms">
+          <!-- Replace YOUR_EMAIL or hook up your backend. Add _next and _captcha fields if using formsubmit.co -->
+          <div class="row">
+            <div><label>Name<br><input required name="name" placeholder="Your full name"></label></div>
+            <div><label>Phone<br><input required name="phone" placeholder="Your phone"></label></div>
+          </div>
+          <div class="row">
+            <div><label>Email<br><input type="email" name="email" placeholder="you@example.com"></label></div>
+            <div><label>Event Date<br><input type="date" name="date"></label></div>
+          </div>
+          <label>Message<br><textarea name="message"
+              placeholder="Tell us what you are looking for..."></textarea></label>
+          <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <button class="btn" type="submit">Send Enquiry</button>
+            <a class="cta" href="tel:+91XXXXXXXXXX">Call Now</a>
+            <a class="pill" href="mailto:info@vivahvilla.example">info@vivahvilla.example</a>
+          </div>
+        </form>
+
+        <div style="margin-top:20px;" data-anim="fade-up" style="--d:220ms">
+          <h4>Address</h4>
+          <p class="muted">Shop No. 12, Your Street, Your Area, Your City, PIN XXXXXXX</p>
+          <div class="social" aria-label="Social links">
+            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener"
+              aria-label="Instagram">Instagram</a>
+            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            <a href="https://wa.me/91xxxxxxxxxx" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div data-anim="flip-left" style="--d:200ms">
+        <!-- Replace the src below with your actual Google Maps embed URL -->
+        <iframe title="Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d72.0000!3d22.0000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVivah%20Villa%20Collection!5e0!3m2!1sen!2sin!4v0000000000000"
+          width="100%" height="380" style="border:0; border-radius: 14px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="wrap fgrid">
+      <div data-anim="fade-up">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <img src="img/logo/logo.png" alt="Vivah Villa Collection logo small"
+            style="height:40px; width:auto; border-radius:8px;" />
+          <div>
+            <strong>Vivah Villa Collection</strong><br>
+            <span class="muted">Traditional style • Affordable rentals</span>
+          </div>
+        </div>
+      </div>
+      <div data-anim="fade-up" style="--d:100ms">
+        <strong>Quick Links</strong>
+        <div style="margin-top:8px; display:grid; gap:6px;">
+          <a class="link" href="#collections">Collections</a>
+          <a class="link" href="#gallery">Gallery</a>
+          <a class="link" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div data-anim="fade-up" style="--d:160ms">
+        <strong>Policy</strong>
+        <div class="muted" style="font-size:14px; margin-top:8px;">Security deposit required • Damage & late return fees
+          apply • ID proof at booking</div>
+      </div>
+    </section>
+    <div class="wrap"
+      style="padding: 16px 0; border-top:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+      <div class="muted" style="font-size:13px;">© <span id="yy"></span> Vivah Villa Collection. All rights reserved.
+      </div>
+      <a class="pill" href="#home" data-anim="zoom-in" style="--d:60ms">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Schema.org for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Vivah Villa Collection",
+    "image": "https://your-domain.com/img/logo/logo.png",
+    "description": "Premium wedding attire — suits, sherwanis, lehengas, kurtis, and cholis.",
+    "telephone": "+91XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 12, Your Street, Your Area",
+      "addressLocality": "Your City",
+      "postalCode": "XXXXXX",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Su 10:00-20:00",
+    "sameAs": [
+      "https://instagram.com/yourhandle",
+      "https://facebook.com/yourpage",
+      "https://youtube.com/@yourchannel"
+    ]
+  }
+  </script>
+
+  <script src="animations.js"></script>
+  
+<script>
+const galleryImages = [];
+let i = 1;
+
+function checkImageExists(url, callback) {
+  const img = new Image();
+  img.onload = () => callback(true);
+  img.onerror = () => callback(false);
+  img.src = url;
+}
+
+function loadGallery() {
+  const url = `img/gallery/${i}.jpg`;
+  checkImageExists(url, exists => {
+    if (exists) {
+      galleryImages.push(url);
+      i++;
+      loadGallery();
+    } else {
+      loadphoto();
+      console.log('All images loaded:', galleryImages);
+    }
+  });
+}
+
+loadGallery();
+
+let current = 1;
+let autoTimer;
+
+function animateMainImage(newSrc, direction) {
+  const mainImg = document.querySelector('.gallery-main img');
+  const prevImg = document.querySelector('.gallery-prev img');
+  const nextImg = document.querySelector('.gallery-next img');
+
+  // Prepare animation classes
+  if (direction === 'next') {
+    // Main image slides left, next image slides in
+    mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
+    nextImg.style.transition = 'transform 0.5s, opacity 0.5s';
+
+    mainImg.style.transform = 'translateX(-100%) scale(0.7)';
+    mainImg.style.opacity = '0';
+
+    nextImg.style.transform = 'translateX(0) scale(1)';
+    nextImg.style.opacity = '1';
+
+    setTimeout(() => {
+      mainImg.src = newSrc;
+      mainImg.style.transition = 'none';
+      mainImg.style.transform = 'translateX(100%) scale(0.7)';
+      mainImg.style.opacity = '0';
+
+      setTimeout(() => {
+        mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
+        mainImg.style.transform = 'translateX(0) scale(1)';
+        mainImg.style.opacity = '1';
+      }, 20);
+    }, 500);
+  } else {
+    // Main image slides right, prev image slides in
+    mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
+    prevImg.style.transition = 'transform 0.5s, opacity 0.5s';
+
+    mainImg.style.transform = 'translateX(100%) scale(0.7)';
+    mainImg.style.opacity = '0';
+
+    prevImg.style.transform = 'translateX(0) scale(1)';
+    prevImg.style.opacity = '1';
+
+    setTimeout(() => {
+      mainImg.src = newSrc;
+      mainImg.style.transition = 'none';
+      mainImg.style.transform = 'translateX(-100%) scale(0.7)';
+      mainImg.style.opacity = '0';
+
+      setTimeout(() => {
+        mainImg.style.transition = 'transform 0.5s, opacity 0.5s';
+        mainImg.style.transform = 'translateX(0) scale(1)';
+        mainImg.style.opacity = '1';
+      }, 20);
+    }, 500);
+  }
+}
+
+function updateGallery(direction = 'next') {
+  document.querySelector('.gallery-prev img').src = galleryImages[(current - 1 + galleryImages.length) % galleryImages.length];
+  animateMainImage(galleryImages[current], direction);
+  document.querySelector('.gallery-next img').src = galleryImages[(current + 1) % galleryImages.length];
+}
+
+function nextPhoto() {
+  current = (current + 1) % galleryImages.length;
+  updateGallery('next');
+}
+
+function prevPhoto() {
+  current = (current - 1 + galleryImages.length) % galleryImages.length;
+  updateGallery('prev');
+}
+
+function startAutoNext() {
+  clearInterval(autoTimer);
+  autoTimer = setInterval(nextPhoto, 6000);
+}
+
+function loadphoto() {
+  document.querySelector('.gallery-prev').onclick = prevPhoto;
+  document.querySelector('.gallery-next').onclick = nextPhoto;
+  document.querySelector('.gallery-arrow-next').onclick = nextPhoto;
+  document.querySelector('.gallery-arrow-prev').onclick = prevPhoto;
+
+  // Initial load
+  document.querySelector('.gallery-prev img').src = galleryImages[0];
+  document.querySelector('.gallery-main img').src = galleryImages[1];
+  document.querySelector('.gallery-next img').src = galleryImages[2];
+
+  startAutoNext();
+}
+</script>
+</body>
+
+</html>
