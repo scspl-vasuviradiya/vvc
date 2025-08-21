@@ -474,14 +474,20 @@
     function handleSelection() {
       var wrappers = document.getElementsByClassName("wrapper");
       for (var i = 0; i < wrappers.length; i++) {
-        wrappers[i].classList.remove("selected", "next", "prev");
+        wrappers[i].classList.remove("selected", "first-wrap", "last-wrap");
       }
       // Mark selected
       wrappers[selected].classList.add("selected");
-      // Mark next (wrap to first if at end)
-      wrappers[(selected + 1) % images].classList.add("next");
-      // Mark prev (wrap to last if at start)
-      wrappers[(selected - 1 + images) % images].classList.add("prev");
+
+     
+      // If selected is last, add first-wrap to first image
+      if (selected === wrappers.length - 1) {
+        wrappers[0].classList.add("first-wrap");
+      }
+      // If selected is first, add last-wrap to last image
+      else if (selected === 0) {
+        wrappers[wrappers.length - 1].classList.add("last-wrap");
+      }
     }
 
   </script>

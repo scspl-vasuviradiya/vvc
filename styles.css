@@ -865,3 +865,25 @@
 #theme-checkbox + label span .fa {
     font-size: smaller !important;
 }
+
+/* If .selected is at the end, animate first .wrapper as next */
+.wrapper.first-wrap {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + var(--image-size) / 1);
+  transform: translate3d(-50%, -50%, 0) scale(0.5);
+  z-index: 2;
+  opacity: 0.7;
+}
+
+/* If .selected is at the start, animate last .wrapper as prev */
+.wrapper.last-wrap {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - var(--image-size) / 1);
+  transform: translate3d(-50%, -50%, 0) scale(0.5);
+  z-index: 2;
+  opacity: 0.7;
+}
