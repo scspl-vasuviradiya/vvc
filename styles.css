@@ -888,48 +888,103 @@
   z-index: 2;
   opacity: 0.7;
 }
-.arrow {
-    transform: rotate(90deg);
-    cursor: pointer;
-    position: relative;
+
+.theme-switcher_div{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
     justify-content: center;
-    direction: rtl;
-    margin-top: -54px;
-    margin-left: 250px;
+    align-items: center;
+}
+/* Direction arrow */
+.arrow-bounce {
+  animation: bounce 8s infinite;
+  color: #8b1538;
 }
 
-.arrow span {
-    display: block;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-bottom: 5px solid #8b1538;
-    border-right: 5px solid #8b1538;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
+@keyframes bounce {
+  /* blue, red, goldenrod, cyan */
+  0%,
+  5% {
+    transform: translateX(0);
+    
+  }
+  10% {
+    transform: translateX(40px);
+  }
+  12.5% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(10px);
+  }
+  20%,
+  25% {
+    transform: translateX(0);
+  }
+
+  25%,
+  30% {
+    transform: translateX(0);
+    
+  }
+  35% {
+    transform: translateX(40px);
+  }
+  37.5% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  45%,
+  50% {
+    transform: translateX(0);
+  }
+
+  50%,
+  55% {
+    transform: translateX(0);
+    
+  }
+  60% {
+    transform: translateX(40px);
+  }
+  62.5% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(10px);
+  }
+  70%,
+  75% {
+    transform: translateX(0);
+  }
+
+  75%,
+  80% {
+    transform: translateX(0);
+    
+  }
+  85% {
+    transform: translateX(40px);
+  }
+  87.5% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  95%,
+  100% {
+    transform: translateX(0);
+    
+  }
 }
 
-.arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-}
 
-.arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-}
 
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
 
 /* Add to styles.css or inside <head> */
 .map-responsive {
@@ -982,9 +1037,6 @@
   .nav-links.active {
     display: flex !important;
   }
-  .arrow{
-  display: none !important;
-}
 .gallery_title_div{
   flex-direction: column;
 }

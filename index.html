@@ -35,8 +35,8 @@
       <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
         <a class="link" href="#about">About</a>
         <a class="link" href="#collections">Collections</a>
-        <a class="link" href="#gallery" >Gallery</a>
-        <a class="link" href="#why" >Why Us</a>
+        <a class="link" href="#gallery">Gallery</a>
+        <a class="link" href="#why">Why Us</a>
         <a class="link" href="#contact">Contact</a>
         <a class="cta"
           href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
@@ -217,7 +217,7 @@
           <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.
           </p>
         </div>
-        <div>
+        <div class="theme-switcher_div" data-anim="fade-up" style="--d:120ms">
           <div class="theme-switch">
             <input type="checkbox" id="theme-checkbox" onchange="checkboxChanged();" />
             <label for="theme-checkbox">
@@ -230,10 +230,11 @@
               </span>
             </label>
           </div>
-          <div class="arrow">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="container">
+            <i class="fa fa-chevron-left arrow-bounce" aria-hidden="true"></i>
+            <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.7;" aria-hidden="true"></i>
+            <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.5;" aria-hidden="true"></i>
+            
           </div>
         </div>
       </div>
@@ -490,7 +491,7 @@
 
   </script>
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
       var navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
       this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
