@@ -29,20 +29,18 @@
         </div>
       </a>
       <!-- Hamburger for mobile -->
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button class="nav-toggle btn btn-outline-dark" aria-label="Open menu" aria-expanded="false">
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
       <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
-        <a class="link" href="#about" data-anim="fade-left">About</a>
-        <a class="link" href="#collections" data-anim="fade-left">Collections</a>
-        <a class="link" href="#gallery" data-anim="fade-left">Gallery</a>
-        <a class="link" href="#why" data-anim="fade-left">Why Us</a>
-        <a class="link" href="#contact" data-anim="fade-left">Contact</a>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#collections">Collections</a>
+        <a class="link" href="#gallery" >Gallery</a>
+        <a class="link" href="#why" >Why Us</a>
+        <a class="link" href="#contact">Contact</a>
         <a class="cta"
           href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
-          target="_blank" rel="noopener" data-anim="zoom-in">WhatsApp</a>
+          target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </nav>
   </header>
@@ -328,10 +326,11 @@
       </div>
       <div data-anim="flip-left" style="--d:200ms">
         <!-- Replace the src below with your actual Google Maps embed URL -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-responsive">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -489,6 +488,13 @@
       }
     }
 
+  </script>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+      this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+    });
   </script>
 </body>
 
