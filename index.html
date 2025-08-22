@@ -232,6 +232,11 @@
               </span>
             </label>
           </div>
+          <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
 
@@ -287,7 +292,8 @@
         <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Contact Us</h2>
         <p class="section-sub" data-anim="fade-up" style="--d:120ms">Have a date in mind? Book a trial or ask about
           availability.</p>
-        <form action="https://formsubmit.co/vivahvillacollection@gmail.com" method="POST" data-anim="zoom-in" style="--d:160ms">
+        <form action="https://formsubmit.co/vivahvillacollection@gmail.com" method="POST" data-anim="zoom-in"
+          style="--d:160ms">
           <!-- Replace YOUR_EMAIL or hook up your backend. Add _next and _captcha fields if using formsubmit.co -->
           <div class="row">
             <div><label>Name<br><input required name="name" placeholder="Your full name"></label></div>
@@ -310,17 +316,22 @@
           <h4>Address</h4>
           <p class="muted">Near Ayodhya chowk, 150 Feet Ring Rd, Rajkot, Gujarat 360006</p>
           <div class="social" aria-label="Social links">
-            <a href="https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp" target="_blank" rel="noopener"
-              aria-label="Instagram" class="btn btn-outline-danger">Instagram</a>
-            <a class="btn btn-outline-danger" href="https://www.facebook.com/share/1ADAW8tf4q/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-            <a class="btn btn-outline-danger" href="https://wa.me/919099055844" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp" target="_blank"
+              rel="noopener" aria-label="Instagram" class="btn btn-outline-danger">Instagram</a>
+            <a class="btn btn-outline-danger" href="https://www.facebook.com/share/1ADAW8tf4q/" target="_blank"
+              rel="noopener" aria-label="Facebook">Facebook</a>
+            <a class="btn btn-outline-danger" href="https://wa.me/919099055844" target="_blank" rel="noopener"
+              aria-label="WhatsApp">WhatsApp</a>
             <!-- <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a> -->
           </div>
         </div>
       </div>
       <div data-anim="flip-left" style="--d:200ms">
         <!-- Replace the src below with your actual Google Maps embed URL -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -388,47 +399,38 @@
 
   <script>
     var galleryImages = [];
-    let i = 1;
-    
-    function checkImageExists(url, callback) {
-      const img = new Image();
-      img.onload = () => callback(true);
-      img.onerror = () => callback(false);
-      img.src = url;
+    var MAX_IMAGES = 0;
+    function loadGalleryManifest(callback) {
+      fetch('gallery_manifest.json')
+        .then(response => response.json())
+        .then(data => {
+          let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
+          MAX_IMAGES = data[genderType] || 0;
+          callback();
+        });
     }
-    
     function loadGallery() {
       let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
-      const url = `img/gallery/${genderType}/${i}.jpg`;
-      checkImageExists(url, exists => {
-        if (exists) {
-          galleryImages.push(url);
-          i++;
-          loadGallery();
-        } else {
-          init();
-          console.log('All images loaded:', galleryImages);
-        }
-      });
+      for (let i = 1; i <= MAX_IMAGES; i++) {
+        const url = `img/gallery/${genderType}/${i}.jpg`;
+        galleryImages.push(url);
+      }
+      init();
+      console.log('All images loaded:', galleryImages);
     }
 
-    loadGallery();
+    loadGalleryManifest(loadGallery);
     function checkboxChanged() {
       gallery.innerHTML = "";
       galleryImages = [];
-      i=1;
       selected = 1;
-      loadGallery();
+      loadGalleryManifest(loadGallery);
     }
-
-    
-
-
     const gallery = document.getElementById("slider");
     const left = document.getElementsByClassName("left")[0];
     const right = document.getElementsByClassName("right")[0];
     var images = galleryImages.length;
-    var selected = 1;
+    var selected = 0;
 
     function init() {
       images = galleryImages.length;
@@ -476,7 +478,7 @@
       // Mark selected
       wrappers[selected].classList.add("selected");
 
-     
+
       // If selected is last, add first-wrap to first image
       if (selected === wrappers.length - 1) {
         wrappers[0].classList.add("first-wrap");
