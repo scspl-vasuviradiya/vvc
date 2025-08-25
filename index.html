@@ -411,6 +411,7 @@
     }
     function loadGallery() {
       let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
+      galleryImages = [];
       for (let i = 1; i <= MAX_IMAGES; i++) {
         const url = `img/gallery/${genderType}/${i}.jpg`;
         galleryImages.push(url);
@@ -433,6 +434,7 @@
     var selected = 1; // Start with the first image
 
     function init() {
+      gallery.innerHTML = "";
       images = galleryImages.length;
       for (var i = 0; i < galleryImages.length; i++) {
         var imageWrapper = document.createElement("div");
@@ -441,14 +443,48 @@
         if (i === selected) {
           imageWrapper.classList.add("selected");
         }
-        var image = document.createElement("img");
-        image.src = galleryImages[i];
-        image.style.height = "500px";
-        imageWrapper.appendChild(image);
-        var mirrored = image.cloneNode();
-        mirrored.classList.add("flipped");
-        imageWrapper.appendChild(mirrored);
-        gallery.appendChild(imageWrapper);
+
+        // Create canvas to merge gallery image and watermark
+        var canvas = document.createElement("canvas");
+        var ctx = canvas.getContext("2d");
+        var mainImg = new Image();
+        var watermarkImg = new Image();
+
+        mainImg.crossOrigin = "anonymous";
+        watermarkImg.crossOrigin = "anonymous";
+        mainImg.src = galleryImages[i];
+        watermarkImg.src = "img/logo/WaterMark.png";
+
+        mainImg.onload = function () {
+          canvas.width = mainImg.width;
+          canvas.height = mainImg.height;
+          ctx.drawImage(mainImg, 0, 0);
+
+          watermarkImg.onload = function () {
+            // Position watermark at bottom right
+            var scale = 0.25; // watermark size relative to main image
+            var wmWidth = mainImg.width * scale;
+            var wmHeight = watermarkImg.height * (wmWidth / watermarkImg.width);
+            var x = mainImg.width - wmWidth - 20;
+            var y = mainImg.height - wmHeight - 20;
+            ctx.globalAlpha = 0.35;
+            ctx.drawImage(watermarkImg, x, y, wmWidth, wmHeight);
+            ctx.globalAlpha = 1.0;
+
+            // Create merged image
+            var mergedImg = document.createElement("img");
+            mergedImg.src = canvas.toDataURL("image/jpeg");
+            mergedImg.style.height = "500px";
+            imageWrapper.appendChild(mergedImg);
+
+            // Mirrored image (optional)
+            var mirrored = mergedImg.cloneNode();
+            mirrored.classList.add("flipped");
+            imageWrapper.appendChild(mirrored);
+
+            gallery.appendChild(imageWrapper);
+          };
+        };
       }
     }
 
