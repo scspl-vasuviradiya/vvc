@@ -411,7 +411,6 @@
     }
     function loadGallery() {
       let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
-      galleryImages = [];
       for (let i = 1; i <= MAX_IMAGES; i++) {
         const url = `img/gallery/${genderType}/${i}.jpg`;
         galleryImages.push(url);
@@ -434,7 +433,6 @@
     var selected = 1; // Start with the first image
 
     function init() {
-      gallery.innerHTML = "";
       images = galleryImages.length;
       for (var i = 0; i < galleryImages.length; i++) {
         var imageWrapper = document.createElement("div");
@@ -447,20 +445,6 @@
         image.src = galleryImages[i];
         image.style.height = "500px";
         imageWrapper.appendChild(image);
-
-        // Add watermark image overlay
-        var watermark = document.createElement("img");
-        watermark.src = "img/logo/WaterMark.png";
-        watermark.style.position = "absolute";
-        watermark.style.bottom = "10px";
-        watermark.style.right = "10px";
-        watermark.style.width = "120px";
-        watermark.style.opacity = "0.35";
-        watermark.style.pointerEvents = "none";
-        watermark.style.zIndex = "10";
-        imageWrapper.style.position = "relative";
-        imageWrapper.appendChild(watermark);
-
         var mirrored = image.cloneNode();
         mirrored.classList.add("flipped");
         imageWrapper.appendChild(mirrored);
