@@ -186,7 +186,7 @@
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
-      aspect-ratio: 4/3;
+      aspect-ratio: 3/3;
       background: #ddd url('img/gallery/hero.jpg') center/cover no-repeat;
       transform-origin: 60% 40%;
       transition: transform .6s var(--a-ease), box-shadow .6s var(--a-ease);
