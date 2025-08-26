@@ -531,7 +531,7 @@ async function addImageWatermarkToImgTag(imgElement = {}) {
                 x=0;
                 y=0;
                 // Draw watermark image with transparency
-                ctx.globalAlpha = 1.0; 
+                ctx.globalAlpha = 0.5; 
                 ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
                 ctx.globalAlpha = 1.0; // reset alpha
 
