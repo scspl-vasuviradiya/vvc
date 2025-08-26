@@ -234,7 +234,7 @@
             <i class="fa fa-chevron-left arrow-bounce" aria-hidden="true"></i>
             <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.7;" aria-hidden="true"></i>
             <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.5;" aria-hidden="true"></i>
-            
+
           </div>
         </div>
       </div>
@@ -435,6 +435,7 @@
     function init() {
       images = galleryImages.length;
       for (var i = 0; i < galleryImages.length; i++) {
+        //image.src = galleryImages[i];
         var imageWrapper = document.createElement("div");
         imageWrapper.id = `image_${i}`;
         imageWrapper.classList.add("wrapper");
@@ -442,6 +443,8 @@
           imageWrapper.classList.add("selected");
         }
         var image = document.createElement("img");
+        //console.log(base64); // base64 string
+        //document.body.innerHTML += `<img src="${base64}" />`; // preview
         image.src = galleryImages[i];
         image.style.height = "500px";
         imageWrapper.appendChild(image);
@@ -449,6 +452,7 @@
         mirrored.classList.add("flipped");
         imageWrapper.appendChild(mirrored);
         gallery.appendChild(imageWrapper);
+        addImageWatermarkToImgTag(image);
       }
     }
 
@@ -497,6 +501,53 @@
       this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
     });
   </script>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <script>
+async function addImageWatermarkToImgTag(imgElement = {}) {
+    return new Promise((resolve, reject) => {
+        const mainImg = new Image();
+        mainImg.crossOrigin = "anonymous"; // Needed for external images
+        mainImg.onload = function () {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            canvas.width = mainImg.width;
+            canvas.height = mainImg.height;
+
+            // Draw main image
+            ctx.drawImage(mainImg, 0, 0);
+
+            // Load watermark image
+            const watermark = new Image();
+            watermark.crossOrigin = "anonymous";
+            watermark.onload = function () {
+                // Size of watermark
+                const wmWidth = mainImg.width * 0.50;  // 50% of main image width
+                const wmHeight = (watermark.height / watermark.width) * wmWidth;
+
+                // Position (bottom-right by default)
+                const x = (canvas.width - wmWidth) / 2;
+                const y = (canvas.height - wmHeight) / 2;
+
+                // Draw watermark image with transparency
+                ctx.globalAlpha = 0.5; 
+                ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
+                ctx.globalAlpha = 1.0; // reset alpha
+
+                // Convert to base64 and set as img src
+                const base64 = canvas.toDataURL("image/png");
+                imgElement.src = base64;
+                resolve(base64);
+            };
+            watermark.onerror = reject;
+            watermark.src = "img/logo/watermark.png";
+        };
+        mainImg.onerror = reject;
+        mainImg.src = imgElement.src;
+    });
+}
+</script>
+
 </body>
 
 </html>
