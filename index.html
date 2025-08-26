@@ -526,8 +526,8 @@ async function addImageWatermarkToImgTag(imgElement = {}) {
                 const wmHeight = (watermark.height / watermark.width) * wmWidth;
 
                 // Position (bottom-right by default)
-                const x = (canvas.width - wmWidth) / 2;
-                const y = (canvas.height - wmHeight) / 2;
+                var x = (canvas.width - wmWidth) / 2;
+                var y = (canvas.height - wmHeight) / 2;
                 x=0;
                 y=0;
                 // Draw watermark image with transparency
