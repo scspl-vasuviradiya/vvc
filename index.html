@@ -435,25 +435,25 @@
     function init() {
       images = galleryImages.length;
       for (var i = 0; i < galleryImages.length; i++) {
-        var imageWrapper = document.createElement("div");
-        imageWrapper.id = `image_${i}`;
-        imageWrapper.classList.add("wrapper");
-        if (i === selected) {
-          imageWrapper.classList.add("selected");
-        }
-        var image = document.createElement("img");
         //image.src = galleryImages[i];
         addWatermark(galleryImages[i], "Vivah Villa Collection").then(base64 => {
+          var imageWrapper = document.createElement("div");
+          imageWrapper.id = `image_${i}`;
+          imageWrapper.classList.add("wrapper");
+          if (i === selected) {
+            imageWrapper.classList.add("selected");
+          }
+          var image = document.createElement("img");
           //console.log(base64); // base64 string
           //document.body.innerHTML += `<img src="${base64}" />`; // preview
           image.src = base64;
+          image.style.height = "500px";
+          imageWrapper.appendChild(image);
+          var mirrored = image.cloneNode();
+          mirrored.classList.add("flipped");
+          imageWrapper.appendChild(mirrored);
+          gallery.appendChild(imageWrapper);
         });
-        image.style.height = "500px";
-        imageWrapper.appendChild(image);
-        var mirrored = image.cloneNode();
-        mirrored.classList.add("flipped");
-        imageWrapper.appendChild(mirrored);
-        gallery.appendChild(imageWrapper);
       }
     }
 
