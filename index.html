@@ -503,46 +503,49 @@
   </script>
   <canvas id="canvas" style="display:none;"></canvas>
   <script>
-async function addWatermarkToImgTag(imgElement, watermarkText = "© MySite", options = {}) {
+async function addImageWatermarkToImgTag(imgElement = {}) {
     return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.crossOrigin = "anonymous"; // Handle CORS
-        img.onload = function () {
+        const mainImg = new Image();
+        mainImg.crossOrigin = "anonymous"; // Needed for external images
+        mainImg.onload = function () {
             const canvas = document.createElement("canvas");
             const ctx = canvas.getContext("2d");
 
-            canvas.width = img.width;
-            canvas.height = img.height;
+            canvas.width = mainImg.width;
+            canvas.height = mainImg.height;
 
-            // Draw original image
-            ctx.drawImage(img, 0, 0);
+            // Draw main image
+            ctx.drawImage(mainImg, 0, 0);
 
-            // Watermark styles
-            ctx.font = options.font || "30px Arial";
-            ctx.fillStyle = options.color || "rgba(255,255,255,0.6)";
-            ctx.textAlign = options.textAlign || "right";
-            ctx.textBaseline = "bottom";
+            // Load watermark image
+            const watermark = new Image();
+            watermark.crossOrigin = "anonymous";
+            watermark.onload = function () {
+                // Size of watermark
+                const wmWidth = mainImg.width * 0.25;  // 25% of main image width
+                const wmHeight = (watermark.height / watermark.width) * wmWidth;
 
-            // Position (bottom-right default)
-            const x = options.x || canvas.width - 20;
-            const y = options.y || canvas.height - 20;
+                // Position (bottom-right by default)
+                const x = canvas.width - wmWidth - 20;
+                const y = canvas.height - wmHeight - 20;
 
-            ctx.fillText(watermarkText, x, y);
+                // Draw watermark image with transparency
+                ctx.globalAlpha = 0.5; 
+                ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
+                ctx.globalAlpha = 1.0; // reset alpha
 
-            // Set the img src to base64
-            const base64 = canvas.toDataURL("image/png");
-            imgElement.src = base64;
-
-            resolve(base64);
+                // Convert to base64 and set as img src
+                const base64 = canvas.toDataURL("image/png");
+                imgElement.src = base64;
+                resolve(base64);
+            };
+            watermark.onerror = reject;
+            watermark.src = "img/logo/watermark.png";
         };
-        img.onerror = reject;
-        img.src = imgElement.src;
+        mainImg.onerror = reject;
+        mainImg.src = imgElement.src;
     });
 }
-
-// Example usage
-const myImg = document.getElementById("myImg");
-addWatermarkToImgTag(myImg, "© Vivah Villa");
 </script>
 
 </body>
