@@ -522,13 +522,14 @@ async function addImageWatermarkToImgTag(imgElement = {}) {
             watermark.crossOrigin = "anonymous";
             watermark.onload = function () {
                 // Size of watermark
-                const wmWidth = mainImg.width * 0.50;  // 50% of main image width
+                const wmWidth = mainImg.width * 1;  // 100% of main image width
                 const wmHeight = (watermark.height / watermark.width) * wmWidth;
 
                 // Position (bottom-right by default)
                 const x = (canvas.width - wmWidth) / 2;
                 const y = (canvas.height - wmHeight) / 2;
-
+                x=0;
+                y=0;
                 // Draw watermark image with transparency
                 ctx.globalAlpha = 0.5; 
                 ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
