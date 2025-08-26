@@ -442,18 +442,17 @@
         if (i === selected) {
           imageWrapper.classList.add("selected");
         }
-        addWatermark(galleryImages[i], "Vivah Villa Collection").then(base64 => {
-          var image = document.createElement("img");
-          //console.log(base64); // base64 string
-          //document.body.innerHTML += `<img src="${base64}" />`; // preview
-          image.src = base64;
-          image.style.height = "500px";
-          imageWrapper.appendChild(image);
-          var mirrored = image.cloneNode();
-          mirrored.classList.add("flipped");
-          imageWrapper.appendChild(mirrored);
-          gallery.appendChild(imageWrapper);
-        });
+        var image = document.createElement("img");
+        //console.log(base64); // base64 string
+        //document.body.innerHTML += `<img src="${base64}" />`; // preview
+        image.src = galleryImages[i];
+        image.style.height = "500px";
+        imageWrapper.appendChild(image);
+        var mirrored = image.cloneNode();
+        mirrored.classList.add("flipped");
+        imageWrapper.appendChild(mirrored);
+        gallery.appendChild(imageWrapper);
+        addWatermarkToImgTag(image, "Vivah Villa Collection");
       }
     }
 
@@ -504,45 +503,47 @@
   </script>
   <canvas id="canvas" style="display:none;"></canvas>
   <script>
-    async function addWatermark(imgUrl, watermarkText = "Watermark", options = {}) {
-      return new Promise((resolve, reject) => {
+async function addWatermarkToImgTag(imgElement, watermarkText = "© MySite", options = {}) {
+    return new Promise((resolve, reject) => {
         const img = new Image();
-        img.crossOrigin = "anonymous"; // Allow CORS if the image is external
+        img.crossOrigin = "anonymous"; // Handle CORS
         img.onload = function () {
-          const canvas = document.getElementById("canvas");
-          const ctx = canvas.getContext("2d");
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
 
-          canvas.width = img.width;
-          canvas.height = img.height;
+            canvas.width = img.width;
+            canvas.height = img.height;
 
-          // Draw original image
-          ctx.drawImage(img, 0, 0);
+            // Draw original image
+            ctx.drawImage(img, 0, 0);
 
-          // Watermark settings
-          ctx.font = options.font || "40px Arial";
-          ctx.fillStyle = options.color || "rgba(255, 255, 255, 0.5)";
-          ctx.textAlign = options.textAlign || "right";
-          ctx.textBaseline = "bottom";
+            // Watermark styles
+            ctx.font = options.font || "30px Arial";
+            ctx.fillStyle = options.color || "rgba(255,255,255,0.6)";
+            ctx.textAlign = options.textAlign || "right";
+            ctx.textBaseline = "bottom";
 
-          // Position (bottom-right by default)
-          const x = options.x || canvas.width - 20;
-          const y = options.y || canvas.height - 20;
+            // Position (bottom-right default)
+            const x = options.x || canvas.width - 20;
+            const y = options.y || canvas.height - 20;
 
-          // Draw text watermark
-          ctx.fillText(watermarkText, x, y);
+            ctx.fillText(watermarkText, x, y);
 
-          // Return base64 string
-          resolve(canvas.toDataURL("image/png"));
+            // Set the img src to base64
+            const base64 = canvas.toDataURL("image/png");
+            imgElement.src = base64;
+
+            resolve(base64);
         };
-
         img.onerror = reject;
-        img.src = imgUrl;
-      });
-    }
+        img.src = imgElement.src;
+    });
+}
 
-    // Example usage:
-
-  </script>
+// Example usage
+const myImg = document.getElementById("myImg");
+addWatermarkToImgTag(myImg, "© Vivah Villa");
+</script>
 
 </body>
 
