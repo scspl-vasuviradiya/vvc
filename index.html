@@ -133,8 +133,7 @@
       <div class="grid" id="items">
         <!-- Item template examples (replace background-image URLs with your photos) -->
         <article class="item" data-tags="men suits" data-anim="fade-up" style="--d:60ms">
-          <div class="img" style="background-image:url('img/collections/men-suit-1.jpg')" role="img"
-            aria-label="Men's tuxedo in navy"></div>
+          <img src="img/collections/men-suit-1.jpg" alt="Men's tuxedo in navy" class="img" role="img">
           <div class="body">
             <h4>Classic Navy Suit</h4>
             <div class="muted">Tailored fit • 2-piece</div>
@@ -142,8 +141,7 @@
           </div>
         </article>
         <article class="item" data-tags="men sherwani" data-anim="fade-up" style="--d:100ms">
-          <div class="img" style="background-image:url('img/collections/men-sherwani-1.jpg')" role="img"
-            aria-label="Men's cream sherwani"></div>
+          <img src="img/collections/men-sherwani-1.jpg" alt="Men's cream sherwani" class="img" role="img">
           <div class="body">
             <h4>Regal Cream Sherwani</h4>
             <div class="muted">Zari work • Dupatta</div>
@@ -151,8 +149,7 @@
           </div>
         </article>
         <article class="item" data-tags="women lehenga" data-anim="fade-up" style="--d:140ms">
-          <div class="img" style="background-image:url('img/collections/women-lehenga-1.jpg')" role="img"
-            aria-label="Women's maroon lehenga"></div>
+          <img src="img/collections/women-lehenga-1.jpg" alt="Women's maroon lehenga" class="img" role="img">
           <div class="body">
             <h4>Maroon Bridal Lehenga</h4>
             <div class="muted">Thread & sequin work</div>
@@ -160,8 +157,7 @@
           </div>
         </article>
         <article class="item" data-tags="women kurti" data-anim="fade-up" style="--d:180ms">
-          <div class="img" style="background-image:url('img/collections/women-kurti-1.jpg')" role="img"
-            aria-label="Women's festive kurti"></div>
+          <img src="img/collections/women-kurti-1.jpg" alt="Women's festive kurti" class="img" role="img">
           <div class="body">
             <h4>Festive Kurti Set</h4>
             <div class="muted">Comfort fit • Dupatta</div>
@@ -169,8 +165,7 @@
           </div>
         </article>
         <article class="item" data-tags="women choli" data-anim="fade-up" style="--d:220ms">
-          <div class="img" style="background-image:url('img/collections/women-choli-1.jpg')" role="img"
-            aria-label="Women's choli"></div>
+          <img src="img/collections/women-choli-1.jpg" alt="Women's choli" class="img" role="img">
           <div class="body">
             <h4>Embroidered Choli</h4>
             <div class="muted">Mirror accents</div>
@@ -178,8 +173,7 @@
           </div>
         </article>
         <article class="item" data-tags="men suits" data-anim="fade-up" style="--d:260ms">
-          <div class="img" style="background-image:url('img/collections/men-suit-2.jpg')" role="img"
-            aria-label="Men's charcoal suit"></div>
+          <img src="img/collections/men-suit-2.jpg" alt="Men's charcoal suit" class="img" role="img">
           <div class="body">
             <h4>Charcoal Suit</h4>
             <div class="muted">Slim fit • 2-piece</div>
@@ -187,8 +181,7 @@
           </div>
         </article>
         <article class="item" data-tags="men sherwani" data-anim="fade-up" style="--d:300ms">
-          <div class="img" style="background-image:url('img/collections/men-sherwani-2.jpg')" role="img"
-            aria-label="Men's maroon sherwani"></div>
+          <img src="img/collections/men-sherwani-2.jpg" alt="Men's maroon sherwani" class="img" role="img">
           <div class="body">
             <h4>Maroon Royal Sherwani</h4>
             <div class="muted">Hand embroidery</div>
@@ -196,8 +189,7 @@
           </div>
         </article>
         <article class="item" data-tags="women lehenga" data-anim="fade-up" style="--d:340ms">
-          <div class="img" style="background-image:url('img/collections/women-lehenga-2.jpg')" role="img"
-            aria-label="Women's pastel lehenga"></div>
+          <img src="img/collections/women-lehenga-2.jpg" alt="Women's pastel lehenga" class="img" role="img">
           <div class="body">
             <h4>Pastel Garden Lehenga</h4>
             <div class="muted">Floral motifs</div>
@@ -503,6 +495,9 @@
   </script>
   <canvas id="canvas" style="display:none;"></canvas>
   <script>
+    $('.collections').find('img').each(function () {
+        addImageWatermarkToImgTag(this);
+    });
 async function addImageWatermarkToImgTag(imgElement = {}) {
     return new Promise((resolve, reject) => {
         const mainImg = new Image();
