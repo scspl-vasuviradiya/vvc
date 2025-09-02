@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Font Awesome: use the swap strategy via CSS override -->
   <style>
     @font-face {
       font-family: 'FontAwesome';
@@ -31,7 +30,6 @@
 
 <body>
   <!-- Header -->
-  <!-- ...existing code... -->
   <header class="topbar" data-anim="fade-down">
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="#home" data-anim="fade-right">
@@ -57,7 +55,6 @@
       </div>
     </nav>
   </header>
-  <!-- ...existing code... -->
 
 
   <!-- Hero -->
@@ -154,7 +151,18 @@
           </div>
         </article>
         <article class="item" data-tags="men sherwani" data-anim="fade-up" style="--d:100ms">
-          <img src="img/collections/men-sherwani-1.jpg" alt="Regal Cream Sherwani - Men's cream sherwani" class="img" role="img">
+          <img
+            src="img/collections/men-sherwani-1.jpg"
+            srcset="
+              img/collections/men-sherwani-1-370.jpg 370w,
+              img/collections/men-sherwani-1-740.jpg 740w,
+              img/collections/men-sherwani-1.webp 370w
+            "
+            sizes="(max-width: 400px) 100vw, 370px"
+            alt="Regal Cream Sherwani - Men's cream sherwani"
+            class="img"
+            role="img"
+          />
           <div class="body">
             <h4>Regal Cream Sherwani</h4>
             <div class="muted">Zari work • Dupatta</div>
@@ -239,7 +247,6 @@
             <i class="fa fa-chevron-left arrow-bounce" aria-hidden="true"></i>
             <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.7;" aria-hidden="true"></i>
             <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.5;" aria-hidden="true"></i>
-
           </div>
         </div>
       </div>
@@ -374,7 +381,7 @@
       <a class="pill" href="#home" data-anim="zoom-in" style="--d:60ms">Back to top ↑</a>
     </div>
   </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- Schema.org for Local Business -->
   <script type="application/ld+json">
   {
@@ -405,6 +412,11 @@
   <script>
     var galleryImages = [];
     var MAX_IMAGES = 0;
+    var selected = 1;
+    const gallery = document.getElementById("slider");
+    const left = document.getElementsByClassName("left")[0];
+    const right = document.getElementsByClassName("right")[0];
+
     function loadGalleryManifest(callback) {
       fetch('gallery_manifest.json')
         .then(response => response.json())
@@ -414,33 +426,30 @@
           callback();
         });
     }
+
     function loadGallery() {
       let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
+      galleryImages = [];
       for (let i = 1; i <= MAX_IMAGES; i++) {
         const url = `img/gallery/${genderType}/${i}.jpg`;
         galleryImages.push(url);
       }
       init();
-      console.log('All images loaded:', galleryImages);
     }
 
     loadGalleryManifest(loadGallery);
+
     function checkboxChanged() {
       gallery.innerHTML = "";
       galleryImages = [];
       selected = 1;
       loadGalleryManifest(loadGallery);
     }
-    const gallery = document.getElementById("slider");
-    const left = document.getElementsByClassName("left")[0];
-    const right = document.getElementsByClassName("right")[0];
-    var images = galleryImages.length;
-    var selected = 1; // Start with the first image
 
     function init() {
-      images = galleryImages.length;
+      gallery.innerHTML = "";
+      var images = galleryImages.length;
       for (var i = 0; i < galleryImages.length; i++) {
-        //image.src = galleryImages[i];
         var imageWrapper = document.createElement("div");
         imageWrapper.id = `image_${i}`;
         imageWrapper.classList.add("wrapper");
@@ -448,11 +457,14 @@
           imageWrapper.classList.add("selected");
         }
         var image = document.createElement("img");
-        //console.log(base64); // base64 string
-        //document.body.innerHTML += `<img src="${base64}" />`; // preview
-        image.src = galleryImages[i];
+        image.src = galleryImages[i].replace('.jpg', '-400.jpg');
+        image.srcset = `
+          ${galleryImages[i].replace('.jpg', '-400.jpg')} 400w,
+          ${galleryImages[i].replace('.jpg', '-800.jpg')} 800w,
+          ${galleryImages[i].replace('.jpg', '.webp')} 400w
+        `;
+        image.sizes = "(max-width: 500px) 100vw, 400px";
         image.alt = "Vivah Villa Collection gallery photo " + (i + 1);
-        image.style.height = "500px";
         imageWrapper.appendChild(image);
         var mirrored = image.cloneNode();
         mirrored.classList.add("flipped");
@@ -466,8 +478,8 @@
 
     right.onclick = function () {
       selected++;
-      if (selected > images - 1) {
-        selected = 0; // Loop to first image
+      if (selected > galleryImages.length - 1) {
+        selected = 0;
       }
       handleSelection();
     };
@@ -475,7 +487,7 @@
     left.onclick = function () {
       selected--;
       if (selected < 0) {
-        selected = images - 1; // Loop to last image
+        selected = galleryImages.length - 1;
       }
       handleSelection();
     };
@@ -485,79 +497,66 @@
       for (var i = 0; i < wrappers.length; i++) {
         wrappers[i].classList.remove("selected", "first-wrap", "last-wrap");
       }
-      // Mark selected
       wrappers[selected].classList.add("selected");
-
-
-      // If selected is last, add first-wrap to first image
       if (selected === wrappers.length - 1) {
         wrappers[0].classList.add("first-wrap");
-      }
-      // If selected is first, add last-wrap to last image
-      else if (selected === 0) {
+      } else if (selected === 0) {
         wrappers[wrappers.length - 1].classList.add("last-wrap");
       }
     }
 
-  </script>
-  <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function () {
-      var navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-      this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
-    });
-  </script>
-  <canvas id="canvas" style="display:none;"></canvas>
-  <script>
     $('#collections').find('img').each(function () {
-        addImageWatermarkToImgTag(this);
+      addImageWatermarkToImgTag(this);
     });
-async function addImageWatermarkToImgTag(imgElement = {}) {
-    return new Promise((resolve, reject) => {
+
+    async function addImageWatermarkToImgTag(imgElement = {}) {
+      const responsiveImg = document.createElement("img");
+      responsiveImg.src = imgElement.src;
+      responsiveImg.srcset = `
+        ${imgElement.src.replace('.jpg', '-370.jpg')} 370w,
+        ${imgElement.src.replace('.jpg', '-740.jpg')} 740w,
+        ${imgElement.src.replace('.jpg', '.webp')} 370w
+      `;
+      responsiveImg.sizes = "(max-width: 400px) 100vw, 370px";
+      responsiveImg.alt = imgElement.alt || "";
+      responsiveImg.className = "img";
+      responsiveImg.setAttribute("role", "img");
+
+      return new Promise((resolve, reject) => {
         const mainImg = new Image();
-        mainImg.crossOrigin = "anonymous"; // Needed for external images
+        mainImg.crossOrigin = "anonymous";
         mainImg.onload = function () {
-            const canvas = document.createElement("canvas");
-            const ctx = canvas.getContext("2d");
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+          canvas.width = mainImg.width;
+          canvas.height = mainImg.height;
+          ctx.drawImage(mainImg, 0, 0);
 
-            canvas.width = mainImg.width;
-            canvas.height = mainImg.height;
+          const watermark = new Image();
+          watermark.crossOrigin = "anonymous";
+          watermark.onload = function () {
+            const wmWidth = mainImg.width * 1;
+            const wmHeight = (watermark.height / watermark.width) * wmWidth;
+            let x = 0, y = 0;
+            ctx.globalAlpha = 0.8;
+            ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
+            ctx.globalAlpha = 1.0;
 
-            // Draw main image
-            ctx.drawImage(mainImg, 0, 0);
-
-            // Load watermark image
-            const watermark = new Image();
-            watermark.crossOrigin = "anonymous";
-            watermark.onload = function () {
-                // Size of watermark
-                const wmWidth = mainImg.width * 1;  // 100% of main image width
-                const wmHeight = (watermark.height / watermark.width) * wmWidth;
-
-                // Position (bottom-right by default)
-                var x = (canvas.width - wmWidth) / 2;
-                var y = (canvas.height - wmHeight) / 2;
-                x=0;
-                y=0;
-                // Draw watermark image with transparency
-                ctx.globalAlpha = 0.8; 
-                ctx.drawImage(watermark, x, y, wmWidth, wmHeight);
-                ctx.globalAlpha = 1.0; // reset alpha
-
-                // Convert to base64 and set as img src
-                const base64 = canvas.toDataURL("image/png");
-                imgElement.src = base64;
-                resolve(base64);
-            };
-            watermark.onerror = reject;
-            watermark.src = "img/logo/watermark.png";
+            const base64 = canvas.toDataURL("image/png");
+            responsiveImg.src = base64;
+            if (imgElement.parentNode) {
+              imgElement.parentNode.replaceChild(responsiveImg, imgElement);
+            }
+            resolve(base64);
+          };
+          watermark.onerror = reject;
+          watermark.src = "img/logo/watermark.png";
         };
         mainImg.onerror = reject;
         mainImg.src = imgElement.src;
-    });
-}
-</script>
-
+      });
+    }
+  </script>
 </body>
 
 </html>
