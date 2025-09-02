@@ -467,7 +467,7 @@
         mirrored.classList.add("flipped");
         imageWrapper.appendChild(mirrored);
         gallery.appendChild(imageWrapper);
-        addImageWatermarkToImgTag(image);
+        //addImageWatermarkToImgTag(image);
       }
     }
 
@@ -503,7 +503,7 @@
     }
 
     $('#collections').find('img').each(function () {
-      addImageWatermarkToImgTag(this);
+      // addImageWatermarkToImgTag(this);
     });
 
     async function addImageWatermarkToImgTag(imgElement = {}) {
