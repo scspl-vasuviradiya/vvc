@@ -410,7 +410,31 @@
       filter: brightness(1.05);
     }
 
-    /* Footer */
+    /* Custom .btn-outline-danger style for social icons and buttons */
+.btn-outline-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  font-size: 1.1em;
+  color: #8b1538;
+  background: transparent;
+  border: 2px solid #8b1538;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+  background: #8b1538;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(139, 21, 56, 0.12);
+  text-decoration: none;
+}
+
+/* Footer */
     footer {
       background: linear-gradient(180deg, #fff, var(--vv-cream));
       border-top: 1px solid #eee;
