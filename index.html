@@ -544,6 +544,8 @@
 
             const base64 = canvas.toDataURL("image/png");
             responsiveImg.src = base64;
+            responsiveImg.removeAttribute('srcset');
+            responsiveImg.removeAttribute('sizes');
             if (imgElement.parentNode) {
               imgElement.parentNode.replaceChild(responsiveImg, imgElement);
             }
