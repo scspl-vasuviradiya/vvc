@@ -458,12 +458,7 @@
         }
         var image = document.createElement("img");
         image.src = galleryImages[i].replace('.jpg', '-400.jpg');
-        image.srcset = `
-          ${galleryImages[i].replace('.jpg', '-400.jpg')} 400w,
-          ${galleryImages[i].replace('.jpg', '-800.jpg')} 800w,
-          ${galleryImages[i].replace('.jpg', '.webp')} 400w
-        `;
-        image.sizes = "(max-width: 500px) 100vw, 400px";
+        // Removed srcset and sizes attributes
         image.alt = "Vivah Villa Collection gallery photo " + (i + 1);
         imageWrapper.appendChild(image);
         var mirrored = image.cloneNode();
