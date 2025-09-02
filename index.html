@@ -507,15 +507,10 @@
     async function addImageWatermarkToImgTag(imgElement = {}) {
       const responsiveImg = document.createElement("img");
       responsiveImg.src = imgElement.src;
-      responsiveImg.srcset = `
-        ${imgElement.src.replace('.jpg', '-370.jpg')} 370w,
-        ${imgElement.src.replace('.jpg', '-740.jpg')} 740w,
-        ${imgElement.src.replace('.jpg', '.webp')} 370w
-      `;
-      responsiveImg.sizes = "(max-width: 400px) 100vw, 370px";
       responsiveImg.alt = imgElement.alt || "";
       responsiveImg.className = "img";
       responsiveImg.setAttribute("role", "img");
+      // Do NOT set srcset or sizes if you don't have responsive images
 
       return new Promise((resolve, reject) => {
         const mainImg = new Image();
