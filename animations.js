@@ -3,23 +3,7 @@
 document.getElementById('yy').textContent = new Date().getFullYear();
 
 // -----------------------------
-// Tab filter
-const tabs = document.querySelectorAll('.tab');
-const items = document.querySelectorAll('#items .item');
 
-tabs.forEach(t => t.addEventListener('click', () => {
-  tabs.forEach(x => x.classList.remove('active'));
-  t.classList.add('active');
-
-  const f = t.dataset.filter;
-  items.forEach(it => {
-    if (f === 'all') { it.style.display = ''; return; }
-    const tags = (it.dataset.tags || '').split(/\s+/);
-    it.style.display = tags.includes(f) ? '' : 'none';
-  });
-}));
-
-// -----------------------------
 // Scroll-based animations (stay visible after animation)
 (function(){
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
