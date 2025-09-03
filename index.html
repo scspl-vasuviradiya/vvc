@@ -607,6 +607,27 @@
         mainImg.src = imgElement.src;
       });
     }
+
+    $(document).ready(function() {
+  $.getJSON('collections.json', function(data) {
+    var $items = $('#items');
+    $items.empty();
+    $.each(data, function(i, item) {
+      var tags = item.tags.join(' ');
+      var html = `
+        <article class="item" data-tags="${tags}">
+          <img src="${item.img}" alt="${item.alt}" class="img" role="img">
+          <div class="body">
+            <h4>${item.title}</h4>
+            <div class="muted">${item.desc}</div>
+            <div class="price">${item.price}</div>
+          </div>
+        </article>
+      `;
+      $items.append(html);
+    });
+  });
+});
   </script>
 </body>
 
