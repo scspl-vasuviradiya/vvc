@@ -676,6 +676,9 @@
       .gallery-slider .gallery-next {
         flex: 0 0 60px;
       }
+      .gallery{
+        margin-top: 80px;
+      }
     }
 
 
