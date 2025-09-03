@@ -138,7 +138,8 @@
         <button class="tab" data-filter="sherwani" role="tab" data-anim="fade-right"
           style="--d:160ms">Sherwanis</button>
         <button class="tab" data-filter="lehenga" role="tab" data-anim="fade-right" style="--d:200ms">Lehengas</button>
-        <button class="tab" data-filter="Jodhpuri" role="tab" data-anim="fade-right" style="--d:240ms">Jodhpuris</button>
+        <button class="tab" data-filter="Jodhpuri" role="tab" data-anim="fade-right"
+          style="--d:240ms">Jodhpuris</button>
         <button class="tab" data-filter="choli" role="tab" data-anim="fade-right" style="--d:280ms">Cholis</button>
       </div>
 
@@ -485,13 +486,14 @@
       });
     }
 
-    $(document).ready(function() {
-  $.getJSON('collections.json', function(data) {
-    var $items = $('#items');
-    $items.empty();
-    $.each(data, function(i, item) {
-      var tags = item.tags.join(' ');
-      var html = `
+    $(document).ready(function () {
+      $.getJSON('collections.json', function (data) {
+        debugger; // Should trigger here if successful
+        var $items = $('#items');
+        $items.empty();
+        $.each(data, function (i, item) {
+          var tags = item.tags.join(' ');
+          var html = `
         <article class="item" data-tags="${tags}">
           <img src="${item.img}" alt="${item.alt}" class="img" role="img">
           <div class="body">
@@ -501,10 +503,12 @@
           </div>
         </article>
       `;
-      $items.append(html);
+          $items.append(html);
+        });
+      }).fail(function (jqxhr, textStatus, error) {
+        console.error("Request Failed: " + textStatus + ", " + error);
+      });
     });
-  });
-});
   </script>
 </body>
 
