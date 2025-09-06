@@ -3,323 +3,569 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vivah Villa Collection — Premium Wedding Attire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Vivah Villa Collection — Premium Wedding Attire Rental</title>
   <meta name="description"
-    content="Vivah Villa Collection offers premium wedding attire — elegant suits, sherwanis, lehengas, Jodhpuris, and cholis. Traditional style with affordability for weddings and festive events." />
+    content="Rent premium wedding attire in Rajkot - elegant suits, sherwanis, lehengas, Jodhpuris, and cholis. Traditional style with modern convenience at affordable prices." />
   <meta name="theme-color" content="#8b1538" />
   <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Vivah Villa Collection - Premium Wedding Attire Rental">
+  <meta property="og:description" content="Rent premium wedding attire in Rajkot. Traditional elegance at affordable prices.">
   <meta property="og:image" content="https://vivahvilla.in/img/logo/logo.png" />
+  <meta property="og:url" content="https://vivahvilla.in">
+  <meta property="og:type" content="website">
   <link rel="icon" href="img/logo/logo.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="css2.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="animations.js" as="script">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome.min.css" media="print" onload="this.media='all'">
-  <style>
-    @font-face {
-      font-family: 'FontAwesome';
-      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
-        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <header class="topbar" data-anim="fade-down">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#home" data-anim="fade-right">
-        <img src="img/logo/logo.png" alt="Vivah Villa Collection logo" />
-        <div>
-          <div class="title">Vivah Villa Collection</div>
-          <div class="subtitle">Elegance</div>
-        </div>
-      </a>
-      <!-- Hamburger for mobile -->
-      <button class="nav-toggle btn btn-outline-dark" aria-label="Open menu" aria-expanded="false">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </button>
-      <div class="stagger nav-links" style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
-        <a class="link" href="#about">About</a>
-        <a class="link" href="#collections">Collections</a>
-        <a class="link" href="#gallery">Gallery</a>
-        <a class="link" href="#why">Why Us</a>
-        <a class="link" href="#contact">Contact</a>
-        <a class="cta"
-          href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit"
-          target="_blank" rel="noopener">WhatsApp</a>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  
+  <!-- Header -->
+  <header class="header" data-anim="fade-down">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#home" data-anim="fade-right">
+          <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo" />
+          <div class="brand-text">
+            <h1 class="brand-title">Vivah Villa</h1>
+            <span class="brand-subtitle">Collection</span>
+          </div>
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- Desktop Navigation -->
+        <nav class="navbar-nav desktop-nav" id="navbarNav">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#collections">Collections</a>
+          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-header">
+            <div class="brand-mobile">
+              <img src="img/logo/logo.png" alt="Vivah Villa Collection" />
+              <span>Vivah Villa Collection</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="mobile-nav-links">
+            <a class="mobile-nav-link" href="#home">Home</a>
+            <a class="mobile-nav-link" href="#about">About</a>
+            <a class="mobile-nav-link" href="#collections">Collections</a>
+            <a class="mobile-nav-link" href="#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="#contact">Contact</a>
+            <div class="mobile-nav-cta">
+              <a class="btn-whatsapp" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                <span>Contact via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </nav>
       </div>
     </nav>
   </header>
 
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-wrap">
-      <div>
-        <span class="badge1" data-anim="fade-up">Premium Wedding Attire</span>
-        <h1 class="h1" data-anim="fade-up">
-          Look your best for weddings & festive events—
-          <span class="accent">without the high cost</span>.
-        </h1>
-        <p class="lead" data-anim="fade-up">
-          Rent elegant <strong>suits</strong>, <strong>sherwanis</strong>,
-          <strong>lehengas</strong>, <strong>Jodhpuris</strong>, and <strong>cholis</strong>.
-        </p>
-        <div class="hero-cards stagger">
-          <div class="card" data-anim="tilt-in">
-            <h4>Flexible Rental Plans</h4>
-            <div class="muted">Daily or weekend packages with easy pickup & returns.</div>
-          </div>
-          <div class="card" data-anim="tilt-in">
-            <h4>Sizes & Tailoring</h4>
-            <div class="muted">Inclusive sizes with quick-fit alterations available.</div>
-          </div>
-          <div class="card" data-anim="tilt-in">
-            <h4>Hygenic & Ready-to-Wear</h4>
-            <div class="muted">Professionally cleaned and steamed after each use.</div>
-          </div>
-          <div class="card" data-anim="tilt-in">
-            <h4>Try Before You Rent</h4>
-            <div class="muted">Book an appointment for in-store trial.</div>
-          </div>
-        </div>
+  <!-- Hero Section -->
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
       </div>
-      <div class="hero-img">
-        <div class="frame" aria-label="Showcase image" data-anim="zoom-in"></div>
-        <div class="floating" data-anim="fade-left">
-          Over <strong>300+</strong> outfits • Men & Women
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- About -->
-  <section id="about">
-    <div class="wrap">
-      <h2 class="section-title" data-anim="fade-up" style="--d:120ms">About Vivah Villa Collection</h2>
-      <p class="section-sub" data-anim="fade-up">
-        We are a boutique offering premium wedding attire — perfect for weddings and festive events.
-      </p>
-      <div class="why stagger">
-        <div class="c" data-anim="flip-up"><strong>Our Promise</strong><br>
-          <span class="muted">Premium designs • Affordable rentals • Hassle-free experience</span>
-        </div>
-        <div class="c" data-anim="flip-up"><strong>Timings</strong><br>
-          <span class="muted">Mon–Sun: 10:00 AM – 10:00 PM</span>
-        </div>
-        <div class="c" data-anim="flip-up"><strong>Services</strong><br>
-          <span class="muted">Alterations • Outfit Styling • Express Cleaning</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Collections -->
-  <section id="collections" aria-labelledby="collections-title" style="background: var(--vv-cream);">
-    <div class="wrap">
-      <h2 id="collections-title" class="section-title" data-anim="fade-up" style="--d:120ms">Collections</h2>
-      <p class="section-sub" data-anim="fade-up" style="--d:100ms">Browse by gender and style. All pieces are available
-        for rent and can be pre-booked for your dates.</p>
-
-      <div class="tabs" role="tablist" aria-label="Collection filters">
-        <button class="tab active" data-filter="all" role="tab" aria-selected="true" data-anim="fade-right"
-          style="--d:0ms">All</button>
-        <button class="tab" data-filter="men" role="tab" data-anim="fade-right" style="--d:40ms">Men</button>
-        <button class="tab" data-filter="women" role="tab" data-anim="fade-right" style="--d:80ms">Women</button>
-        <button class="tab" data-filter="Indowestern" role="tab" data-anim="fade-right"
-          style="--d:120ms">Indowestern</button>
-        <button class="tab" data-filter="sherwani" role="tab" data-anim="fade-right"
-          style="--d:160ms">Sherwanis</button>
-        <button class="tab" data-filter="lehenga" role="tab" data-anim="fade-right" style="--d:200ms">Lehengas</button>
-        <button class="tab" data-filter="Jodhpuri" role="tab" data-anim="fade-right"
-          style="--d:240ms">Jodhpuris</button>
-        <button class="tab" data-filter="choli" role="tab" data-anim="fade-right" style="--d:280ms">Cholis</button>
-      </div>
-
-      <div class="grid" id="items" data-anim="fade-up" style="--d:60ms">
-        <!-- Item template examples (replace background-image URLs with your photos) -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" style="background: burlywood;overflow: hidden;padding: 100px;">
-    <div class="wrap">
-      <div class="gallery_title_div">
-        <div>
-          <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Gallery</h2>
-          <p class="section-sub" data-anim="fade-up" style="--d:120ms">A glimpse of our outfits and boutique ambience.
-          </p>
-        </div>
-        <div class="theme-switcher_div" data-anim="fade-up" style="--d:120ms">
-          <div class="theme-switch">
-            <input type="checkbox" id="theme-checkbox" onchange="checkboxChanged();" />
-            <label for="theme-checkbox">
-              <div></div>
-              <span>
-                <i class="fa fa-female" aria-hidden="true"></i>
-              </span>
-              <span>
-                <i class="fa fa-male" aria-hidden="true"></i>
-              </span>
-            </label>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text" data-anim="fade-up">
+            <span class="hero-badge" data-anim="fade-up">Premium Wedding Attire Rental</span>
+            <h1 class="hero-title" data-anim="fade-up">
+              Look <span class="text-gradient">Magnificent</span><br>
+              on Your <span class="text-accent">Special Day</span>
+            </h1>
+            <p class="hero-description" data-anim="fade-up">
+              Rent premium wedding attire in Rajkot. From elegant <strong>suits</strong> and <strong>sherwanis</strong>
+              to stunning <strong>lehengas</strong> and <strong>cholis</strong> — traditional style with modern convenience.
+            </p>
+            <div class="hero-actions" data-anim="fade-up">
+              <a href="#collections" class="btn btn-primary btn-lg">
+                <span>Browse Collections</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="tel:+919099055844" class="btn btn-outline btn-lg">
+                <i class="fas fa-phone"></i>
+                <span>Call Now</span>
+              </a>
+            </div>
           </div>
-          <div class="container">
-            <i class="fa fa-chevron-left arrow-bounce" aria-hidden="true"></i>
-            <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.7;" aria-hidden="true"></i>
-            <i class="fa fa-chevron-left arrow-bounce" style="opacity: 0.5;" aria-hidden="true"></i>
+          
+            <div class="hero-visual" data-anim="zoom-in">
+              <div class="hero-image-container">
+                <img src="img/gallery/hero.jpg" alt="Vivah Villa Collection - Premium Wedding Attire" class="hero-image" />
+              <div class="hero-stats" data-anim="fade-left">
+                <div class="stat">
+                  <span class="stat-number">300+</span>
+                  <span class="stat-label">Premium Outfits</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">5★</span>
+                  <span class="stat-label">Customer Rating</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-
-      <div class="gallery">
-        <div id="slider" class="slider">
-        </div>
-        <div class="arrows">
-          <div class="left">
-            <svg viewBox="0 0 512 512" width="100" title="chevron-circle-left">
-              <path
-                d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
-            </svg>
-          </div>
-          <div class="right">
-            <svg viewBox="0 0 512 512" width="100" title="chevron-circle-right">
-              <path
-                d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section id="why" style="background: var(--vv-cream);">
-    <div class="wrap">
-      <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Why Choose Us</h2>
-      <p class="section-sub" data-anim="fade-up" style="--d:120ms">Traditional aesthetics, modern convenience,
-        budget-friendly elegance.</p>
-      <div class="why stagger">
-        <div class="c" data-anim="fade-right" style="--i:0">
-          <h4>Affordable Luxury</h4>
-          <p class="muted">Premium outfits at rental prices so you can save for the big day.</p>
-        </div>
-        <div class="c" data-anim="fade-up" style="--i:1">
-          <h4>Curated Collections</h4>
-          <p class="muted">Handpicked designs for brides, grooms, families, and guests.</p>
-        </div>
-        <div class="c" data-anim="fade-left" style="--i:2">
-          <h4>Seamless Process</h4>
-          <p class="muted">Browse, try, book, wear, return — we keep it simple and delightful.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="wrap contact">
-      <div>
-        <h2 class="section-title" data-anim="fade-up" style="--d:120ms">Contact Us</h2>
-        <p class="section-sub" data-anim="fade-up" style="--d:120ms">Have a date in mind? Book a trial or ask about
-          availability.</p>
-        <form action="https://formsubmit.co/vivahvillacollection@gmail.com" method="POST" data-anim="zoom-in"
-          style="--d:160ms" netlify>
-          <!-- Replace YOUR_EMAIL or hook up your backend. Add _next and _captcha fields if using formsubmit.co -->
-          <div class="row">
-            <div><label>Name<br><input required name="name" placeholder="Your full name"></label></div>
-            <div><label>Phone<br><input required name="phone" placeholder="Your phone"></label></div>
-          </div>
-          <div class="row">
-            <div><label>Email<br><input type="email" name="email" placeholder="you@example.com"></label></div>
-            <div><label>Event Date<br><input type="date" name="date"></label></div>
-          </div>
-          <label>Message<br><textarea name="message"
-              placeholder="Tell us what you are looking for..."></textarea></label>
-          <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-            <button class="cta" type="submit">Send Enquiry</button>
-            <a class="cta" href="tel:+919099055844">Call Now</a>
-            <a class="pill" href="mailto:vivahvillacollection@gmail.com">vivahvillacollection@gmail.com</a>
-          </div>
-        </form>
-
-        <div style="margin-top:20px;">
-          <h4>Address</h4>
-          <p class="muted">Near Ayodhya chowk, 150 Feet Ring Rd, Rajkot, Gujarat 360006</p>
-          <div class="social" aria-label="Social links">
-            <a href="https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp" target="_blank"
-              rel="noopener" aria-label="Instagram" class="btn btn-outline-danger">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-outline-danger" href="https://www.facebook.com/share/1ADAW8tf4q/" target="_blank"
-              rel="noopener" aria-label="Facebook">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-outline-danger" href="https://wa.me/919099055844" target="_blank" rel="noopener"
-              aria-label="WhatsApp">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <!-- <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener" aria-label="YouTube">
-              <i class="fa fa-youtube" aria-hidden="true"></i>
-            </a> -->
+        
+        <!-- Feature Cards -->
+        <div class="hero-features" data-anim="fade-up">
+          <div class="feature-grid">
+            <div class="feature-card" data-anim="slide-up">
+              <div class="feature-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <h3>Flexible Booking</h3>
+              <p>Daily or weekend packages with easy pickup & returns</p>
+            </div>
+            <div class="feature-card" data-anim="slide-up">
+              <div class="feature-icon">
+                <i class="fas fa-ruler-combined"></i>
+              </div>
+              <h3>Perfect Fit</h3>
+              <p>All sizes available with quick alterations service</p>
+            </div>
+            <div class="feature-card" data-anim="slide-up">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Hygienic & Clean</h3>
+              <p>Professional cleaning and steaming after each rental</p>
+            </div>
+            <div class="feature-card" data-anim="slide-up">
+              <div class="feature-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Try Before Rent</h3>
+              <p>Book in-store appointments for trial and fitting</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div data-anim="flip-left" style="--d:200ms">
-        <!-- Replace the src below with your actual Google Maps embed URL -->
-        <div class="map-responsive">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Vivah Villa Collection Location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <section class="wrap fgrid">
-      <div data-anim="fade-up" style="--d:120ms">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <img src="img/logo/logo.png" alt="Vivah Villa Collection logo"
-            style="height:40px; width:auto; border-radius:8px;" />
-          <div>
-            <strong>Vivah Villa Collection</strong><br>
-            <span class="muted">Traditional style • Affordable rentals</span>
-          </div>
-        </div>
-      </div>
-      <div data-anim="fade-up" style="--d:100ms">
-        <strong>Quick Links</strong>
-        <div style="margin-top:8px; display:grid; gap:6px;">
-          <a class="link" href="#collections">Collections</a>
-          <a class="link" href="#gallery">Gallery</a>
-          <a class="link" href="#contact">Contact</a>
-        </div>
-      </div>
-      <div data-anim="fade-up" style="--d:160ms">
-        <strong>Policy</strong>
-        <div class="muted" style="font-size:14px; margin-top:8px;">Security deposit required • Damage & late return fees
-          apply • ID proof at booking</div>
       </div>
     </section>
-    <div class="wrap"
-      style="padding: 16px 0; border-top:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-      <div class="muted" style="font-size:13px;">© <span id="yy"></span> Vivah Villa Collection. All rights reserved.
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">About Us</span>
+          <h2 class="section-title">Vivah Villa Collection</h2>
+          <p class="section-description">
+            Your trusted partner for premium wedding attire in Rajkot. We blend traditional elegance 
+            with modern convenience, making your special occasions truly memorable.
+          </p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-grid">
+            <div class="about-card" data-anim="fade-right">
+              <div class="about-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Our Promise</h3>
+              <p>Premium designs with affordable rentals and a completely hassle-free experience for our customers.</p>
+            </div>
+            
+            <div class="about-card" data-anim="fade-up">
+              <div class="about-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>Store Hours</h3>
+              <p>Open 7 days a week from 10:00 AM to 10:00 PM. Visit us anytime for trials and consultations.</p>
+            </div>
+            
+            <div class="about-card" data-anim="fade-left">
+              <div class="about-icon">
+                <i class="fas fa-concierge-bell"></i>
+              </div>
+              <h3>Full Service</h3>
+              <p>Professional alterations, personal styling consultations, and express cleaning services available.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <a class="pill" href="#home" data-anim="zoom-in" style="--d:60ms">Back to top ↑</a>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections-section">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Our Collections</span>
+          <h2 class="section-title">Premium Wedding Attire</h2>
+          <p class="section-description">
+            Browse our curated collection of premium wedding outfits. All pieces are available 
+            for rent and can be pre-booked for your special dates.
+          </p>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Collection filters" data-anim="fade-up">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+            <span>All Collections</span>
+          </button>
+          <button class="filter-tab" data-filter="men" role="tab">
+            <i class="fas fa-male"></i>
+            <span>Men</span>
+          </button>
+          <button class="filter-tab" data-filter="women" role="tab">
+            <i class="fas fa-female"></i>
+            <span>Women</span>
+          </button>
+          <button class="filter-tab" data-filter="indowestern" role="tab">
+            <span>Indowestern</span>
+          </button>
+          <button class="filter-tab" data-filter="sherwani" role="tab">
+            <span>Sherwanis</span>
+          </button>
+          <button class="filter-tab" data-filter="lehenga" role="tab">
+            <span>Lehengas</span>
+          </button>
+          <button class="filter-tab" data-filter="jodhpuri" role="tab">
+            <span>Jodhpuris</span>
+          </button>
+          <button class="filter-tab" data-filter="choli" role="tab">
+            <span>Cholis</span>
+          </button>
+        </div>
+        
+        <!-- Collections Grid -->
+        <div class="collections-grid" id="collectionsGrid" data-anim="fade-up">
+          <!-- Collections will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" style="background: burlywood;overflow: hidden;padding: 70px;padding-bottom: 150px;">
+      <div class="wrap">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Our Gallery</span>
+          <h2 class="section-title">Wedding Attire Collection</h2>
+          <p class="section-description">
+            Explore our stunning collection of wedding attire and get inspired for your special day. 
+            Browse through men's and women's collections.
+          </p>
+        </div>
+        
+        <div class="gallery_title_div">
+          <div class="gallery-controls" data-anim="fade-up" style="--d:120ms">
+            <div class="gender-toggle">
+              <label class="toggle-label">Toggle Collection:</label>
+              <div class="theme-switch">
+                <input type="checkbox" id="theme-checkbox" onchange="checkboxChanged();" />
+                <label for="theme-checkbox" class="switch-label">
+                  <div class="switch-slider"></div>
+                  <span class="switch-option women">
+                    <i class="fas fa-female" aria-hidden="true"></i>
+                    <span>Women</span>
+                  </span>
+                  <span class="switch-option men">
+                    <i class="fas fa-male" aria-hidden="true"></i>
+                    <span>Men</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="gallery">
+          <div id="slider" class="slider">
+          </div>
+          <div class="gallery-arrows">
+            <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="gallery-pagination" id="gallery-pagination">
+              <!-- Pagination dots will be generated here by JavaScript -->
+            </div>
+            
+            <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why" class="why-section">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Why Choose Us</span>
+          <h2 class="section-title">Traditional Elegance, Modern Convenience</h2>
+          <p class="section-description">
+            Experience the perfect blend of traditional aesthetics with modern convenience 
+            and budget-friendly elegance for your special occasions.
+          </p>
+        </div>
+        
+        <div class="why-grid">
+          <div class="why-card" data-anim="slide-up">
+            <div class="why-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Affordable Luxury</h3>
+            <p>Get premium designer outfits at rental prices. Save money while looking your absolute best on your special day.</p>
+          </div>
+          
+          <div class="why-card" data-anim="slide-up">
+            <div class="why-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3>Curated Collections</h3>
+            <p>Handpicked premium designs for brides, grooms, families, and guests. Every piece is carefully selected for quality and style.</p>
+          </div>
+          
+          <div class="why-card" data-anim="slide-up">
+            <div class="why-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Seamless Process</h3>
+            <p>Simple 5-step process: Browse, try, book, wear, return. We handle the rest to make your experience delightful and stress-free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Contact Us Today</h2>
+          <p class="section-description">
+            Ready to find your perfect outfit? Get in touch with us to book a trial, 
+            check availability, or ask any questions.
+          </p>
+        </div>
+        
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper" data-anim="fade-right">
+            <form class="contact-form" action="https://formsubmit.co/vivahvillacollection@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="https://vivahvilla.in">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New inquiry from Vivah Villa website">
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="input-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+                <div class="input-group">
+                  <label for="eventDate">Event Date</label>
+                  <input type="date" id="eventDate" name="date">
+                </div>
+              </div>
+              
+              <div class="input-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements, occasion, or any specific questions..."></textarea>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="contact-info" data-anim="fade-left">
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Call Us</h3>
+                  <p>Speak directly with our team</p>
+                  <a href="tel:+919099055844" class="contact-link">+91 90990 55844</a>
+                </div>
+              </div>
+              
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>WhatsApp</h3>
+                  <p>Quick messages and photos</p>
+                  <a href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener" class="contact-link">Chat with us</a>
+                </div>
+              </div>
+              
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p>Detailed inquiries welcome</p>
+                  <a href="mailto:vivahvillacollection@gmail.com" class="contact-link">vivahvillacollection@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-method">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Visit Our Store</h3>
+                  <p>Near Ayodhya chowk<br>150 Feet Ring Rd, Rajkot<br>Gujarat 360006</p>
+                  <p class="store-hours"><strong>Open:</strong> Mon-Sun, 10 AM - 10 PM</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="social-media">
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1ADAW8tf4q/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/919099055844" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map-section" data-anim="fade-up">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4435.739863315205!2d70.7673576!3d22.321771500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c9b1e4815a1f%3A0x5d530c33b5bf291d!2sVivah%20villa%20Collection!5e1!3m2!1sen!2sin!4v1755773804403!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Vivah Villa Collection Location on Google Maps">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-brand" data-anim="fade-up">
+          <div class="footer-logo">
+            <img src="img/logo/logo.png" alt="Vivah Villa Collection" />
+            <div class="footer-brand-text">
+              <h3>Vivah Villa Collection</h3>
+              <p>Traditional style • Modern convenience</p>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your trusted partner for premium wedding attire in Rajkot. 
+            Making your special occasions truly memorable with our curated collections.
+          </p>
+        </div>
+        
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li>Outfit Rental</li>
+            <li>Alterations</li>
+            <li>Styling Consultation</li>
+            <li>Express Cleaning</li>
+            <li>Home Delivery</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Rental Policy</h4>
+          <ul class="footer-links">
+            <li>Security deposit required</li>
+            <li>ID proof at booking</li>
+            <li>Damage fees apply</li>
+            <li>Late return charges</li>
+            <li>Advance booking recommended</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>© <span id="currentYear"></span> Vivah Villa Collection. All rights reserved.</p>
+        </div>
+        <div class="footer-actions">
+          <a href="#home" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+            <span>Back to top</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- Schema.org for Local Business -->
+  
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -328,34 +574,58 @@
     "url": "https://vivahvilla.in",
     "logo": "https://vivahvilla.in/img/logo/logo.png",
     "image": "https://vivahvilla.in/img/logo/logo.png",
-    "priceRange": "₹",
-    "description": "Premium wedding attire — suits, sherwanis, lehengas, Jodhpuris, and cholis.",
+    "priceRange": "₹₹",
+    "description": "Premium wedding attire rental in Rajkot - suits, sherwanis, lehengas, Jodhpuris, and cholis.",
     "telephone": "+919099055844",
+    "email": "vivahvillacollection@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Shop No. 12, Your Street, Your Area",
-      "addressLocality": "Your City",
-      "postalCode": "XXXXXX",
+      "streetAddress": "Near Ayodhya chowk, 150 Feet Ring Rd",
+      "addressLocality": "Rajkot",
+      "addressRegion": "Gujarat",
+      "postalCode": "360006",
       "addressCountry": "IN"
     },
-    "openingHours": "Mo-Su 10:00-20:00",
+    "openingHours": "Mo-Su 10:00-22:00",
     "sameAs": [
       "https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp",
-      "https://www.facebook.com/share/1ADAW8tf4q/",
-      "https://youtube.com/@yourchannel"
-    ] 
+      "https://www.facebook.com/share/1ADAW8tf4q/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Wedding Attire Rental",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Men's Wedding Suits & Sherwanis",
+            "category": "Men's Formal Wear"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Women's Lehengas & Cholis",
+            "category": "Women's Traditional Wear"
+          }
+        }
+      ]
+    }
   }
   </script>
-
+  
+  <!-- Main JavaScript -->
   <script src="animations.js"></script>
-
+  
   <script>
     var galleryImages = [];
     var MAX_IMAGES = 0;
     var selected = 1;
     const gallery = document.getElementById("slider");
-    const left = document.getElementsByClassName("left")[0];
-    const right = document.getElementsByClassName("right")[0];
+    const left = document.getElementsByClassName("gallery-prev")[0];
+    const right = document.getElementsByClassName("gallery-next")[0];
 
     function loadGalleryManifest(callback) {
       fetch('gallery_manifest.json')
@@ -398,18 +668,18 @@
         }
         var image = document.createElement("img");
         image.src = galleryImages[i];
-        // Removed srcset and sizes attributes
         image.alt = "Vivah Villa Collection gallery photo " + (i + 1);
         imageWrapper.appendChild(image);
         var mirrored = image.cloneNode();
         mirrored.classList.add("flipped");
         imageWrapper.appendChild(mirrored);
         gallery.appendChild(imageWrapper);
-        //addImageWatermarkToImgTag(image);
       }
+      
+      // Generate pagination dots
+      generatePaginationDots();
+      updatePaginationDots();
     }
-
-
 
     right.onclick = function () {
       selected++;
@@ -438,6 +708,39 @@
       } else if (selected === 0) {
         wrappers[wrappers.length - 1].classList.add("last-wrap");
       }
+      
+      // Update pagination dots
+      updatePaginationDots();
+    }
+    
+    function generatePaginationDots() {
+      const paginationContainer = document.getElementById("gallery-pagination");
+      if (!paginationContainer) return;
+      
+      paginationContainer.innerHTML = "";
+      
+      for (let i = 0; i < galleryImages.length; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("gallery-dot");
+        dot.setAttribute("data-index", i);
+        dot.setAttribute("aria-label", `Go to image ${i + 1}`);
+        dot.onclick = function() {
+          selected = i;
+          handleSelection();
+        };
+        paginationContainer.appendChild(dot);
+      }
+    }
+    
+    function updatePaginationDots() {
+      const dots = document.querySelectorAll(".gallery-dot");
+      dots.forEach((dot, index) => {
+        if (index === selected) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
     }
 
     $('#collections').find('img').each(function () {
@@ -450,7 +753,6 @@
       responsiveImg.alt = imgElement.alt || "";
       responsiveImg.className = "img";
       responsiveImg.setAttribute("role", "img");
-      // Do NOT set srcset or sizes if you don't have responsive images
 
       return new Promise((resolve, reject) => {
         const mainImg = new Image();
@@ -489,46 +791,274 @@
       });
     }
 
-    $(document).ready(function () {
-      $.getJSON('collections.json', function (data) {
-        debugger; // Should trigger here if successful
-        var $items = $('#items');
-        $items.empty();
-        $.each(data, function (i, item) {
-          var tags = item.tags.join(' ');
-          var html = `
-        <article class="item" data-tags="${tags}">
-          <img src="${item.img}" alt="${item.alt}" class="img" role="img">
-          <div class="body">
-            <h4>${item.title}</h4>
-            <div class="muted">${item.desc}</div>
-            <div class="price">${item.price}</div>
-          </div>
-        </article>
-      `;
-          $items.append(html);
+    // Fallback collections data for direct HTML file opening
+    const fallbackCollections = [
+      {
+        "tags": ["men", "indowestern"],
+        "img": "img/collections/men-indowestern-1.jpg",
+        "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
+        "title": "Classic Navy Indowestern",
+        "desc": "Tailored fit • 2-piece",
+        "price": "₹1999/day"
+      },
+      {
+        "tags": ["men", "indowestern"],
+        "img": "img/collections/men-indowestern-3.jpg",
+        "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
+        "title": "Classic Navy Indowestern",
+        "desc": "Tailored fit • 2-piece",
+        "price": "₹1999/day"
+      },
+      {
+        "tags": ["men", "sherwani"],
+        "img": "img/collections/men-sherwani-1.jpg",
+        "alt": "Regal Cream Sherwani - Men's cream sherwani",
+        "title": "Regal Cream Sherwani",
+        "desc": "Zari work • Dupatta",
+        "price": "₹9999/day"
+      },
+      {
+        "tags": ["women", "lehenga"],
+        "img": "img/collections/women-lehenga-1.jpg",
+        "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
+        "title": "Elegant Red Lehenga",
+        "desc": "Bridal collection • Heavy work",
+        "price": "₹15999/day"
+      },
+      {
+        "tags": ["women", "lehenga"],
+        "img": "img/collections/women-lehenga-2.jpg",
+        "alt": "Pink Designer Lehenga - Contemporary lehenga design",
+        "title": "Pink Designer Lehenga",
+        "desc": "Designer piece • Modern cut",
+        "price": "₹12999/day"
+      },
+      {
+        "tags": ["women", "choli"],
+        "img": "img/collections/women-choli-1.jpg",
+        "alt": "Traditional Choli - Classic Indian choli",
+        "title": "Traditional Choli",
+        "desc": "Traditional design • Comfortable fit",
+        "price": "₹5999/day"
+      },
+      {
+        "tags": ["men", "suit"],
+        "img": "img/collections/men-suit-1.jpg",
+        "alt": "Classic Men's Suit",
+        "title": "Classic Men's Suit",
+        "desc": "Professional look • Perfect fit",
+        "price": "₹2999/day"
+      },
+      {
+        "tags": ["men", "jodhpuri"],
+        "img": "img/collections/men-jodhpuri-1.jpg",
+        "alt": "Traditional Jodhpuri Suit",
+        "title": "Traditional Jodhpuri",
+        "desc": "Royal look • Traditional style",
+        "price": "₹3999/day"
+      },
+      {
+        "tags": ["women", "kurti"],
+        "img": "img/collections/women-kurti-1.jpg",
+        "alt": "Elegant Kurti",
+        "title": "Elegant Kurti",
+        "desc": "Comfortable • Stylish",
+        "price": "₹1999/day"
+      }
+    ];
+    
+    // Collections functionality
+    function loadCollections() {
+      fetch('collections.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Collections data loaded from JSON:', data);
+          displayCollections(data);
+        })
+        .catch(error => {
+          console.warn('Could not fetch collections.json (likely CORS when opening file directly), using fallback data:', error.message);
+          // Use fallback data when fetch fails (e.g., when opening HTML directly or CORS issues)
+          console.log('Using fallback collections:', fallbackCollections);
+          displayCollections(fallbackCollections);
         });
-        // Tab filter
-        const tabs = document.querySelectorAll('.tab');
-        const items = document.querySelectorAll('#items .item');
-
-        tabs.forEach(t => t.addEventListener('click', () => {
-          tabs.forEach(x => x.classList.remove('active'));
-          t.classList.add('active');
-
-          const f = t.dataset.filter;
-          items.forEach(it => {
-            if (f === 'all') { it.style.display = ''; return; }
-            const tags = (it.dataset.tags || '').split(/\s+/);
-            it.style.display = tags.includes(f) ? '' : 'none';
-          });
-        }));
-        // -----------------------------
-      }).fail(function (jqxhr, textStatus, error) {
-        console.error("Request Failed: " + textStatus + ", " + error);
+    }
+    
+    // Function to display collections data
+    function displayCollections(data) {
+      // Store data globally for filtering
+      window.currentCollectionsData = data;
+      
+      const grid = document.getElementById('collectionsGrid');
+      if (!grid) {
+        console.error('Collections grid element not found!');
+        return;
+      }
+      
+      // Ensure grid is visible with inline styles - use CSS Grid for better positioning
+      grid.style.cssText = `
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        padding: 20px;
+        justify-items: center;
+        min-height: 100px;
+      `;
+      
+      grid.innerHTML = '';
+      
+      if (!data || data.length === 0) {
+        grid.innerHTML = '<p class="no-collections">No collections available at the moment.</p>';
+        return;
+      }
+      
+      data.forEach((item, index) => {
+        const tags = item.tags.join(' ');
+        const card = document.createElement('div');
+        
+        // Use inline styles to ensure display - optimized for CSS Grid
+        card.style.cssText = `
+          display: block !important;
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          min-height: 200px;
+          width: 100%;
+          max-width: 320px;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        `;
+        
+        card.setAttribute('data-tags', tags);
+        card.className = 'collection-card visible';
+        
+        // Simple, reliable HTML structure
+        card.innerHTML = `
+          <div style="margin-bottom: 12px;">
+            <img src="${item.img}" alt="${item.alt}" 
+                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
+                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
+          </div>
+          <div style="padding: 8px 0;">
+            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
+            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
+            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
       });
+      
+      console.log(`Loaded ${data.length} collection items`);
+      
+      // Initialize filter functionality with delay to ensure DOM is ready
+      setTimeout(() => {
+        initCollectionFilters();
+      }, 100);
+    }
+    
+    function initCollectionFilters() {
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      
+      if (filterTabs.length === 0) {
+        console.warn('No filter tabs found');
+        return;
+      }
+      
+      filterTabs.forEach(tab => {
+        // Remove any existing event listeners
+        tab.removeEventListener('click', handleFilterClick);
+        
+        // Add new event listener
+        tab.addEventListener('click', handleFilterClick);
+      });
+    }
+    
+    function handleFilterClick(e) {
+      const clickedTab = e.currentTarget;
+      const filter = clickedTab.dataset.filter;
+      
+      // Remove active class from all tabs
+      document.querySelectorAll('.filter-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      
+      // Add active class to clicked tab
+      clickedTab.classList.add('active');
+      clickedTab.setAttribute('aria-selected', 'true');
+      
+      const grid = document.getElementById('collectionsGrid');
+      
+      // Alternative approach: completely re-render visible cards for perfect positioning
+      const allData = window.currentCollectionsData || [];
+      const filteredData = allData.filter(item => {
+        return filter === 'all' || item.tags.includes(filter);
+      });
+      
+      // Clear and re-render only the filtered items
+      grid.innerHTML = '';
+      
+      filteredData.forEach((item, index) => {
+        const tags = item.tags.join(' ');
+        const card = document.createElement('div');
+        
+        // Use inline styles to ensure display - optimized for CSS Grid
+        card.style.cssText = `
+          display: block !important;
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          min-height: 200px;
+          width: 100%;
+          max-width: 320px;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        `;
+        
+        card.setAttribute('data-tags', tags);
+        card.className = 'collection-card visible';
+        
+        // Simple, reliable HTML structure
+        card.innerHTML = `
+          <div style="margin-bottom: 12px;">
+            <img src="${item.img}" alt="${item.alt}" 
+                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
+                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
+          </div>
+          <div style="padding: 8px 0;">
+            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
+            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
+            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    }
+
+    // Initialize collections when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update footer year
+      const currentYearSpan = document.getElementById('currentYear');
+      if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+      }
+      
+      // Load collections immediately
+      loadCollections();
+      
+      // Initialize filters after collections are loaded
+      setTimeout(() => {
+        initCollectionFilters();
+      }, 500);
     });
   </script>
 </body>
-
 </html>
