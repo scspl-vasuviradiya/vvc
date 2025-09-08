@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Nav Debug</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #f0f0f0;
+        }
+        .debug-info { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1000;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            color: #1565c0;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Navigation Bar -->
+    <div class="test-nav">
+        <div class="nav-content">
+            <h3>Mobile Nav Debug</h3>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="brand-mobile">
+                <img src="img/logo/logo.png" alt="Vivah Villa Collection" style="height: 32px;" />
+                <span>Vivah Villa Collection</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a class="mobile-nav-link" href="#home">Home</a>
+            <a class="mobile-nav-link" href="#about">About</a>
+            <a class="mobile-nav-link" href="#collections">Collections</a>
+            <a class="mobile-nav-link" href="#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="#contact">Contact</a>
+            <div class="mobile-nav-cta">
+                <a class="btn-whatsapp" href="#" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Contact via WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 100px;">
+        <div class="debug-info">
+            <h2>Mobile Navigation Debug Tool</h2>
+            <p>This tool helps debug mobile navigation visibility issues.</p>
+
+            <div id="status-display" class="status">
+                Checking mobile navigation...
+            </div>
+
+            <div>
+                <button onclick="toggleMobileNav()">Toggle Mobile Nav</button>
+                <button onclick="checkElements()">Check Elements</button>
+                <button onclick="checkStyles()">Check CSS Styles</button>
+                <button onclick="resetNav()">Reset Nav</button>
+            </div>
+
+            <div id="element-check"></div>
+            <div id="style-check"></div>
+        </div>
+    </div>
+
+    <!-- Include animations.js -->
+    <script src="animations.js"></script>
+
+    <script>
+        function updateStatus(message, isError = false) {
+            const statusDiv = document.getElementById('status-display');
+            statusDiv.innerHTML = message;
+            statusDiv.style.background = isError ? '#ffebee' : '#e3f2fd';
+            statusDiv.style.borderColor = isError ? '#f44336' : '#2196f3';
+            statusDiv.style.color = isError ? '#c62828' : '#1565c0';
+        }
+
+        function checkElements() {
+            const elements = {
+                mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+                mobileNav: document.getElementById('mobileNav'),
+                mobileNavClose: document.getElementById('mobileNavClose'),
+                mobileMenuOverlay: document.getElementById('mobileMenuOverlay')
+            };
+
+            let report = '<h3>Element Check Results:</h3><ul>';
+            let allFound = true;
+
+            for (const [name, element] of Object.entries(elements)) {
+                if (element) {
+                    report += `<li style="color: green;">✓ ${name}: Found</li>`;
+                } else {
+                    report += `<li style="color: red;">✗ ${name}: NOT FOUND</li>`;
+                    allFound = false;
+                }
+            }
+
+            report += '</ul>';
+            document.getElementById('element-check').innerHTML = report;
+
+            updateStatus(allFound ? 'All elements found!' : 'Some elements missing!', !allFound);
+            console.log('Element check:', elements);
+        }
+
+        function checkStyles() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (!mobileNav) {
+                updateStatus('Mobile nav element not found!', true);
+                return;
+            }
+
+            const computedStyle = window.getComputedStyle(mobileNav);
+            const styles = {
+                zIndex: computedStyle.zIndex,
+                opacity: computedStyle.opacity,
+                visibility: computedStyle.visibility,
+                position: computedStyle.position,
+                right: computedStyle.right,
+                background: computedStyle.backgroundColor,
+                display: computedStyle.display
+            };
+
+            let report = '<h3>CSS Style Check:</h3><ul>';
+            for (const [prop, value] of Object.entries(styles)) {
+                report += `<li><strong>${prop}:</strong> ${value}</li>`;
+            }
+            report += '</ul>';
+
+            document.getElementById('style-check').innerHTML = report;
+            console.log('Style check:', styles);
+            updateStatus('CSS styles checked - see results above');
+        }
+
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                updateStatus('Mobile nav closed');
+            } else {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                updateStatus('Mobile nav opened');
+            }
+        }
+
+        function resetNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            updateStatus('Mobile nav reset to default state');
+        }
+
+        // Initialize
+        window.addEventListener('load', function() {
+            updateStatus('Debug tool loaded');
+            checkElements();
+            setTimeout(checkStyles, 1000);
+        });
+    </script>
+</body>
+</html>
