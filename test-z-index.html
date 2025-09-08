@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .test-header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .z-index-display {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .test-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 4px;
+        }
+        .clickable-test {
+            position: absolute;
+            top: 50%;
+            right: 160px;
+            background: lime;
+            padding: 10px;
+            border: 2px solid green;
+            z-index: 9995;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Navigation -->
+    <div class="test-nav">
+        <div class="nav-content">
+            <h3>Z-Index Stack Test</h3>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Test element to check if it gets covered -->
+    <div class="clickable-test" id="testElement">
+        <strong>Test Element</strong><br>
+        Z-Index: 9995<br>
+        Should be behind nav (9999)<br>
+        but above overlay (9990)
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="brand-mobile">
+                <span>Test Navigation</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a class="mobile-nav-link" href="#test1">Test Link 1</a>
+            <a class="mobile-nav-link" href="#test2">Test Link 2</a>
+            <a class="mobile-nav-link" href="#test3">Test Link 3</a>
+            <div class="mobile-nav-cta">
+                <a class="btn-whatsapp" href="#" onclick="alert('WhatsApp clicked!')">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Test WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 80px;">
+        <div class="test-header">
+            <h2>Mobile Navigation Z-Index Test</h2>
+            <p>This tests the z-index stacking order to ensure buttons are clickable.</p>
+
+            <div class="z-index-display">
+                <strong>Expected Z-Index Order (bottom to top):</strong><br>
+                1. Overlay: 9990 (behind everything)<br>
+                2. Test Element: 9995 (middle)<br>
+                3. Navigation Panel: 9999 (on top)<br>
+                4. Navigation Elements: 20 (relative to panel)<br>
+                5. Hamburger Button: 10000 (highest)
+            </div>
+
+            <div>
+                <button onclick="toggleNav()">Toggle Navigation</button>
+                <button onclick="showTestElement()">Show Test Element</button>
+                <button onclick="checkZIndex()">Check Z-Index Values</button>
+            </div>
+
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <!-- Include animations.js -->
+    <script src="animations.js"></script>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                console.log('Navigation closed');
+            } else {
+                nav.classList.add('active');
+                overlay.classList.add('active');
+                console.log('Navigation opened');
+            }
+        }
+
+        function showTestElement() {
+            const testEl = document.getElementById('testElement');
+            testEl.style.display = testEl.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function checkZIndex() {
+            const elements = {
+                'Hamburger Button': document.getElementById('mobileMenuBtn'),
+                'Navigation Panel': document.getElementById('mobileNav'),
+                'Overlay': document.getElementById('mobileMenuOverlay'),
+                'Test Element': document.getElementById('testElement'),
+                'Close Button': document.getElementById('mobileNavClose')
+            };
+
+            let results = '<h3>Z-Index Values:</h3><ul>';
+            
+            for (const [name, element] of Object.entries(elements)) {
+                if (element) {
+                    const style = window.getComputedStyle(element);
+                    const zIndex = style.zIndex;
+                    results += `<li><strong>${name}:</strong> ${zIndex}</li>`;
+                } else {
+                    results += `<li><strong>${name}:</strong> NOT FOUND</li>`;
+                }
+            }
+            
+            results += '</ul>';
+            document.getElementById('results').innerHTML = results;
+            
+            console.log('Z-Index check completed');
+        }
+
+        // Test navigation link clicks
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`Clicked: ${this.textContent}`);
+                console.log('Navigation link clicked:', this.textContent);
+            });
+        });
+
+        // Initialize
+        window.addEventListener('load', function() {
+            console.log('Z-Index test loaded');
+            setTimeout(checkZIndex, 1000);
+        });
+    </script>
+</body>
+</html>

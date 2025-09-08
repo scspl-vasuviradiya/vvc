@@ -473,7 +473,7 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 9998;
+  z-index: 9990;
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-base);
@@ -511,6 +511,8 @@ button {
 .mobile-nav.active * {
   opacity: 1 !important;
   pointer-events: auto !important;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-nav-header {
@@ -523,7 +525,7 @@ button {
   min-height: 80px;
   opacity: 1;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .brand-mobile {
@@ -560,7 +562,7 @@ button {
   border: 1px solid var(--gray-200);
   opacity: 1;
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 .mobile-nav-close:hover,
@@ -578,7 +580,7 @@ button {
   min-height: calc(100vh - 160px);
   opacity: 1;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .mobile-nav-link {
@@ -594,7 +596,7 @@ button {
   border: 1px solid transparent;
   opacity: 1;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   cursor: pointer;
 }
 
@@ -613,7 +615,7 @@ button {
   background: var(--bg-cream);
   opacity: 1;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .btn-whatsapp {
@@ -630,7 +632,7 @@ button {
   transition: all var(--transition-base);
   opacity: 1;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   cursor: pointer;
   text-decoration: none;
 }
@@ -694,6 +696,15 @@ body.mobile-nav-open {
 .mobile-nav.active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+/* Ensure proper z-index stacking order */
+.mobile-nav {
+  pointer-events: auto;
+}
+
+.mobile-nav * {
+  pointer-events: auto;
 }
 
 /* ===================================
