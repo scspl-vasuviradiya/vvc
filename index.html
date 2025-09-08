@@ -646,26 +646,9 @@
       }
       init();
     }
-
-    // Initial state logging
-    const initialCheckbox = document.getElementById("theme-checkbox");
-    console.log('Gallery initial state:', {
-      checked: initialCheckbox.checked,
-      genderType: initialCheckbox.checked ? "Male" : "Female",
-      visualState: initialCheckbox.checked ? 'Men highlighted' : 'Women highlighted'
-    });
-    
     loadGalleryManifest(loadGallery);
 
     function checkboxChanged() {
-      const checkbox = document.getElementById("theme-checkbox");
-      const genderType = checkbox.checked ? "Male" : "Female";
-      console.log('Gender toggle changed:', {
-        checked: checkbox.checked,
-        genderType: genderType,
-        visualState: checkbox.checked ? 'Men highlighted' : 'Women highlighted'
-      });
-      
       gallery.innerHTML = "";
       galleryImages = [];
       selected = 1;
@@ -893,13 +876,10 @@
           return response.json();
         })
         .then(data => {
-          console.log('Collections data loaded from JSON:', data);
           displayCollections(data);
         })
         .catch(error => {
-          console.warn('Could not fetch collections.json (likely CORS when opening file directly), using fallback data:', error.message);
           // Use fallback data when fetch fails (e.g., when opening HTML directly or CORS issues)
-          console.log('Using fallback collections:', fallbackCollections);
           displayCollections(fallbackCollections);
         });
     }
@@ -911,7 +891,6 @@
       
       const grid = document.getElementById('collectionsGrid');
       if (!grid) {
-        console.error('Collections grid element not found!');
         return;
       }
       
@@ -970,8 +949,6 @@
         grid.appendChild(card);
       });
       
-      console.log(`Loaded ${data.length} collection items`);
-      
       // Initialize filter functionality with delay to ensure DOM is ready
       setTimeout(() => {
         initCollectionFilters();
@@ -982,7 +959,6 @@
       const filterTabs = document.querySelectorAll('.filter-tab');
       
       if (filterTabs.length === 0) {
-        console.warn('No filter tabs found');
         return;
       }
       

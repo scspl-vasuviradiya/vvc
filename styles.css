@@ -705,34 +705,18 @@ body.mobile-nav-open {
   width: 100%;
 }
 
-/* Debug styles for mobile navigation - remove opacity fade issues */
+/* Hardware acceleration for smooth animations */
 .mobile-nav,
-.mobile-nav *,
-.mobile-nav-header,
-.mobile-nav-links,
-.mobile-nav-cta,
-.mobile-nav-close,
-.mobile-nav-link,
-.btn-whatsapp {
+.mobile-nav * {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Force hardware acceleration for mobile nav */
 .mobile-nav.active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-
-/* Ensure proper z-index stacking order */
-.mobile-nav {
-  pointer-events: auto;
-}
-
-.mobile-nav * {
-  pointer-events: auto;
 }
 
 /* ===================================
