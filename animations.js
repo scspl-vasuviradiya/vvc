@@ -152,6 +152,74 @@
     window.addEventListener('scroll', onHeaderScroll, { passive: true });
   }
 
+  // Mobile navigation functionality
+  function initMobileNavigation() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (!mobileMenuBtn || !mobileNav || !mobileMenuOverlay) {
+      return;
+    }
+    
+    // Function to open mobile menu
+    function openMobileMenu() {
+      mobileNav.classList.add('active');
+      mobileMenuOverlay.classList.add('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('mobile-nav-open');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Function to close mobile menu
+    function closeMobileMenu() {
+      mobileNav.classList.remove('active');
+      mobileMenuOverlay.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('mobile-nav-open');
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Toggle mobile menu on button click
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+    
+    // Close mobile menu on close button click
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener('click', closeMobileMenu);
+    }
+    
+    // Close mobile menu on overlay click
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    
+    // Close mobile menu when clicking on navigation links
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+    
+    // Handle window resize - close menu if window becomes desktop size
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1024 && mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+  }
+
   // Utility function to update footer year
   function updateFooterYear() {
     const yearElement = document.getElementById('currentYear');
@@ -169,6 +237,7 @@
       initAnimations();
       initSmoothScroll();
       initHeaderEffects();
+      initMobileNavigation();
       updateFooterYear();
       
       // Remove loading class
@@ -179,6 +248,7 @@
     initAnimations();
     initSmoothScroll();
     initHeaderEffects();
+    initMobileNavigation();
     updateFooterYear();
     document.body.classList.remove('loading');
   }

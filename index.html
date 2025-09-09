@@ -631,14 +631,14 @@
       fetch('gallery_manifest.json')
         .then(response => response.json())
         .then(data => {
-          let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
+          let genderType = document.getElementById("theme-checkbox").checked ? "Male" : "Female";
           MAX_IMAGES = data[genderType] || 0;
           callback();
         });
     }
 
     function loadGallery() {
-      let genderType = document.getElementById("theme-checkbox").checked ? "Female" : "Male";
+      let genderType = document.getElementById("theme-checkbox").checked ? "Male" : "Female";
       galleryImages = [];
       for (let i = 1; i <= MAX_IMAGES; i++) {
         const url = `img/gallery/${genderType}/${i}.jpg`;
@@ -646,7 +646,6 @@
       }
       init();
     }
-
     loadGalleryManifest(loadGallery);
 
     function checkboxChanged() {
@@ -877,13 +876,10 @@
           return response.json();
         })
         .then(data => {
-          console.log('Collections data loaded from JSON:', data);
           displayCollections(data);
         })
         .catch(error => {
-          console.warn('Could not fetch collections.json (likely CORS when opening file directly), using fallback data:', error.message);
           // Use fallback data when fetch fails (e.g., when opening HTML directly or CORS issues)
-          console.log('Using fallback collections:', fallbackCollections);
           displayCollections(fallbackCollections);
         });
     }
@@ -895,7 +891,6 @@
       
       const grid = document.getElementById('collectionsGrid');
       if (!grid) {
-        console.error('Collections grid element not found!');
         return;
       }
       
@@ -954,8 +949,6 @@
         grid.appendChild(card);
       });
       
-      console.log(`Loaded ${data.length} collection items`);
-      
       // Initialize filter functionality with delay to ensure DOM is ready
       setTimeout(() => {
         initCollectionFilters();
@@ -966,7 +959,6 @@
       const filterTabs = document.querySelectorAll('.filter-tab');
       
       if (filterTabs.length === 0) {
-        console.warn('No filter tabs found');
         return;
       }
       
