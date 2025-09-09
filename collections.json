@@ -15,6 +15,17 @@
       "men",
       "indowestern"
     ],
+    "img": "img/collections/men-indowestern-2.jpg",
+    "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
+    "title": "Classic Navy Indowestern",
+    "desc": "Tailored fit • 2-piece",
+    "price": "₹3999/-"
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
     "img": "img/collections/men-indowestern-3.jpg",
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
     "title": "Classic Navy Indowestern",
@@ -27,6 +38,17 @@
       "sherwani"
     ],
     "img": "img/collections/men-sherwani-1.jpg",
+    "alt": "Regal Cream Sherwani - Men's cream sherwani",
+    "title": "Regal Cream Sherwani",
+    "desc": "Zari work • Dupatta",
+    "price": "₹9999/-"
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/men-sherwani-2.jpg",
     "alt": "Regal Cream Sherwani - Men's cream sherwani",
     "title": "Regal Cream Sherwani",
     "desc": "Zari work • Dupatta",
@@ -57,6 +79,17 @@
   {
     "tags": [
       "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-3.jpg",
+    "alt": "Pink Designer Lehenga - Contemporary lehenga design",
+    "title": "Pink Designer Lehenga",
+    "desc": "Designer piece • Modern cut",
+    "price": "₹19999/-"
+  },
+  {
+    "tags": [
+      "women",
       "choli"
     ],
     "img": "img/collections/women-choli-1.jpg",
@@ -65,7 +98,7 @@
     "desc": "Traditional design • Comfortable fit",
     "price": "₹7999/-"
   },
-   {
+  {
     "tags": [
       "women",
       "choli"
@@ -75,7 +108,8 @@
     "title": "Peachy Charm",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹8999/-"
-  },{
+  },
+  {
     "tags": [
       "men",
       "suit"
@@ -92,6 +126,17 @@
       "jodhpuri"
     ],
     "img": "img/collections/men-jodhpuri-1.jpg",
+    "alt": "Traditional Jodhpuri Suit",
+    "title": "Traditional Jodhpuri",
+    "desc": "Royal look • Traditional style",
+    "price": "₹2999/-"
+  },
+  {
+    "tags": [
+      "men",
+      "jodhpuri"
+    ],
+    "img": "img/collections/men-jodhpuri-2.jpg",
     "alt": "Traditional Jodhpuri Suit",
     "title": "Traditional Jodhpuri",
     "desc": "Royal look • Traditional style",
