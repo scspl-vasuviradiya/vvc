@@ -6,8 +6,8 @@
     ],
     "img": "img/collections/men-indowestern-1.jpg",
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
-    "title": "Classic Navy Indowestern",
-    "desc": "Tailored fit • 2-piece",
+    "title": "Wine Emperor Indowestern",
+    "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-"
   },
   {
@@ -17,8 +17,8 @@
     ],
     "img": "img/collections/men-indowestern-2.jpg",
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
-    "title": "Classic Navy Indowestern",
-    "desc": "Tailored fit • 2-piece",
+    "title": "Dark Knight Elegance Indowestern",
+    "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-"
   },
   {
@@ -28,8 +28,8 @@
     ],
     "img": "img/collections/men-indowestern-3.jpg",
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
-    "title": "Classic Navy Indowestern",
-    "desc": "Tailored fit • 2-piece",
+    "title": "Classic black Velvet Indowestern",
+    "desc": "Tailored fit • 3-piece",
     "price": "₹2999/-"
   },
   {
@@ -40,7 +40,7 @@
     "img": "img/collections/men-sherwani-1.jpg",
     "alt": "Regal Cream Sherwani - Men's cream sherwani",
     "title": "Regal Cream Sherwani",
-    "desc": "Zari work • Dupatta",
+    "desc": "beats work • Dupatta",
     "price": "₹9999/-"
   },
   {
@@ -51,7 +51,7 @@
     "img": "img/collections/men-sherwani-2.jpg",
     "alt": "Regal Cream Sherwani - Men's cream sherwani",
     "title": "Regal Cream Sherwani",
-    "desc": "Zari work • Dupatta",
+    "desc": "beats work • Dupatta",
     "price": "₹9999/-"
   },
   {
@@ -60,8 +60,8 @@
       "lehenga"
     ],
     "img": "img/collections/women-lehenga-1.jpg",
-    "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
-    "title": "Elegant Red Lehenga",
+    "alt": "Maharani’s Legacy Lehenga - Bridal lehenga with gold work",
+    "title": "Maharani’s Legacy Lehenga",
     "desc": "Bridal collection • Heavy work",
     "price": "₹19999/-"
   },
@@ -73,7 +73,7 @@
     "img": "img/collections/women-lehenga-2.jpg",
     "alt": "Pink Designer Lehenga - Contemporary lehenga design",
     "title": "Pink Designer Lehenga",
-    "desc": "Designer piece • Modern cut",
+    "desc": "Bridal collection • Heavy work",
     "price": "₹19999/-"
   },
   {
@@ -82,9 +82,9 @@
       "lehenga"
     ],
     "img": "img/collections/women-lehenga-3.jpg",
-    "alt": "Pink Designer Lehenga - Contemporary lehenga design",
-    "title": "Pink Designer Lehenga",
-    "desc": "Designer piece • Modern cut",
+    "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
+    "title": "Elegant Red Lehenga",
+    "desc": "Bridal collection • Heavy work",
     "price": "₹19999/-"
   },
   {
@@ -93,8 +93,8 @@
       "choli"
     ],
     "img": "img/collections/women-choli-1.jpg",
-    "alt": "Traditional Choli - Classic Indian choli",
-    "title": "Traditional Choli",
+    "alt": "Rajwada Blue Choli - Classic Indian choli",
+    "title": "Rajwada Blue Choli",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹7999/-"
   },
@@ -104,8 +104,8 @@
       "choli"
     ],
     "img": "img/collections/women-choli-2.jpg",
-    "alt": "Traditional Choli - Classic Indian choli",
-    "title": "Peachy Charm",
+    "alt": "Pastel Princess Choli - Classic Indian choli",
+    "title": "Pastel Princess Choli",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹8999/-"
   },
@@ -126,8 +126,8 @@
       "jodhpuri"
     ],
     "img": "img/collections/men-jodhpuri-1.jpg",
-    "alt": "Traditional Jodhpuri Suit",
-    "title": "Traditional Jodhpuri",
+    "alt": "Royal Reflection",
+    "title": "Royal Reflection",
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-"
   },
@@ -137,8 +137,8 @@
       "jodhpuri"
     ],
     "img": "img/collections/men-jodhpuri-2.jpg",
-    "alt": "Traditional Jodhpuri Suit",
-    "title": "Traditional Jodhpuri",
+    "alt": "Navy blue beats Jodhpuri",
+    "title": "Navy blue beats Jodhpuri",
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-"
   }
