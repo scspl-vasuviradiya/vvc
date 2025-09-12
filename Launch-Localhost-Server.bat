@@ -24,25 +24,28 @@ if not exist "%HTML_FILE%" (
 echo [INFO] Starting Localhost Server for Collection Management...
 echo.
 
-:: Check for Python (preferred for simple HTTP server)
+:: Check for Python (preferred server)
+echo [DEBUG] Checking for Python...
 python --version >nul 2>&1
 if %errorlevel% == 0 (
-    echo [INFO] Python found. Starting Python HTTP server...
+    echo [INFO] Python found. Starting Python Collection Server...
     goto start_python_server
 )
 
+:: Check for Node.js
+echo [DEBUG] Checking for Node.js...
+node --version >nul 2>&1
+if %errorlevel% == 0 (
+    echo [INFO] Node.js found. Starting Node.js Collection Server...
+    goto start_node_server
+)
+
 :: Check for PHP
+echo [DEBUG] Checking for PHP...
 php --version >nul 2>&1
 if %errorlevel% == 0 (
     echo [INFO] PHP found. Starting PHP HTTP server...
     goto start_php_server
-)
-
-:: Check for Node.js
-node --version >nul 2>&1
-if %errorlevel% == 0 (
-    echo [INFO] Node.js found. Starting Node.js HTTP server...
-    goto start_node_server
 )
 
 :: No server found, offer to install
