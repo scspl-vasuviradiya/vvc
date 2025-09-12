@@ -31,15 +31,15 @@ echo [INFO] Testing endpoints...
 
 :: Test static file
 echo Checking HTML file...
-curl -s -o nul -w "HTML Status: %%{http_code}\n" "http://localhost:8080/collection-management.html"
+curl -s -o nul -w "HTML Status: %%{http_code}\n" "http://localhost:8888/collection-management.html"
 
 :: Test collections endpoint
 echo Checking collections endpoint...
-curl -s -o nul -w "Collections Status: %%{http_code}\n" "http://localhost:8080/save-collections.php"
+curl -s -o nul -w "Collections Status: %%{http_code}\n" "http://localhost:8888/save-collections.php"
 
 echo.
 echo [INFO] If all status codes are 200, the server is working correctly!
-echo [INFO] Open http://localhost:8080/collection-management.html in your browser
+echo [INFO] Open http://localhost:8888/collection-management.html in your browser
 echo.
 echo Press any key to stop test server...
 pause >nul

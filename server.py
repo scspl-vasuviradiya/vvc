@@ -209,7 +209,7 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
         except Exception as e:
             self.send_error(500, f"Error uploading image: {str(e)}")
 
-def run_server(port=8080):
+def run_server(port=8888):
     """Start the collection management server"""
     try:
         with socketserver.TCPServer(("", port), CollectionHandler) as httpd:

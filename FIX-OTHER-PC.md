@@ -4,6 +4,7 @@
 - Launcher starts Node.js but crashes when trying to install `http-server`
 - Node.js `http-server` can only serve static files (no PHP endpoints)
 - Collections won't save and images won't upload
+- IIS conflicts on port 8080 (now using port 8888)
 
 ## ✅ **Solution - Files Added:**
 
@@ -39,6 +40,7 @@ Launch-Localhost-Server.bat  ← Updated launcher
    HTML Status: 200
    Collections Status: 200
    ```
+   **Note:** Server runs on port 8888 to avoid IIS conflicts
 3. If both show 200, the server works!
 
 ### Step 3: Use the Main Launcher

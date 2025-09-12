@@ -267,7 +267,7 @@ class CollectionServer {
     }
 
     // Start the server
-    start(port = 8080) {
+    start(port = 8888) {
         const server = http.createServer((req, res) => {
             this.handleRequest(req, res);
         });

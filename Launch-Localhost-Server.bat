@@ -11,7 +11,7 @@ echo.
 :: Get current directory
 set "CURRENT_DIR=%~dp0"
 set "HTML_FILE=%CURRENT_DIR%collection-management.html"
-set "SERVER_PORT=8080"
+set "SERVER_PORT=8888"
 
 :: Check if collection-management.html exists
 if not exist "%HTML_FILE%" (
