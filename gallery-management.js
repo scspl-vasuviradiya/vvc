@@ -286,14 +286,23 @@
     
     galleryStats.innerHTML = `
       <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-images"></i>
+        </div>
         <div class="stat-number">${total}</div>
         <div class="stat-label">Total Images</div>
       </div>
       <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-male"></i>
+        </div>
         <div class="stat-number">${galleryManifest.Male || 0}</div>
         <div class="stat-label">Male Gallery</div>
       </div>
       <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-female"></i>
+        </div>
         <div class="stat-number">${galleryManifest.Female || 0}</div>
         <div class="stat-label">Female Gallery</div>
       </div>
