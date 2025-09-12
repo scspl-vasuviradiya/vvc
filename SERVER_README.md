@@ -19,17 +19,15 @@ node server.js
 
 ## API Endpoints
 
-### Working with Node.js Server
+### Working with Node.js Server (Full Featured!)
 - ✅ `GET /gallery-list.php` - List gallery images
 - ✅ `GET /gallery-manifest.php` - Get gallery statistics  
 - ✅ `POST /gallery-manifest.php` - Update gallery statistics
+- ✅ `POST /gallery-upload.php` - Upload gallery images
+- ✅ `POST /gallery-delete.php` - Delete gallery images
 - ✅ `GET /save-collections.php` - Get collections
 - ✅ `POST /save-collections.php` - Save collections
 - ✅ `POST /upload-image.php` - Upload collection images
-
-### Requires PHP Server
-- ❌ `POST /gallery-upload.php` - Upload gallery images
-- ❌ `POST /gallery-delete.php` - Delete gallery images
 
 ## Troubleshooting
 
@@ -67,16 +65,13 @@ vvc/
 
 ## Features by Server Type
 
-### Node.js Server (Current)
+### Node.js Server (Current - Full Featured!)
 - ✅ View gallery images
-- ✅ Gallery statistics
+- ✅ Gallery statistics (auto-updated)
 - ✅ Collection management (full CRUD)
 - ✅ Cross-navigation between pages
-- ❌ Upload new gallery images
-- ❌ Delete gallery images
-
-### PHP Server (Future)
-- ✅ All Node.js features
-- ✅ Upload gallery images  
-- ✅ Delete gallery images
-- ✅ Bulk operations
+- ✅ Upload new gallery images
+- ✅ Delete gallery images (single & bulk)
+- ✅ Automatic file sequencing
+- ✅ File validation (type, size)
+- ✅ Manifest management
