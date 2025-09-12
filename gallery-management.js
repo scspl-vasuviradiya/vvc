@@ -145,7 +145,6 @@
 
     try {
       const apiUrl = `${baseUrl}/gallery-list.php`;
-      console.log('Fetching gallery from:', apiUrl);
       const response = await fetch(apiUrl);
       
       if (!response.ok) {
@@ -163,7 +162,6 @@
         displayGalleryImages([]);
       }
     } catch (error) {
-      console.error('Gallery load error:', error);
       showToast('Error loading gallery images: ' + error.message, 'error');
       displayGalleryImages([]);
     }

@@ -3,9 +3,10 @@
 ## Quick Start
 
 ### Option 1: Using Batch File (Recommended)
-1. Double-click `start-server.bat`
-2. Server will start on port 8888
-3. Open: http://localhost:8888/gallery-management.html
+1. Double-click `Start-NodeJS-Server.bat` (full featured)
+2. Or double-click `start-server.bat` (simple version)
+3. Server will start on port 8888
+4. Gallery management opens automatically
 
 ### Option 2: Manual Start
 ```bash
@@ -53,14 +54,17 @@ taskkill /F /IM node.exe
 vvc/
 ├── img/
 │   ├── gallery/
-│   │   ├── Male/          # Male gallery images (1.jpg, 2.jpg, etc.)
-│   │   └── Female/        # Female gallery images (1.jpg, 2.jpg, etc.)
-│   └── collections/       # Collection preview images
-├── server.js              # Node.js server
-├── start-server.bat       # Quick start script
+│   │   ├── Male/              # Male gallery images (1.jpg, 2.jpg, etc.)
+│   │   └── Female/            # Female gallery images (1.jpg, 2.jpg, etc.)
+│   └── collections/           # Collection preview images
+├── server.js                  # Node.js server (full featured)
+├── Start-NodeJS-Server.bat    # Recommended startup script
+├── start-server.bat           # Simple startup script
+├── Quick-Start.bat            # Auto-detect server type
 ├── gallery-management.html
 ├── collection-management.html
-└── gallery-management.js
+├── gallery-management.js
+└── gallery_manifest.json      # Auto-generated image counts
 ```
 
 ## Features by Server Type
@@ -70,8 +74,8 @@ vvc/
 - ✅ Gallery statistics (auto-updated)
 - ✅ Collection management (full CRUD)
 - ✅ Cross-navigation between pages
-- ✅ Upload new gallery images
+- ✅ Upload new gallery images (auto-converts to JPG)
 - ✅ Delete gallery images (single & bulk)
-- ✅ Automatic file sequencing
+- ✅ Automatic file sequencing (1.jpg, 2.jpg, etc.)
 - ✅ File validation (type, size)
-- ✅ Manifest management
+- ✅ Auto-updating statistics

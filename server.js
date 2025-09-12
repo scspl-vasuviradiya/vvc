@@ -380,11 +380,11 @@ class CollectionServer {
                                 modified: stats.mtime.getTime()
                             });
                         } catch (fileError) {
-                            console.log(`Error processing file ${filePath}: ${fileError.message}`);
+                            // Skip files that can't be processed
                         }
                     });
                 } catch (dirError) {
-                    console.log(`Error reading directory ${categoryDir}: ${dirError.message}`);
+                    // Skip directories that can't be read
                 }
             });
             
@@ -402,13 +402,10 @@ class CollectionServer {
                 total: images.length
             };
             
-            console.log(`Gallery list: Found ${images.length} images`);
-            
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify(response));
             
         } catch (error) {
-            console.log(`Gallery list error: ${error.message}`);
             const response = {
                 success: false,
                 error: error.message,
@@ -518,7 +515,7 @@ class CollectionServer {
                 const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
                 if (!allowedTypes.includes(uploadedFile.headers['content-type'])) {
                     res.writeHead(400, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ success: false, error: 'Invalid file type. Only JPG, PNG, and WebP images are allowed.' }));
+                    res.end(JSON.stringify({ success: false, error: 'Invalid file type. Only JPG, PNG, and WebP images are allowed (will be converted to JPG).' }));
                     return;
                 }
                 
@@ -552,13 +549,8 @@ class CollectionServer {
                 
                 const nextSequence = existingFiles.length > 0 ? existingFiles[0] + 1 : 1;
                 
-                // Determine file extension
-                const contentType = uploadedFile.headers['content-type'];
-                let ext = 'jpg';
-                if (contentType === 'image/png') ext = 'png';
-                else if (contentType === 'image/webp') ext = 'webp';
-                
-                const filename = `${nextSequence}.${ext}`;
+                // Force all gallery images to be saved as .jpg
+                const filename = `${nextSequence}.jpg`;
                 const targetPath = path.join(categoryDir, filename);
                 
                 // Copy the file
@@ -578,8 +570,6 @@ class CollectionServer {
                     sequence: nextSequence,
                     size: fs.statSync(targetPath).size
                 };
-                
-                console.log(`Gallery upload: ${filename} to ${category} category`);
                 
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify(response));
@@ -614,7 +604,7 @@ class CollectionServer {
                             if (fs.existsSync(filePath)) {
                                 fs.unlinkSync(filePath);
                                 deletedCount++;
-                                console.log(`Deleted: ${img.category}/${img.filename}`);
+                                // File deleted successfully
                             } else {
                                 errors.push(`File not found: ${img.filename}`);
                             }
@@ -647,7 +637,6 @@ class CollectionServer {
                     }
                     
                     fs.unlinkSync(filePath);
-                    console.log(`Deleted: ${data.category}/${data.filename}`);
                     
                     // Update manifest
                     this.updateGalleryManifest();
@@ -693,7 +682,6 @@ class CollectionServer {
             
             return manifest;
         } catch (error) {
-            console.log(`Error updating gallery manifest: ${error.message}`);
             return { Male: 0, Female: 0 };
         }
     }
@@ -708,7 +696,6 @@ class CollectionServer {
             }
             return this.updateGalleryManifest();
         } catch (error) {
-            console.log(`Error reading gallery manifest: ${error.message}`);
             return { Male: 0, Female: 0 };
         }
     }

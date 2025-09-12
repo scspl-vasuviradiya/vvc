@@ -1,5 +1,19 @@
 {
+  "name": "vivah-villa-collection",
+  "version": "1.0.0",
+  "description": "Wedding attire collection and gallery management system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["wedding", "collection", "gallery", "management"],
+  "author": "Vivah Villa Collection",
+  "license": "ISC",
   "dependencies": {
     "multiparty": "^4.2.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
