@@ -1,0 +1,9 @@
+@echo off
+echo Starting Vivah Villa Collection Server...
+echo.
+echo Killing any existing Node.js processes...
+taskkill /F /IM node.exe >nul 2>&1
+echo.
+echo Starting server on port 8888...
+node server.js
+pause

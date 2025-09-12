@@ -17,8 +17,9 @@ if %errorlevel% == 0 (
         timeout /t 3 /nobreak >nul
         start http://localhost:8888/collection-management.html
         echo.
-        echo Collection Management is now running at:
+        echo Collection & Gallery Management is now running at:
         echo http://localhost:8888/collection-management.html
+        echo http://localhost:8888/gallery-management.html
         echo.
         echo Server is running in background. Close this window to stop.
         pause >nul
@@ -36,8 +37,9 @@ if %errorlevel% == 0 (
         timeout /t 3 /nobreak >nul
         start http://localhost:8888/collection-management.html
         echo.
-        echo Collection Management is now running at:
+        echo Collection & Gallery Management is now running at:
         echo http://localhost:8888/collection-management.html
+        echo http://localhost:8888/gallery-management.html
         echo.
         echo Server is running in background. Close this window to stop.
         pause >nul

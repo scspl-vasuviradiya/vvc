@@ -43,6 +43,10 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
         """Handle GET requests"""
         if self.path == '/save-collections.php':
             self.handle_get_collections()
+        elif self.path == '/gallery-list.php':
+            self.handle_gallery_list()
+        elif self.path == '/gallery-manifest.php':
+            self.handle_gallery_manifest_get()
         else:
             # Serve static files
             super().do_GET()
@@ -53,6 +57,12 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
             self.handle_save_collections()
         elif self.path == '/upload-image.php':
             self.handle_upload_image()
+        elif self.path == '/gallery-upload.php':
+            self.handle_gallery_upload()
+        elif self.path == '/gallery-delete.php':
+            self.handle_gallery_delete()
+        elif self.path == '/gallery-manifest.php':
+            self.handle_gallery_manifest_post()
         else:
             self.send_error(404, "Endpoint not found")
     
@@ -235,6 +245,148 @@ def run_server(port=8888):
             print(f"❌ Error starting server: {e}")
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
+
+    def handle_gallery_list(self):
+        """List all gallery images"""
+        try:
+            import glob
+            gallery_dir = 'img/gallery'
+            categories = ['Male', 'Female']
+            images = []
+            
+            # Ensure gallery directory exists
+            if not os.path.exists(gallery_dir):
+                os.makedirs(gallery_dir, exist_ok=True)
+            
+            for category in categories:
+                category_dir = os.path.join(gallery_dir, category)
+                if not os.path.exists(category_dir):
+                    continue
+                    
+                # Get all image files
+                pattern = os.path.join(category_dir, '*')
+                files = [f for f in glob.glob(pattern) if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+                
+                for file_path in files:
+                    try:
+                        filename = os.path.basename(file_path)
+                        file_size = os.path.getsize(file_path)
+                        relative_path = file_path.replace('\\', '/')
+                        
+                        # Extract sequence number from filename
+                        try:
+                            sequence_number = int(os.path.splitext(filename)[0])
+                        except ValueError:
+                            # Skip files that don't have numeric names
+                            continue
+                        
+                        images.append({
+                            'filename': filename,
+                            'path': relative_path,
+                            'category': category,
+                            'size': file_size,
+                            'sequence': sequence_number,
+                            'modified': os.path.getmtime(file_path)
+                        })
+                    except Exception as file_error:
+                        print(f"Error processing file {file_path}: {file_error}")
+                        continue
+            
+            # Sort by category first, then by sequence
+            images.sort(key=lambda x: (x['category'], x['sequence']))
+            
+            response = {
+                'success': True,
+                'images': images,
+                'total': len(images)
+            }
+            
+            print(f"Gallery list: Found {len(images)} images")
+            
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+            
+        except Exception as e:
+            print(f"Gallery list error: {str(e)}")
+            response = {
+                'success': False,
+                'error': str(e),
+                'images': [],
+                'total': 0
+            }
+            self.send_response(500)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+    
+    def handle_gallery_manifest_get(self):
+        """Get gallery manifest"""
+        manifest_file = 'gallery_manifest.json'
+        try:
+            if os.path.exists(manifest_file):
+                with open(manifest_file, 'r', encoding='utf-8') as f:
+                    manifest = json.load(f)
+            else:
+                manifest = {'Male': 0, 'Female': 0}
+                
+            response = {
+                'success': True,
+                'manifest': manifest
+            }
+            
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+            
+        except Exception as e:
+            self.send_error(500, f"Error reading manifest: {str(e)}")
+    
+    def handle_gallery_manifest_post(self):
+        """Update gallery manifest"""
+        manifest_file = 'gallery_manifest.json'
+        try:
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            data = json.loads(post_data.decode('utf-8'))
+            
+            # Validate structure
+            if 'Male' not in data or 'Female' not in data:
+                self.send_error(400, "Invalid manifest structure")
+                return
+            
+            manifest = {
+                'Male': int(data['Male']),
+                'Female': int(data['Female'])
+            }
+            
+            with open(manifest_file, 'w', encoding='utf-8') as f:
+                json.dump(manifest, f, indent=2)
+            
+            response = {
+                'success': True,
+                'manifest': manifest
+            }
+            
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+            
+        except Exception as e:
+            self.send_error(500, f"Error saving manifest: {str(e)}")
+    
+    # Note: gallery_upload and gallery_delete would require more complex multipart handling
+    # For now, the PHP handlers will be used when PHP is available
+    def handle_gallery_upload(self):
+        """Handle gallery image upload - simplified version"""
+        self.send_error(501, "Gallery upload requires PHP server for full functionality")
+    
+    def handle_gallery_delete(self):
+        """Handle gallery image deletion - simplified version"""
+        self.send_error(501, "Gallery delete requires PHP server for full functionality")
 
 if __name__ == "__main__":
     run_server()
