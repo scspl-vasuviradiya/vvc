@@ -50,9 +50,9 @@ echo [WARNING] No suitable HTTP server found!
 echo.
 echo To run the collection management system with full functionality,
 echo you need one of the following:
-echo   - Python (Recommended)
-echo   - PHP 
-echo   - Node.js
+echo   - Python (Recommended) - Uses server.py
+echo   - Node.js (Good alternative) - Uses server.js
+echo   - PHP (If available) - Uses built-in server
 echo.
 echo [1] Install Python (Recommended)
 echo [2] Try opening with file:// (Limited functionality)
@@ -136,42 +136,29 @@ goto server_success
 
 :start_node_server
 echo.
-echo [INFO] Checking for http-server module...
+echo [INFO] Starting Node.js Collection Management Server on port %SERVER_PORT%...
+echo [INFO] Server will run at: http://localhost:%SERVER_PORT%
+echo [INFO] This server supports full PHP endpoint functionality
+echo.
 
-:: Check if http-server is installed globally
-npx http-server --version >nul 2>&1
-if %errorlevel% == 0 (
-    echo [INFO] Starting Node.js HTTP server on port %SERVER_PORT%...
-    start /min "Node HTTP Server" cmd /c "cd /d "%CURRENT_DIR%" && npx http-server -p %SERVER_PORT% -c-1"
-    
-    :: Wait a moment for server to start
-    timeout /t 3 /nobreak >nul
-    
-    :: Open in browser
-    echo [INFO] Opening collection management in browser...
-    start http://localhost:%SERVER_PORT%/collection-management.html
-    
-    goto server_success
-) else (
-    echo [INFO] Installing http-server module...
-    npm install -g http-server
-    if %errorlevel% == 0 (
-        echo [INFO] Starting Node.js HTTP server on port %SERVER_PORT%...
-        start /min "Node HTTP Server" cmd /c "cd /d "%CURRENT_DIR%" && http-server -p %SERVER_PORT% -c-1"
-        
-        :: Wait a moment for server to start
-        timeout /t 3 /nobreak >nul
-        
-        :: Open in browser
-        echo [INFO] Opening collection management in browser...
-        start http://localhost:%SERVER_PORT%/collection-management.html
-        
-        goto server_success
-    ) else (
-        echo [ERROR] Failed to install http-server module.
-        goto fallback_file
-    )
+:: Check if our custom server exists
+if not exist "%CURRENT_DIR%server.js" (
+    echo [ERROR] server.js not found! Please ensure all files are present.
+    pause
+    goto end
 )
+
+:: Start Node.js server in background
+start /min "Node Collection Server" cmd /c "cd /d "%CURRENT_DIR%" && node server.js"
+
+:: Wait a moment for server to start
+timeout /t 5 /nobreak >nul
+
+:: Open in browser
+echo [INFO] Opening collection management in browser...
+start http://localhost:%SERVER_PORT%/collection-management.html
+
+goto server_success
 
 :server_success
 echo.
@@ -190,8 +177,8 @@ echo FEATURES AVAILABLE:
 echo   ✓ Direct access to collections.json
 echo   ✓ Real-time data saving
 echo   ✓ Image upload to img/collections/
-echo   ✓ No sample data - uses your actual collections
-echo   ✓ Full CRUD operations
+echo   ✓ PHP endpoint emulation (works with both Python and Node.js)
+echo   ✓ Full CRUD operations with automatic backups
 echo.
 echo IMPORTANT:
 echo - Keep this window open to maintain the server
