@@ -29,25 +29,36 @@
 Copy these files from this PC to your other PC:
 ```
 server.js           ← NEW! Node.js server
+Node-Start.bat      ← NEW! Node.js specific launcher  
+Check-System.bat    ← NEW! System diagnostic
 test-server.bat     ← NEW! Test script  
 Launch-Localhost-Server.bat  ← Updated launcher
 ```
 
-### Step 2: Test the Server
-1. Double-click **`test-server.bat`**
+### Step 2: Check Your System
+1. Double-click **`Check-System.bat`**
+2. This will show you what's available on your PC:
+   ```
+   ✓ FOUND: Node.js v16.x.x (or similar)
+   ✓ server.js found
+   ✅ GOOD OPTION: Use Node.js server
+   ```
+
+### Step 3: Use the Node.js Launcher
+1. Double-click **`Node-Start.bat`** 
+2. This launcher is specifically designed for Node.js:
+   - Detects Node.js reliably
+   - Starts the custom `server.js`
+   - Tests server connection
+   - Opens browser automatically
+
+### Step 4: Alternative - Test Server
+1. If Node-Start.bat doesn't work, try **`test-server.bat`**
 2. You should see:
    ```
    HTML Status: 200
    Collections Status: 200
    ```
-   **Note:** Server runs on port 8888 to avoid IIS conflicts
-3. If both show 200, the server works!
-
-### Step 3: Use the Main Launcher
-1. Double-click **`Launch-Localhost-Server.bat`**
-2. It should now:
-   - Detect Node.js
-   - Start the custom `server.js` 
    - Open browser with full functionality
 
 ## 🔍 **What Changed:**
