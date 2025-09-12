@@ -801,7 +801,8 @@
         "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
         "title": "Classic Navy Indowestern",
         "desc": "Tailored fit • 2-piece",
-        "price": "₹1999/day"
+        "price": "₹1999/day",
+        "active": true
       },
       {
         "tags": ["men", "indowestern"],
@@ -809,7 +810,8 @@
         "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
         "title": "Classic Navy Indowestern",
         "desc": "Tailored fit • 2-piece",
-        "price": "₹1999/day"
+        "price": "₹1999/day",
+        "active": true
       },
       {
         "tags": ["men", "sherwani"],
@@ -817,7 +819,8 @@
         "alt": "Regal Cream Sherwani - Men's cream sherwani",
         "title": "Regal Cream Sherwani",
         "desc": "Zari work • Dupatta",
-        "price": "₹9999/day"
+        "price": "₹9999/day",
+        "active": true
       },
       {
         "tags": ["women", "lehenga"],
@@ -825,7 +828,8 @@
         "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
         "title": "Elegant Red Lehenga",
         "desc": "Bridal collection • Heavy work",
-        "price": "₹15999/day"
+        "price": "₹15999/day",
+        "active": true
       },
       {
         "tags": ["women", "lehenga"],
@@ -833,7 +837,8 @@
         "alt": "Pink Designer Lehenga - Contemporary lehenga design",
         "title": "Pink Designer Lehenga",
         "desc": "Designer piece • Modern cut",
-        "price": "₹12999/day"
+        "price": "₹12999/day",
+        "active": true
       },
       {
         "tags": ["women", "choli"],
@@ -841,7 +846,8 @@
         "alt": "Traditional Choli - Classic Indian choli",
         "title": "Traditional Choli",
         "desc": "Traditional design • Comfortable fit",
-        "price": "₹5999/day"
+        "price": "₹5999/day",
+        "active": true
       },
       {
         "tags": ["men", "suit"],
@@ -849,7 +855,8 @@
         "alt": "Classic Men's Suit",
         "title": "Classic Men's Suit",
         "desc": "Professional look • Perfect fit",
-        "price": "₹2999/day"
+        "price": "₹2999/day",
+        "active": true
       },
       {
         "tags": ["men", "jodhpuri"],
@@ -857,7 +864,8 @@
         "alt": "Traditional Jodhpuri Suit",
         "title": "Traditional Jodhpuri",
         "desc": "Royal look • Traditional style",
-        "price": "₹3999/day"
+        "price": "₹3999/day",
+        "active": true
       },
       {
         "tags": ["women", "kurti"],
@@ -865,7 +873,8 @@
         "alt": "Elegant Kurti",
         "title": "Elegant Kurti",
         "desc": "Comfortable • Stylish",
-        "price": "₹1999/day"
+        "price": "₹1999/day",
+        "active": true
       }
     ];
     
@@ -889,8 +898,11 @@
     
     // Function to display collections data
     function displayCollections(data) {
-      // Store data globally for filtering
-      window.currentCollectionsData = data;
+      // Filter data to only show active collections
+      const activeData = data.filter(item => item.active !== false);
+      
+      // Store filtered data globally for filtering
+      window.currentCollectionsData = activeData;
       
       const grid = document.getElementById('collectionsGrid');
       if (!grid) {
@@ -909,12 +921,12 @@
       
       grid.innerHTML = '';
       
-      if (!data || data.length === 0) {
-        grid.innerHTML = '<p class="no-collections">No collections available at the moment.</p>';
+      if (!activeData || activeData.length === 0) {
+        grid.innerHTML = '<p class="no-collections">No active collections available at the moment.</p>';
         return;
       }
       
-      data.forEach((item, index) => {
+      activeData.forEach((item, index) => {
         const tags = item.tags.join(' ');
         const card = document.createElement('div');
         
@@ -993,7 +1005,10 @@
       // Alternative approach: completely re-render visible cards for perfect positioning
       const allData = window.currentCollectionsData || [];
       const filteredData = allData.filter(item => {
-        return filter === 'all' || item.tags.includes(filter);
+        // Only show active collections that match the filter
+        const isActive = item.active !== false;
+        const matchesFilter = filter === 'all' || item.tags.includes(filter);
+        return isActive && matchesFilter;
       });
       
       // Clear and re-render only the filtered items
