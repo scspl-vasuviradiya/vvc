@@ -214,5 +214,17 @@
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/abc.jpg",
+    "alt": "sdf",
+    "title": "abc",
+    "desc": "sdf",
+    "price": "123",
+    "active": true
   }
 ]

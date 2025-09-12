@@ -8,8 +8,7 @@
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
     "title": "Wine Emperor Indowestern",
     "desc": "Tailored fit • 3-piece",
-    "price": "₹3999/-",
-    "active": true
+    "price": "₹3999/-"
   },
   {
     "tags": [
@@ -20,8 +19,7 @@
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
     "title": "Dark Knight Elegance Indowestern",
     "desc": "Tailored fit • 3-piece",
-    "price": "₹3999/-",
-    "active": true
+    "price": "₹3999/-"
   },
   {
     "tags": [
@@ -32,8 +30,7 @@
     "alt": "Classic Navy Indowestern - Men's tuxedo in navy",
     "title": "Classic black Velvet Indowestern",
     "desc": "Tailored fit • 3-piece",
-    "price": "₹2999/-",
-    "active": true
+    "price": "₹2999/-"
   },
   {
     "tags": [
@@ -44,8 +41,7 @@
     "alt": "Regal Cream Sherwani - Men's cream sherwani",
     "title": "Regal Cream Sherwani",
     "desc": "beats work • Dupatta",
-    "price": "₹9999/-",
-    "active": true
+    "price": "₹9999/-"
   },
   {
     "tags": [
@@ -56,8 +52,7 @@
     "alt": "Maharani’s Legacy Lehenga - Bridal lehenga with gold work",
     "title": "Maharani’s Legacy Lehenga",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹19999/-",
-    "active": true
+    "price": "₹19999/-"
   },
   {
     "tags": [
@@ -68,8 +63,7 @@
     "alt": "Pink Designer Lehenga - Contemporary lehenga design",
     "title": "Pink Designer Lehenga",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹19999/-",
-    "active": true
+    "price": "₹19999/-"
   },
   {
     "tags": [
@@ -80,8 +74,7 @@
     "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
     "title": "Elegant Red Lehenga",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹19999/-",
-    "active": true
+    "price": "₹19999/-"
   },
   {
     "tags": [
@@ -92,8 +85,7 @@
     "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
     "title": "Mehendi Majesty",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹11999/-",
-    "active": true
+    "price": "₹11999/-"
   },
   {
     "tags": [
@@ -104,8 +96,7 @@
     "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
     "title": "Peach Blossom Charm",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹8999/-",
-    "active": true
+    "price": "₹8999/-"
   },
   {
     "tags": [
@@ -116,8 +107,7 @@
     "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
     "title": "Midnight Majesty",
     "desc": "Bridal collection • Heavy work",
-    "price": "₹8999/-",
-    "active": true
+    "price": "₹8999/-"
   },
   {
     "tags": [
@@ -128,8 +118,7 @@
     "alt": "Heritage Rose - Classic Indian choli",
     "title": "Heritage Rose",
     "desc": "Traditional design • Comfortable fit",
-    "price": "₹4999/-",
-    "active": true
+    "price": "₹4999/-"
   },
   {
     "tags": [
@@ -140,8 +129,7 @@
     "alt": "Coral Charm - Classic Indian choli",
     "title": "Coral Charm",
     "desc": "Traditional design • Comfortable fit",
-    "price": "₹11999/-",
-    "active": true
+    "price": "₹11999/-"
   },
   {
     "tags": [
@@ -152,8 +140,7 @@
     "alt": "Ethereal Bloom - Classic Indian choli",
     "title": "Ethereal Bloom",
     "desc": "Traditional design • Comfortable fit",
-    "price": "₹4999/-",
-    "active": true
+    "price": "₹4999/-"
   },
   {
     "tags": [
@@ -164,8 +151,7 @@
     "alt": "Lavender Bloom Lehenga - Classic Indian choli",
     "title": "Lavender Bloom Lehenga",
     "desc": "Traditional design • Comfortable fit",
-    "price": "₹4999/-",
-    "active": true
+    "price": "₹4999/-"
   },
   {
     "tags": [
@@ -176,8 +162,7 @@
     "alt": "Mystic Grey Lehenga - Classic Indian choli",
     "title": "Mystic Grey Lehenga",
     "desc": "Traditional design • Comfortable fit",
-    "price": "₹5999/-",
-    "active": true
+    "price": "₹5999/-"
   },
   {
     "tags": [
@@ -188,8 +173,7 @@
     "alt": "Classic Men's Suit",
     "title": "Classic Men's Suit",
     "desc": "Professional look • Perfect fit",
-    "price": "₹1999/-",
-    "active": true
+    "price": "₹1999/-"
   },
   {
     "tags": [
@@ -200,8 +184,7 @@
     "alt": "Royal Reflection",
     "title": "Royal Reflection",
     "desc": "Royal look • Traditional style",
-    "price": "₹2999/-",
-    "active": true
+    "price": "₹2999/-"
   },
   {
     "tags": [
@@ -212,7 +195,6 @@
     "alt": "Navy blue beats Jodhpuri",
     "title": "Navy blue beats Jodhpuri",
     "desc": "Royal look • Traditional style",
-    "price": "₹2999/-",
-    "active": true
+    "price": "₹2999/-"
   }
 ]
