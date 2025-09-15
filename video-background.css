@@ -1,0 +1,275 @@
+/* ===================================
+   HERO VIDEO BACKGROUND STYLES
+   Vivah Villa Collection 2024
+   ===================================*/
+
+/* Hero Section with Video Background */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #000; /* Fallback background */
+}
+
+/* Video Background Container */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Hero Video Styling */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  /* Ensure video plays smoothly */
+  will-change: transform;
+}
+
+/* Video Overlay for Better Text Readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 21, 56, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(212, 175, 55, 0.6) 75%,
+    rgba(139, 21, 56, 0.8) 100%
+  );
+  z-index: 2;
+  /* Add subtle animation */
+  animation: overlayPulse 15s ease-in-out infinite;
+}
+
+@keyframes overlayPulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Hero Content - Ensure it's above video and overlay */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Hero text styling for better contrast against video */
+.hero-text {
+  position: relative;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+.hero-description {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.hero-badge {
+  background: rgba(212, 175, 55, 0.9) !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Hero buttons styling */
+.hero-actions .btn {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-actions .btn-primary {
+  background: rgba(139, 21, 56, 0.9) !important;
+  border-color: rgba(139, 21, 56, 1) !important;
+}
+
+.hero-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.hero-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero visual container */
+.hero-visual {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-image-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-stats {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.stat-number,
+.stat-label {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Feature cards styling over video */
+.hero-features {
+  position: relative;
+  z-index: 10;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Responsive video background */
+@media (max-width: 768px) {
+  .hero-video {
+    /* On mobile, ensure video covers properly */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-overlay {
+    /* Stronger overlay on mobile for better text readability */
+    background: linear-gradient(
+      135deg,
+      rgba(139, 21, 56, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(139, 21, 56, 0.9) 100%
+    );
+  }
+  
+  .hero-description {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(139, 21, 56, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(139, 21, 56, 0.95) 100%
+    );
+  }
+  
+  .hero-text {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Video loading state */
+.hero-video:not([data-loaded]) {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero-video[data-loaded] {
+  opacity: 1;
+}
+
+/* Pause video controls for accessibility */
+.video-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 15;
+}
+
+.video-pause-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.video-pause-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-overlay {
+    animation: none;
+  }
+  
+  .hero-video {
+    animation-play-state: paused;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-title,
+  .hero-description {
+    color: #ffffff !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1) !important;
+  }
+}
