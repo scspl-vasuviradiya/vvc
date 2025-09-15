@@ -13,6 +13,21 @@
   background: #000; /* Fallback background */
 }
 
+/* Desktop: Show video by default */
+@media (min-width: 769px) {
+  .hero-background {
+    background-image: none !important;
+  }
+  
+  .hero-video {
+    display: block !important;
+  }
+  
+  .video-controls {
+    display: block !important;
+  }
+}
+
 /* Video Background Container */
 .hero-background {
   position: absolute;
@@ -96,6 +111,83 @@
   backdrop-filter: blur(5px);
 }
 
+/* Mobile: Reset text styling for original background */
+@media (max-width: 768px) {
+  /* Enhanced mobile button visibility */
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 
+      0 4px 12px rgba(139, 21, 56, 0.2),
+      inset 0 0 0 1px rgba(139, 21, 56, 0.1) !important;
+  }
+  
+  .hero-actions .btn-outline i {
+    margin-right: 8px !important;
+    font-size: 16px !important;
+  }
+  
+  .hero-actions .btn-outline:hover,
+  .hero-actions .btn-outline:active,
+  .hero-actions .btn-outline:focus {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.3) !important;
+  }
+  .hero-title {
+    color: var(--gray-900) !important;
+    text-shadow: none !important;
+  }
+  
+  .hero-description {
+    color: var(--gray-600) !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+  }
+  
+  .hero-badge {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    backdrop-filter: none !important;
+  }
+  
+  .hero-actions .btn {
+    backdrop-filter: none !important;
+    box-shadow: var(--shadow-md) !important;
+  }
+  
+  .hero-actions .btn-primary {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--white) !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    border-width: 2px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(139, 21, 56, 0.2) !important;
+  }
+  
+  .hero-actions .btn-outline:hover {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.3) !important;
+  }
+}
+
 .hero-badge {
   background: rgba(212, 175, 55, 0.9) !important;
   color: #000 !important;
@@ -168,28 +260,46 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Responsive video background */
+/* Tablet and mid-range mobile button improvements */
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero-actions .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 160px !important;
+    padding: 14px 28px !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 3px 10px rgba(139, 21, 56, 0.2) !important;
+  }
+}
+
+/* Mobile: Hide video and show original gradient background */
 @media (max-width: 768px) {
   .hero-video {
-    /* On mobile, ensure video covers properly */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none !important;
+  }
+  
+  .hero-background {
+    /* Use original gradient background */
+    background: linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%) !important;
   }
   
   .hero-overlay {
-    /* Stronger overlay on mobile for better text readability */
-    background: linear-gradient(
-      135deg,
-      rgba(139, 21, 56, 0.8) 0%,
-      rgba(0, 0, 0, 0.6) 50%,
-      rgba(139, 21, 56, 0.9) 100%
-    );
+    /* Use original hero overlay */
+    background:
+      radial-gradient(circle at 20% 50%, rgba(139, 21, 56, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(139, 21, 56, 0.05) 0%, transparent 50%) !important;
   }
   
-  .hero-description {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
+  .video-controls {
+    display: none !important;
   }
 }
 
@@ -198,20 +308,60 @@
     min-height: 100vh;
   }
   
+  .hero-video {
+    display: none !important;
+  }
+  
+  .hero-background {
+    /* Use original gradient background */
+    background: linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%) !important;
+  }
+  
   .hero-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(139, 21, 56, 0.9) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(139, 21, 56, 0.95) 100%
-    );
+    /* Use original hero overlay */
+    background:
+      radial-gradient(circle at 20% 50%, rgba(139, 21, 56, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(139, 21, 56, 0.05) 0%, transparent 50%) !important;
+  }
+  
+  .video-controls {
+    display: none !important;
   }
   
   .hero-text {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: transparent !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* Enhanced mobile button styling */
+  .hero-actions {
+    margin-top: 30px !important;
+  }
+  
+  .hero-actions .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 8px 0 !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 3px solid var(--primary-color) !important;
+    box-shadow: 0 4px 15px rgba(139, 21, 56, 0.25) !important;
+  }
+  
+  .hero-actions .btn-outline:active,
+  .hero-actions .btn-outline:focus {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.4) !important;
   }
 }
 

@@ -8,12 +8,87 @@
     
     document.addEventListener('DOMContentLoaded', function() {
         initVideoControls();
+        handleResponsiveVideoBackground();
     });
+    
+    // Handle responsive switching between video and static background
+    function handleResponsiveVideoBackground() {
+        function checkScreenSize() {
+            const isMobile = window.innerWidth <= 768;
+            const video = document.querySelector('.hero-video');
+            const videoControls = document.querySelector('.video-controls');
+            const heroBackground = document.querySelector('.hero-background');
+            
+            if (isMobile) {
+                // Mobile: Hide video, show static background
+                if (video) {
+                    video.style.display = 'none';
+                    video.pause();
+                }
+                if (videoControls) {
+                    videoControls.style.display = 'none';
+                }
+                if (heroBackground) {
+                    heroBackground.style.background = 'linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%)';
+                }
+                console.log('Switched to mobile view - static background');
+            } else {
+                // Desktop: Show video, hide static background
+                if (video) {
+                    video.style.display = 'block';
+                    if (!video.hasAttribute('data-user-paused')) {
+                        video.play().catch(e => console.log('Auto-play prevented:', e));
+                    }
+                }
+                if (videoControls) {
+                    videoControls.style.display = 'block';
+                }
+                if (heroBackground) {
+                    heroBackground.style.background = '';
+                }
+                console.log('Switched to desktop view - video background');
+            }
+        }
+        
+        // Check on load
+        checkScreenSize();
+        
+        // Check on resize with throttling
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(checkScreenSize, 250);
+        });
+    }
     
     function initVideoControls() {
         const video = document.querySelector('.hero-video');
         const pauseBtn = document.getElementById('videoPauseBtn');
         const playPauseIcon = document.getElementById('playPauseIcon');
+        
+        // Check if mobile device
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        
+        if (isMobile) {
+            console.log('Mobile device detected - using static background instead of video');
+            
+            // Hide video and controls on mobile
+            if (video) {
+                video.style.display = 'none';
+                video.remove();
+            }
+            if (pauseBtn) {
+                pauseBtn.style.display = 'none';
+            }
+            
+            // Set original gradient background for mobile
+            const heroBackground = document.querySelector('.hero-background');
+            if (heroBackground) {
+                heroBackground.style.background = 'linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%)';
+            }
+            
+            return; // Exit function - no video functionality on mobile
+        }
         
         if (!video || !pauseBtn) {
             console.warn('Video or controls not found');
@@ -26,22 +101,21 @@
             console.log('Video loaded successfully');
         });
         
-        // Handle video load error - fallback to image background
+        // Handle video load error - fallback to image background (desktop only)
         video.addEventListener('error', function() {
             console.warn('Video failed to load, using fallback background');
             video.style.display = 'none';
             
-            // Add fallback background image to hero-background
+            // Add fallback to original gradient background
             const heroBackground = document.querySelector('.hero-background');
             if (heroBackground) {
-                heroBackground.style.backgroundImage = 'url("img/gallery/hero.jpg")';
-                heroBackground.style.backgroundSize = 'cover';
-                heroBackground.style.backgroundPosition = 'center';
-                heroBackground.style.backgroundRepeat = 'no-repeat';
+                heroBackground.style.background = 'linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%)';
             }
             
             // Hide video controls
-            pauseBtn.style.display = 'none';
+            if (pauseBtn) {
+                pauseBtn.style.display = 'none';
+            }
         });
         
         // Play/Pause functionality
@@ -129,59 +203,7 @@
             document.querySelector('.hero-background').appendChild(reducedMotionNotice);
         }
         
-        // Mobile-specific optimizations
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-            // On mobile, video might not autoplay due to browser policies
-            video.addEventListener('click', function() {
-                if (video.paused) {
-                    video.play();
-                }
-            });
-            
-            // Show a play button overlay on mobile if video doesn't start
-            setTimeout(() => {
-                if (video.paused) {
-                    showMobilePlayButton();
-                }
-            }, 1000);
-        }
-        
-        function showMobilePlayButton() {
-            const playOverlay = document.createElement('div');
-            playOverlay.style.cssText = `
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(139, 21, 56, 0.9);
-                color: white;
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 30px;
-                cursor: pointer;
-                z-index: 15;
-                backdrop-filter: blur(10px);
-                border: 2px solid rgba(255, 255, 255, 0.3);
-                transition: all 0.3s ease;
-            `;
-            playOverlay.innerHTML = '<i class="fas fa-play"></i>';
-            
-            playOverlay.addEventListener('click', function() {
-                video.play().then(() => {
-                    playOverlay.remove();
-                }).catch(e => {
-                    console.log('Play failed:', e);
-                });
-            });
-            
-            document.querySelector('.hero-background').appendChild(playOverlay);
-        }
+        // Note: Mobile devices will use static background instead of video
         
         // Keyboard accessibility
         pauseBtn.addEventListener('keydown', function(e) {
