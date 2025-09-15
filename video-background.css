@@ -363,6 +363,28 @@
     color: var(--white) !important;
     box-shadow: 0 6px 20px rgba(139, 21, 56, 0.4) !important;
   }
+  
+  /* Extra visibility for Call Now button on very small screens */
+  .hero-actions .btn[href^="tel:"] {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 3px solid var(--primary-color) !important;
+    font-weight: 700 !important;
+    box-shadow: 
+      0 4px 15px rgba(139, 21, 56, 0.3),
+      0 0 0 1px rgba(139, 21, 56, 0.1) !important;
+    outline: 2px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .hero-actions .btn[href^="tel:"]:hover,
+  .hero-actions .btn[href^="tel:"]:focus,
+  .hero-actions .btn[href^="tel:"]:active {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.4) !important;
+  }
 }
 
 /* Video loading state */
