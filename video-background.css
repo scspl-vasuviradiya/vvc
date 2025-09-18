@@ -1,0 +1,447 @@
+/* ===================================
+   HERO VIDEO BACKGROUND STYLES
+   Vivah Villa Collection 2024
+   ===================================*/
+
+/* Hero Section with Video Background */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #000; /* Fallback background */
+}
+
+/* Desktop: Show video by default */
+@media (min-width: 769px) {
+  .hero-background {
+    background-image: none !important;
+  }
+  
+  .hero-video {
+    display: block !important;
+  }
+  
+  .video-controls {
+    display: block !important;
+  }
+}
+
+/* Video Background Container */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Hero Video Styling */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  /* Ensure video plays smoothly */
+  will-change: transform;
+}
+
+/* Video Overlay for Better Text Readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 21, 56, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(212, 175, 55, 0.6) 75%,
+    rgba(139, 21, 56, 0.8) 100%
+  );
+  z-index: 2;
+  /* Add subtle animation */
+  animation: overlayPulse 15s ease-in-out infinite;
+}
+
+@keyframes overlayPulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Hero Content - Ensure it's above video and overlay */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Hero text styling for better contrast against video */
+.hero-text {
+  position: relative;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+.hero-description {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Mobile: Reset text styling for original background */
+@media (max-width: 768px) {
+  /* Enhanced mobile button visibility */
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 
+      0 4px 12px rgba(139, 21, 56, 0.2),
+      inset 0 0 0 1px rgba(139, 21, 56, 0.1) !important;
+  }
+  
+  .hero-actions .btn-outline i {
+    margin-right: 8px !important;
+    font-size: 16px !important;
+  }
+  
+  .hero-actions .btn-outline:hover,
+  .hero-actions .btn-outline:active,
+  .hero-actions .btn-outline:focus {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.3) !important;
+  }
+  .hero-title {
+    color: var(--gray-900) !important;
+    text-shadow: none !important;
+  }
+  
+  .hero-description {
+    color: var(--gray-600) !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+  }
+  
+  .hero-badge {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    backdrop-filter: none !important;
+  }
+  
+  .hero-actions .btn {
+    backdrop-filter: none !important;
+    box-shadow: var(--shadow-md) !important;
+  }
+  
+  .hero-actions .btn-primary {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--white) !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    border-width: 2px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(139, 21, 56, 0.2) !important;
+  }
+  
+  .hero-actions .btn-outline:hover {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.3) !important;
+  }
+}
+
+.hero-badge {
+  background: rgba(212, 175, 55, 0.9) !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Hero buttons styling */
+.hero-actions .btn {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-actions .btn-primary {
+  background: rgba(139, 21, 56, 0.9) !important;
+  border-color: rgba(139, 21, 56, 1) !important;
+}
+
+.hero-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.hero-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero visual container */
+.hero-visual {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-image-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-stats {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.stat-number,
+.stat-label {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Feature cards styling over video */
+.hero-features {
+  position: relative;
+  z-index: 10;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Tablet and mid-range mobile button improvements */
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero-actions .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 160px !important;
+    padding: 14px 28px !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 3px 10px rgba(139, 21, 56, 0.2) !important;
+  }
+}
+
+/* Mobile: Hide video and show original gradient background */
+@media (max-width: 768px) {
+  .hero-video {
+    display: none !important;
+  }
+  
+  .hero-background {
+    /* Use original gradient background */
+    background: linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%) !important;
+  }
+  
+  .hero-overlay {
+    /* Use original hero overlay */
+    background:
+      radial-gradient(circle at 20% 50%, rgba(139, 21, 56, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(139, 21, 56, 0.05) 0%, transparent 50%) !important;
+  }
+  
+  .video-controls {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+  
+  .hero-video {
+    display: none !important;
+  }
+  
+  .hero-background {
+    /* Use original gradient background */
+    background: linear-gradient(135deg, #fff8ee 0%, #f7f3ec 100%) !important;
+  }
+  
+  .hero-overlay {
+    /* Use original hero overlay */
+    background:
+      radial-gradient(circle at 20% 50%, rgba(139, 21, 56, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(139, 21, 56, 0.05) 0%, transparent 50%) !important;
+  }
+  
+  .video-controls {
+    display: none !important;
+  }
+  
+  .hero-text {
+    padding: 20px;
+    background: transparent !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* Enhanced mobile button styling */
+  .hero-actions {
+    margin-top: 30px !important;
+  }
+  
+  .hero-actions .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 8px 0 !important;
+  }
+  
+  .hero-actions .btn-outline {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 3px solid var(--primary-color) !important;
+    box-shadow: 0 4px 15px rgba(139, 21, 56, 0.25) !important;
+  }
+  
+  .hero-actions .btn-outline:active,
+  .hero-actions .btn-outline:focus {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    box-shadow: 0 6px 20px rgba(139, 21, 56, 0.4) !important;
+  }
+  
+  /* Extra visibility for Call Now button on very small screens */
+  .hero-actions .btn[href^="tel:"] {
+    background: var(--white) !important;
+    color: var(--primary-color) !important;
+    border: 3px solid var(--primary-color) !important;
+    font-weight: 700 !important;
+    box-shadow: 
+      0 4px 15px rgba(139, 21, 56, 0.3),
+      0 0 0 1px rgba(139, 21, 56, 0.1) !important;
+    outline: 2px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .hero-actions .btn[href^="tel:"]:hover,
+  .hero-actions .btn[href^="tel:"]:focus,
+  .hero-actions .btn[href^="tel:"]:active {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(139, 21, 56, 0.4) !important;
+  }
+}
+
+/* Video loading state */
+.hero-video:not([data-loaded]) {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero-video[data-loaded] {
+  opacity: 1;
+}
+
+/* Pause video controls for accessibility */
+.video-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 15;
+}
+
+.video-pause-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.video-pause-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-overlay {
+    animation: none;
+  }
+  
+  .hero-video {
+    animation-play-state: paused;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-title,
+  .hero-description {
+    color: #ffffff !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1) !important;
+  }
+}

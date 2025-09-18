@@ -21,6 +21,7 @@
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="animations.js" as="script">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="video-background.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -95,6 +96,21 @@
   <main>
     <section id="home" class="hero-section">
       <div class="hero-background">
+        <!-- Video Background -->
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/gallery/hero.jpg">
+          <source src="hero-video.mp4" type="video/mp4">
+          <source src="hero-video.webm" type="video/webm">
+          <!-- Fallback for browsers that don't support video -->
+          Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Controls -->
+        <div class="video-controls">
+          <button class="video-pause-btn" id="videoPauseBtn" aria-label="Pause/Play video">
+            <i class="fas fa-pause" id="playPauseIcon"></i>
+          </button>
+        </div>
+        
         <div class="hero-overlay"></div>
       </div>
       <div class="container">
@@ -463,7 +479,7 @@
                 <div class="contact-details">
                   <h3>Visit Our Store</h3>
                   <p>Near Ayodhya chowk<br>150 Feet Ring Rd, Rajkot<br>Gujarat 360006</p>
-                  <p class="store-hours"><strong>Open:</strong> Mon-Sun, 10 AM - 10 PM</p>
+                  <p class="store-hours"><strong>Open:</strong> Mon-Sun, 10 AM - 09 PM</p>
                 </div>
               </div>
             </div>
@@ -567,7 +583,8 @@
   </footer>
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  
+  <script src="video-controls.js"></script>
+  <script src="scroll-animations.js"></script>
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
