@@ -1010,58 +1010,47 @@
       }
     ];
     
-    // Collections functionality
-    function loadCollections() {
-      fetch('collections.json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          displayCollections(data);
-        })
-        .catch(error => {
-          // Use fallback data when fetch fails (e.g., when opening HTML directly or CORS issues)
-          displayCollections(fallbackCollections);
-        });
-    }
-    
-    // Global variables for view more functionality
+    // Global variables
+    let allCollectionsData = [];
     let currentFilter = 'all';
-    let showAllItems = false;
-    const ITEMS_PER_ROW = 3; // Assuming 3 items per row on average
-    const INITIAL_ROWS = 3;
-    const INITIAL_ITEMS_COUNT = ITEMS_PER_ROW * INITIAL_ROWS; // Show 9 items initially
+    const INITIAL_ITEMS_COUNT = 6; // Show 6 items initially
     
-    // Function to display collections data
-    function displayCollections(data) {
-      // Filter data to only show active collections
-      const activeData = data.filter(item => item.active !== false);
+    // Collections functionality
+    async function loadCollections() {
+      try {
+        const response = await fetch('collections.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        allCollectionsData = data.filter(item => item.active !== false);
+      } catch (error) {
+        console.warn('Loading fallback collections:', error);
+        allCollectionsData = fallbackCollections;
+      }
       
-      // Store filtered data globally for filtering
-      window.currentCollectionsData = activeData;
-      
-      // Reset view state when new data is loaded
-      showAllItems = false;
-      currentFilter = 'all';
-      
-      renderCollections(activeData);
+      displayCollections();
       initViewMoreButton();
       initCollectionFilters();
+      initPanelClose();
     }
     
-    // Function to render collections with view more logic
-    function renderCollections(data) {
+    // Function to display collections
+    function displayCollections() {
       const grid = document.getElementById('collectionsGrid');
       const viewMoreContainer = document.getElementById('viewMoreContainer');
       
-      if (!grid) {
-        return;
+      if (!grid) return;
+      
+      // Get filtered data
+      let filteredData = allCollectionsData;
+      if (currentFilter !== 'all') {
+        filteredData = allCollectionsData.filter(item => 
+          item.tags && item.tags.includes(currentFilter)
+        );
       }
       
-      // Ensure grid is visible with inline styles - use CSS Grid for better positioning
+      // Ensure grid has consistent styling
       grid.style.cssText = `
         display: grid !important;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1071,274 +1060,295 @@
         min-height: 100px;
       `;
       
+      // Clear grid
       grid.innerHTML = '';
       
-      if (!data || data.length === 0) {
+      if (filteredData.length === 0) {
         grid.innerHTML = '<p class="no-collections">No active collections available at the moment.</p>';
-        viewMoreContainer.style.display = 'none';
+        if (viewMoreContainer) viewMoreContainer.style.display = 'none';
         return;
       }
       
-      // Determine how many items to show
-      const itemsToShow = showAllItems ? data.length : Math.min(INITIAL_ITEMS_COUNT, data.length);
-      const hasMoreItems = data.length > INITIAL_ITEMS_COUNT;
+      // Show initial items with animation
+      const itemsToShow = Math.min(INITIAL_ITEMS_COUNT, filteredData.length);
       
-      // Render items
-      for (let i = 0; i < itemsToShow; i++) {
-        const item = data[i];
-        const tags = item.tags.join(' ');
-        const card = document.createElement('div');
-        
-        // Use inline styles to ensure display - optimized for CSS Grid
-        card.style.cssText = `
-          display: block !important;
-          background: white;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          padding: 16px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          min-height: 200px;
-          width: 100%;
-          max-width: 320px;
-          transition: opacity 0.3s ease, transform 0.3s ease;
-        `;
-        
-        card.setAttribute('data-tags', tags);
-        card.className = 'collection-card visible';
-        
-        // Simple, reliable HTML structure
-        card.innerHTML = `
-          <div style="margin-bottom: 12px;">
-            <img src="${item.img}" alt="${item.alt}" 
-                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
-                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
-          </div>
-          <div style="padding: 8px 0;">
-            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
-            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
-            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
-          </div>
-        `;
-        
+      filteredData.slice(0, itemsToShow).forEach((item, index) => {
+        const card = createCollectionCard(item);
         grid.appendChild(card);
-      }
+        
+        // Stagger animation
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
       
       // Show/hide view more button
-      if (hasMoreItems && !showAllItems) {
-        viewMoreContainer.style.display = 'flex';
-        updateViewMoreButton(false);
-      } else if (hasMoreItems && showAllItems) {
-        viewMoreContainer.style.display = 'flex';
-        updateViewMoreButton(true);
-      } else {
-        viewMoreContainer.style.display = 'none';
+      if (viewMoreContainer) {
+        if (filteredData.length > INITIAL_ITEMS_COUNT) {
+          viewMoreContainer.style.display = 'flex';
+          updateViewMoreButton(filteredData.length);
+        } else {
+          viewMoreContainer.style.display = 'none';
+        }
       }
     }
     
-    // Function to update view more button text and icon
-    function updateViewMoreButton(isExpanded) {
+    // Create collection card with original design
+    function createCollectionCard(item) {
+      const card = document.createElement('div');
+      card.className = 'collection-card visible';
+      card.setAttribute('data-tags', item.tags ? item.tags.join(' ') : '');
+      
+      // Set initial animation state
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.5s ease';
+      
+      // Use original inline styles to maintain the existing design
+      card.style.cssText = `
+        display: block !important;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        min-height: 200px;
+        width: 100%;
+        max-width: 320px;
+        transition: all 0.5s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      `;
+      
+      // Simple HTML structure without View Details button
+      card.innerHTML = `
+        <div style="margin-bottom: 12px;">
+          <img src="${item.img || 'img/logo/logo.png'}" 
+               alt="${item.alt || item.title || 'Collection item'}" 
+               style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
+               onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
+        </div>
+        <div style="padding: 8px 0;">
+          <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title || 'Untitled'}</h3>
+          <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc || 'No description available'}</p>
+          <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price || 'Price on request'}</div>
+        </div>
+      `;
+      
+      return card;
+    }
+    
+    // Update view more button
+    function updateViewMoreButton(totalItems) {
       const btn = document.getElementById('viewMoreBtn');
       if (!btn) return;
       
       const span = btn.querySelector('span');
       const icon = btn.querySelector('i');
       
-      if (isExpanded) {
-        span.textContent = 'View Less';
-        icon.className = 'fas fa-arrow-up';
-      } else {
-        span.textContent = 'View More Collections';
-        icon.className = 'fas fa-arrow-down';
+      if (span && icon) {
+        span.textContent = `View All Collections (${totalItems})`;
+        icon.className = 'fas fa-expand';
       }
     }
     
-    // Function to initialize view more button
+    // Initialize view more button - FIXED VERSION
     function initViewMoreButton() {
       const btn = document.getElementById('viewMoreBtn');
       if (!btn) return;
       
-      // Remove existing event listener
-      btn.removeEventListener('click', handleViewMoreClick);
+      // Clone the button to remove all existing event listeners
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
       
-      // Add new event listener
-      btn.addEventListener('click', handleViewMoreClick);
-    }
-    
-    // Handle view more button click - now opens fullscreen panel
-    function handleViewMoreClick() {
-      openFullscreenPanel();
-    }
-    
-    // Open fullscreen panel
-    function openFullscreenPanel() {
-      const panel = document.getElementById('fullscreenPanel');
-      if (panel) {
-        panel.classList.add('show');
-        panel.classList.remove('hide');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        
-        // Load all collections in fullscreen
-        loadFullscreenCollections('all');
-        
-        // Initialize fullscreen filters
-        initFullscreenFilters();
-      }
-    }
-    
-    // Close fullscreen panel
-    function closeFullscreenPanel() {
-      const panel = document.getElementById('fullscreenPanel');
-      if (panel) {
-        panel.classList.add('hide');
-        panel.classList.remove('show');
-        document.body.style.overflow = ''; // Restore scrolling
-        
-        // Hide panel after animation
-        setTimeout(() => {
-          panel.style.display = 'none';
-          panel.classList.remove('hide');
-        }, 300);
-      }
-    }
-    
-    // Load collections in fullscreen panel
-    function loadFullscreenCollections(filter = 'all') {
-      const allData = window.currentCollectionsData || [];
-      const filteredData = allData.filter(item => {
-        const isActive = item.active !== false;
-        const matchesFilter = filter === 'all' || item.tags.includes(filter);
-        return isActive && matchesFilter;
+      // Add fresh event listener
+      newBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openFullscreenView();
       });
-      
-      renderFullscreenCollections(filteredData);
     }
     
-    // Render collections in fullscreen grid
-    function renderFullscreenCollections(data) {
+    // Open fullscreen view - FIXED VERSION
+    function openFullscreenView() {
+      const panel = document.getElementById('fullscreenPanel');
+      if (!panel) return;
+      
+      // Show panel
+      panel.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Load all collections in fullscreen
+      renderFullscreenCollections();
+      initFullscreenFilters();
+    }
+    
+    // Close fullscreen view - FIXED VERSION  
+    function closeFullscreenView() {
+      const panel = document.getElementById('fullscreenPanel');
+      if (!panel) return;
+      
+      panel.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Render collections in fullscreen
+    function renderFullscreenCollections() {
       const grid = document.getElementById('fullscreenCollectionsGrid');
       if (!grid) return;
       
+      // Get filtered data
+      let filteredData = allCollectionsData;
+      if (currentFilter !== 'all') {
+        filteredData = allCollectionsData.filter(item => 
+          item.tags && item.tags.includes(currentFilter)
+        );
+      }
+      
+      // Apply the same grid styling as main collections
+      grid.style.cssText = `
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        padding: 20px;
+        justify-items: center;
+        min-height: 100px;
+      `;
+      
+      // Clear grid
       grid.innerHTML = '';
       
-      if (!data || data.length === 0) {
-        grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #666;">No collections available for this filter.</div>';
+      if (filteredData.length === 0) {
+        grid.innerHTML = '<p class="no-collections">No collections found.</p>';
         return;
       }
       
-      data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'fullscreen-collection-card';
-        
-        card.innerHTML = `
-          <div style="margin-bottom: 12px;">
-            <img src="${item.img}" alt="${item.alt}" 
-                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
-                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
-          </div>
-          <div style="padding: 8px 0;">
-            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
-            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
-            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
-          </div>
-        `;
-        
+      // Create all collection cards with same design
+      filteredData.forEach((item, index) => {
+        const card = createCollectionCard(item);
         grid.appendChild(card);
+        
+        // Stagger animation
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 50);
       });
     }
     
-    // Initialize fullscreen filter tabs
+    // Initialize fullscreen filters - FIXED VERSION
     function initFullscreenFilters() {
-      const filterTabs = document.querySelectorAll('.fullscreen-filter-tab');
+      const filterContainer = document.getElementById('fullscreenFilterTabs');
+      if (!filterContainer) return;
       
-      filterTabs.forEach(tab => {
-        tab.removeEventListener('click', handleFullscreenFilterClick);
-        tab.addEventListener('click', handleFullscreenFilterClick);
+      // Use event delegation to avoid multiple listeners
+      const existingListener = filterContainer._filterListener;
+      if (existingListener) {
+        filterContainer.removeEventListener('click', existingListener);
+      }
+      
+      const filterListener = function(e) {
+        const tab = e.target.closest('.fullscreen-filter-tab');
+        if (!tab) return;
+        
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const filter = tab.dataset.filter;
+        if (!filter) return;
+        
+        // Update current filter
+        currentFilter = filter;
+        
+        // Update tab states
+        document.querySelectorAll('.fullscreen-filter-tab').forEach(t => {
+          t.classList.remove('active');
+        });
+        tab.classList.add('active');
+        
+        // Re-render collections
+        renderFullscreenCollections();
+      };
+      
+      filterContainer.addEventListener('click', filterListener);
+      filterContainer._filterListener = filterListener;
+      
+      // Update active tab
+      document.querySelectorAll('.fullscreen-filter-tab').forEach(tab => {
+        if (tab.dataset.filter === currentFilter) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
       });
     }
     
-    // Handle fullscreen filter click
-    function handleFullscreenFilterClick(e) {
-      const clickedTab = e.currentTarget;
-      const filter = clickedTab.dataset.filter;
-      
-      // Remove active class from all tabs
-      document.querySelectorAll('.fullscreen-filter-tab').forEach(t => {
-        t.classList.remove('active');
-      });
-      
-      // Add active class to clicked tab
-      clickedTab.classList.add('active');
-      
-      // Load filtered collections
-      loadFullscreenCollections(filter);
-    }
-    
-    // Initialize panel close functionality
+    // Initialize panel close - FIXED VERSION
     function initPanelClose() {
       const closeBtn = document.getElementById('panelCloseBtn');
       if (closeBtn) {
-        closeBtn.removeEventListener('click', closeFullscreenPanel);
-        closeBtn.addEventListener('click', closeFullscreenPanel);
+        // Clone to remove existing listeners
+        const newCloseBtn = closeBtn.cloneNode(true);
+        closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+        
+        newCloseBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeFullscreenView();
+        });
       }
       
-      // Close on Escape key
+      // Escape key handler
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
           const panel = document.getElementById('fullscreenPanel');
-          if (panel && panel.classList.contains('show')) {
-            closeFullscreenPanel();
+          if (panel && panel.classList.contains('active')) {
+            closeFullscreenView();
           }
         }
       });
     }
     
+    // Initialize main filter tabs - FIXED VERSION
     function initCollectionFilters() {
-      const filterTabs = document.querySelectorAll('.filter-tab');
+      const filterContainer = document.querySelector('.filter-tabs');
+      if (!filterContainer) return;
       
-      if (filterTabs.length === 0) {
-        return;
+      // Use event delegation
+      const existingListener = filterContainer._mainFilterListener;
+      if (existingListener) {
+        filterContainer.removeEventListener('click', existingListener);
       }
       
-      filterTabs.forEach(tab => {
-        // Remove any existing event listeners
-        tab.removeEventListener('click', handleFilterClick);
+      const filterListener = function(e) {
+        const tab = e.target.closest('.filter-tab');
+        if (!tab) return;
         
-        // Add new event listener
-        tab.addEventListener('click', handleFilterClick);
-      });
-    }
-    
-    function handleFilterClick(e) {
-      const clickedTab = e.currentTarget;
-      const filter = clickedTab.dataset.filter;
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const filter = tab.dataset.filter;
+        if (!filter) return;
+        
+        // Update current filter
+        currentFilter = filter;
+        
+        // Update tab states
+        document.querySelectorAll('.filter-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        
+        // Re-render collections
+        displayCollections();
+      };
       
-      // Update current filter
-      currentFilter = filter;
-      
-      // Reset view state when filter changes
-      showAllItems = false;
-      
-      // Remove active class from all tabs
-      document.querySelectorAll('.filter-tab').forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      
-      // Add active class to clicked tab
-      clickedTab.classList.add('active');
-      clickedTab.setAttribute('aria-selected', 'true');
-      
-      // Get filtered data
-      const allData = window.currentCollectionsData || [];
-      const filteredData = allData.filter(item => {
-        // Only show active collections that match the filter
-        const isActive = item.active !== false;
-        const matchesFilter = filter === 'all' || item.tags.includes(filter);
-        return isActive && matchesFilter;
-      });
-      
-      // Re-render collections with new filter
-      renderCollections(filteredData);
+      filterContainer.addEventListener('click', filterListener);
+      filterContainer._mainFilterListener = filterListener;
     }
 
     // Initialize collections when page loads
