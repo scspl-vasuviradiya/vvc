@@ -282,8 +282,69 @@
         <div class="collections-grid" id="collectionsGrid" data-anim="fade-up">
           <!-- Collections will be loaded here via JavaScript -->
         </div>
+        
+        <!-- View More Button -->
+        <div class="view-more-container" id="viewMoreContainer" style="display: none; text-align: center; margin-top: 2rem;">
+          <button class="btn btn-outline btn-lg view-more-btn" id="viewMoreBtn">
+            <span>View All Collections</span>
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
       </div>
     </section>
+    
+    <!-- Fullscreen Collections Panel -->
+    <div class="fullscreen-panel" id="fullscreenPanel">
+      <div class="fullscreen-panel-header">
+        <div class="panel-title">
+          <h2>All Collections</h2>
+          <p>Browse our complete collection of premium wedding attire</p>
+        </div>
+        <button class="panel-close-btn" id="panelCloseBtn" aria-label="Close fullscreen view">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="fullscreen-panel-content">
+        <!-- Filter Tabs for Fullscreen -->
+        <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs">
+          <button class="fullscreen-filter-tab active" data-filter="all">
+            <span>All Collections</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="men">
+            <i class="fas fa-male"></i>
+            <span>Men</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="women">
+            <i class="fas fa-female"></i>
+            <span>Women</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="indowestern">
+            <span>Indowestern</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="sherwani">
+            <span>Sherwanis</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="lehenga">
+            <span>Lehengas</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="jodhpuri">
+            <span>Jodhpuris</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="choli">
+            <span>Cholis</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="suit">
+            <span>Suit</span>
+          </button>
+        </div>
+        
+        <!-- Fullscreen Collections Grid -->
+        <div class="fullscreen-collections-grid" id="fullscreenCollectionsGrid">
+          <!-- Collections will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </div>
 
     <!-- Gallery -->
     <section id="gallery" style="background: burlywood;overflow: hidden;padding: 70px;padding-bottom: 150px;">
@@ -885,6 +946,60 @@
         "active": true
       },
       {
+        "tags": ["men", "sherwani"],
+        "img": "img/collections/men-sherwani-1.jpg",
+        "alt": "Regal Cream Sherwani - Men's cream sherwani",
+        "title": "Regal Cream Sherwani",
+        "desc": "Zari work • Dupatta",
+        "price": "₹9999/day",
+        "active": true
+      },
+      {
+        "tags": ["women", "lehenga"],
+        "img": "img/collections/women-lehenga-1.jpg",
+        "alt": "Elegant Red Lehenga - Bridal lehenga with gold work",
+        "title": "Elegant Red Lehenga",
+        "desc": "Bridal collection • Heavy work",
+        "price": "₹15999/day",
+        "active": true
+      },
+      {
+        "tags": ["women", "lehenga"],
+        "img": "img/collections/women-lehenga-2.jpg",
+        "alt": "Pink Designer Lehenga - Contemporary lehenga design",
+        "title": "Pink Designer Lehenga",
+        "desc": "Designer piece • Modern cut",
+        "price": "₹12999/day",
+        "active": true
+      },
+      {
+        "tags": ["women", "choli"],
+        "img": "img/collections/women-choli-1.jpg",
+        "alt": "Traditional Choli - Classic Indian choli",
+        "title": "Traditional Choli",
+        "desc": "Traditional design • Comfortable fit",
+        "price": "₹5999/day",
+        "active": true
+      },
+      {
+        "tags": ["men", "suit"],
+        "img": "img/collections/men-suit-1.jpg",
+        "alt": "Classic Men's Suit",
+        "title": "Classic Men's Suit",
+        "desc": "Professional look • Perfect fit",
+        "price": "₹2999/day",
+        "active": true
+      },
+      {
+        "tags": ["men", "jodhpuri"],
+        "img": "img/collections/men-jodhpuri-1.jpg",
+        "alt": "Traditional Jodhpuri Suit",
+        "title": "Traditional Jodhpuri",
+        "desc": "Royal look • Traditional style",
+        "price": "₹3999/day",
+        "active": true
+      },
+      {
         "tags": ["women", "kurti"],
         "img": "img/collections/women-kurti-1.jpg",
         "alt": "Elegant Kurti",
@@ -913,6 +1028,13 @@
         });
     }
     
+    // Global variables for view more functionality
+    let currentFilter = 'all';
+    let showAllItems = false;
+    const ITEMS_PER_ROW = 3; // Assuming 3 items per row on average
+    const INITIAL_ROWS = 3;
+    const INITIAL_ITEMS_COUNT = ITEMS_PER_ROW * INITIAL_ROWS; // Show 9 items initially
+    
     // Function to display collections data
     function displayCollections(data) {
       // Filter data to only show active collections
@@ -921,7 +1043,20 @@
       // Store filtered data globally for filtering
       window.currentCollectionsData = activeData;
       
+      // Reset view state when new data is loaded
+      showAllItems = false;
+      currentFilter = 'all';
+      
+      renderCollections(activeData);
+      initViewMoreButton();
+      initCollectionFilters();
+    }
+    
+    // Function to render collections with view more logic
+    function renderCollections(data) {
       const grid = document.getElementById('collectionsGrid');
+      const viewMoreContainer = document.getElementById('viewMoreContainer');
+      
       if (!grid) {
         return;
       }
@@ -938,12 +1073,19 @@
       
       grid.innerHTML = '';
       
-      if (!activeData || activeData.length === 0) {
+      if (!data || data.length === 0) {
         grid.innerHTML = '<p class="no-collections">No active collections available at the moment.</p>';
+        viewMoreContainer.style.display = 'none';
         return;
       }
       
-      activeData.forEach((item, index) => {
+      // Determine how many items to show
+      const itemsToShow = showAllItems ? data.length : Math.min(INITIAL_ITEMS_COUNT, data.length);
+      const hasMoreItems = data.length > INITIAL_ITEMS_COUNT;
+      
+      // Render items
+      for (let i = 0; i < itemsToShow; i++) {
+        const item = data[i];
         const tags = item.tags.join(' ');
         const card = document.createElement('div');
         
@@ -979,12 +1121,175 @@
         `;
         
         grid.appendChild(card);
+      }
+      
+      // Show/hide view more button
+      if (hasMoreItems && !showAllItems) {
+        viewMoreContainer.style.display = 'flex';
+        updateViewMoreButton(false);
+      } else if (hasMoreItems && showAllItems) {
+        viewMoreContainer.style.display = 'flex';
+        updateViewMoreButton(true);
+      } else {
+        viewMoreContainer.style.display = 'none';
+      }
+    }
+    
+    // Function to update view more button text and icon
+    function updateViewMoreButton(isExpanded) {
+      const btn = document.getElementById('viewMoreBtn');
+      if (!btn) return;
+      
+      const span = btn.querySelector('span');
+      const icon = btn.querySelector('i');
+      
+      if (isExpanded) {
+        span.textContent = 'View Less';
+        icon.className = 'fas fa-arrow-up';
+      } else {
+        span.textContent = 'View More Collections';
+        icon.className = 'fas fa-arrow-down';
+      }
+    }
+    
+    // Function to initialize view more button
+    function initViewMoreButton() {
+      const btn = document.getElementById('viewMoreBtn');
+      if (!btn) return;
+      
+      // Remove existing event listener
+      btn.removeEventListener('click', handleViewMoreClick);
+      
+      // Add new event listener
+      btn.addEventListener('click', handleViewMoreClick);
+    }
+    
+    // Handle view more button click - now opens fullscreen panel
+    function handleViewMoreClick() {
+      openFullscreenPanel();
+    }
+    
+    // Open fullscreen panel
+    function openFullscreenPanel() {
+      const panel = document.getElementById('fullscreenPanel');
+      if (panel) {
+        panel.classList.add('show');
+        panel.classList.remove('hide');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        
+        // Load all collections in fullscreen
+        loadFullscreenCollections('all');
+        
+        // Initialize fullscreen filters
+        initFullscreenFilters();
+      }
+    }
+    
+    // Close fullscreen panel
+    function closeFullscreenPanel() {
+      const panel = document.getElementById('fullscreenPanel');
+      if (panel) {
+        panel.classList.add('hide');
+        panel.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+        
+        // Hide panel after animation
+        setTimeout(() => {
+          panel.style.display = 'none';
+          panel.classList.remove('hide');
+        }, 300);
+      }
+    }
+    
+    // Load collections in fullscreen panel
+    function loadFullscreenCollections(filter = 'all') {
+      const allData = window.currentCollectionsData || [];
+      const filteredData = allData.filter(item => {
+        const isActive = item.active !== false;
+        const matchesFilter = filter === 'all' || item.tags.includes(filter);
+        return isActive && matchesFilter;
       });
       
-      // Initialize filter functionality with delay to ensure DOM is ready
-      setTimeout(() => {
-        initCollectionFilters();
-      }, 100);
+      renderFullscreenCollections(filteredData);
+    }
+    
+    // Render collections in fullscreen grid
+    function renderFullscreenCollections(data) {
+      const grid = document.getElementById('fullscreenCollectionsGrid');
+      if (!grid) return;
+      
+      grid.innerHTML = '';
+      
+      if (!data || data.length === 0) {
+        grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #666;">No collections available for this filter.</div>';
+        return;
+      }
+      
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'fullscreen-collection-card';
+        
+        card.innerHTML = `
+          <div style="margin-bottom: 12px;">
+            <img src="${item.img}" alt="${item.alt}" 
+                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
+                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
+          </div>
+          <div style="padding: 8px 0;">
+            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
+            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
+            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    }
+    
+    // Initialize fullscreen filter tabs
+    function initFullscreenFilters() {
+      const filterTabs = document.querySelectorAll('.fullscreen-filter-tab');
+      
+      filterTabs.forEach(tab => {
+        tab.removeEventListener('click', handleFullscreenFilterClick);
+        tab.addEventListener('click', handleFullscreenFilterClick);
+      });
+    }
+    
+    // Handle fullscreen filter click
+    function handleFullscreenFilterClick(e) {
+      const clickedTab = e.currentTarget;
+      const filter = clickedTab.dataset.filter;
+      
+      // Remove active class from all tabs
+      document.querySelectorAll('.fullscreen-filter-tab').forEach(t => {
+        t.classList.remove('active');
+      });
+      
+      // Add active class to clicked tab
+      clickedTab.classList.add('active');
+      
+      // Load filtered collections
+      loadFullscreenCollections(filter);
+    }
+    
+    // Initialize panel close functionality
+    function initPanelClose() {
+      const closeBtn = document.getElementById('panelCloseBtn');
+      if (closeBtn) {
+        closeBtn.removeEventListener('click', closeFullscreenPanel);
+        closeBtn.addEventListener('click', closeFullscreenPanel);
+      }
+      
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const panel = document.getElementById('fullscreenPanel');
+          if (panel && panel.classList.contains('show')) {
+            closeFullscreenPanel();
+          }
+        }
+      });
     }
     
     function initCollectionFilters() {
@@ -1007,6 +1312,12 @@
       const clickedTab = e.currentTarget;
       const filter = clickedTab.dataset.filter;
       
+      // Update current filter
+      currentFilter = filter;
+      
+      // Reset view state when filter changes
+      showAllItems = false;
+      
       // Remove active class from all tabs
       document.querySelectorAll('.filter-tab').forEach(t => {
         t.classList.remove('active');
@@ -1017,9 +1328,7 @@
       clickedTab.classList.add('active');
       clickedTab.setAttribute('aria-selected', 'true');
       
-      const grid = document.getElementById('collectionsGrid');
-      
-      // Alternative approach: completely re-render visible cards for perfect positioning
+      // Get filtered data
       const allData = window.currentCollectionsData || [];
       const filteredData = allData.filter(item => {
         // Only show active collections that match the filter
@@ -1028,46 +1337,8 @@
         return isActive && matchesFilter;
       });
       
-      // Clear and re-render only the filtered items
-      grid.innerHTML = '';
-      
-      filteredData.forEach((item, index) => {
-        const tags = item.tags.join(' ');
-        const card = document.createElement('div');
-        
-        // Use inline styles to ensure display - optimized for CSS Grid
-        card.style.cssText = `
-          display: block !important;
-          background: white;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          padding: 16px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          min-height: 200px;
-          width: 100%;
-          max-width: 320px;
-          transition: opacity 0.3s ease, transform 0.3s ease;
-        `;
-        
-        card.setAttribute('data-tags', tags);
-        card.className = 'collection-card visible';
-        
-        // Simple, reliable HTML structure
-        card.innerHTML = `
-          <div style="margin-bottom: 12px;">
-            <img src="${item.img}" alt="${item.alt}" 
-                 style="width: 100%; height: auto; max-height: 300px; object-fit: contain; border-radius: 4px;" 
-                 onerror="this.src='img/logo/logo.png'; this.style.height='100px'; this.style.objectFit='contain';">
-          </div>
-          <div style="padding: 8px 0;">
-            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title}</h3>
-            <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc}</p>
-            <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price}</div>
-          </div>
-        `;
-        
-        grid.appendChild(card);
-      });
+      // Re-render collections with new filter
+      renderCollections(filteredData);
     }
 
     // Initialize collections when page loads
@@ -1085,6 +1356,9 @@
       setTimeout(() => {
         initCollectionFilters();
       }, 500);
+      
+      // Initialize panel close functionality
+      initPanelClose();
     });
   </script>
 </body>
