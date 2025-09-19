@@ -1663,7 +1663,7 @@ body.mobile-nav-open {
 
 .footer {
   background: burlywood;
-  color: var(--white);
+  color: #2c3e50;
   padding: var(--space-20) 0 var(--space-8);
 }
 
@@ -1712,25 +1712,29 @@ body.mobile-nav-open {
 }
 
 .footer-brand-text h3 {
-  color: var(--white);
+  color: #1a365d;
   margin-bottom: var(--space-1);
+  font-weight: 700;
 }
 
 .footer-brand-text p {
-  color: var(--gray-300);
+  color: #4a5568;
   font-size: var(--font-size-sm);
   margin: 0;
+  font-weight: 500;
 }
 
 .footer-description {
-  color: var(--gray-300);
-  line-height: 1.6;
+  color: #4a5568;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .footer-section h4 {
-  color: var(--white);
+  color: #1a365d;
   margin-bottom: var(--space-4);
   font-size: var(--font-size-lg);
+  font-weight: 600;
 }
 
 .footer-links {
@@ -1744,12 +1748,16 @@ body.mobile-nav-open {
 }
 
 .footer-links a {
-  color: var(--gray-300);
-  transition: color var(--transition-fast);
+  color: #2c3e50;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: #e53e3e;
+  text-decoration: underline;
+  transform: translateX(2px);
 }
 
 .footer-bottom {
@@ -1757,7 +1765,7 @@ body.mobile-nav-open {
   justify-content: space-between;
   align-items: center;
   padding-top: var(--space-8);
-  border-top: 1px solid var(--gray-700);
+  border-top: 2px solid #e2e8f0;
   flex-direction: column;
   gap: var(--space-4);
 }
@@ -1770,25 +1778,30 @@ body.mobile-nav-open {
 }
 
 .footer-copyright p {
-  color: var(--gray-400);
+  color: #4a5568;
   margin: 0;
   font-size: var(--font-size-sm);
+  font-weight: 400;
 }
 
 .back-to-top {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--gray-300);
+  color: #ffffff;
+  background: linear-gradient(135deg, #3182ce, #2d72d2);
   transition: all var(--transition-base);
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-lg);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
 }
 
 .back-to-top:hover {
-  color: var(--white);
-  background: var(--gray-800);
-  transform: translateY(-2px);
+  color: #ffffff;
+  background: linear-gradient(135deg, #e53e3e, #dc2626);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(229, 62, 62, 0.4);
 }
 
 /* ===================================
@@ -2370,7 +2383,7 @@ body.mobile-nav-open {
   transform: none !important;
   transition: none !important;
 }
-}
+
 
 /* Responsive typography */
 @media (max-width: 640px) {
