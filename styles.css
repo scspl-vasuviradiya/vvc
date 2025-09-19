@@ -1662,7 +1662,7 @@ body.mobile-nav-open {
    ===================================*/
 
 .footer {
-  background: var(--bg-dark-gradient);
+  background: burlywood;
   color: var(--white);
   padding: var(--space-20) 0 var(--space-8);
 }
