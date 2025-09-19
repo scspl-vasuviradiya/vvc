@@ -377,6 +377,10 @@
                 </label>
               </div>
             </div>
+            <!-- Simple Fullscreen Button -->
+            <button class="gallery-fullscreen-btn" id="galleryFullscreenBtn" title="Fullscreen Gallery">
+              <i class="fas fa-expand"></i>
+            </button>
           </div>
         </div>
 
@@ -1227,6 +1231,78 @@
     }
 
 
+    // Simple Gallery Fullscreen
+    let isFullscreen = false;
+    
+    function initSimpleFullscreen() {
+      const btn = document.getElementById('galleryFullscreenBtn');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          if (!isFullscreen) {
+            enterFullscreen();
+          } else {
+            exitFullscreen();
+          }
+        });
+      }
+      
+      // Listen for fullscreen changes
+      document.addEventListener('fullscreenchange', updateButtonState);
+      document.addEventListener('webkitfullscreenchange', updateButtonState);
+      document.addEventListener('mozfullscreenchange', updateButtonState);
+      document.addEventListener('MSFullscreenChange', updateButtonState);
+    }
+    
+    function enterFullscreen() {
+      const gallery = document.getElementById('gallery');
+      if (gallery) {
+        if (gallery.requestFullscreen) {
+          gallery.requestFullscreen();
+        } else if (gallery.webkitRequestFullscreen) {
+          gallery.webkitRequestFullscreen();
+        } else if (gallery.mozRequestFullScreen) {
+          gallery.mozRequestFullScreen();
+        } else if (gallery.msRequestFullscreen) {
+          gallery.msRequestFullscreen();
+        }
+      }
+    }
+    
+    function exitFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+    
+    function updateButtonState() {
+      const btn = document.getElementById('galleryFullscreenBtn');
+      const icon = btn ? btn.querySelector('i') : null;
+      
+      // Check if we're in fullscreen
+      const inFullscreen = !!(document.fullscreenElement || 
+                             document.webkitFullscreenElement || 
+                             document.mozFullScreenElement || 
+                             document.msFullscreenElement);
+      
+      isFullscreen = inFullscreen;
+      
+      if (icon) {
+        if (inFullscreen) {
+          icon.className = 'fas fa-compress';
+          btn.title = 'Exit Fullscreen';
+        } else {
+          icon.className = 'fas fa-expand';
+          btn.title = 'Fullscreen Gallery';
+        }
+      }
+    }
+
     // Initialize collections when page loads
     document.addEventListener('DOMContentLoaded', function() {
       // Update footer year
@@ -1245,6 +1321,9 @@
       
       // Initialize panel close functionality
       initPanelClose();
+      
+      // Initialize simple fullscreen
+      initSimpleFullscreen();
       
     });
   </script>

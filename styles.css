@@ -3002,3 +3002,28 @@ body.mobile-nav-open {
   }
 }
 
+/* Simple Gallery Fullscreen Button */
+.gallery-fullscreen-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-left: var(--space-3);
+}
+
+.gallery-fullscreen-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+.gallery-fullscreen-btn i {
+  font-size: var(--font-size-sm);
+}
+
