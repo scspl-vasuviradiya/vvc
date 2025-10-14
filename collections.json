@@ -274,5 +274,17 @@
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-peacock-prince.jpg",
+    "alt": "indowestrn, groom, royal look, ethnic, style, wedding, vivah villa, new collection",
+    "title": "The Peacock Prince",
+    "desc": "Royal look • Traditional style",
+    "price": "₹3999/-",
+    "active": true
   }
 ]
