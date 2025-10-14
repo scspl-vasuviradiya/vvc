@@ -262,5 +262,17 @@
     "desc": "Tailored fit • 3-piece",
     "price": "₹2999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/midnight-blue-grace.jpg",
+    "alt": "Royal, jodhapuri, Ethnic, Embroidered, Formal, Festive, Traditional, Patched Jacket, rama, open jodhpuri",
+    "title": "Midnight Blue Grace",
+    "desc": "Royal look • Traditional style",
+    "price": "₹2999/-",
+    "active": true
   }
 ]
