@@ -382,5 +382,17 @@
     "desc": "A refined long Indo-Western crafted in deep teal elegance.",
     "price": "₹2999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/neelmayur-royale-indo-western.jpg",
+    "alt": "IndoWestern, Sherwani, Couture, Royal, Elegant, Luxury, Groomwear, Timeless, Designer, Classic, Embroidery, Ethnic, black, peacock, thread work",
+    "title": "Neelmayur Royale Indo-Western",
+    "desc": "Tradition reimagined with contemporary power and timeless detailing.",
+    "price": "₹3999/-",
+    "active": true
   }
 ]
