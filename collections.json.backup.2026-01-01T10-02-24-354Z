@@ -1,0 +1,338 @@
+[
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/men-indowestern-1.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Wine Emperor Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/men-indowestern-2.jpg",
+    "alt": "IndoWestern, Sherwani, Couture, Royal, Elegant, Luxury, Groomwear, Timeless, Designer, Classic, Embroidery, Ethnic",
+    "title": "Dark Knight Elegance Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/men-indowestern-3.jpg",
+    "alt": "Indo-Western, Ethnic, Floral Printed, Sherwani, Jacket, Traditional, Formal, Celebration",
+    "title": "Classic black Velvet Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/men-sherwani-1.jpg",
+    "alt": "Sherwani, Groom, Wedding, Indian, Ethnic, Traditional, Festive, Embellished",
+    "title": "Regal Cream Sherwani",
+    "desc": "beats work • Dupatta",
+    "price": "₹9999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-1.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian",
+    "title": "Maharani’s Legacy Lehenga",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹19999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-2.jpg",
+    "alt": "Pink, Designer, Lehenga, Lehenga Choli, Traditional, Indian, Embroidered, Festive, Pink Floral, Regal, Ethnic, Celebration Attire, Vibrant, Opulent",
+    "title": "Pink Designer Lehenga",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹19999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-3.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
+    "title": "Elegant Red Lehenga",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹19999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-4.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Green, Mehndi, Traditional, Ethnic, Festive, Designer, Indian, Choli",
+    "title": "Mehendi Majesty",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹11999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-5.jpg",
+    "alt": "Lehenga, Embroidered, Ethnic, Traditional, Bridal, Festive, Indian, Choli, Westurn were",
+    "title": "Peach Blossom Charm",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹8999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/women-lehenga-6.jpg",
+    "alt": "Lehenga, Embroidered, Traditional, Festive, Elegant, Navy, Blue, Nevy Blue, Designer, Ethnic, Opulent, Bridal",
+    "title": "Midnight Majesty",
+    "desc": "Bridal collection • Heavy work",
+    "price": "₹8999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "choli"
+    ],
+    "img": "img/collections/women-choli-1.jpg",
+    "alt": "Lehenga, Choli, Ethnic, Indian, Festive, Embroidered, Pink, Traditional, Glamorous, Occasionwear",
+    "title": "Heritage Rose",
+    "desc": "Traditional design • Comfortable fit",
+    "price": "₹4999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "choli"
+    ],
+    "img": "img/collections/women-choli-2.jpg",
+    "alt": "Lehenga, Choli, Embroidered, Peach, Bridal, Ethnic, Traditional, Indian, Wedding, Festive, Floral",
+    "title": "Coral Charm",
+    "desc": "Traditional design • Comfortable fit",
+    "price": "₹11999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "choli"
+    ],
+    "img": "img/collections/women-choli-3.jpg",
+    "alt": "Lehenga, Choli, Ethnic, Indian, Wedding, Embroidered, Bridal, Traditional, Designer, pearl work",
+    "title": "Ethereal Bloom",
+    "desc": "Traditional design • Comfortable fit",
+    "price": "₹4999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "choli"
+    ],
+    "img": "img/collections/women-choli-4.jpg",
+    "alt": "Lavender, Lehenga, Choli, Ghagra, Indian, Ethnic, Traditional, Embroidered, Festive, Wedding, beads work",
+    "title": "Lavender Bloom Lehenga",
+    "desc": "Traditional design • Comfortable fit",
+    "price": "₹4999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "choli"
+    ],
+    "img": "img/collections/women-choli-5.jpg",
+    "alt": "Grey, Lehenga, Embroidered, Ethnic, Indian, Traditional, Choli, Wedding, Festive, Designer, Perl work",
+    "title": "Mystic Grey Lehenga",
+    "desc": "Traditional design • Comfortable fit",
+    "price": "₹5999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "suit"
+    ],
+    "img": "img/collections/men-suit-1.jpg",
+    "alt": "Classic, Men's Suit, Formal, Suit, Pink, Tailored, Elegant, Classic, Vest, Modern, Occasion, Fashion",
+    "title": "Classic Men's Suit",
+    "desc": "Professional look • Perfect fit",
+    "price": "₹1999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/men-jodhpuri-1.jpg",
+    "alt": "Royal, Indo-Western, Ethnic, Embroidered, Formal, Sherwani, Festive, Traditional, Patched Jacket, mirror, white",
+    "title": "Royal Reflection",
+    "desc": "Royal look • Traditional style",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/men-jodhpuri-2.jpg",
+    "alt": "Navy blue, beads work, Jodhpuri, Sherwani, Ethnic, Formal, Traditional, Embroidered, Regal, Indian, Wedding",
+    "title": "Navy blue beats Jodhpuri",
+    "desc": "Royal look • Traditional style • 3-piece",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-crown-prince.jpg",
+    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "The Crown Prince",
+    "desc": "beats work • Dupatta",
+    "price": "₹9999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-maharaja-sherwani.jpg",
+    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, cream sherwani",
+    "title": "The Maharaja Sherwani",
+    "desc": "beats work • Dupatta",
+    "price": "₹9999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/the-royal-wine-jodhpuri.jpg",
+    "alt": "jodhpuri, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, beats work",
+    "title": "The Royal Wine jodhpuri",
+    "desc": "Royal look • Traditional style • 3-piece",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-golden-fable.jpg",
+    "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "The Golden Fable",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/midnight-blue-grace.jpg",
+    "alt": "Royal, jodhapuri, Ethnic, Embroidered, Formal, Festive, Traditional, Patched Jacket, rama, open jodhpuri",
+    "title": "Midnight Blue Grace",
+    "desc": "Royal look • Traditional style",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-peacock-prince.jpg",
+    "alt": "indowestrn, groom, royal look, ethnic, style, wedding, vivah villa, new collection",
+    "title": "The Peacock Prince",
+    "desc": "Royal look • Traditional style",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/shahi-noir-indo-western.jpg",
+    "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Shahi Noir Indo-Western",
+    "desc": "Black Indo-Western with royal detailing",
+    "price": "₹3499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/shahi-peacock-indo-western.jpg",
+    "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Shahi Peacock Indo-Western",
+    "desc": "Royal black Indo-Western adorned with peacock elegance.",
+    "price": "₹4499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/mirror-bloom-fusion-indo-western.jpg",
+    "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Mirror Bloom Fusion Indo-Western",
+    "desc": "Black Indo-Western elevated with elegant mirror work.",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/ivory-peacock-lehenga.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Ivory Lehenga, Designer Lehenga",
+    "title": "Ivory Peacock Lehenga",
+    "desc": "Delicate ivory hues with royal peacock artistry.",
+    "price": "₹9999/-",
+    "active": true
+  }
+]
