@@ -334,5 +334,53 @@
     "desc": "Delicate ivory hues with royal peacock artistry.",
     "price": "₹9999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/ivory-pastel-mirror-indo-western.jpg",
+    "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, mirror work, ivory",
+    "title": "Ivory Pastel Mirror Indo-Western",
+    "desc": "Pastel hues elevated with intricate mirror craftsmanship.",
+    "price": "₹2999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/royal-white-long-indo-western.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, White, Heritage",
+    "title": "Royal White Long Indo-Western",
+    "desc": "A graceful blend of heritage embroidery and modern silhouette.",
+    "price": "₹2499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/black-crown-long-indo-western.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Black, Haritage, Hand work",
+    "title": "Black Crown Long Indo-Western",
+    "desc": "Designed for men who carry heritage with confidence.",
+    "price": "₹2499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/ocean-dusk-long-indo-western.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Blue, Rama",
+    "title": "Ocean Dusk Long Indo-Western",
+    "desc": "A refined long Indo-Western crafted in deep teal elegance.",
+    "price": "₹2999/-",
+    "active": true
   }
 ]
