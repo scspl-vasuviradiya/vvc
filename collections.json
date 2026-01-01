@@ -292,11 +292,11 @@
       "men",
       "indowestern"
     ],
-    "img": "",
+    "img": "img/collections/shahi-noir-indo-western.jpg",
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "Shahi Noir Indo-Western",
     "desc": "Black Indo-Western with royal detailing",
-    "price": "3499/-",
+    "price": "₹3499/-",
     "active": true
   },
   {
@@ -304,11 +304,11 @@
       "men",
       "indowestern"
     ],
-    "img": "",
+    "img": "img/collections/shahi-peacock-indo-western.jpg",
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "Shahi Peacock Indo-Western",
     "desc": "Royal black Indo-Western adorned with peacock elegance.",
-    "price": "4499",
+    "price": "₹4499/-",
     "active": true
   },
   {
@@ -320,7 +320,7 @@
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "Mirror Bloom Fusion Indo-Western",
     "desc": "Black Indo-Western elevated with elegant mirror work.",
-    "price": "3999/-",
+    "price": "₹3999/-",
     "active": true
   },
   {
@@ -328,11 +328,11 @@
       "women",
       "lehenga"
     ],
-    "img": "",
+    "img": "img/collections/ivory-peacock-lehenga.jpg",
     "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Ivory Lehenga, Designer Lehenga",
     "title": "Ivory Peacock Lehenga",
     "desc": "Delicate ivory hues with royal peacock artistry.",
-    "price": "9999/-",
+    "price": "₹9999/-",
     "active": true
   }
 ]
