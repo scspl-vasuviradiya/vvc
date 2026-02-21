@@ -406,5 +406,65 @@
     "desc": "Tradition reimagined with contemporary power and timeless detailing.",
     "price": "₹3999/-",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/rajwadi-peacock-koti-set.jpg",
+    "alt": "Pastel pink koti kurta, Rajwadi style, groom outfit, Wedding wear for men, Designer koti set, Festive traditional wear, Royal ethnic look, Handwork detailing, Groom special outfit, Sangeet & reception wear, Heritage embroidery, Elegant men’s kurta set, Luxury wedding collection",
+    "title": "RajwadI Peacock Koti Set",
+    "desc": "A pastel pink koti kurta adorned with royal peacock and palace embroidery.",
+    "price": "₹2499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/rajsi-peacock-heritage-indo-western.jpg",
+    "alt": "Indo-western for groom, Rajwadi outfit,Wedding wear for men, Luxury ethnic wear, Royal pastel outfit, Groom special collection, Sangeet outfit, Reception wear men,Shahi menswear, Traditional wedding attire, Premium festive wear, Rajkot style outfit, Vivah Villa collection",
+    "title": "Rajsi peacock Heritage Indo-Western",
+    "desc": "A regal pastel Indo-western set",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/shahi-ashva-indo-western.jpg",
+    "alt": "Black Indo-western, Horse embroidery outfit, Royal groom wear, Designer mens ethnic wear, Wedding reception outfit, Cocktail night attire, Luxury Indo-western, Shahi menswear, Statement wedding look, Embroidered Indo-western, Modern groom fashion, Premium festive wear, Regal men’s outfit, Midnight wedding attire, Vivah Villa collection",
+    "title": "Shahi Ashva Indo-Western",
+    "desc": "black Indo-western intricate horse embroidery",
+    "price": "₹3999/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/shahi-ganesh-koti-kurta.jpg",
+    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
+    "title": "Shahi Ganesh koti kurta",
+    "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity",
+    "price": "₹2499/-",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/blue-dynasty-signature-indo-western.jpg",
+    "alt": "Navy blue Indo-western, Royal groom outfit, Sapphire wedding wear, Designer Indo-western, Embroidered menswear, Reception outfit men, Cocktail wedding attire, Luxury ethnic wear, Rajwadi style outfit, Modern groom fashion, Premium festive wear, Shahi blue ensemble, Wedding ceremony dress, Elegant mens traditional wear, Indo-western for groom, Vivah Villa collection",
+    "title": "Blue Dynasty Signature Indo-Western",
+    "desc": "A royal navy blue Indo-western crafted for the groom who defines elegance.",
+    "price": "₹3999/-",
+    "active": true
   }
 ]
