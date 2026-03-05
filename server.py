@@ -115,7 +115,13 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
             
             # Create backup before saving
             if os.path.exists(self.collections_file):
-                backup_name = f"{self.collections_file}.backup.{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
+                # Ensure backup directory exists
+                backup_dir = 'backup'
+                os.makedirs(backup_dir, exist_ok=True)
+                
+                # Create backup in backup folder
+                timestamp = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+                backup_name = os.path.join(backup_dir, f"collections.json.backup.{timestamp}")
                 with open(self.collections_file, 'r', encoding='utf-8') as src:
                     with open(backup_name, 'w', encoding='utf-8') as dst:
                         dst.write(src.read())

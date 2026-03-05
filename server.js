@@ -113,8 +113,15 @@ class CollectionServer {
 
                 // Create backup before saving
                 if (fs.existsSync(this.collectionsFile)) {
+                    // Ensure backup directory exists
+                    const backupDir = 'backup';
+                    if (!fs.existsSync(backupDir)) {
+                        fs.mkdirSync(backupDir, { recursive: true });
+                    }
+                    
+                    // Create backup in backup folder
                     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-                    const backupName = `${this.collectionsFile}.backup.${timestamp}`;
+                    const backupName = path.join(backupDir, `collections.json.backup.${timestamp}`);
                     fs.copyFileSync(this.collectionsFile, backupName);
                 }
 
