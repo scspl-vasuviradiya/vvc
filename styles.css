@@ -1656,6 +1656,42 @@ body.mobile-nav-open {
 }
 
 /* ===================================
+   INSTAGRAM SECTION
+   ===================================*/
+
+.instagram-section {
+  padding: var(--space-20) 0;
+  background: linear-gradient(180deg, #fff1df 0%, var(--white) 100%);
+}
+
+.instagram-section-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--space-12) * -0.25);
+  margin-bottom: var(--space-8);
+}
+
+.instagram-widget-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(139, 21, 56, 0.12);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  /* padding: clamp(0.75rem, 1.8vw, 1.25rem); */
+}
+
+.instagram-widget-card [class*="elfsight-app-"] {
+  min-height: 360px;
+}
+
+@media (max-width: 640px) {
+  .instagram-section-actions .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===================================
    WHY SECTION
    ===================================*/
 

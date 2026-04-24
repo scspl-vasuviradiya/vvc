@@ -425,6 +425,30 @@
       </div>
     </section>
     
+    <!-- Instagram Feed -->
+    <section id="instagram" class="instagram-section">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Instagram Feed</span>
+          <h2 class="section-title">See Our Latest Looks on Instagram</h2>
+          <p class="section-description">
+            Explore fresh arrivals, real store moments, and styling inspiration from Vivah Villa Collection before your visit.
+          </p>
+        </div>
+
+        <div class="instagram-section-actions" data-anim="fade-up" style="--d:120ms">
+          <a href="https://www.instagram.com/vivahvilla.collection?igsh=c29yOTA0M2dlczVp" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span>Follow @vivahvilla.collection</span>
+          </a>
+        </div>
+
+        <div class="instagram-widget-card" data-anim="fade-up" style="--d:180ms">
+          <div class="elfsight-app-d302b7b7-aa54-4f66-9901-d033459823f6" data-elfsight-app-lazy></div>
+        </div>
+      </div>
+    </section>
+    
 
     <!-- Why Choose Us Section -->
     <section id="why" class="why-section">
@@ -668,6 +692,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="video-controls.js"></script>
@@ -1411,7 +1436,9 @@
       
       // Initialize simple fullscreen
       initSimpleFullscreen();
-      
+      setTimeout(() => {
+        $('.instagram-widget-card').find('.eapps-instagram-feed').children('a').remove();
+      }, 1000);
     });
   </script>
 </body>
