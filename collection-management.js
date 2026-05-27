@@ -21,6 +21,7 @@
 
   const titleEl = document.getElementById('title');
   const priceEl = document.getElementById('price');
+  const sellingPriceEl = document.getElementById('selling-price');
   const descEl = document.getElementById('desc');
   const altEl = document.getElementById('alt');
   const genderEl = document.getElementById('gender');
@@ -325,6 +326,7 @@
   function collectFormData(){
     const title = titleEl.value.trim();
     const price = priceEl.value.trim();
+    const sellingPrice = sellingPriceEl.value.trim() || '0';
     const desc = descEl.value.trim();
     const alt = altEl.value.trim();
     const gender = genderEl.value;
@@ -342,6 +344,7 @@
       title,
       desc,
       price,
+      sellingPrice,
       active: true
     };
   }
@@ -368,7 +371,7 @@
 
     let list = [...collections];
     if (term){
-      list = list.filter(x => `${x.title} ${x.desc} ${x.price}`.toLowerCase().includes(term));
+      list = list.filter(x => `${x.title} ${x.desc} ${x.price} ${x.sellingPrice || ''}`.toLowerCase().includes(term));
     }
     if (filter){
       list = list.filter(x => x.tags.includes(filter));
@@ -402,7 +405,8 @@
         <div class="card-content">
           <h4 class="card-title">${item.title}</h4>
           <p class="card-desc">${item.desc}</p>
-          <div class="card-price">${item.price}</div>
+          <div class="card-price"><span>Rental Price:</span> ${item.price}</div>
+          ${isVisibleSellingPrice(item.sellingPrice) ? `<div class="card-price card-selling-price"><span>Selling Price:</span> ${item.sellingPrice}</div>` : ''}
           <div class="card-path"><small><i class="fas fa-folder"></i> ${item.img}</small></div>
         </div>
         <div class="card-actions">
@@ -435,6 +439,7 @@
 
     titleEl.value = item.title;
     priceEl.value = item.price;
+    sellingPriceEl.value = item.sellingPrice || '0';
     descEl.value = item.desc;
     altEl.value = item.alt;
     genderEl.value = item.tags[0];
@@ -634,6 +639,13 @@
 
   function slugify(str){
     return str.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  }
+
+  function isVisibleSellingPrice(value){
+    const normalized = String(value || '').trim();
+    if (normalized === '') return false;
+    const numericValue = normalized.replace(/[^\d.]/g, '');
+    return numericValue === '' || Number(numericValue) !== 0;
   }
 
   async function saveCollections(data){

@@ -1006,6 +1006,7 @@
         "title": "Coming Soon",
         "desc": "New exciting collections • Stay tuned",
         "price": "Coming Soon",
+        "sellingPrice": "0",
         "active": true
       }
     ];
@@ -1094,6 +1095,13 @@
       }
     }
     
+    function isVisibleSellingPrice(value) {
+      const normalized = String(value || '').trim();
+      if (normalized === '') return false;
+      const numericValue = normalized.replace(/[^\d.]/g, '');
+      return numericValue === '' || Number(numericValue) !== 0;
+    }
+
     // Create collection card with original design
     function createCollectionCard(item) {
       const card = document.createElement('div');
@@ -1121,6 +1129,10 @@
         transform: translateY(20px);
       `;
       
+      const sellingPriceHtml = isVisibleSellingPrice(item.sellingPrice)
+        ? `<div style="font-weight: bold; color: #047857; font-size: 16px; margin-top: 4px;"><span style="color: #666; font-weight: 600;">Selling Price:</span> ${item.sellingPrice}</div>`
+        : '';
+
       // Simple HTML structure without View Details button
       card.innerHTML = `
         <div style="margin-bottom: 12px;">
@@ -1132,7 +1144,8 @@
         <div style="padding: 8px 0;">
           <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title || 'Untitled'}</h3>
           <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc || 'No description available'}</p>
-          <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price || 'Price on request'}</div>
+          <div style="font-weight: bold; color: #8b1538; font-size: 16px;"><span style="color: #666; font-weight: 600;">Rental Price:</span> ${item.price || 'Price on request'}</div>
+          ${sellingPriceHtml}
         </div>
       `;
       

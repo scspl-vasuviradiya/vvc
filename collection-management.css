@@ -151,6 +151,8 @@ body {
 .card-title { margin: 0 0 6px 0; font-size: 16px; }
 .card-desc { margin: 0 0 8px 0; color: var(--muted); font-size: 13px; }
 .card-price { font-weight: 700; color: var(--primary); }
+.card-price span { color: var(--muted); font-weight: 600; }
+.card-selling-price { color: #047857; margin-top: 2px; }
 .card-path { color: var(--muted); font-size: 12px; margin-top: 4px; }
 
 .card-actions { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px 12px; }

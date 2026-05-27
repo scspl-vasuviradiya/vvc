@@ -9,7 +9,8 @@
     "title": "Wine Emperor Indowestern",
     "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -21,7 +22,8 @@
     "title": "Dark Knight Elegance Indowestern",
     "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -33,7 +35,8 @@
     "title": "Classic black Velvet Indowestern",
     "desc": "Tailored fit • 3-piece",
     "price": "₹3499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -45,7 +48,8 @@
     "title": "Regal Cream Sherwani",
     "desc": "beats work • Dupatta",
     "price": "₹9999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -57,7 +61,8 @@
     "title": "Maharani’s Legacy Lehenga",
     "desc": "Bridal collection • Heavy work",
     "price": "₹14999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -69,7 +74,8 @@
     "title": "Pink Designer Lehenga",
     "desc": "Bridal collection • Heavy work",
     "price": "₹14999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -81,7 +87,8 @@
     "title": "Elegant Red Lehenga",
     "desc": "Bridal collection • Heavy work",
     "price": "₹14999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -93,7 +100,8 @@
     "title": "Mehendi Majesty",
     "desc": "Bridal collection • Heavy work",
     "price": "₹7999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -105,7 +113,8 @@
     "title": "Peach Blossom Charm",
     "desc": "Bridal collection • Heavy work",
     "price": "₹4999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -117,7 +126,8 @@
     "title": "Midnight Majesty",
     "desc": "Bridal collection • Heavy work",
     "price": "₹5999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -129,7 +139,8 @@
     "title": "Heritage Rose",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -141,7 +152,8 @@
     "title": "Coral Charm",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹4999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -153,7 +165,8 @@
     "title": "Ethereal Bloom",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹3499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -165,7 +178,8 @@
     "title": "Lavender Bloom Lehenga",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹2499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -177,7 +191,8 @@
     "title": "Mystic Grey Lehenga",
     "desc": "Traditional design • Comfortable fit",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -189,7 +204,8 @@
     "title": "Classic Men's Suit",
     "desc": "Professional look • Perfect fit",
     "price": "₹1999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -201,7 +217,8 @@
     "title": "Royal Reflection",
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -213,7 +230,8 @@
     "title": "Navy blue beats Jodhpuri",
     "desc": "Royal look • Traditional style • 3-piece",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -225,7 +243,8 @@
     "title": "The Crown Prince",
     "desc": "beats work • Dupatta",
     "price": "₹9999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -237,7 +256,8 @@
     "title": "The Maharaja Sherwani",
     "desc": "beats work • Dupatta",
     "price": "₹9999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -249,7 +269,8 @@
     "title": "The Royal Wine jodhpuri",
     "desc": "Royal look • Traditional style • 3-piece",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -261,7 +282,8 @@
     "title": "The Golden Fable",
     "desc": "Tailored fit • 3-piece",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -273,7 +295,8 @@
     "title": "Midnight Blue Grace",
     "desc": "Royal look • Traditional style",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -285,7 +308,8 @@
     "title": "The Peacock Prince",
     "desc": "Royal look • Traditional style",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -297,7 +321,8 @@
     "title": "Shahi Noir Indo-Western",
     "desc": "Black Indo-Western with royal detailing",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -309,7 +334,8 @@
     "title": "Shahi Peacock Indo-Western",
     "desc": "Royal black Indo-Western adorned with peacock elegance.",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -321,7 +347,8 @@
     "title": "Mirror Bloom Fusion Indo-Western",
     "desc": "Black Indo-Western elevated with elegant mirror work.",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -333,7 +360,8 @@
     "title": "Ivory Peacock Lehenga",
     "desc": "Delicate ivory hues with royal peacock artistry.",
     "price": "₹9999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -345,7 +373,8 @@
     "title": "Ivory Pastel Mirror Indo-Western",
     "desc": "Pastel hues elevated with intricate mirror craftsmanship.",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -357,7 +386,8 @@
     "title": "Royal White Long Indo-Western",
     "desc": "A graceful blend of heritage embroidery and modern silhouette.",
     "price": "₹2499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -369,7 +399,8 @@
     "title": "Black Crown Long Indo-Western",
     "desc": "Designed for men who carry heritage with confidence.",
     "price": "₹2499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -381,7 +412,8 @@
     "title": "Ocean Dusk Long Indo-Western",
     "desc": "A refined long Indo-Western crafted in deep teal elegance.",
     "price": "₹2999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -393,7 +425,8 @@
     "title": "Neelmayur Royale Indo-Western",
     "desc": "Tradition reimagined with contemporary power and timeless detailing.",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -405,7 +438,8 @@
     "title": "The Midnight Groom",
     "desc": "Tradition reimagined with contemporary power and timeless detailing.",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -417,7 +451,8 @@
     "title": "RajwadI Peacock Koti Set",
     "desc": "A pastel pink koti kurta adorned with royal peacock and palace embroidery.",
     "price": "₹2499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -429,7 +464,8 @@
     "title": "Rajsi peacock Heritage Indo-Western",
     "desc": "A regal pastel Indo-western set",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -441,7 +477,8 @@
     "title": "Shahi Ashva Indo-Western",
     "desc": "black Indo-western intricate horse embroidery",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -453,7 +490,8 @@
     "title": "Shahi Ganesh koti kurta",
     "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity",
     "price": "₹2499/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   },
   {
     "tags": [
@@ -465,6 +503,7 @@
     "title": "Blue Dynasty Signature Indo-Western",
     "desc": "A royal navy blue Indo-western crafted for the groom who defines elegance.",
     "price": "₹3999/-",
-    "active": true
+    "active": true,
+    "sellingPrice": "0"
   }
 ]
