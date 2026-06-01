@@ -1094,6 +1094,13 @@
           viewMoreContainer.style.display = 'none';
         }
       }
+
+        function isVisibleSize(value) {
+          const normalized = String(value || '').trim();
+          if (normalized === '') return false;
+          const numericValue = normalized.replace(/[^\d.]/g, '');
+          return numericValue === '' || Number(numericValue) !== 0;
+        }
     }
 
     // Create collection card with original design
@@ -1135,6 +1142,7 @@
           <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">${item.title || 'Untitled'}</h3>
           <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">${item.desc || 'No description available'}</p>
           <div style="font-weight: bold; color: #8b1538; font-size: 16px;">${item.price || 'Price on request'}</div>
+          ${isVisibleSize(item.size) ? `<div style="font-weight: 600; color: #333; font-size: 14px; margin-top: 4px;"><span style="color: #666; font-weight:600;">Sizes:</span> ${item.size}</div>` : ''}
         </div>
       `;
 

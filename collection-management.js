@@ -22,6 +22,7 @@
   const titleEl = document.getElementById('title');
   const priceEl = document.getElementById('price');
   const sellingPriceEl = document.getElementById('selling-price');
+  const sizesEl = document.getElementById('sizes');
   const descEl = document.getElementById('desc');
   const altEl = document.getElementById('alt');
   const genderEl = document.getElementById('gender');
@@ -327,6 +328,13 @@
     const title = titleEl.value.trim();
     const price = priceEl.value.trim();
     const sellingPrice = sellingPriceEl.value.trim() || '0';
+    const rawSize = sizesEl ? sizesEl.value.trim() : '';
+    let size = '0';
+    if (rawSize && rawSize !== '0'){
+      // Normalize numeric sizes: accept "34,36,38" or "34 36 38" and store as "34, 36, 38"
+      const parts = rawSize.split(/[^0-9]+/).filter(Boolean);
+      size = parts.length ? parts.join(', ') : rawSize;
+    }
     const desc = descEl.value.trim();
     const alt = altEl.value.trim();
     const gender = genderEl.value;
@@ -345,6 +353,7 @@
       desc,
       price,
       sellingPrice,
+      size,
       active: true
     };
   }
@@ -406,7 +415,8 @@
           <h4 class="card-title">${item.title}</h4>
           <p class="card-desc">${item.desc}</p>
           <div class="card-price"><span>Rental Price:</span> ${item.price}</div>
-          ${isVisibleSellingPrice(item.sellingPrice) ? `<div class="card-price card-selling-price"><span>Selling Price:</span> ${item.sellingPrice}</div>` : ''}
+            ${isVisibleSize(item.size) ? `<div class="card-size"><span>Sizes:</span> ${item.size}</div>` : ''}
+            ${isVisibleSellingPrice(item.sellingPrice) ? `<div class="card-price card-selling-price"><span>Selling Price:</span> ${item.sellingPrice}</div>` : ''}
           <div class="card-path"><small><i class="fas fa-folder"></i> ${item.img}</small></div>
         </div>
         <div class="card-actions">
@@ -440,6 +450,7 @@
     titleEl.value = item.title;
     priceEl.value = item.price;
     sellingPriceEl.value = item.sellingPrice || '0';
+    if (sizesEl) sizesEl.value = (item.size && String(item.size) !== '0') ? item.size : '';
     descEl.value = item.desc;
     altEl.value = item.alt;
     genderEl.value = item.tags[0];
@@ -642,6 +653,13 @@
   }
 
   function isVisibleSellingPrice(value){
+    const normalized = String(value || '').trim();
+    if (normalized === '') return false;
+    const numericValue = normalized.replace(/[^\d.]/g, '');
+    return numericValue === '' || Number(numericValue) !== 0;
+  }
+
+  function isVisibleSize(value){
     const normalized = String(value || '').trim();
     if (normalized === '') return false;
     const numericValue = normalized.replace(/[^\d.]/g, '');
