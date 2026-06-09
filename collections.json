@@ -11,7 +11,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40, 42"
   },
   {
     "tags": [
@@ -25,7 +25,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40, 42"
   },
   {
     "tags": [
@@ -39,7 +39,7 @@
     "price": "₹3499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "34, 36, 38, 42"
   },
   {
     "tags": [
@@ -53,7 +53,7 @@
     "price": "₹9999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 40"
   },
   {
     "tags": [
@@ -544,5 +544,145 @@
     "active": true,
     "sellingPrice": "0",
     "size": "0"
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/woven-legacy.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Woven Legacy",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹2499/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/brown-reign.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Brown Reign",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/maroon-modern-king.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Maroon Modern King",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/the-white-sovereign.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modernethnic wear",
+    "title": "The White Sovereign",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/heritage-reimagined.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear",
+    "title": "Heritage Reimagined",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/royal-plumage.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "Royal Plumage",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-signature-of-sovereignty.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthaniWear",
+    "title": "The Signature of Sovereignty",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/midnight-cavalier.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "Midnight Cavalier",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/royal-azure.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "Royal Azure",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-royal-tapestry.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "The Royal Tapestry",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹4999/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
   }
 ]
