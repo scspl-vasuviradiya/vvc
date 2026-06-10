@@ -302,10 +302,10 @@
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "The Golden Fable",
     "desc": "Tailored fit • 3-piece",
-    "price": "₹2999/-",
+    "price": "₹1999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "38, 40"
   },
   {
     "tags": [
@@ -333,7 +333,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "40, 42, 46"
   },
   {
     "tags": [
@@ -344,10 +344,10 @@
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "Shahi Noir Indo-Western",
     "desc": "Black Indo-Western with royal detailing",
-    "price": "₹2999/-",
+    "price": "₹1999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40"
   },
   {
     "tags": [
@@ -361,7 +361,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "34, 40"
   },
   {
     "tags": [
@@ -375,7 +375,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "38, 42"
   },
   {
     "tags": [
@@ -394,16 +394,16 @@
   {
     "tags": [
       "men",
-      "indowestern"
+      "open Jodhpuris"
     ],
     "img": "img/collections/ivory-pastel-mirror-indo-western.jpg",
     "alt": "IndoWestern, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, mirror work, ivory",
     "title": "Ivory Pastel Mirror Indo-Western",
     "desc": "Pastel hues elevated with intricate mirror craftsmanship.",
-    "price": "₹2999/-",
+    "price": "₹2499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "38, 42"
   },
   {
     "tags": [
@@ -414,10 +414,10 @@
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, White, Heritage",
     "title": "Royal White Long Indo-Western",
     "desc": "A graceful blend of heritage embroidery and modern silhouette.",
-    "price": "₹2499/-",
+    "price": "₹1499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "34, 36, 38"
   },
   {
     "tags": [
@@ -428,24 +428,24 @@
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Black, Haritage, Hand work",
     "title": "Black Crown Long Indo-Western",
     "desc": "Designed for men who carry heritage with confidence.",
-    "price": "₹2499/-",
+    "price": "₹1499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "38, 40, 42"
   },
   {
     "tags": [
       "men",
-      "indowestern"
+      "open Jodhpuris"
     ],
     "img": "img/collections/ocean-dusk-long-indo-western.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Blue, Rama",
     "title": "Ocean Dusk Long Indo-Western",
     "desc": "A refined long Indo-Western crafted in deep teal elegance.",
-    "price": "₹2999/-",
+    "price": "₹1999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40"
   },
   {
     "tags": [
@@ -459,7 +459,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 40"
   },
   {
     "tags": [
@@ -473,7 +473,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38"
   },
   {
     "tags": [
@@ -501,7 +501,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40"
   },
   {
     "tags": [
@@ -515,7 +515,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38, 40"
   },
   {
     "tags": [
@@ -543,7 +543,7 @@
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 40"
   },
   {
     "tags": [
@@ -640,7 +640,7 @@
     "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-",
     "sellingPrice": "0",
-    "size": "0",
+    "size": "34, 38, 42",
     "active": true
   },
   {
@@ -682,7 +682,7 @@
     "desc": "Tailored fit • 3-piece",
     "price": "₹4999/-",
     "sellingPrice": "0",
-    "size": "0",
+    "size": "36",
     "active": true
   }
 ]
