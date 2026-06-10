@@ -218,10 +218,10 @@
     "alt": "Classic, Men's Suit, Formal, Suit, Pink, Tailored, Elegant, Classic, Vest, Modern, Occasion, Fashion",
     "title": "Classic Men's Suit",
     "desc": "Professional look • Perfect fit",
-    "price": "₹1999/-",
+    "price": "₹1499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "34, 36, 38, 40, 42"
   },
   {
     "tags": [
@@ -260,10 +260,10 @@
     "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "title": "The Crown Prince",
     "desc": "beats work • Dupatta",
-    "price": "₹9999/-",
+    "price": "₹6999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 40"
   },
   {
     "tags": [
@@ -274,10 +274,10 @@
     "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, cream sherwani",
     "title": "The Maharaja Sherwani",
     "desc": "beats work • Dupatta",
-    "price": "₹9999/-",
+    "price": "₹6999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0"
+    "size": "36, 38"
   },
   {
     "tags": [
