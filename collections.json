@@ -18,14 +18,57 @@
       "men",
       "indowestern"
     ],
-    "img": "img/collections/men-indowestern-2.jpg",
-    "alt": "IndoWestern, Sherwani, Couture, Royal, Elegant, Luxury, Groomwear, Timeless, Designer, Classic, Embroidery, Ethnic",
-    "title": "Dark Knight Elegance Indowestern",
+    "img": "img/collections/rajsi-peacock-heritage-indo-western.jpg",
+    "alt": "Indo-western for groom, Rajwadi outfit,Wedding wear for men, Luxury ethnic wear, Royal pastel outfit, Groom special collection, Sangeet outfit, Reception wear men,Shahi menswear, Traditional wedding attire, Premium festive wear, Rajkot style outfit, Vivah Villa collection",
+    "title": "Rajsi peacock Heritage Indowestern",
+    "desc": "A regal pastel Indo-western set",
+    "price": "₹3999/-",
+    "active": true,
+    "sellingPrice": "₹14499/-",
+    "size": "36, 38, 40",
+    "reelUrl": "https://www.instagram.com/reel/DTXzagNjJYG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/midnight-cavalier.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "Midnight Cavalier Indowestern",
     "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/blue-dynasty-signature-indo-western.jpg",
+    "alt": "Navy blue Indo-western, Royal groom outfit, Sapphire wedding wear, Designer Indo-western, Embroidered menswear, Reception outfit men, Cocktail wedding attire, Luxury ethnic wear, Rajwadi style outfit, Modern groom fashion, Premium festive wear, Shahi blue ensemble, Wedding ceremony dress, Elegant mens traditional wear, Indo-western for groom, Vivah Villa collection",
+    "title": "Blue Dynasty Signature Indowestern",
+    "desc": "A royal navy blue Indo-western crafted for the groom who defines elegance.",
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "36, 38, 40, 42"
+    "size": "36, 40"
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/the-white-sovereign.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modernethnic wear",
+    "title": "The White Sovereign Jodhpuri",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true
   },
   {
     "tags": [
@@ -508,14 +551,14 @@
       "men",
       "indowestern"
     ],
-    "img": "img/collections/rajsi-peacock-heritage-indo-western.jpg",
-    "alt": "Indo-western for groom, Rajwadi outfit,Wedding wear for men, Luxury ethnic wear, Royal pastel outfit, Groom special collection, Sangeet outfit, Reception wear men,Shahi menswear, Traditional wedding attire, Premium festive wear, Rajkot style outfit, Vivah Villa collection",
-    "title": "Rajsi peacock Heritage Indowestern",
-    "desc": "A regal pastel Indo-western set",
+    "img": "img/collections/men-indowestern-2.jpg",
+    "alt": "IndoWestern, Sherwani, Couture, Royal, Elegant, Luxury, Groomwear, Timeless, Designer, Classic, Embroidery, Ethnic",
+    "title": "Dark Knight Elegance Indowestern",
+    "desc": "Tailored fit • 3-piece",
     "price": "₹3999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "36, 38, 40"
+    "size": "36, 38, 40, 42"
   },
   {
     "tags": [
@@ -544,20 +587,6 @@
     "active": true,
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42"
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/blue-dynasty-signature-indo-western.jpg",
-    "alt": "Navy blue Indo-western, Royal groom outfit, Sapphire wedding wear, Designer Indo-western, Embroidered menswear, Reception outfit men, Cocktail wedding attire, Luxury ethnic wear, Rajwadi style outfit, Modern groom fashion, Premium festive wear, Shahi blue ensemble, Wedding ceremony dress, Elegant mens traditional wear, Indo-western for groom, Vivah Villa collection",
-    "title": "Blue Dynasty Signature Indowestern",
-    "desc": "A royal navy blue Indo-western crafted for the groom who defines elegance.",
-    "price": "₹3999/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "36, 40"
   },
   {
     "tags": [
@@ -606,20 +635,6 @@
       "men",
       "open Jodhpuris"
     ],
-    "img": "img/collections/the-white-sovereign.jpg",
-    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modernethnic wear",
-    "title": "The White Sovereign Jodhpuri",
-    "desc": "Tailored fit • 3-piece",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "0",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
     "img": "img/collections/heritage-reimagined.jpg",
     "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear",
     "title": "Heritage Reimagined Jodhpuri",
@@ -655,20 +670,6 @@
     "price": "₹3999/-",
     "sellingPrice": "0",
     "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/midnight-cavalier.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "title": "Midnight Cavalier Indowestern",
-    "desc": "Tailored fit • 3-piece",
-    "price": "₹3999/-",
-    "sellingPrice": "0",
-    "size": "0",
     "active": true
   },
   {
