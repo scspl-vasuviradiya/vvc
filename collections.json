@@ -4,14 +4,14 @@
       "men",
       "indowestern"
     ],
-    "img": "img/collections/men-indowestern-1.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
-    "title": "Wine Emperor Indowestern",
+    "img": "img/collections/the-royal-tapestry.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "title": "The Royal Tapestry Indowestern",
     "desc": "Tailored fit • 3-piece",
-    "price": "₹3999/-",
-    "active": true,
+    "price": "₹4999/-",
     "sellingPrice": "0",
-    "size": "36, 38, 40, 42"
+    "size": "36",
+    "active": true
   },
   {
     "tags": [
@@ -68,6 +68,20 @@
     "active": true,
     "sellingPrice": "0",
     "size": "0"
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/men-indowestern-1.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Wine Emperor Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42"
   },
   {
     "tags": [
@@ -212,6 +226,20 @@
   {
     "tags": [
       "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-peacock-prince.jpg",
+    "alt": "indowestrn, groom, royal look, ethnic, style, wedding, vivah villa, new collection",
+    "title": "The Peacock Prince Indowestern",
+    "desc": "Royal look • Traditional style",
+    "price": "₹3999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "40, 42, 46"
+  },
+  {
+    "tags": [
+      "men",
       "suit"
     ],
     "img": "img/collections/men-suit-1.jpg",
@@ -320,20 +348,6 @@
     "active": true,
     "sellingPrice": "0",
     "size": "34, 38, 40, 42"
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/the-peacock-prince.jpg",
-    "alt": "indowestrn, groom, royal look, ethnic, style, wedding, vivah villa, new collection",
-    "title": "The Peacock Prince Indowestern",
-    "desc": "Royal look • Traditional style",
-    "price": "₹3999/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "40, 42, 46"
   },
   {
     "tags": [
@@ -669,20 +683,6 @@
     "price": "₹3999/-",
     "sellingPrice": "0",
     "size": "0",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/the-royal-tapestry.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "title": "The Royal Tapestry Indowestern",
-    "desc": "Tailored fit • 3-piece",
-    "price": "₹4999/-",
-    "sellingPrice": "0",
-    "size": "36",
     "active": true
   }
 ]

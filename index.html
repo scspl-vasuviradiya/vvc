@@ -1155,6 +1155,7 @@
           <div style="font-weight: bold; color: #8b1538; font-size: 16px;"><span style="color: #666; font-weight: 600;">Rent:</span> ${item.price || 'Price on request'}</div>
           ${sizesHtml}
           ${sellingPriceHtml}
+          ${item.reelUrl ? `<div style="margin-top:8px;"><a href="${item.reelUrl}" target="_blank" rel="noopener" aria-label="Watch Reel" style="color:#E1306C; text-decoration:none; font-weight:600;"><i class="fab fa-instagram" aria-hidden="true" style="margin-right:6px;"></i>Watch Reel</a></div>` : ''}
         </div>
       `;
       

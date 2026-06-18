@@ -25,6 +25,7 @@
   const sizesEl = document.getElementById('sizes');
   const descEl = document.getElementById('desc');
   const altEl = document.getElementById('alt');
+  const reelUrlEl = document.getElementById('reel-url');
   const genderEl = document.getElementById('gender');
   const categoryEl = document.getElementById('category');
 
@@ -337,6 +338,7 @@
     }
     const desc = descEl.value.trim();
     const alt = altEl.value.trim();
+    const reelUrl = reelUrlEl ? reelUrlEl.value.trim() : '';
     const gender = genderEl.value;
     const category = categoryEl.value;
 
@@ -349,6 +351,7 @@
       tags: [gender, category],
       img: '', // set later
       alt,
+      reelUrl: reelUrl || '',
       title,
       desc,
       price,
@@ -366,6 +369,7 @@
     currentImageDataURL = '';
     imagePreview.style.display = 'none';
     uploadStatus.textContent = '';
+    if (reelUrlEl) reelUrlEl.value = '';
   }
 
   function bindFilters(){
@@ -425,6 +429,9 @@
             <span>${item.active ? 'Active' : 'Inactive'}</span>
           </label>
           <div class="action-buttons">
+            <button class="btn btn-outline btn-sm" data-action="move-up" data-index="${index}" ${index === 0 ? 'disabled' : ''} title="Move up"><i class="fas fa-arrow-up"></i></button>
+            <input type="number" class="position-input" data-index="${index}" min="1" max="${collections.length}" value="${index + 1}" style="width:56px; text-align:center; margin:0 6px;" aria-label="Position">
+            <button class="btn btn-outline btn-sm" data-action="move-down" data-index="${index}" ${index === collections.length - 1 ? 'disabled' : ''} title="Move down"><i class="fas fa-arrow-down"></i></button>
             <button class="btn btn-outline btn-sm" data-action="edit" data-index="${index}"><i class="fas fa-edit"></i> Edit</button>
             <button class="btn btn-danger btn-sm" data-action="delete" data-index="${index}"><i class="fas fa-trash"></i> Delete</button>
           </div>
@@ -437,6 +444,9 @@
     grid.querySelectorAll('[data-action="edit"]').forEach(btn => btn.addEventListener('click', onEdit));
     grid.querySelectorAll('[data-action="delete"]').forEach(btn => btn.addEventListener('click', onDelete));
     grid.querySelectorAll('[data-action="toggle"]').forEach(toggle => toggle.addEventListener('change', onToggleActive));
+    grid.querySelectorAll('[data-action="move-up"]').forEach(btn => btn.addEventListener('click', onMoveUp));
+    grid.querySelectorAll('.position-input').forEach(input => input.addEventListener('change', onPositionChange));
+    grid.querySelectorAll('[data-action="move-down"]').forEach(btn => btn.addEventListener('click', onMoveDown));
   }
 
   function onEdit(e){
@@ -453,6 +463,7 @@
     if (sizesEl) sizesEl.value = (item.size && String(item.size) !== '0') ? item.size : '';
     descEl.value = item.desc;
     altEl.value = item.alt;
+    if (reelUrlEl) reelUrlEl.value = item.reelUrl || '';
     genderEl.value = item.tags[0];
     categoryEl.value = item.tags[1];
 
@@ -509,6 +520,58 @@
     hasChanges = true;
     updateSyncStatus();
     showToast(`Collection ${checked ? 'activated' : 'deactivated'}`, 'success');
+  }
+
+  // Move item up in the collections array
+  async function onMoveUp(e){
+    const index = parseInt(e.currentTarget.dataset.index, 10);
+    if (isNaN(index) || index <= 0) return;
+    [collections[index - 1], collections[index]] = [collections[index], collections[index - 1]];
+    const saved = await saveCollections(collections);
+    if (!saved) { showToast('Failed to save order', 'error'); return; }
+    hasChanges = true;
+    updateSyncStatus();
+    renderList();
+    showToast('Collection moved up', 'success');
+  }
+
+  // Move item down in the collections array
+  async function onMoveDown(e){
+    const index = parseInt(e.currentTarget.dataset.index, 10);
+    if (isNaN(index) || index >= collections.length - 1) return;
+    [collections[index + 1], collections[index]] = [collections[index], collections[index + 1]];
+    const saved = await saveCollections(collections);
+    if (!saved) { showToast('Failed to save order', 'error'); return; }
+    hasChanges = true;
+    updateSyncStatus();
+    renderList();
+    showToast('Collection moved down', 'success');
+  }
+
+  // Change position via numeric input
+  async function onPositionChange(e){
+    const input = e.currentTarget;
+    const oldIndex = parseInt(input.dataset.index, 10);
+    let newPos = parseInt(input.value, 10);
+    if (isNaN(oldIndex) || isNaN(newPos)) return;
+    // convert to zero-based index and clamp
+    let newIndex = Math.max(0, Math.min(collections.length - 1, newPos - 1));
+    if (newIndex === oldIndex) {
+      // No change
+      renderList();
+      return;
+    }
+
+    // Move item from oldIndex to newIndex
+    const [item] = collections.splice(oldIndex, 1);
+    collections.splice(newIndex, 0, item);
+
+    const saved = await saveCollections(collections);
+    if (!saved) { showToast('Failed to save new order', 'error'); return; }
+    hasChanges = true;
+    updateSyncStatus();
+    renderList();
+    showToast('Collection order updated', 'success');
   }
 
   function updateSyncStatus() {
