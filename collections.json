@@ -695,5 +695,50 @@
     "sellingPrice": "0",
     "size": "0",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/shadow-prince-indowestern.jpg",
+    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
+    "reelUrl": "",
+    "title": "Shadow Prince Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/royal-sapphire-drape-indowestern.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "reelUrl": "",
+    "title": "Royal Sapphire Drape Indowestern",
+    "desc": "Tailored fit • 3-piece",
+    "price": "₹4999/-",
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/ethereal-groom-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern",
+    "reelUrl": "",
+    "title": "Ethereal Groom Sherwani",
+    "desc": "Royal look • Traditional style",
+    "price": "₹11999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "active": true
   }
 ]
