@@ -16,3 +16,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VIVAH_VILLA_COLLECTION }}
           projectId: vivah-villa-collection
+          channelId: live
