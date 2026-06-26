@@ -20,7 +20,8 @@ jobs:
       - name: Deploy to Firebase Hosting
         run: |
           set +e
-          npx firebase-tools@latest deploy --only hosting --project vivah-villa-collection --non-interactive 2>&1 | tee firebase-deploy.log
+          deploy_log="$RUNNER_TEMP/firebase-deploy.log"
+          npx firebase-tools@latest deploy --only hosting --project vivah-villa-collection --non-interactive 2>&1 | tee "$deploy_log"
           status=${PIPESTATUS[0]}
           set -e
 
@@ -28,7 +29,7 @@ jobs:
             exit 0
           fi
 
-          if grep -q "is the current active version" firebase-deploy.log; then
+          if grep -q "is the current active version" "$deploy_log"; then
             echo "Firebase reports this version is already live; treating deploy as successful."
             exit 0
           fi
