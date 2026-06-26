@@ -875,6 +875,7 @@
         var image = document.createElement("img");
         image.src = galleryImages[i];
         image.alt = "Vivah Villa Collection gallery photo " + (i + 1);
+        image.height="700px";
         imageWrapper.appendChild(image);
         var mirrored = image.cloneNode();
         mirrored.classList.add("flipped");
