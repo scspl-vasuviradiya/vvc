@@ -4,7 +4,16 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "backup/**",
+      "public/**",
+      "package.json",
+      "package-lock.json",
+      "server.js",
+      "server.py",
+      "*.bat",
+      "*.md",
+      "skills-lock.json"
     ],
     "rewrites": [
       {
