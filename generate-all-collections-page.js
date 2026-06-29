@@ -38,7 +38,7 @@ function category(item) {
 }
 
 function card(item, index) {
-  const tags = (item.tags || []).join(' ');
+  const tags = (item.tags || []).join('|');
   const img = item.img || 'img/logo/logo.png';
   const title = item.title || 'Vivah Villa Collection Outfit';
   const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
@@ -59,7 +59,7 @@ function card(item, index) {
               <img src="${esc(img)}" alt="${esc(item.alt || title)}" width="640" height="800" ${eager} decoding="async" itemprop="image">
             </a>
             <div class="collection-content">
-              <h2 class="collection-title" itemprop="name">${esc(title)}</h2>
+              <h3 class="collection-title" itemprop="name">${esc(title)}</h3>
               <p class="collection-description" itemprop="description">${esc(desc)}</p>
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
               <meta itemprop="category" content="${esc(category(item))}">
@@ -113,155 +113,119 @@ const page = `<!DOCTYPE html>
     .all-collections-page {
       background: var(--bg-gradient);
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    .all-collections-hero {
-      padding: 132px 0 44px;
-      background: linear-gradient(135deg, rgba(139, 21, 56, 0.92), rgba(31, 41, 55, 0.9)), url('img/gallery/hero.jpg') center/cover;
+    .all-collections-page .fullscreen-panel-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .all-collections-page .panel-close-btn {
+      text-decoration: none;
+    }
+
+    .all-collections-page .panel-title h1 {
+      margin: 0;
       color: var(--white);
-    }
-
-    .all-collections-hero .container {
-      max-width: 1120px;
-    }
-
-    .all-collections-eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      font-size: 0.78rem;
+      font-size: var(--font-size-3xl);
       font-weight: 700;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.78);
     }
 
-    .all-collections-hero h1 {
-      max-width: 760px;
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 4vw, 4.25rem);
-      line-height: 1.05;
-      color: var(--white);
+    .all-collections-page .fullscreen-panel-content {
+      min-height: calc(100vh - 96px);
     }
 
-    .all-collections-hero p {
-      max-width: 720px;
-      margin: 0;
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 1.08rem;
+    .all-collections-page .fullscreen-filter-tabs {
+      margin-bottom: 1.5rem;
     }
 
-    .all-collections-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .all-collections-actions .btn {
-      min-height: 48px;
-    }
-
-    .all-collections-main {
-      padding: 48px 0 80px;
-    }
-
-    .all-collections-summary {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: flex-end;
-      margin-bottom: 28px;
-    }
-
-    .all-collections-summary h2 {
-      margin: 0 0 6px;
-      font-size: clamp(1.5rem, 3vw, 2.35rem);
-    }
-
-    .all-collections-summary p {
-      margin: 0;
-      color: var(--gray-600);
-    }
-
-    .all-collections-count {
-      flex: 0 0 auto;
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      background: var(--white);
-      padding: 12px 16px;
-      color: var(--primary-color);
-      font-weight: 800;
-    }
-
-    .all-collections-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .all-collections-page .fullscreen-collections-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      align-items: start;
+      padding: 20px;
+      justify-items: center;
+      min-height: 100px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .all-collection-card {
-      border: 1px solid var(--gray-200);
+      display: block !important;
+      background: white;
+      border: 1px solid #ccc;
       border-radius: 8px;
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-      background: var(--white);
-      height: 100%;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-height: 200px;
+      width: 100%;
+      max-width: 320px;
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .all-collection-card[hidden] {
+      display: none !important;
     }
 
     .all-collection-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .all-collection-image-link {
       display: block;
-      background: #f8f5f2;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
+      margin-bottom: 12px;
+      text-decoration: none;
     }
 
     .all-collection-image-link img {
       width: 100%;
-      height: 100%;
-      display: block;
+      height: auto;
+      max-height: 300px;
       object-fit: contain;
+      border-radius: 4px;
+      display: block;
     }
 
     .all-collection-card .collection-content {
-      padding: 16px;
+      padding: 8px 0;
     }
 
     .all-collection-card .collection-title {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-      line-height: 1.25;
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      line-height: 1.3;
+      color: #333;
+      font-weight: 600;
     }
 
     .all-collection-card .collection-description {
-      margin: 0 0 10px;
-      color: var(--gray-600);
-      font-size: 0.92rem;
+      margin: 0 0 8px 0;
+      color: #666;
+      font-size: 14px;
       line-height: 1.45;
     }
 
     .all-collection-card .collection-price,
     .all-collection-card .collection-meta,
     .all-collection-card .collection-reel {
-      margin: 6px 0 0;
-      font-size: 0.94rem;
-      color: var(--gray-800);
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #333;
       font-weight: 600;
     }
 
     .all-collection-card .collection-price {
-      color: var(--primary-color);
-      font-weight: 800;
+      color: #8b1538;
+      font-size: 16px;
+      font-weight: 700;
     }
 
     .all-collection-card span {
-      color: var(--gray-600);
-      font-weight: 700;
+      color: #666;
+      font-weight: 600;
     }
 
     .all-collection-card .selling-price {
@@ -269,94 +233,110 @@ const page = `<!DOCTYPE html>
     }
 
     .collection-reel a {
-      color: #c13584;
+      color: #E1306C;
       text-decoration: none;
-      font-weight: 800;
+      font-weight: 600;
     }
 
-    @media (max-width: 700px) {
-      .all-collections-hero {
-        padding-top: 108px;
+    .all-collections-empty {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: var(--space-12);
+      color: var(--gray-500);
+      font-size: var(--font-size-lg);
+    }
+
+    .all-collections-footer {
+      padding: 1.25rem;
+      text-align: center;
+      color: var(--gray-600);
+      background: rgba(255,255,255,0.7);
+    }
+
+    .all-collections-footer a {
+      color: var(--primary-color);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .all-collections-page .fullscreen-panel-header {
+        align-items: flex-start;
+        gap: 1rem;
       }
 
-      .all-collections-summary {
-        display: block;
-      }
-
-      .all-collections-count {
-        display: inline-block;
-        margin-top: 14px;
+      .all-collections-page .fullscreen-collections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 0.5rem;
       }
     }
   </style>
 </head>
 <body class="all-collections-page">
-  <header class="header" id="header">
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="nav-brand" aria-label="Vivah Villa Collection home">
-          <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
-          <div class="brand-text">
-            <span class="brand-name">Vivah Villa</span>
-            <span class="brand-subtitle">Collection</span>
-          </div>
-        </a>
-        <div class="nav-menu" id="navMenu">
-          <a class="nav-link" href="index.html#home">Home</a>
-          <a class="nav-link active" href="all-collections.html">All Collections</a>
-          <a class="nav-link" href="index.html#gallery">Gallery</a>
-          <a class="nav-link" href="index.html#contact">Contact</a>
-          <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            <span>Book Now</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
   <main>
-    <section class="all-collections-hero">
-      <div class="container">
-        <span class="all-collections-eyebrow">Complete Collection</span>
-        <h1>All Vivah Villa Collection Wedding Outfits</h1>
-        <p>Every active collection image is rendered directly on this page for search indexing, image discovery, and easy browsing before your store visit.</p>
-        <div class="all-collections-actions">
-          <a class="btn btn-primary btn-lg" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            <span>Ask Availability</span>
-          </a>
-          <a class="btn btn-outline btn-lg" href="index.html#collections">
-            <i class="fas fa-arrow-left"></i>
-            <span>Back to Home</span>
-          </a>
+    <section class="all-collections-panel" aria-labelledby="allCollectionsTitle">
+      <div class="fullscreen-panel-header">
+        <div class="panel-title">
+          <h1 id="allCollectionsTitle">All Collections</h1>
+          <p>Browse our complete collection of premium wedding attire</p>
         </div>
+        <a class="panel-close-btn" href="index.html#collections" aria-label="Back to home collections">
+          <i class="fas fa-times"></i>
+        </a>
       </div>
-    </section>
 
-    <section class="all-collections-main">
-      <div class="container">
-        <div class="all-collections-summary">
-          <div>
-            <h2>Browse ${collections.length} Rental Outfits</h2>
-            <p>Sherwanis, indowesterns, Jodhpuris, lehengas, cholis, suits and curated festive wear.</p>
-          </div>
-          <div class="all-collections-count">${collections.length} images</div>
+      <div class="fullscreen-panel-content">
+        <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
+          <button class="fullscreen-filter-tab active" data-filter="all" type="button" role="tab" aria-selected="true">
+            <span>All Collections</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="men" type="button" role="tab" aria-selected="false">
+            <i class="fas fa-male"></i>
+            <span>Men</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="women" type="button" role="tab" aria-selected="false">
+            <i class="fas fa-female"></i>
+            <span>Women</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="indowestern" type="button" role="tab" aria-selected="false">
+            <span>Indowestern</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="sherwani" type="button" role="tab" aria-selected="false">
+            <span>Sherwanis</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="lehenga" type="button" role="tab" aria-selected="false">
+            <span>Lehengas</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="jodhpuri" type="button" role="tab" aria-selected="false">
+            <span>Jodhpuris</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="open Jodhpuris" type="button" role="tab" aria-selected="false">
+            <span>Open Jodhpuris</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="choli" type="button" role="tab" aria-selected="false">
+            <span>Cholis</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="suit" type="button" role="tab" aria-selected="false">
+            <span>Suit</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="blezer" type="button" role="tab" aria-selected="false">
+            <span>Blezer</span>
+          </button>
+          <button class="fullscreen-filter-tab" data-filter="koti kurta" type="button" role="tab" aria-selected="false">
+            <span>Koti Kurta</span>
+          </button>
         </div>
-        <div class="all-collections-grid">
+        <div class="fullscreen-collections-grid" id="fullscreenCollectionsGrid">
 ${collections.map(card).join('\n')}
+          <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2026 Vivah Villa Collection. All rights reserved.</p>
-        <p><a href="index.html">Home</a> | <a href="all-collections.html">All Collections</a> | <a href="index.html#contact">Contact</a></p>
-      </div>
-    </div>
+  <footer class="all-collections-footer">
+    <p>&copy; 2026 Vivah Villa Collection. <a href="index.html#contact">Contact</a></p>
   </footer>
 
   <script type="application/ld+json">
@@ -368,6 +348,35 @@ ${JSON.stringify({
   numberOfItems: collections.length,
   itemListElement: itemList
 }, null, 2)}
+  </script>
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
+      const cards = document.querySelectorAll('.all-collection-card');
+      const empty = document.getElementById('collectionsEmpty');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.dataset.filter || 'all';
+          let visibleCount = 0;
+
+          tabs.forEach((item) => {
+            const isActive = item === tab;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', String(isActive));
+          });
+
+          cards.forEach((card) => {
+            const tags = (card.dataset.tags || '').split('|');
+            const shouldShow = filter === 'all' || tags.includes(filter);
+            card.hidden = !shouldShow;
+            if (shouldShow) visibleCount += 1;
+          });
+
+          if (empty) empty.hidden = visibleCount !== 0;
+        });
+      });
+    })();
   </script>
 </body>
 </html>
