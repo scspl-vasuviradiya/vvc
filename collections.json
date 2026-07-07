@@ -2,6 +2,81 @@
   {
     "tags": [
       "men",
+      "jodhpuri"
+    ],
+    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "reelUrl": "",
+    "title": "Modern Asymmetric Fusion Jodhpuri",
+    "desc": "A premium fusion ensemble crafted for the modern groom.",
+    "price": "₹2999/-",
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/ethereal-groom-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern",
+    "reelUrl": "",
+    "title": "Ethereal Groom Sherwani",
+    "desc": "A premium cream-ivory groom ensemble featuring high-density tone-on-tone embroidery.",
+    "price": "₹11999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/shadow-prince-indowestern.jpg",
+    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
+    "reelUrl": "",
+    "title": "Shadow Prince Indowestern",
+    "desc": "A sleek black streetwear-inspired look featuring structured tailoring and textured hand-embroidery.",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/woven-legacy-koti-kurta.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Woven Legacy Koti Kurta",
+    "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
+    "price": "₹2499/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true,
+    "reelUrl": ""
+  },
+  {
+    "tags": [
+      "women",
+      "lehenga"
+    ],
+    "img": "img/collections/ivory-peacock-lehenga.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Ivory Lehenga, Designer Lehenga",
+    "title": "Ivory Peacock Lehenga",
+    "desc": "Delicate ivory hues with royal peacock artistry.",
+    "price": "₹4999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "0",
+    "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
       "indowestern"
     ],
     "img": "img/collections/the-royal-tapestry-indowestern.jpg",
@@ -541,21 +616,6 @@
   },
   {
     "tags": [
-      "women",
-      "lehenga"
-    ],
-    "img": "img/collections/ivory-peacock-lehenga.jpg",
-    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Ivory Lehenga, Designer Lehenga",
-    "title": "Ivory Peacock Lehenga",
-    "desc": "Delicate ivory hues with royal peacock artistry.",
-    "price": "₹4999/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "0",
-    "reelUrl": ""
-  },
-  {
-    "tags": [
       "men",
       "open Jodhpuris"
     ],
@@ -692,21 +752,6 @@
   {
     "tags": [
       "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/woven-legacy-koti-kurta.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
-    "title": "Woven Legacy Koti Kurta",
-    "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
-    "price": "₹2499/-",
-    "sellingPrice": "0",
-    "size": "36, 38, 40, 42",
-    "active": true,
-    "reelUrl": ""
-  },
-  {
-    "tags": [
-      "men",
       "open Jodhpuris"
     ],
     "img": "img/collections/heritage-reimagined-jodhpuri.jpg",
@@ -739,21 +784,6 @@
       "men",
       "indowestern"
     ],
-    "img": "img/collections/shadow-prince-indowestern.jpg",
-    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
-    "reelUrl": "",
-    "title": "Shadow Prince Indowestern",
-    "desc": "A sleek black streetwear-inspired look featuring structured tailoring and textured hand-embroidery.",
-    "price": "₹3999/-",
-    "sellingPrice": "0",
-    "size": "38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
     "img": "img/collections/royal-sapphire-drape-indowestern.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
     "reelUrl": "",
@@ -762,21 +792,6 @@
     "price": "₹4999/-",
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/ethereal-groom-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern",
-    "reelUrl": "",
-    "title": "Ethereal Groom Sherwani",
-    "desc": "A premium cream-ivory groom ensemble featuring high-density tone-on-tone embroidery.",
-    "price": "₹11999/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
     "active": true
   },
   {
@@ -835,21 +850,6 @@
     "title": "Modern Floral Tux-Style Indowestern",
     "desc": "An all-black Indo-Western outfit highlighted by intricate pastel pink, blue, and gold threadwork.",
     "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "jodhpuri"
-    ],
-    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "reelUrl": "",
-    "title": "Modern Asymmetric Fusion Jodhpuri",
-    "desc": "A premium fusion ensemble crafted for the modern groom.",
-    "price": "₹2999/-",
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
