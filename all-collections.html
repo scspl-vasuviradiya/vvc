@@ -6,7 +6,11 @@
   <title>All Collections - Vivah Villa Collection Wedding Attire Rental</title>
   <meta name="description" content="Browse every Vivah Villa Collection rental outfit with crawlable images: sherwanis, indowesterns, Jodhpuris, lehengas, cholis, suits and premium wedding attire in Rajkot.">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow, max-image-preview:large">
+  <meta name="googlebot-image" content="index, follow, max-image-preview:large">
+  <meta name="keywords" content="vivah villa, vivahvilla.in, wedding collection, sherwani rent rajkot, indowestern for groom, jodhpuri suit rental, lehenga rental rajkot, wedding attire rental">
   <link rel="canonical" href="https://vivahvilla.in/all-collections.html">
+  <link rel="sitemap" type="application/xml" href="https://vivahvilla.in/sitemap_photos.xml">
   <meta property="og:title" content="All Collections - Vivah Villa Collection">
   <meta property="og:description" content="Complete wedding attire rental collection from Vivah Villa Collection in Rajkot.">
   <meta property="og:type" content="website">
@@ -186,6 +190,7 @@
         <div class="panel-title">
           <h1 id="allCollectionsTitle">All Collections</h1>
           <p>Browse our complete collection of premium wedding attire</p>
+          <p id="redirectStatus" aria-live="polite">All product photos are listed below for search indexing. You will be redirected to the main website shortly.</p>
         </div>
         <a class="panel-close-btn" href="index.html#collections" aria-label="Back to home collections">
           <i class="fas fa-times"></i>
@@ -2105,6 +2110,37 @@
           if (empty) empty.hidden = visibleCount !== 0;
         });
       });
+    })();
+
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const shouldStay = params.get('stay') === '1';
+      const redirectTarget = 'index.html#collections';
+      const redirectDelayMs = 1800;
+      const status = document.getElementById('redirectStatus');
+      const imageLinks = document.querySelectorAll('.all-collection-image-link');
+
+      imageLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          window.location.href = redirectTarget;
+        });
+      });
+
+      if (shouldStay) {
+        if (status) {
+          status.textContent = 'Stay mode is active for testing. Photos remain visible on this page.';
+        }
+        return;
+      }
+
+      if (status) {
+        status.textContent = 'Redirecting to Vivah Villa main collections page...';
+      }
+
+      window.setTimeout(() => {
+        window.location.replace(redirectTarget);
+      }, redirectDelayMs);
     })();
   </script>
 </body>
