@@ -20,7 +20,7 @@
       "sherwani"
     ],
     "img": "img/collections/ethereal-groom-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri",
     "reelUrl": "",
     "title": "Ethereal Groom Sherwani",
     "desc": "A premium cream-ivory groom ensemble featuring high-density tone-on-tone embroidery.",
@@ -55,7 +55,7 @@
     "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
     "price": "₹2499/-",
     "sellingPrice": "0",
-    "size": "36, 38, 40, 42",
+    "size": "34, 38, 42",
     "active": true,
     "reelUrl": ""
   },
@@ -85,7 +85,7 @@
     "desc": "A white Indian groom's outfit featuring intricate peacock motifs and ornate gold embroidery.",
     "price": "₹4999/-",
     "sellingPrice": "0",
-    "size": "36",
+    "size": "36, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DZzz3f4zSF7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
@@ -912,6 +912,51 @@
     "price": "₹3499/-",
     "sellingPrice": "0",
     "size": "34, 38, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "https://www.instagram.com/reel/DSK8GVbCRB_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "A Royal Entrance Begins with the Perfect Sherwani",
+    "desc": "Exquisitely handcrafted in an elegant ivory shade, this royal sherwani features intricate embroidery and luxurious detailing, making it the perfect choice for a groom's grand wedding celebration",
+    "price": "₹10999/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/maharaja-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "https://www.instagram.com/reel/DSK8GVbCRB_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "Maharaja Sherwani",
+    "desc": "A luxurious blush pink embroidered sherwani with a royal safa, matching stole, and elegant accessories—crafted for the groom who wants to make a majestic entrance. ✨",
+    "price": "₹12999/-",
+    "sellingPrice": "0",
+    "size": "34, 38",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/floral-royale-indowestern.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "reelUrl": "https://www.instagram.com/reel/DSnEJ7djFoS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "Floral Royale indowestern",
+    "desc": "Luxury floral craftsmanship with a royal touch.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "36, 38",
     "active": true
   }
 ]
