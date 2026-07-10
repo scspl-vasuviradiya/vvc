@@ -958,5 +958,20 @@
     "sellingPrice": "0",
     "size": "36, 38",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/ivory-signature-indowestern.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "reelUrl": "https://www.instagram.com/reel/DTkt6IFjNy4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "Ivory Signature indowestern",
+    "desc": "Crafted in luxurious ivory fabric, this Jodhpuri features intricate floral embroidery and shimmering handcrafted detailing, creating a refined look for weddings and grand celebrations.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "34, 38",
+    "active": true
   }
 ]
