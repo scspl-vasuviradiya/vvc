@@ -489,7 +489,7 @@
     "title": "Navy blue beats Jodhpuri",
     "desc": "A deep blue Jodhpuri suit featuring subtle geometric quilted pattern, and dark bead work along the borders and sleeves.",
     "price": "₹1999/-",
-    "active": false,
+    "active": true,
     "sellingPrice": "0",
     "size": "38, 40, 42",
     "reelUrl": ""
