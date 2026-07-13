@@ -182,10 +182,26 @@ const page = `<!DOCTYPE html>
       overflow-x: hidden;
     }
 
+    .all-collections-page main {
+      padding-top: 108px;
+    }
+
+    .all-collections-page .header + main {
+      min-height: calc(100vh - 108px);
+    }
+
     .all-collections-page .fullscreen-panel-header {
       position: sticky;
-      top: 0;
+      top: 96px;
       z-index: 20;
+    }
+
+    .all-collections-page .all-collections-panel {
+      padding: 0 0 2rem;
+    }
+
+    .all-collections-page .navbar-brand {
+      text-decoration: none;
     }
 
     .all-collections-page .panel-close-btn {
@@ -326,23 +342,19 @@ const page = `<!DOCTYPE html>
       font-size: var(--font-size-lg);
     }
 
-    .all-collections-footer {
-      padding: 1.25rem;
-      text-align: center;
-      color: var(--gray-600);
-      background: rgba(255,255,255,0.7);
-    }
-
-    .all-collections-footer a {
-      color: var(--primary-color);
-      font-weight: 700;
-      text-decoration: none;
+    .all-collections-page .footer-links li {
+      margin-bottom: 0.75rem;
     }
 
     @media (max-width: 768px) {
+      .all-collections-page main {
+        padding-top: 92px;
+      }
+
       .all-collections-page .fullscreen-panel-header {
         align-items: flex-start;
         gap: 1rem;
+        top: 84px;
       }
 
       .all-collections-page .fullscreen-collections-grid {
@@ -358,6 +370,65 @@ const page = `<!DOCTYPE html>
   </style>
 </head>
 <body class="all-collections-page">
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <header class="header" data-anim="fade-down">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="index.html#home" data-anim="fade-right">
+          <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
+          <div class="brand-text">
+            <h1 class="brand-title">Vivah Villa</h1>
+            <span class="brand-subtitle">Collection</span>
+          </div>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <nav class="navbar-nav desktop-nav" id="navbarNav">
+          <a class="nav-link" href="index.html#home">Home</a>
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#collections">Collections</a>
+          <a class="nav-link" href="index.html#gallery">Gallery</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
+          <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+        </nav>
+
+        <nav class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-header">
+            <div class="brand-mobile">
+              <img src="img/logo/logo.png" alt="Vivah Villa Collection">
+              <span>Vivah Villa Collection</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="mobile-nav-links">
+            <a class="mobile-nav-link" href="index.html#home">Home</a>
+            <a class="mobile-nav-link" href="index.html#about">About</a>
+            <a class="mobile-nav-link" href="index.html#collections">Collections</a>
+            <a class="mobile-nav-link" href="index.html#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="index.html#contact">Contact</a>
+            <div class="mobile-nav-cta">
+              <a class="btn-whatsapp" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                <span>Contact via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+  </header>
+
   <main>
     <section class="all-collections-panel" aria-labelledby="allCollectionsTitle">
       <div class="fullscreen-panel-header">
@@ -424,8 +495,69 @@ ${collections.map(card).join('\n')}
     </section>
   </main>
 
-  <footer class="all-collections-footer">
-    <p>&copy; 2026 Vivah Villa Collection. <a href="index.html#contact">Contact</a></p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-brand" data-anim="fade-up">
+          <div class="footer-logo">
+            <img src="img/logo/logo.png" alt="Vivah Villa Collection">
+            <div class="footer-brand-text">
+              <h3>Vivah Villa Collection</h3>
+              <p>Traditional style • Modern convenience</p>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your trusted partner for premium wedding attire in Rajkot.
+            Making your special occasions truly memorable with our curated collections.
+          </p>
+        </div>
+
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#collections">Collections</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li>Outfit Rental</li>
+            <li>Alterations</li>
+            <li>Styling Consultation</li>
+            <li>Express Cleaning</li>
+            <li>Home Delivery</li>
+          </ul>
+        </div>
+
+        <div class="footer-section" data-anim="fade-up">
+          <h4>Rental Policy</h4>
+          <ul class="footer-links">
+            <li>Security deposit required</li>
+            <li>ID proof at booking</li>
+            <li>Damage fees apply</li>
+            <li>Late return charges</li>
+            <li>Advance booking recommended</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; <span id="currentYear"></span> Vivah Villa Collection. All rights reserved.</p>
+        </div>
+        <div class="footer-actions">
+          <a href="#top" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+            <span>Back to top</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script type="application/ld+json">
@@ -443,6 +575,72 @@ ${JSON.stringify({
   },
   associatedMedia: imageGallery
 }, null, 2)}
+  </script>
+  <script>
+    (function () {
+      const body = document.body;
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileNavClose = document.getElementById('mobileNavClose');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const currentYear = document.getElementById('currentYear');
+      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
+      const cards = document.querySelectorAll('.all-collection-card');
+      const empty = document.getElementById('collectionsEmpty');
+
+      function setMenuState(isOpen) {
+        if (!mobileNav || !mobileMenuBtn || !mobileMenuOverlay) return;
+        mobileNav.classList.toggle('active', isOpen);
+        mobileMenuOverlay.classList.toggle('active', isOpen);
+        body.classList.toggle('menu-open', isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isOpen = mobileNav ? !mobileNav.classList.contains('active') : false;
+          setMenuState(isOpen);
+        });
+      }
+
+      if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', () => setMenuState(false));
+      }
+
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', () => setMenuState(false));
+      }
+
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => setMenuState(false));
+      });
+
+      if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.dataset.filter || 'all';
+          let visibleCount = 0;
+
+          tabs.forEach((item) => {
+            const isActive = item === tab;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', String(isActive));
+          });
+
+          cards.forEach((card) => {
+            const tags = (card.dataset.tags || '').split('|');
+            const shouldShow = filter === 'all' || tags.includes(filter);
+            card.hidden = !shouldShow;
+            if (shouldShow) visibleCount += 1;
+          });
+
+          if (empty) empty.hidden = visibleCount !== 0;
+        });
+      });
+    })();
   </script>
 </body>
 </html>
