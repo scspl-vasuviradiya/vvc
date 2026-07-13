@@ -642,6 +642,35 @@ ${JSON.stringify({
       });
     })();
   </script>
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
+      const cards = document.querySelectorAll('.all-collection-card');
+      const empty = document.getElementById('collectionsEmpty');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const filter = tab.dataset.filter || 'all';
+          let visibleCount = 0;
+
+          tabs.forEach((item) => {
+            const isActive = item === tab;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', String(isActive));
+          });
+
+          cards.forEach((card) => {
+            const tags = (card.dataset.tags || '').split('|');
+            const shouldShow = filter === 'all' || tags.includes(filter);
+            card.hidden = !shouldShow;
+            if (shouldShow) visibleCount += 1;
+          });
+
+          if (empty) empty.hidden = visibleCount !== 0;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
 `;
