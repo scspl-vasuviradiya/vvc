@@ -92,8 +92,6 @@ function card(item, index) {
   const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
   const alt = imageAlt(item);
   const price = cleanText(item.price || 'Price on request');
-  const imageUrl = absoluteUrl(img);
-  const keywords = seoKeywords(item);
   const eager = index < 6 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
   const sizeHtml = isVisibleValue(item.size)
     ? `\n              <p class="collection-meta"><span>Sizes:</span> ${esc(item.size)}</p>`
@@ -105,17 +103,14 @@ function card(item, index) {
     ? `\n              <p class="collection-reel"><a href="${esc(item.reelUrl)}" target="_blank" rel="noopener">Watch Reel</a></p>`
     : '';
 
-  return `          <article class="collection-card visible all-collection-card" data-tags="${esc(tags)}" itemscope itemtype="https://schema.org/Product">
-            <a class="all-collection-image-link" href="${esc(img)}" aria-label="View ${esc(title)} image" itemprop="url">
-              <img src="${esc(img)}" alt="${esc(alt)}" width="320" height="400" ${eager} decoding="async" itemprop="image">
+  return `          <article class="collection-card visible all-collection-card" data-tags="${esc(tags)}">
+            <a class="all-collection-image-link" href="${esc(img)}" aria-label="View ${esc(title)} image">
+              <img src="${esc(img)}" alt="${esc(alt)}" width="320" height="400" ${eager} decoding="async">
             </a>
             <div class="collection-content">
-              <h3 class="collection-title" itemprop="name">${esc(title)}</h3>
-              <p class="collection-description" itemprop="description">${esc(desc)}</p>
+              <h3 class="collection-title">${esc(title)}</h3>
+              <p class="collection-description">${esc(desc)}</p>
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
-              <meta itemprop="keywords" content="${esc(keywords)}">
-              <meta itemprop="category" content="${esc(category(item))}">
-              <meta itemprop="image" content="${esc(imageUrl)}">
             </div>
           </article>`;
 }
@@ -435,6 +430,7 @@ const page = `<!DOCTYPE html>
         <div class="panel-title">
           <h1 id="allCollectionsTitle">All Collections</h1>
           <p>Browse our complete collection of premium wedding attire</p>
+          <p id="redirectStatus" aria-live="polite">All product photos are listed below for search indexing and image discovery.</p>
         </div>
         <a class="panel-close-btn" href="index.html#collections" aria-label="Back to home collections">
           <i class="fas fa-times"></i>
