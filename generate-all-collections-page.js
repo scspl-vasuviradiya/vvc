@@ -185,12 +185,6 @@ const page = `<!DOCTYPE html>
       min-height: calc(100vh - 108px);
     }
 
-    .all-collections-page .fullscreen-panel-header {
-      position: sticky;
-      top: 96px;
-      z-index: 20;
-    }
-
     .all-collections-page .all-collections-panel {
       padding: 0 0 2rem;
     }
@@ -346,12 +340,6 @@ const page = `<!DOCTYPE html>
         padding-top: 92px;
       }
 
-      .all-collections-page .fullscreen-panel-header {
-        align-items: flex-start;
-        gap: 1rem;
-        top: 84px;
-      }
-
       .all-collections-page .fullscreen-collections-grid {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 1rem;
@@ -426,7 +414,7 @@ const page = `<!DOCTYPE html>
 
   <main>
     <section class="all-collections-panel" aria-labelledby="allCollectionsTitle">
-      <div class="fullscreen-panel-header">
+      <div>
         <div class="panel-title">
           <h1 id="allCollectionsTitle">All Collections</h1>
           <p>Browse our complete collection of premium wedding attire</p>
