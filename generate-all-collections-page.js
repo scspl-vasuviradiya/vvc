@@ -435,7 +435,6 @@ const page = `<!DOCTYPE html>
         <div class="panel-title">
           <h1 id="allCollectionsTitle">All Collections</h1>
           <p>Browse our complete collection of premium wedding attire</p>
-          <p id="redirectStatus" aria-live="polite">All product photos are listed below for search indexing and image discovery.</p>
         </div>
         <a class="panel-close-btn" href="index.html#collections" aria-label="Back to home collections">
           <i class="fas fa-times"></i>
