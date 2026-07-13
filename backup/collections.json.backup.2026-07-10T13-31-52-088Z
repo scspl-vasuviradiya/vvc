@@ -47,47 +47,17 @@
   {
     "tags": [
       "men",
-      "indowestern"
+      "open Jodhpuris"
     ],
-    "img": "img/collections/royal-sapphire-drape-indowestern.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
-    "reelUrl": "",
-    "title": "Royal Sapphire Drape Indowestern",
-    "desc": "A majestic cobalt-blue look featuring intricate silver glass bead detailing for a high-fashion Sangeet or reception.",
-    "price": "₹4999/-",
+    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "reelUrl": "https://www.instagram.com/reel/DTVQmpRgXZQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "Modern Asymmetric Fusion Jodhpuri",
+    "desc": "A premium fusion ensemble crafted for the modern groom.",
+    "price": "₹2999/-",
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/woven-legacy-koti-kurta.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
-    "title": "Woven Legacy Koti Kurta",
-    "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
-    "price": "₹2499/-",
-    "sellingPrice": "0",
-    "size": "34, 38, 42",
-    "active": true,
-    "reelUrl": ""
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/the-crown-prince-sherwani.jpg",
-    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
-    "title": "The Crown Prince Sherwani",
-    "desc": "A pastel lavender groom's sherwani featuring intricate geometric self-textured embroidery.",
-    "price": "₹6999/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "36, 40",
-    "reelUrl": ""
   },
   {
     "tags": [
@@ -107,21 +77,6 @@
   {
     "tags": [
       "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/shahi-ganesh-koti-kurta.jpg",
-    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
-    "title": "Shahi Ganesh koti kurta",
-    "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity.",
-    "price": "₹2499/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "reelUrl": "https://www.instagram.com/reel/DSkWzAmjMcE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-  },
-  {
-    "tags": [
-      "men",
       "indowestern"
     ],
     "img": "img/collections/shadow-prince-indowestern.jpg",
@@ -137,17 +92,17 @@
   {
     "tags": [
       "men",
-      "sherwani"
+      "koti kurta"
     ],
-    "img": "img/collections/the-maharaja-sherwani.jpg",
-    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, cream sherwani",
-    "title": "The Maharaja Sherwani",
-    "desc": "An elegant cream-colored groom's sherwani featuring intricate gold embroidery, multi-colored pastel floral accents along the hem.",
-    "price": "₹6999/-",
-    "active": true,
+    "img": "img/collections/woven-legacy-koti-kurta.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "Woven Legacy Koti Kurta",
+    "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
+    "price": "₹2499/-",
     "sellingPrice": "0",
-    "size": "36, 38",
-    "reelUrl": "https://www.instagram.com/reel/DO03pW5Eivp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    "size": "34, 38, 42",
+    "active": true,
+    "reelUrl": ""
   },
   {
     "tags": [
@@ -283,6 +238,21 @@
     "size": "34, 38, 42",
     "active": true,
     "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/shahi-ganesh-koti-kurta.jpg",
+    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
+    "title": "Shahi Ganesh koti kurta",
+    "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity.",
+    "price": "₹2499/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "reelUrl": "https://www.instagram.com/reel/DSkWzAmjMcE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
@@ -572,6 +542,36 @@
   {
     "tags": [
       "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-crown-prince-sherwani.jpg",
+    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "title": "The Crown Prince Sherwani",
+    "desc": "A pastel lavender groom's sherwani featuring intricate geometric self-textured embroidery.",
+    "price": "₹6999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-maharaja-sherwani.jpg",
+    "alt": "groom, Wedding cloths, purple, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, cream sherwani",
+    "title": "The Maharaja Sherwani",
+    "desc": "An elegant cream-colored groom's sherwani featuring intricate gold embroidery, multi-colored pastel floral accents along the hem.",
+    "price": "₹6999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "36, 38",
+    "reelUrl": "https://www.instagram.com/reel/DO03pW5Eivp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "tags": [
+      "men",
       "open Jodhpuris"
     ],
     "img": "img/collections/the-royal-wine-jodhpuri.jpg",
@@ -658,21 +658,6 @@
     "sellingPrice": "0",
     "size": "38, 42",
     "reelUrl": "https://www.instagram.com/reel/DS7i-HVDHgE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "reelUrl": "https://www.instagram.com/reel/DTVQmpRgXZQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-    "title": "Modern Asymmetric Fusion Jodhpuri",
-    "desc": "A premium fusion ensemble crafted for the modern groom.",
-    "price": "₹2999/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "active": true
   },
   {
     "tags": [
@@ -838,6 +823,21 @@
     "size": "0",
     "active": true,
     "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/royal-sapphire-drape-indowestern.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern",
+    "reelUrl": "",
+    "title": "Royal Sapphire Drape Indowestern",
+    "desc": "A majestic cobalt-blue look featuring intricate silver glass bead detailing for a high-fashion Sangeet or reception.",
+    "price": "₹4999/-",
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "active": true
   },
   {
     "tags": [

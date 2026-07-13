@@ -77,6 +77,21 @@
   {
     "tags": [
       "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
+    "reelUrl": "https://www.instagram.com/reel/DTVQmpRgXZQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "title": "Modern Asymmetric Fusion Jodhpuri",
+    "desc": "A premium fusion ensemble crafted for the modern groom.",
+    "price": "₹2999/-",
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
       "sherwani"
     ],
     "img": "img/collections/the-crown-prince-sherwani.jpg",
@@ -103,21 +118,6 @@
     "sellingPrice": "0",
     "size": "36, 40",
     "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/shahi-ganesh-koti-kurta.jpg",
-    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
-    "title": "Shahi Ganesh koti kurta",
-    "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity.",
-    "price": "₹2499/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "reelUrl": "https://www.instagram.com/reel/DSkWzAmjMcE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
@@ -283,6 +283,21 @@
     "size": "34, 38, 42",
     "active": true,
     "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/shahi-ganesh-koti-kurta.jpg",
+    "alt": "Ganesh embroidered outfit, Ganpati koti kurta, Groom traditional wear, Designer koti kurta, Heritage embroidery, Luxury groom collection, Rajwadi groom style, Vivah Villa collection, Groom wedding wear,Rajwadi menswear, Luxury ethnic outfit, Wedding ceremony attire, Premium groom collection",
+    "title": "Shahi Ganesh koti kurta",
+    "desc": "A divine Ganesh-inspired koti kurta ensemble symbolizing prosperity.",
+    "price": "₹2499/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "34, 36, 38, 40, 42",
+    "reelUrl": "https://www.instagram.com/reel/DSkWzAmjMcE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
@@ -658,21 +673,6 @@
     "sellingPrice": "0",
     "size": "38, 42",
     "reelUrl": "https://www.instagram.com/reel/DS7i-HVDHgE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "reelUrl": "https://www.instagram.com/reel/DTVQmpRgXZQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-    "title": "Modern Asymmetric Fusion Jodhpuri",
-    "desc": "A premium fusion ensemble crafted for the modern groom.",
-    "price": "₹2999/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "active": true
   },
   {
     "tags": [
