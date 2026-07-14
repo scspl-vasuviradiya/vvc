@@ -1,4 +1,4 @@
-if (!window.THREE) console.error("Three.js non chargé");
+if (!window.THREE) console.error("Three.js non chargÃ©");
 let layers = [];
 const textures = [];
 let loaded = 0;
@@ -33,227 +33,111 @@ const LAYER_CONFIG = [{
     opacity: 0.4
 }];
 const IMAGE_PATHS = [
-'https://vivahvilla.in/img/logo/WaterMark1.png',
-'https://vivahvilla.in/img/logo/WaterMark.png',
-
-
-'https://vivahvilla.in/img/logo/logo.png',
-
-
-'https://vivahvilla.in/img/collections/maroon-modern-king.jpg',
-
-
-'https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg',
-
-
-'https://vivahvilla.in/img/collections/ivory-pastel-mirror-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/heritage-reimagined.jpg',
-
-
-'https://vivahvilla.in/img/collections/brown-reign.jpg',
-
-
-'https://vivahvilla.in/img/collections/blue-dynasty-signature-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/black-crown-long-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/abc.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-jodhpuri-2.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-jodhpuri-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-indowestern-3.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-indowestern-2.JPG',
-
-
-'https://vivahvilla.in/img/collections/men-indowestern-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/midnight-blue-grace.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-suit-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/men-sherwani-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/midnight-cavalier.jpg',
-
-
-'https://vivahvilla.in/img/collections/mirror-bloom-fusion-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/woven-legacy.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-6.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-5.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-4.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-3.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-2.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-lehenga-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-choli-5.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-choli-4.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-choli-3.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-choli-2.jpg',
-
-
-'https://vivahvilla.in/img/collections/women-choli-1.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-white-sovereign.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-signature-of-sovereignty.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-royal-tapestry.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-peacock-prince.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-midnight-groom.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-maharaja-sherwani.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-golden-fable.jpg',
-
-
-'https://vivahvilla.in/img/collections/the-crown-prince.jpg',
-
-
-'https://vivahvilla.in/img/collections/shahi-peacock-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/shahi-noir-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/shahi-ganesh-koti-kurta.jpg',
-
-
-'https://vivahvilla.in/img/collections/shahi-ashva-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/royal-white-long-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/royal-plumage.jpg',
-
-
-'https://vivahvilla.in/img/collections/royal-azure.jpg',
-
-
-'https://vivahvilla.in/img/collections/royal-azure-jodhpuri.jpg',
-
-
-'https://vivahvilla.in/img/collections/rajwadi-peacock-koti-set.jpg',
-
-
-'https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/ocean-dusk-long-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/collections/neelmayur-royale-indo-western.jpg',
-
-
-'https://vivahvilla.in/img/gallery/hero.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Female/4.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Female/3.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/9.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Female/2.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/8.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Female/1.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/7.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/6.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/5.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/4.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/3.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/2.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/16.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/15.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/14.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/13.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/12.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/11.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/10.jpg',
-
-
-'https://vivahvilla.in/img/gallery/Male/1.jpg'];
+    'https://vivahvilla.in/img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/black-crown-long-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/blue-dynasty-signature-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/blue-dynasty-signature-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/brown-reign.jpg',
+    'https://vivahvilla.in/img/collections/brown-reign-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/classic-black-velvet-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/classic-men-s-suit.jpg',
+    'https://vivahvilla.in/img/collections/coral-charm-lehnga.jpg',
+    'https://vivahvilla.in/img/collections/dark-knight-elegance-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/elegant-red-lehenga.jpg',
+    'https://vivahvilla.in/img/collections/ethereal-groom-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/floral-royale-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/heritage-reimagined.jpg',
+    'https://vivahvilla.in/img/collections/heritage-reimagined-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/imperial-ivory-elegance.jpg',
+    'https://vivahvilla.in/img/collections/ivory-pastel-mirror-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/ivory-pastel-mirror-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg',
+    'https://vivahvilla.in/img/collections/ivory-signature-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg',
+    'https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/maharaja-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/maharani-s-legacy-lehenga.jpg',
+    'https://vivahvilla.in/img/collections/maroon-modern-king.jpg',
+    'https://vivahvilla.in/img/collections/maroon-modern-king-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/men-indowestern-1.jpg',
+    'https://vivahvilla.in/img/collections/men-indowestern-3.jpg',
+    'https://vivahvilla.in/img/collections/men-indowestern-4.jpg',
+    'https://vivahvilla.in/img/collections/men-jodhpuri-1.jpg',
+    'https://vivahvilla.in/img/collections/men-jodhpuri-2.jpg',
+    'https://vivahvilla.in/img/collections/men-sherwani-1.jpg',
+    'https://vivahvilla.in/img/collections/men-suit-1.jpg',
+    'https://vivahvilla.in/img/collections/metallic-blush-fusion-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/midnight-blue-grace.jpg',
+    'https://vivahvilla.in/img/collections/midnight-blue-grace-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/midnight-cavalier.jpg',
+    'https://vivahvilla.in/img/collections/midnight-cavalier-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/midnight-majesty-lehnga.jpg',
+    'https://vivahvilla.in/img/collections/mirror-bloom-fusion-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/mirror-bloom-fusion-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/modern-floral-tux-style-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/multicolored-mosaic-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/navy-blue-beats-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/neelmayur-royale-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/neelmayur-royale-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/ocean-dusk-long-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/rajwadi-peacock-koti-kurta-set.jpg',
+    'https://vivahvilla.in/img/collections/rajwadi-peacock-koti-set.jpg',
+    'https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/royal-azure.jpg',
+    'https://vivahvilla.in/img/collections/royal-azure-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/royal-azure-peacock-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/royal-plumage.jpg',
+    'https://vivahvilla.in/img/collections/royal-plumage-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/royal-reflection-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/royal-sapphire-drape-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/royal-white-long-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/shadow-prince-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/shahi-ashva-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/shahi-ashva-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/shahi-ganesh-koti-kurta.jpg',
+    'https://vivahvilla.in/img/collections/shahi-noir-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/shahi-noir-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/shahi-peacock-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/shahi-peacock-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/signature-of-sovereignty-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/stealth-luxury-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/stealth-luxury-indo-western.jpg',
+    'https://vivahvilla.in/img/collections/the-crown-prince.jpg',
+    'https://vivahvilla.in/img/collections/the-crown-prince-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/the-golden-fable.jpg',
+    'https://vivahvilla.in/img/collections/the-golden-fable-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/the-maharaja-sherwani.jpg',
+    'https://vivahvilla.in/img/collections/the-midnight-groom.jpg',
+    'https://vivahvilla.in/img/collections/the-midnight-groom-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/the-peacock-prince.jpg',
+    'https://vivahvilla.in/img/collections/the-royal-tapestry.jpg',
+    'https://vivahvilla.in/img/collections/the-royal-tapestry-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/the-signature-of-sovereignty.jpg',
+    'https://vivahvilla.in/img/collections/the-white-sovereign.jpg',
+    'https://vivahvilla.in/img/collections/the-white-sovereign-jodhpuri.jpg',
+    'https://vivahvilla.in/img/collections/wine-emperor-indowestern.jpg',
+    'https://vivahvilla.in/img/collections/women-choli-1.jpg',
+    'https://vivahvilla.in/img/collections/women-choli-2.jpg',
+    'https://vivahvilla.in/img/collections/women-choli-3.jpg',
+    'https://vivahvilla.in/img/collections/women-choli-4.jpg',
+    'https://vivahvilla.in/img/collections/women-choli-5.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-1.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-2.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-3.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-4.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-5.jpg',
+    'https://vivahvilla.in/img/collections/women-lehenga-6.jpg',
+    'https://vivahvilla.in/img/collections/woven-legacy.jpg',
+    'https://vivahvilla.in/img/collections/woven-legacy-koti-kurta.jpg'
+];
 let shuffledImages = [];
 let currentImageIndex = 0;
 console.log("&Toc on codepen - https://codepen.io/ol-ivier");
