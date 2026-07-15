@@ -32,7 +32,8 @@ const LAYER_CONFIG = [{
     speed: 15,
     opacity: 0.4
 }];
-const IMAGE_PATHS = [
+const COLLECTIONS_JSON_URL = "../collections.json";
+const FALLBACK_IMAGE_PATHS = [
     'https://vivahvilla.in/img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg',
     'https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg',
     'https://vivahvilla.in/img/collections/black-crown-long-indo-western.jpg',
@@ -138,6 +139,7 @@ const IMAGE_PATHS = [
     'https://vivahvilla.in/img/collections/woven-legacy.jpg',
     'https://vivahvilla.in/img/collections/woven-legacy-koti-kurta.jpg'
 ];
+let IMAGE_PATHS = [];
 let shuffledImages = [];
 let currentImageIndex = 0;
 console.log("&Toc on codepen - https://codepen.io/ol-ivier");
@@ -159,6 +161,11 @@ function getNextRandomImage() {
     const image = shuffledImages[currentImageIndex];
     currentImageIndex++;
     return image
+}
+function normalizeCollectionImagePath(path) {
+    if (/^https?:\/\//i.test(path)) return path;
+    const normalizedPath = path.replace(/^\.\//, "").replace(/^\/+/, "");
+    return normalizedPath ? `../${normalizedPath}` : path
 }
 const container = document.getElementById("container");
 const loadingEl = document.getElementById("loading");
@@ -222,7 +229,25 @@ const loader = new THREE.TextureLoader();
 loader.crossOrigin = "anonymous";
 const TOTAL = DEPTH_LAYERS * IMAGES_PER_LAYER;
 
-function loadAll() {
+async function loadImagePaths() {
+    try {
+        const response = await fetch(COLLECTIONS_JSON_URL, {
+            cache: "no-store"
+        });
+        if (!response.ok) throw new Error(`collections.json HTTP ${response.status}`);
+        const collections = await response.json();
+        if (Array.isArray(collections)) {
+            const paths = collections.map(item => item && item.img).filter(Boolean).map(normalizeCollectionImagePath);
+            if (paths.length) return paths
+        }
+    } catch (error) {
+        console.warn("Using fallback image list", error)
+    }
+    return FALLBACK_IMAGE_PATHS
+}
+
+async function loadAll() {
+    IMAGE_PATHS = await loadImagePaths();
     shuffledImages = shuffleArray(IMAGE_PATHS);
     currentImageIndex = 0;
     for (let l = 0; l < DEPTH_LAYERS; l++) {
