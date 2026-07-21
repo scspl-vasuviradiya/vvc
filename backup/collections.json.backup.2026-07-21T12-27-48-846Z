@@ -107,21 +107,6 @@
   {
     "tags": [
       "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/heritage-reimagined-jodhpuri.jpg",
-    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear, jodhpuri",
-    "title": "Heritage Reimagined Jodhpuri",
-    "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "0",
-    "active": true,
-    "reelUrl": ""
-  },
-  {
-    "tags": [
-      "men",
       "indowestern"
     ],
     "img": "img/collections/ivory-signature-indowestern.jpg",
@@ -148,6 +133,21 @@
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/heritage-reimagined-jodhpuri.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear, jodhpuri",
+    "title": "Heritage Reimagined Jodhpuri",
+    "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true,
+    "reelUrl": ""
   },
   {
     "tags": [

@@ -47,36 +47,6 @@
   {
     "tags": [
       "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/the-white-sovereign-jodhpuri.jpg",
-    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modernethnic wear, jodhpuri",
-    "title": "The White Sovereign Jodhpuri",
-    "desc": "An off-white Jodhpuri suit featuring heavy silver thread work and geometric mirror embellishments along the borders.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "0",
-    "active": true,
-    "reelUrl": ""
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/brown-reign-jodhpuri.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, jodhpuri",
-    "title": "Brown Reign Jodhpuri",
-    "desc": "This Jodhpuri suit featuring a unique honeycomb pattern of Mirror embellishments.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "0",
-    "active": true,
-    "reelUrl": "https://www.instagram.com/reel/DaxnKRtpMja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-  },
-  {
-    "tags": [
-      "men",
       "sherwani"
     ],
     "img": "img/collections/maharaja-sherwani.jpg",
@@ -107,21 +77,6 @@
   {
     "tags": [
       "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/heritage-reimagined-jodhpuri.jpg",
-    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear, jodhpuri",
-    "title": "Heritage Reimagined Jodhpuri",
-    "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "0",
-    "active": true,
-    "reelUrl": ""
-  },
-  {
-    "tags": [
-      "men",
       "indowestern"
     ],
     "img": "img/collections/ivory-signature-indowestern.jpg",
@@ -148,6 +103,21 @@
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/heritage-reimagined-jodhpuri.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernethanicWear, jodhpuri",
+    "title": "Heritage Reimagined Jodhpuri",
+    "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true,
+    "reelUrl": ""
   },
   {
     "tags": [
@@ -319,6 +289,21 @@
       "men",
       "open Jodhpuris"
     ],
+    "img": "img/collections/the-white-sovereign-jodhpuri.jpg",
+    "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modernethnic wear, jodhpuri",
+    "title": "The White Sovereign Jodhpuri",
+    "desc": "An off-white Jodhpuri suit featuring heavy silver thread work and geometric mirror embellishments along the borders.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true,
+    "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
     "img": "img/collections/royal-plumage-jodhpuri.jpg",
     "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
     "title": "Royal Plumage Jodhpuri",
@@ -328,6 +313,21 @@
     "size": "0",
     "active": true,
     "reelUrl": ""
+  },
+  {
+    "tags": [
+      "men",
+      "open Jodhpuris"
+    ],
+    "img": "img/collections/brown-reign-jodhpuri.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, jodhpuri",
+    "title": "Brown Reign Jodhpuri",
+    "desc": "This Jodhpuri suit featuring a unique honeycomb pattern of Mirror embellishments.",
+    "price": "₹3499/-",
+    "sellingPrice": "0",
+    "size": "0",
+    "active": true,
+    "reelUrl": "https://www.instagram.com/reel/DaxnKRtpMja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
