@@ -11,7 +11,7 @@
     "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
     "price": "₹2499/-",
     "sellingPrice": "₹7999/-",
-    "size": "36, 40",
+    "size": "34, 38, 42",
     "active": true
   },
   {
@@ -144,8 +144,8 @@
     "reelUrl": "",
     "title": "Royal Sapphire Drape Indowestern",
     "desc": "A majestic cobalt-blue look featuring intricate silver glass bead detailing for a high-fashion Sangeet or reception.",
-    "price": "₹5999/-",
-    "sellingPrice": "₹15999/-",
+    "price": "₹4999/-",
+    "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
   },
@@ -159,7 +159,7 @@
     "title": "Woven Legacy Koti Kurta",
     "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
     "price": "₹2499/-",
-    "sellingPrice": "₹7999/-",
+    "sellingPrice": "0",
     "size": "34, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbBDYMRO6Wb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -263,8 +263,8 @@
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
     "title": "The Royal Tapestry Indowestern",
     "desc": "A white Indian groom's outfit featuring intricate peacock motifs and ornate gold embroidery.",
-    "price": "₹5999/-",
-    "sellingPrice": "₹15999/-",
+    "price": "₹4999/-",
+    "sellingPrice": "0",
     "size": "36, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DZzz3f4zSF7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -280,7 +280,7 @@
     "desc": "A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs.",
     "price": "₹3999/-",
     "active": true,
-    "sellingPrice": "0",
+    "sellingPrice": "₹14499/-",
     "size": "36, 38, 40",
     "reelUrl": "https://www.instagram.com/reel/DTXzagNjJYG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
@@ -294,8 +294,8 @@
     "title": "Midnight Cavalier Indowestern",
     "desc": "A mauve Indo-Western suit featuring a stylized horse motif and intricate black floral embroidery.",
     "price": "₹3999/-",
-    "sellingPrice": "₹15999/-",
-    "size": "36, 40, 42",
+    "sellingPrice": "0",
+    "size": "0",
     "active": true,
     "reelUrl": ""
   },
@@ -323,9 +323,9 @@
     "alt": "OpenJodhpuri, IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
     "title": "Royal Plumage Jodhpuri",
     "desc": "A pristine white Jodhpuri suit featuring intricate gold lattice embroidery and a side-swept peacock motif.",
-    "price": "₹5999/-",
-    "sellingPrice": "₹15999/-",
-    "size": "34, 38, 42",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "0",
     "active": true,
     "reelUrl": ""
   },
@@ -339,7 +339,7 @@
     "title": "Signature of Sovereignty Indowestern",
     "desc": "A cream Indo-Western set detailed with intricate antique gold embroidery along the shoulders, cuffs, and lower hemline.",
     "price": "₹3999/-",
-    "sellingPrice": "₹15999/-",
+    "sellingPrice": "0",
     "size": "34, 38, 42",
     "active": true,
     "reelUrl": ""
@@ -354,8 +354,8 @@
     "title": "Maroon Modern King Jodhpuri",
     "desc": "This Jodhpuri suit featuring intricate black bead detailing along the borders.",
     "price": "₹3499/-",
-    "sellingPrice": "₹7999/-",
-    "size": "34, 36, 38, 40, 42",
+    "sellingPrice": "0",
+    "size": "0",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DaX3dOCMkX3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
