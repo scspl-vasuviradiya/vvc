@@ -1139,6 +1139,24 @@
       return numericValue === '' || Number(numericValue) !== 0;
     }
 
+    const WHATSAPP_NUMBER = '919099055844';
+    const SITE_BASE_URL = 'https://vivahvilla.in';
+
+    function getAbsoluteImageUrl(imgPath) {
+      if (!imgPath) return SITE_BASE_URL + '/img/logo/logo.png';
+      if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) return imgPath;
+      const path = imgPath.startsWith('/') ? imgPath : '/' + imgPath;
+      return SITE_BASE_URL + path;
+    }
+
+    function buildWhatsAppUrl(item) {
+      const productName = item.title || 'Collection item';
+      const price = item.price || 'Price on request';
+      const imageUrl = getAbsoluteImageUrl(item.img);
+      const message = `Hello, I want to rent this outfit.\n\nProduct: ${productName}\n${imageUrl}`;
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+
     // Create collection card with original design
     function createCollectionCard(item) {
       const card = document.createElement('div');
@@ -1195,6 +1213,11 @@
           <i class="fab fa-instagram" aria-hidden="true" style="margin-right:6px;"></i>Watch Reel
         </a>
       </div>` : ''}
+    <div style="margin-top:8px;">
+      <a href="${buildWhatsAppUrl(item)}" target="_blank" rel="noopener" aria-label="Enquire about ${item.title || 'this outfit'} on WhatsApp" style="color:#25D366; text-decoration:none; font-weight:600;">
+        <i class="fab fa-whatsapp" aria-hidden="true" style="margin-right:6px;"></i>WhatsApp Enquiry
+      </a>
+    </div>
   </div>
 `;
 
