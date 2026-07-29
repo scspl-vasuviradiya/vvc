@@ -443,7 +443,7 @@
     "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
     "title": "Elegant Red Lehenga",
     "desc": "A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.",
-    "price": "��7999/-",
+    "price": "₹7999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1017,51 +1017,6 @@
     "price": "₹1499/-",
     "sellingPrice": "0",
     "size": "36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/ivory-crown-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Ivory Crown Sherwani",
-    "desc": "Crafted for the groom who appreciates luxury, this ivory sherwani blends traditional artistry with contemporary elegance, offering an unforgettable wedding ensemble.",
-    "price": "₹9999/-",
-    "sellingPrice": "0",
-    "size": "36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/imperial-ivory-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Imperial Ivory Sherwani",
-    "desc": "A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.",
-    "price": "₹9999/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/elite-groom-rose-gold-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Elite Groom Rose Gold Sherwani",
-    "desc": "A premium rose goldsherwani featuring intricate embroidery, a matching stole, and regal accessories—crafted to deliver a graceful and majestic groom's look for your special day.",
-    "price": "₹10999/-",
-    "sellingPrice": "0",
-    "size": "34, 38, 42",
     "active": true
   }
 ]
