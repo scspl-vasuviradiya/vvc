@@ -443,7 +443,7 @@
     "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
     "title": "Elegant Red Lehenga",
     "desc": "A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.",
-    "price": "₹7999/-",
+    "price": "��7999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1077,36 +1077,6 @@
     "price": "₹3499/-",
     "sellingPrice": "0",
     "size": "38, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/midnight-bloom-jodhpuri.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
-    "title": "Midnight Bloom Jodhpuri",
-    "desc": "It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "open Jodhpuris"
-    ],
-    "img": "img/collections/black-baron-jodhpuri.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
-    "title": "Black Baron jodhpuri",
-    "desc": "A luxurious black Jodhpuri featuring intricate tonal embroidery, crafted for grooms who appreciate timeless elegance with a bold royal presence.",
-    "price": "₹2999/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
     "active": true
   }
 ]
