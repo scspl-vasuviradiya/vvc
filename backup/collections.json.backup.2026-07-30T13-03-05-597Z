@@ -443,7 +443,7 @@
     "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
     "title": "Elegant Red Lehenga",
     "desc": "A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.",
-    "price": "��7999/-",
+    "price": "₹7999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1212,36 +1212,6 @@
     "price": "₹12999/-",
     "sellingPrice": "0",
     "size": "40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/rajsi-mayur-royal.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Rajsi Mayur Royal",
-    "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
-    "price": "₹13999/-",
-    "sellingPrice": "0",
-    "size": "38, 42, 44",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/rajsi-virasat.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Rajsi Virasat",
-    "desc": "An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.",
-    "price": "₹13999/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
     "active": true
   }
 ]

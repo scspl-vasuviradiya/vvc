@@ -443,7 +443,7 @@
     "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
     "title": "Elegant Red Lehenga",
     "desc": "A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.",
-    "price": "��7999/-",
+    "price": "₹7999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1137,111 +1137,6 @@
     "price": "₹3499/-",
     "sellingPrice": "0",
     "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/blue-dynasty.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
-    "title": "Blue Dynasty",
-    "desc": "A premium navy blue Indo-Western featuring elegant hand embroidery, a structured open jacket, and a sleek modern silhouette—crafted for the groom who embodies timeless style and royal confidence.",
-    "price": "₹3999/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/noir-dynasty.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
-    "title": "Noir Dynasty",
-    "desc": "A premium black Indo-Western featuring exquisite silver hand embroidery, a structured silhouette, and refined craftsmanship—designed for the modern groom who commands attention with effortless elegance.",
-    "price": "₹3999/-",
-    "sellingPrice": "0",
-    "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/shehenshah-ivory.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Shehenshah Ivory",
-    "desc": "A luxurious off-white sherwani featuring intricate heritage embroidery, regal pearl layering, and timeless royal elegance, crafted for the modern groom who commands attention.",
-    "price": "₹6999/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/timeless-maharaja.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Timeless Maharaja",
-    "desc": "A masterpiece of royal craftsmanship, this sherwani showcases intricate all-over embroidery with heritage-inspired motifs. Paired with a matching stole, regal pearl mala, and elegant safa, it creates a timeless look for the groom who values sophistication and tradition.",
-    "price": "₹11999/-",
-    "sellingPrice": "0",
-    "size": "40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/off-white-maharaja-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Off White Maharaja Sherwani",
-    "desc": "A luxurious blush off white embroidered sherwani with a royal safa, matching stole, and elegant accessories—crafted for the groom who wants to make a majestic entrance. ✨",
-    "price": "₹12999/-",
-    "sellingPrice": "0",
-    "size": "40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/rajsi-mayur-royal.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Rajsi Mayur Royal",
-    "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
-    "price": "₹13999/-",
-    "sellingPrice": "0",
-    "size": "38, 42, 44",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/rajsi-virasat.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Rajsi Virasat",
-    "desc": "An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.",
-    "price": "₹13999/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42",
     "active": true
   }
 ]
