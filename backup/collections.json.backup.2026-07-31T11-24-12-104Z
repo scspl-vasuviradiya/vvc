@@ -1363,35 +1363,5 @@
     "sellingPrice": "0",
     "size": "36, 40, 42",
     "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/celestial-black.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
-    "reelUrl": "",
-    "title": "Celestial Black",
-    "desc": "An elegant black embroidered jacket featuring intricate detailing, perfect for the modern groom or wedding guest.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "38, 40, 50",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/black-sovereign.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Black Sovereign",
-    "desc": "A sophisticated black Indo-Western sherwani featuring intricate tonal embroidery and subtle embellishments, crafted for a bold, regal look at weddings, receptions, and grand celebrations.",
-    "price": "₹3499/-",
-    "sellingPrice": "0",
-    "size": "34, 38, 42",
-    "active": true
   }
 ]
