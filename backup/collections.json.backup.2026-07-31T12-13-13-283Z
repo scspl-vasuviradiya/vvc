@@ -17,16 +17,16 @@
   {
     "tags": [
       "men",
-      "sherwani"
+      "koti kurta"
     ],
-    "img": "img/collections/rajsi-mayur-royal.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "img": "img/collections/imperial-ivory-koti-kurta.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
     "reelUrl": "",
-    "title": "Rajsi Mayur Royal",
-    "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
-    "price": "₹13999/-",
-    "sellingPrice": "0",
-    "size": "38, 42, 44",
+    "title": "Imperial Ivory Koti kurta",
+    "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
+    "price": "₹2499/-",
+    "sellingPrice": "₹7999/-",
+    "size": "36, 40",
     "active": true
   },
   {
@@ -41,51 +41,6 @@
     "desc": "Bold, refined, and undeniably royal—this black embroidered Indo-Western is made for grand celebrations.",
     "price": "₹3999/-",
     "sellingPrice": "₹9999/-",
-    "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/blue-dynasty.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
-    "title": "Blue Dynasty",
-    "desc": "A premium navy blue Indo-Western featuring elegant hand embroidery, a structured open jacket, and a sleek modern silhouette—crafted for the groom who embodies timeless style and royal confidence.",
-    "price": "₹3999/-",
-    "sellingPrice": "₹15999/-",
-    "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/ivory-crown-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Ivory Crown Sherwani",
-    "desc": "Crafted for the groom who appreciates luxury, this ivory sherwani blends traditional artistry with contemporary elegance, offering an unforgettable wedding ensemble.",
-    "price": "₹9999/-",
-    "sellingPrice": "0",
-    "size": "36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/imperial-ivory-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Imperial Ivory Sherwani",
-    "desc": "A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.",
-    "price": "₹9999/-",
-    "sellingPrice": "0",
     "size": "36, 40",
     "active": true
   },
@@ -1099,6 +1054,36 @@
       "men",
       "sherwani"
     ],
+    "img": "img/collections/ivory-crown-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "",
+    "title": "Ivory Crown Sherwani",
+    "desc": "Crafted for the groom who appreciates luxury, this ivory sherwani blends traditional artistry with contemporary elegance, offering an unforgettable wedding ensemble.",
+    "price": "₹9999/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/imperial-ivory-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "",
+    "title": "Imperial Ivory Sherwani",
+    "desc": "A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.",
+    "price": "₹9999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
     "img": "img/collections/elite-groom-rose-gold-sherwani.jpg",
     "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
     "reelUrl": "",
@@ -1189,6 +1174,21 @@
       "men",
       "indowestern"
     ],
+    "img": "img/collections/blue-dynasty.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
+    "reelUrl": "",
+    "title": "Blue Dynasty",
+    "desc": "A premium navy blue Indo-Western featuring elegant hand embroidery, a structured open jacket, and a sleek modern silhouette—crafted for the groom who embodies timeless style and royal confidence.",
+    "price": "₹3999/-",
+    "sellingPrice": "₹15999/-",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
     "img": "img/collections/noir-dynasty.jpg",
     "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
     "reelUrl": "",
@@ -1242,6 +1242,21 @@
     "price": "₹12999/-",
     "sellingPrice": "0",
     "size": "40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/rajsi-mayur-royal.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "",
+    "title": "Rajsi Mayur Royal",
+    "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
+    "price": "₹13999/-",
+    "sellingPrice": "0",
+    "size": "38, 42, 44",
     "active": true
   },
   {
@@ -1332,21 +1347,6 @@
     "price": "₹5999/-",
     "sellingPrice": "0",
     "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/imperial-ivory-koti-kurta.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
-    "reelUrl": "",
-    "title": "Imperial Ivory Koti kurta",
-    "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
-    "price": "₹2499/-",
-    "sellingPrice": "₹7999/-",
-    "size": "36, 40",
     "active": true
   },
   {

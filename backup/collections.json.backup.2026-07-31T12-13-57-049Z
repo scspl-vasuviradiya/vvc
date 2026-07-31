@@ -32,6 +32,21 @@
   {
     "tags": [
       "men",
+      "koti kurta"
+    ],
+    "img": "img/collections/imperial-ivory-koti-kurta.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
+    "reelUrl": "",
+    "title": "Imperial Ivory Koti kurta",
+    "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
+    "price": "₹2499/-",
+    "sellingPrice": "₹7999/-",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
       "indowestern"
     ],
     "img": "img/collections/black-legacy-indowestern.jpg",
@@ -72,21 +87,6 @@
     "price": "₹9999/-",
     "sellingPrice": "0",
     "size": "36, 38, 40, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/imperial-ivory-sherwani.jpg",
-    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
-    "title": "Imperial Ivory Sherwani",
-    "desc": "A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.",
-    "price": "₹9999/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
     "active": true
   },
   {
@@ -1112,6 +1112,21 @@
   {
     "tags": [
       "men",
+      "sherwani"
+    ],
+    "img": "img/collections/imperial-ivory-sherwani.jpg",
+    "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
+    "reelUrl": "",
+    "title": "Imperial Ivory Sherwani",
+    "desc": "A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.",
+    "price": "₹9999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
       "open Jodhpuris"
     ],
     "img": "img/collections/mirror-luxe-black.jpg",
@@ -1332,21 +1347,6 @@
     "price": "₹5999/-",
     "sellingPrice": "0",
     "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/imperial-ivory-koti-kurta.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
-    "reelUrl": "",
-    "title": "Imperial Ivory Koti kurta",
-    "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
-    "price": "₹2499/-",
-    "sellingPrice": "₹7999/-",
-    "size": "36, 40",
     "active": true
   },
   {
