@@ -21,7 +21,7 @@
     ],
     "img": "img/collections/black-legacy-indowestern.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta",
-    "reelUrl": "https://www.instagram.com/reel/Dbaz8K6BG2W/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    "reelUrl": "",
     "title": "Black Legacy indowestern",
     "desc": "Bold, refined, and undeniably royal—this black embroidered Indo-Western is made for grand celebrations.",
     "price": "₹3999/-",
@@ -443,7 +443,7 @@
     "alt": "Lehenga, Bridal, Embroidered, Red, Traditional, Festive, Regal, Intricate, Ethnic, Glamorous",
     "title": "Elegant Red Lehenga",
     "desc": "A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.",
-    "price": "₹7999/-",
+    "price": "��7999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1075,7 +1075,7 @@
     "title": "Mirror Luxe Black",
     "desc": "Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.",
     "price": "₹3499/-",
-    "sellingPrice": "₹8999/-",
+    "sellingPrice": "0",
     "size": "38, 40",
     "active": true
   },
@@ -1090,7 +1090,7 @@
     "title": "Midnight Bloom Jodhpuri",
     "desc": "It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.",
     "price": "₹3499/-",
-    "sellingPrice": "₹8999/-",
+    "sellingPrice": "0",
     "size": "34, 38, 42",
     "active": true
   },
@@ -1105,7 +1105,7 @@
     "title": "Black Baron jodhpuri",
     "desc": "A luxurious black Jodhpuri featuring intricate tonal embroidery, crafted for grooms who appreciate timeless elegance with a bold royal presence.",
     "price": "₹2999/-",
-    "sellingPrice": "₹7999/-",
+    "sellingPrice": "0",
     "size": "36, 40",
     "active": true
   },
@@ -1150,7 +1150,7 @@
     "title": "Blue Dynasty",
     "desc": "A premium navy blue Indo-Western featuring elegant hand embroidery, a structured open jacket, and a sleek modern silhouette—crafted for the groom who embodies timeless style and royal confidence.",
     "price": "₹3999/-",
-    "sellingPrice": "₹15999/-",
+    "sellingPrice": "0",
     "size": "36, 40",
     "active": true
   },
@@ -1165,7 +1165,7 @@
     "title": "Noir Dynasty",
     "desc": "A premium black Indo-Western featuring exquisite silver hand embroidery, a structured silhouette, and refined craftsmanship—designed for the modern groom who commands attention with effortless elegance.",
     "price": "₹3999/-",
-    "sellingPrice": "₹15999/-",
+    "sellingPrice": "0",
     "size": "34, 38, 42",
     "active": true
   },
