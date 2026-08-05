@@ -1699,44 +1699,14 @@
       "men",
       "sherwani"
     ],
-    "img": "img/collections/maharaja-pearl-sherwani.jpg",
+    "img": "img/collections/raj-tilak-sherwani.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
     "reelUrl": "",
-    "title": "Maharaja Pearl Sherwani",
+    "title": "Raj Tilak Sherwani",
     "desc": "Grace your wedding day in regal style with this premium ivory embroidered sherwani, paired with a vibrant red stole and traditional safa for a timeless royal look. Perfect for the modern groom.",
     "price": "₹4499/-",
     "sellingPrice": "0",
     "size": "34, 38, 42",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/maharaja-pearl-sherwani.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
-    "reelUrl": "",
-    "title": "Shahi Safed Sherwani",
-    "desc": "It perfectly matches the elegant ivory embroidery paired with the traditional red safa and stole, giving a timeless royal groom look.",
-    "price": "₹4499/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/shahi-safed-elegance.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
-    "reelUrl": "",
-    "title": "Shahi Safed Elegance",
-    "desc": "A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.",
-    "price": "₹4499/-",
-    "sellingPrice": "0",
-    "size": "36, 40",
     "active": true
   }
 ]
