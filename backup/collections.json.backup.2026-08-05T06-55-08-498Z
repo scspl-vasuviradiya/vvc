@@ -1633,50 +1633,5 @@
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42, 44, 46",
     "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/off-white-blossom-koti-kurta.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
-    "reelUrl": "",
-    "title": "Off White Blossom Koti Kurta",
-    "desc": "It perfectly reflects the sophisticated off-white base and intricate floral print, making it suitable for festive occasions, weddings, and engagement ceremonies.",
-    "price": "₹1499/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42, 44, 46",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/pink-royale-koti.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
-    "reelUrl": "",
-    "title": "Pink Royale Koti",
-    "desc": "A pastel pink kurta paired with a heritage-inspired printed koti, blending timeless artistry with modern royal elegance for festive and wedding occasions.",
-    "price": "₹1499/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42, 44",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "koti kurta"
-    ],
-    "img": "img/collections/midnight-mosaic-koti.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri",
-    "reelUrl": "",
-    "title": "Midnight Mosaic Koti",
-    "desc": "It reflects the elegant black base with the intricate multicolor paisley-inspired embroidery, giving the outfit a luxurious and contemporary royal appeal.",
-    "price": "₹1499/-",
-    "sellingPrice": "0",
-    "size": "34, 36, 38, 40, 42, 44, 46, 48, 50",
-    "active": true
   }
 ]
