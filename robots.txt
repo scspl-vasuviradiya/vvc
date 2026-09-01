@@ -4,3 +4,4 @@ Disallow: /cdn-cgi/
 Sitemap: https://vivahvilla.in/sitemap.xml
 Sitemap: https://vivahvilla.in/sitemap_collections.xml
 Sitemap: https://vivahvilla.in/sitemap_photos.xml
+Sitemap: https://vivahvilla.in/sitemap_products.xml

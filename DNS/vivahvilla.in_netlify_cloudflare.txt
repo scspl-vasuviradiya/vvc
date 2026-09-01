@@ -1,0 +1,58 @@
+;;
+;; Domain:     vivahvilla.in.
+;; Exported:   2026-07-28 04:25:23
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+vivahvilla.in	3600	IN	SOA	henry.ns.cloudflare.com. dns.cloudflare.com. 2053687932 10000 2400 604800 3600
+
+;; NS Records
+vivahvilla.in.	86400	IN	NS	henry.ns.cloudflare.com.
+vivahvilla.in.	86400	IN	NS	macy.ns.cloudflare.com.
+
+;; A Records
+vivahvilla.in.	1	IN	A	75.2.60.5 ; cf_tags=cf-proxied:false
+vivahvilla.in.	1	IN	A	99.83.190.102 ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+www.vivahvilla.in.	1	IN	CNAME	vivahvilla.netlify.app. ; cf_tags=cf-proxied:false
+
+;; MX Records
+vivahvilla.in.	1	IN	MX	24 route3.mx.cloudflare.net.
+vivahvilla.in.	1	IN	MX	49 route2.mx.cloudflare.net.
+vivahvilla.in.	1	IN	MX	46 route1.mx.cloudflare.net.
+
+;; NS Records
+vivahvilla.in.	1	IN	NS	dns4.p03.nsone.net.
+vivahvilla.in.	1	IN	NS	dns3.p03.nsone.net.
+vivahvilla.in.	1	IN	NS	dns2.p03.nsone.net.
+vivahvilla.in.	1	IN	NS	dns1.p03.nsone.net.
+
+;; TXT Records
+_acme-challenge.vivahvilla.in.	1	IN	TXT	"Y39hmB8fSYG5__ekZauiPgW82QpVQLFv_kwEtosmY0c"
+cf2024-1._domainkey.vivahvilla.in.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiweykoi+o48IOGuP7GR3X0MOExCUDY/BCRHoWBnh3rChl7WhdyCxW3jgq1daEjPPqoi7sJvdg5hEQVsgVRQP4DcnQDVjGMbASQtrY4WmB1VebF+RPJB2ECPsEDTpeiI5ZyUAwJaVX7r6bznU67g7LvFq35yIo4sdlmtZGV+i0H4cpYH9+3JJ78k" "m4KXwaf9xUJCWF6nxeD+qG6Fyruw1Qlbds2r85U9dkNDVAS3gioCvELryh1TxKGiVTkg4wqHTyHfWsp7KD3WQHYJn0RyfJJu6YEmL77zonn7p2SRMvTMP3ZEXibnC9gz3nnhR6wcYL8Q7zXypKTMD58bTixDSJwIDAQAB"
+_dmarc.vivahvilla.in.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+*._domainkey.vivahvilla.in.	1	IN	TXT	"v=DKIM1; p="
+vivahvilla.in.	1	IN	TXT	"hosting-site=vivah-villa-collection"
+vivahvilla.in.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+vivahvilla.in.	1	IN	TXT	"google-site-verification=huSqkNi-UiBB-lHLPx0NIfNL833GuNMpRY3ZAFrgMmY"

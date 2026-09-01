@@ -49,6 +49,39 @@ function absoluteUrl(path) {
   return `${SITE_URL}/${normalized}`;
 }
 
+function slugify(value) {
+  return normalizeText(value)
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'vivah-villa-outfit';
+}
+
+function uniqueSlug(item, usedSlugs) {
+  const base = slugify(item.title || item.img || 'vivah-villa-outfit');
+  let slug = base;
+  let count = 2;
+  while (usedSlugs.has(slug)) {
+    slug = `${base}-${count}`;
+    count += 1;
+  }
+  usedSlugs.add(slug);
+  return slug;
+}
+
+const usedSlugs = new Set();
+collections.forEach((item) => {
+  item.slug = uniqueSlug(item, usedSlugs);
+});
+
+function productPath(item) {
+  return `products/${item.slug}.html`;
+}
+
+function productUrl(item) {
+  return `${SITE_URL}/${productPath(item)}`;
+}
+
 function seoKeywords(item) {
   const values = [item.title, ...(item.tags || []), item.alt, 'vivah villa', 'vivahvilla.in', 'wedding attire rental rajkot'];
   return values
@@ -85,6 +118,18 @@ function category(item) {
   return 'Wedding Attire Rental';
 }
 
+function productTitle(item) {
+  return `${normalizeText(item.title || 'Wedding Outfit')} Rental in Rajkot | Vivah Villa`;
+}
+
+function productMetaDescription(item) {
+  const title = normalizeText(item.title || 'premium wedding outfit');
+  const cat = category(item).replace(/^Men's |^Women's /, '');
+  const price = cleanText(item.price || '');
+  const priceText = isVisibleValue(price) ? ` Rent starts at ${price}.` : '';
+  return shortSentence(`${title} ${cat} available for rent at Vivah Villa Collection in Rajkot.${priceText} ${item.desc || ''}`, 155);
+}
+
 function card(item, index) {
   const tags = (item.tags || []).join('|');
   const img = item.img || 'img/logo/logo.png';
@@ -104,11 +149,11 @@ function card(item, index) {
     : '';
 
   return `          <article class="collection-card visible all-collection-card" data-tags="${esc(tags)}">
-            <a class="all-collection-image-link" href="${esc(img)}" aria-label="View ${esc(title)} image">
+            <a class="all-collection-image-link" href="${esc(productPath(item))}" aria-label="View ${esc(title)} details">
               <img src="${esc(img)}" alt="${esc(alt)}" width="320" height="400" ${eager} decoding="async">
             </a>
             <div class="collection-content">
-              <h3 class="collection-title">${esc(title)}</h3>
+              <h3 class="collection-title"><a href="${esc(productPath(item))}">${esc(title)}</a></h3>
               <p class="collection-description">${esc(desc)}</p>
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
             </div>
@@ -128,7 +173,7 @@ const itemList = collections.map((item, index) => {
       '@type': 'Offer',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      url: `${SITE_URL}/all-collections.html`
+      url: productUrl(item)
     }
   };
   if (price) product.offers.price = price;
@@ -148,6 +193,224 @@ const imageGallery = collections.map((item, index) => ({
   description: item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.',
   keywords: seoKeywords(item)
 }));
+
+function relatedItems(currentItem) {
+  const currentTags = new Set(currentItem.tags || []);
+  return collections
+    .filter((item) => item !== currentItem && (item.tags || []).some((tag) => currentTags.has(tag)))
+    .slice(0, 4);
+}
+
+function productPage(item) {
+  const title = normalizeText(item.title || 'Vivah Villa Collection Outfit');
+  const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
+  const img = item.img || 'img/logo/logo.png';
+  const price = cleanText(item.price || 'Price on request');
+  const sellingPrice = cleanText(item.sellingPrice || '');
+  const tags = (item.tags || []).map((tag) => normalizeText(tag)).filter(Boolean);
+  const sizeHtml = isVisibleValue(item.size) ? `<p><span>Sizes</span>${esc(item.size)}</p>` : '';
+  const sellingPriceHtml = isVisibleValue(sellingPrice) ? `<p><span>Selling Price</span>${esc(sellingPrice)}</p>` : '';
+  const reelHtml = item.reelUrl ? `<a class="btn btn-outline" href="${esc(item.reelUrl)}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span>Watch Reel</span></a>` : '';
+  const related = relatedItems(item);
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: title,
+    description: desc,
+    image: absoluteUrl(img),
+    category: category(item),
+    brand: {
+      '@type': 'Brand',
+      name: 'Vivah Villa Collection'
+    },
+    offers: {
+      '@type': 'Offer',
+      url: productUrl(item),
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'ClothingStore',
+        name: 'Vivah Villa Collection',
+        telephone: '+919099055844',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Near Ayodhya chowk, 150 Feet Ring Rd',
+          addressLocality: 'Rajkot',
+          addressRegion: 'Gujarat',
+          postalCode: '360006',
+          addressCountry: 'IN'
+        }
+      }
+    }
+  };
+  const numericPrice = moneyNumber(price);
+  if (numericPrice) productSchema.offers.price = numericPrice;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${esc(productTitle(item))}</title>
+  <meta name="description" content="${esc(productMetaDescription(item))}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="${productUrl(item)}">
+  <meta property="og:title" content="${esc(productTitle(item))}">
+  <meta property="og:description" content="${esc(productMetaDescription(item))}">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="${productUrl(item)}">
+  <meta property="og:image" content="${absoluteUrl(img)}">
+  <link rel="stylesheet" href="../css2.css">
+  <link rel="stylesheet" href="../font-awesome.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body.product-page { background: #f7f2ed; color: #24151a; }
+    .product-page main { padding-top: 108px; }
+    .product-hero { padding: 28px 0 48px; }
+    .product-wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 20px; font-size: 14px; color: #6b5a60; }
+    .breadcrumb a { color: #8b1538; text-decoration: none; font-weight: 700; }
+    .product-layout { display: grid; grid-template-columns: minmax(280px, 520px) 1fr; gap: 40px; align-items: start; }
+    .product-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 8px; box-shadow: 0 16px 40px rgba(36, 21, 26, 0.16); background: #fff; }
+    .product-copy { padding-top: 10px; }
+    .product-kicker { color: #8b1538; font-weight: 800; text-transform: uppercase; letter-spacing: 0; font-size: 13px; margin-bottom: 10px; }
+    .product-copy h1 { margin: 0 0 16px; font-family: "Playfair Display", serif; font-size: clamp(34px, 5vw, 58px); line-height: 1.05; color: #24151a; }
+    .product-desc { font-size: 18px; line-height: 1.7; color: #4d3d43; margin: 0 0 22px; }
+    .product-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+    .product-tags span { background: #fff; border: 1px solid #eadde2; border-radius: 999px; padding: 8px 12px; color: #5c4950; font-weight: 700; font-size: 13px; }
+    .product-facts { display: grid; gap: 10px; margin: 0 0 26px; }
+    .product-facts p { margin: 0; padding: 14px 16px; background: #fff; border: 1px solid #eadde2; border-radius: 8px; font-weight: 800; color: #24151a; }
+    .product-facts span { display: block; margin-bottom: 4px; color: #77636b; font-size: 13px; font-weight: 700; }
+    .product-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .related-section { padding: 32px 0 64px; background: #fff; }
+    .related-section h2 { margin: 0 0 18px; font-family: "Playfair Display", serif; font-size: 30px; color: #24151a; }
+    .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .related-card { display: block; text-decoration: none; color: inherit; border: 1px solid #eadde2; border-radius: 8px; overflow: hidden; background: #fff; }
+    .related-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; display: block; }
+    .related-card span { display: block; padding: 12px; font-weight: 800; line-height: 1.35; }
+    @media (max-width: 820px) {
+      .product-page main { padding-top: 92px; }
+      .product-layout { grid-template-columns: 1fr; gap: 24px; }
+      .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body class="product-page">
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <header class="header" data-anim="fade-down">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-container">
+        <a class="navbar-brand" href="../index.html#home" data-anim="fade-right">
+          <img src="../img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
+          <div class="brand-text">
+            <span class="brand-title">Vivah Villa</span>
+            <span class="brand-subtitle">Collection</span>
+          </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="navbar-nav desktop-nav" id="navbarNav">
+          <a class="nav-link" href="../index.html#home">Home</a>
+          <a class="nav-link" href="../index.html#about">About</a>
+          <a class="nav-link" href="../all-collections.html">Collections</a>
+          <a class="nav-link" href="../index.html#gallery">Gallery</a>
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+          <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20${encodeURIComponent(title)}" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+        </nav>
+        <nav class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-header">
+            <div class="brand-mobile">
+              <img src="../img/logo/logo.png" alt="Vivah Villa Collection">
+              <span>Vivah Villa Collection</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="mobile-nav-links">
+            <a class="mobile-nav-link" href="../index.html#home">Home</a>
+            <a class="mobile-nav-link" href="../index.html#about">About</a>
+            <a class="mobile-nav-link" href="../all-collections.html">Collections</a>
+            <a class="mobile-nav-link" href="../index.html#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="../index.html#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="product-hero">
+      <div class="product-wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="../all-collections.html">Collections</a>
+          <span>/</span>
+          <span>${esc(title)}</span>
+        </nav>
+        <div class="product-layout">
+          <div class="product-media">
+            <img src="../${esc(img)}" alt="${esc(imageAlt(item))}" width="640" height="800" fetchpriority="high" decoding="async">
+          </div>
+          <div class="product-copy">
+            <p class="product-kicker">${esc(category(item))} Rental in Rajkot</p>
+            <h1>${esc(title)}</h1>
+            <p class="product-desc">${esc(desc)}</p>
+            <div class="product-tags">${tags.map((tag) => `<span>${esc(tag)}</span>`).join('')}</div>
+            <div class="product-facts">
+              <p><span>Rent</span>${esc(price)}</p>
+              ${sizeHtml}
+              ${sellingPriceHtml}
+            </div>
+            <div class="product-actions">
+              <a class="btn btn-primary btn-lg" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20${encodeURIComponent(title)}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Check Availability</span></a>
+              <a class="btn btn-outline btn-lg" href="tel:+919099055844"><i class="fas fa-phone"></i><span>Call Now</span></a>
+              ${reelHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    ${related.length ? `<section class="related-section">
+      <div class="product-wrap">
+        <h2>Similar Rentals</h2>
+        <div class="related-grid">
+          ${related.map((relatedItem) => `<a class="related-card" href="${esc(relatedItem.slug)}.html"><img src="../${esc(relatedItem.img || 'img/logo/logo.png')}" alt="${esc(imageAlt(relatedItem))}" loading="lazy" decoding="async"><span>${esc(relatedItem.title || 'Vivah Villa Collection Outfit')}</span></a>`).join('\n          ')}
+        </div>
+      </div>
+    </section>` : ''}
+  </main>
+  <script type="application/ld+json">
+${JSON.stringify(productSchema, null, 2)}
+  </script>
+  <script>
+    (function () {
+      const body = document.body;
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileNavClose = document.getElementById('mobileNavClose');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      function setMenuState(isOpen) {
+        if (!mobileNav || !mobileMenuBtn || !mobileMenuOverlay) return;
+        mobileNav.classList.toggle('active', isOpen);
+        mobileMenuOverlay.classList.toggle('active', isOpen);
+        body.classList.toggle('menu-open', isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      }
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => setMenuState(mobileNav ? !mobileNav.classList.contains('active') : false));
+      if (mobileNavClose) mobileNavClose.addEventListener('click', () => setMenuState(false));
+      if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', () => setMenuState(false));
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+    })();
+  </script>
+</body>
+</html>
+`;
+}
 
 const page = `<!DOCTYPE html>
 <html lang="en">
@@ -338,7 +601,7 @@ const page = `<!DOCTYPE html>
         <a class="navbar-brand" href="index.html#home" data-anim="fade-right">
           <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
           <div class="brand-text">
-            <h1 class="brand-title">Vivah Villa</h1>
+            <span class="brand-title">Vivah Villa</span>
             <span class="brand-subtitle">Collection</span>
           </div>
         </a>
@@ -393,6 +656,7 @@ const page = `<!DOCTYPE html>
     <section class="all-collections-panel" aria-label="All Collections">
 
       <div class="fullscreen-panel-content">
+        <h1 class="sr-only">All Wedding Dress Rental Collections in Rajkot</h1>
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
           <button class="fullscreen-filter-tab active" data-filter="all" type="button" role="tab" aria-selected="true">
             <span>All Collections</span>
@@ -623,6 +887,11 @@ ${JSON.stringify({
 
 fs.writeFileSync('all-collections.html', page);
 
+fs.mkdirSync('products', { recursive: true });
+collections.forEach((item) => {
+  fs.writeFileSync(productPath(item), productPage(item));
+});
+
 const collectionImageSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -638,4 +907,23 @@ ${collections.map((item) => `    <image:image>
 `;
 
 fs.writeFileSync('sitemap_collections.xml', collectionImageSitemap);
-console.log(`Generated all-collections.html and sitemap_collections.xml with ${collections.length} active collection items.`);
+
+const productSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${collections.map((item) => `  <url>
+    <loc>${productUrl(item)}</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>${absoluteUrl(item.img || 'img/logo/logo.png')}</image:loc>
+      <image:title>${esc(item.title || 'Vivah Villa Collection Outfit')}</image:title>
+      <image:caption>${esc(item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.')}</image:caption>
+    </image:image>
+  </url>`).join('\n')}
+</urlset>
+`;
+
+fs.writeFileSync('sitemap_products.xml', productSitemap);
+console.log(`Generated all-collections.html, sitemap_collections.xml, sitemap_products.xml, and ${collections.length} product pages.`);
