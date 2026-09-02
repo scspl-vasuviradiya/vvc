@@ -194,11 +194,61 @@ const imageGallery = collections.map((item, index) => ({
   keywords: seoKeywords(item)
 }));
 
+const RELATED_CATEGORY_TAGS = [
+  'sherwani',
+  'indowestern',
+  'jodhpuri',
+  'open Jodhpuris',
+  'lehenga',
+  'choli',
+  'suit',
+  'blezer',
+  'koti kurta'
+];
+
+function primaryCategoryTag(item) {
+  const tags = item.tags || [];
+  return RELATED_CATEGORY_TAGS.find((tag) => tags.includes(tag)) || '';
+}
+
+function rentPriceNumber(item) {
+  const value = moneyNumber(item.price);
+  return value ? Number(value) : null;
+}
+
 function relatedItems(currentItem) {
   const currentTags = new Set(currentItem.tags || []);
+  const currentCategory = primaryCategoryTag(currentItem);
+  const currentPrice = rentPriceNumber(currentItem);
+
   return collections
-    .filter((item) => item !== currentItem && (item.tags || []).some((tag) => currentTags.has(tag)))
-    .slice(0, 4);
+    .filter((item) => item !== currentItem)
+    .map((item, index) => {
+      const itemTags = item.tags || [];
+      const sharedTags = itemTags.filter((tag) => currentTags.has(tag));
+      const itemCategory = primaryCategoryTag(item);
+      const itemPrice = rentPriceNumber(item);
+      const categoryRank = currentCategory && itemCategory === currentCategory
+        ? 0
+        : sharedTags.some((tag) => RELATED_CATEGORY_TAGS.includes(tag))
+          ? 1
+          : sharedTags.length
+            ? 2
+            : 3;
+      const priceDiff = currentPrice !== null && itemPrice !== null
+        ? Math.abs(currentPrice - itemPrice)
+        : Number.MAX_SAFE_INTEGER;
+
+      return { item, index, categoryRank, priceDiff, sharedCount: sharedTags.length };
+    })
+    .sort((a, b) =>
+      a.categoryRank - b.categoryRank ||
+      a.priceDiff - b.priceDiff ||
+      b.sharedCount - a.sharedCount ||
+      a.index - b.index
+    )
+    .slice(0, 4)
+    .map((entry) => entry.item);
 }
 
 function productPage(item) {
@@ -471,7 +521,13 @@ const page = `<!DOCTYPE html>
     }
 
     .all-collections-page .fullscreen-filter-tab {
+      background: transparent;
       padding: var(--space-3) var(--space-4);
+    }
+
+    .all-collections-page .fullscreen-filter-tab:hover,
+    .all-collections-page .fullscreen-filter-tab.active {
+      background: var(--primary-color);
     }
 
     .all-collections-page .fullscreen-collections-grid {

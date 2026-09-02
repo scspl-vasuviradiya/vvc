@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="css2.css">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script src="vvc-config.js"></script>
-  <script src="vvc-data.js"></script>
   <style>
     .all-collections-page {
       background: var(--bg-gradient);
@@ -59,7 +57,13 @@
     }
 
     .all-collections-page .fullscreen-filter-tab {
+      background: transparent;
       padding: var(--space-3) var(--space-4);
+    }
+
+    .all-collections-page .fullscreen-filter-tab:hover,
+    .all-collections-page .fullscreen-filter-tab.active {
+      background: var(--primary-color);
     }
 
     .all-collections-page .fullscreen-collections-grid {
@@ -4800,105 +4804,6 @@
           if (empty) empty.hidden = visibleCount !== 0;
         });
       });
-    })();
-  </script>
-  <script>
-    (function () {
-      if (!window.VVCData || !window.VVCData.isSupabaseConfigured()) return;
-
-      const grid = document.getElementById('fullscreenCollectionsGrid');
-      const empty = document.getElementById('collectionsEmpty');
-      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
-      const whatsappNumber = '919099055844';
-
-      let collections = [];
-      let activeFilter = 'all';
-
-      function escapeHtml(value) {
-        return String(value || '').replace(/[&<>"']/g, function (char) {
-          return {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;'
-          }[char];
-        });
-      }
-
-      function isVisibleValue(value) {
-        const normalized = String(value || '').trim();
-        if (normalized === '') return false;
-        const numericValue = normalized.replace(/[^\d.]/g, '');
-        return numericValue === '' || Number(numericValue) !== 0;
-      }
-
-      function buildWhatsAppUrl(item) {
-        const productName = item.title || 'Collection item';
-        const imageUrl = item.img || 'https://vivahvilla.in/img/logo/logo.png';
-        const message = `Hello, I want to rent this outfit.\n\nProduct: ${productName}\n${imageUrl}`;
-        return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-      }
-
-      function render() {
-        if (!grid) return;
-
-        const filtered = activeFilter === 'all'
-          ? collections
-          : collections.filter((item) => item.tags && item.tags.includes(activeFilter));
-
-        grid.querySelectorAll('.all-collection-card').forEach((card) => card.remove());
-
-        if (empty) empty.hidden = filtered.length !== 0;
-
-        filtered.forEach((item) => {
-          const card = document.createElement('article');
-          card.className = 'collection-card visible all-collection-card';
-          card.dataset.tags = (item.tags || []).join('|');
-
-          const image = item.img || 'img/logo/logo.png';
-          const title = escapeHtml(item.title || 'Untitled');
-          const desc = escapeHtml(item.desc || 'No description available');
-          const alt = escapeHtml(item.alt || item.title || 'Collection item');
-          const rent = escapeHtml(item.price || 'Price on request');
-          const size = escapeHtml(item.size || '');
-          const sellingPrice = escapeHtml(item.sellingPrice || '');
-          const reelUrl = item.reelUrl || '';
-
-          card.innerHTML = `
-            <a class="all-collection-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener" aria-label="View ${title} image">
-              <img src="${escapeHtml(image)}" alt="${alt}" width="320" height="400" loading="lazy" decoding="async" onerror="this.src='img/logo/logo.png'">
-            </a>
-            <div class="collection-content">
-              <h3 class="collection-title">${title}</h3>
-              <p class="collection-description">${desc}</p>
-              <p class="collection-price"><span>Rent:</span> ${rent}</p>
-              ${isVisibleValue(size) ? `<p class="collection-meta"><span>Sizes:</span> ${size}</p>` : ''}
-              ${isVisibleValue(sellingPrice) ? `<p class="collection-meta selling-price"><span>Selling Price:</span> ${sellingPrice}</p>` : ''}
-              ${reelUrl ? `<p class="collection-reel"><a href="${escapeHtml(reelUrl)}" target="_blank" rel="noopener">Watch Reel</a></p>` : ''}
-              <p class="collection-reel"><a href="${escapeHtml(buildWhatsAppUrl(item))}" target="_blank" rel="noopener">WhatsApp Enquiry</a></p>
-            </div>
-          `;
-
-          grid.insertBefore(card, empty || null);
-        });
-      }
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          activeFilter = tab.dataset.filter || 'all';
-          render();
-        });
-      });
-
-      window.VVCData.loadCollections()
-        .then((items) => {
-          collections = items;
-          render();
-        })
-        .catch((error) => {
-          console.warn('Live collections unavailable:', error);
-        });
     })();
   </script>
 </body>
