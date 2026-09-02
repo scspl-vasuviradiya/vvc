@@ -311,7 +311,9 @@ function productPage(item) {
   <meta property="og:url" content="${productUrl(item)}">
   <meta property="og:image" content="${absoluteUrl(img)}">
   <link rel="stylesheet" href="../css2.css">
-  <link rel="stylesheet" href="../font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="../styles.css">
   <style>
     body.product-page { background: #f7f2ed; color: #24151a; }
@@ -481,7 +483,9 @@ const page = `<!DOCTYPE html>
   <meta property="og:url" content="${SITE_URL}/all-collections.html">
   <meta property="og:image" content="${absoluteUrl(collections[0]?.img || 'img/logo/logo.png')}">
   <link rel="stylesheet" href="css2.css">
-  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
   <style>
     .all-collections-page {
@@ -514,14 +518,17 @@ const page = `<!DOCTYPE html>
     }
 
     .all-collections-page .fullscreen-filter-tabs {
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
       gap: var(--space-2);
       margin-bottom: var(--space-12);
-      padding-bottom: 0;
+      padding: 0;
       border-bottom: 0;
     }
 
     .all-collections-page .fullscreen-filter-tab {
-      background: transparent;
+      background: var(--white);
       padding: var(--space-3) var(--space-4);
     }
 
