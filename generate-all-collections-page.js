@@ -441,15 +441,14 @@ const page = `<!DOCTYPE html>
     }
 
     .all-collections-page main {
-      padding-top: 108px;
-    }
-
-    .all-collections-page .header + main {
-      min-height: calc(100vh - 108px);
+      padding-top: 80px;
     }
 
     .all-collections-page .all-collections-panel {
-      padding: 0 0 2rem;
+      padding: var(--space-20) 0 var(--space-5);
+      background: var(--bg-gradient);
+      min-height: auto;
+      overflow: visible;
     }
 
     .all-collections-page .navbar-brand {
@@ -457,21 +456,31 @@ const page = `<!DOCTYPE html>
     }
 
     .all-collections-page .fullscreen-panel-content {
-      min-height: calc(100vh - 96px);
+      flex: initial;
+      min-height: auto;
+      padding: 0;
+      overflow: visible;
+      background: transparent;
     }
 
     .all-collections-page .fullscreen-filter-tabs {
-      margin-bottom: 1.5rem;
+      gap: var(--space-2);
+      margin-bottom: var(--space-12);
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .all-collections-page .fullscreen-filter-tab {
+      padding: var(--space-3) var(--space-4);
     }
 
     .all-collections-page .fullscreen-collections-grid {
       display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      padding: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 20px;
       justify-items: center;
       min-height: 100px;
-      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -480,11 +489,11 @@ const page = `<!DOCTYPE html>
       background: white;
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 12px;
+      padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       min-height: 200px;
       width: 100%;
-      max-width: 260px;
+      max-width: 320px;
       transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -493,7 +502,7 @@ const page = `<!DOCTYPE html>
     }
 
     .all-collection-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-8px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
@@ -507,8 +516,8 @@ const page = `<!DOCTYPE html>
       width: 100%;
       aspect-ratio: 4 / 5;
       height: auto;
-      max-height: 220px;
-      object-fit: cover;
+      max-height: 300px;
+      object-fit: contain;
       object-position: top;
       border-radius: 4px;
       display: block;
@@ -581,9 +590,9 @@ const page = `<!DOCTYPE html>
       }
 
       .all-collections-page .fullscreen-collections-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 1rem;
-        padding: 0.5rem;
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        padding: 20px;
       }
 
       .all-collection-card {
@@ -615,7 +624,7 @@ const page = `<!DOCTYPE html>
         <nav class="navbar-nav desktop-nav" id="navbarNav">
           <a class="nav-link" href="index.html#home">Home</a>
           <a class="nav-link" href="index.html#about">About</a>
-          <a class="nav-link" href="index.html#collections">Collections</a>
+          <a class="nav-link" href="/all-collections.html">Collections</a>
           <a class="nav-link" href="index.html#gallery">Gallery</a>
           <a class="nav-link" href="index.html#contact">Contact</a>
           <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
@@ -637,7 +646,7 @@ const page = `<!DOCTYPE html>
           <div class="mobile-nav-links">
             <a class="mobile-nav-link" href="index.html#home">Home</a>
             <a class="mobile-nav-link" href="index.html#about">About</a>
-            <a class="mobile-nav-link" href="index.html#collections">Collections</a>
+            <a class="mobile-nav-link" href="/all-collections.html">Collections</a>
             <a class="mobile-nav-link" href="index.html#gallery">Gallery</a>
             <a class="mobile-nav-link" href="index.html#contact">Contact</a>
             <div class="mobile-nav-cta">
@@ -653,8 +662,16 @@ const page = `<!DOCTYPE html>
   </header>
 
   <main>
-    <section class="all-collections-panel" aria-label="All Collections">
-
+    <section id="collections" class="collections-section all-collections-panel" aria-label="All Collections">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Our Collections</span>
+          <h2 class="section-title">Premium Wedding Attire</h2>
+          <p class="section-description">
+            Browse our complete collection of premium wedding outfits. All pieces are available
+            for rent and can be pre-booked for your special dates.
+          </p>
+        </div>
       <div class="fullscreen-panel-content">
         <h1 class="sr-only">All Wedding Dress Rental Collections in Rajkot</h1>
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
@@ -702,6 +719,7 @@ ${collections.map(card).join('\n')}
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+      </div>
     </section>
   </main>
 
@@ -727,7 +745,7 @@ ${collections.map(card).join('\n')}
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#collections">Collections</a></li>
+            <li><a href="/all-collections.html">Collections</a></li>
             <li><a href="index.html#gallery">Gallery</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>

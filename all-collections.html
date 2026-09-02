@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css2.css">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="vvc-config.js"></script>
+  <script src="vvc-data.js"></script>
   <style>
     .all-collections-page {
       background: var(--bg-gradient);
@@ -27,15 +29,14 @@
     }
 
     .all-collections-page main {
-      padding-top: 108px;
-    }
-
-    .all-collections-page .header + main {
-      min-height: calc(100vh - 108px);
+      padding-top: 80px;
     }
 
     .all-collections-page .all-collections-panel {
-      padding: 0 0 2rem;
+      padding: var(--space-20) 0 var(--space-5);
+      background: var(--bg-gradient);
+      min-height: auto;
+      overflow: visible;
     }
 
     .all-collections-page .navbar-brand {
@@ -43,21 +44,31 @@
     }
 
     .all-collections-page .fullscreen-panel-content {
-      min-height: calc(100vh - 96px);
+      flex: initial;
+      min-height: auto;
+      padding: 0;
+      overflow: visible;
+      background: transparent;
     }
 
     .all-collections-page .fullscreen-filter-tabs {
-      margin-bottom: 1.5rem;
+      gap: var(--space-2);
+      margin-bottom: var(--space-12);
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .all-collections-page .fullscreen-filter-tab {
+      padding: var(--space-3) var(--space-4);
     }
 
     .all-collections-page .fullscreen-collections-grid {
       display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      padding: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 20px;
       justify-items: center;
       min-height: 100px;
-      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -66,11 +77,11 @@
       background: white;
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 12px;
+      padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       min-height: 200px;
       width: 100%;
-      max-width: 260px;
+      max-width: 320px;
       transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -79,7 +90,7 @@
     }
 
     .all-collection-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-8px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
@@ -93,8 +104,8 @@
       width: 100%;
       aspect-ratio: 4 / 5;
       height: auto;
-      max-height: 220px;
-      object-fit: cover;
+      max-height: 300px;
+      object-fit: contain;
       object-position: top;
       border-radius: 4px;
       display: block;
@@ -167,9 +178,9 @@
       }
 
       .all-collections-page .fullscreen-collections-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 1rem;
-        padding: 0.5rem;
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        padding: 20px;
       }
 
       .all-collection-card {
@@ -201,7 +212,7 @@
         <nav class="navbar-nav desktop-nav" id="navbarNav">
           <a class="nav-link" href="index.html#home">Home</a>
           <a class="nav-link" href="index.html#about">About</a>
-          <a class="nav-link" href="index.html#collections">Collections</a>
+          <a class="nav-link" href="/all-collections.html">Collections</a>
           <a class="nav-link" href="index.html#gallery">Gallery</a>
           <a class="nav-link" href="index.html#contact">Contact</a>
           <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
@@ -223,7 +234,7 @@
           <div class="mobile-nav-links">
             <a class="mobile-nav-link" href="index.html#home">Home</a>
             <a class="mobile-nav-link" href="index.html#about">About</a>
-            <a class="mobile-nav-link" href="index.html#collections">Collections</a>
+            <a class="mobile-nav-link" href="/all-collections.html">Collections</a>
             <a class="mobile-nav-link" href="index.html#gallery">Gallery</a>
             <a class="mobile-nav-link" href="index.html#contact">Contact</a>
             <div class="mobile-nav-cta">
@@ -239,8 +250,16 @@
   </header>
 
   <main>
-    <section class="all-collections-panel" aria-label="All Collections">
-
+    <section id="collections" class="collections-section all-collections-panel" aria-label="All Collections">
+      <div class="container">
+        <div class="section-header" data-anim="fade-up">
+          <span class="section-badge">Our Collections</span>
+          <h2 class="section-title">Premium Wedding Attire</h2>
+          <p class="section-description">
+            Browse our complete collection of premium wedding outfits. All pieces are available
+            for rent and can be pre-booked for your special dates.
+          </p>
+        </div>
       <div class="fullscreen-panel-content">
         <h1 class="sr-only">All Wedding Dress Rental Collections in Rajkot</h1>
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
@@ -1611,6 +1630,7 @@
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+      </div>
     </section>
   </main>
 
@@ -1636,7 +1656,7 @@
           <ul class="footer-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#collections">Collections</a></li>
+            <li><a href="/all-collections.html">Collections</a></li>
             <li><a href="index.html#gallery">Gallery</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
@@ -4780,6 +4800,105 @@
           if (empty) empty.hidden = visibleCount !== 0;
         });
       });
+    })();
+  </script>
+  <script>
+    (function () {
+      if (!window.VVCData || !window.VVCData.isSupabaseConfigured()) return;
+
+      const grid = document.getElementById('fullscreenCollectionsGrid');
+      const empty = document.getElementById('collectionsEmpty');
+      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
+      const whatsappNumber = '919099055844';
+
+      let collections = [];
+      let activeFilter = 'all';
+
+      function escapeHtml(value) {
+        return String(value || '').replace(/[&<>"']/g, function (char) {
+          return {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          }[char];
+        });
+      }
+
+      function isVisibleValue(value) {
+        const normalized = String(value || '').trim();
+        if (normalized === '') return false;
+        const numericValue = normalized.replace(/[^\d.]/g, '');
+        return numericValue === '' || Number(numericValue) !== 0;
+      }
+
+      function buildWhatsAppUrl(item) {
+        const productName = item.title || 'Collection item';
+        const imageUrl = item.img || 'https://vivahvilla.in/img/logo/logo.png';
+        const message = `Hello, I want to rent this outfit.\n\nProduct: ${productName}\n${imageUrl}`;
+        return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      }
+
+      function render() {
+        if (!grid) return;
+
+        const filtered = activeFilter === 'all'
+          ? collections
+          : collections.filter((item) => item.tags && item.tags.includes(activeFilter));
+
+        grid.querySelectorAll('.all-collection-card').forEach((card) => card.remove());
+
+        if (empty) empty.hidden = filtered.length !== 0;
+
+        filtered.forEach((item) => {
+          const card = document.createElement('article');
+          card.className = 'collection-card visible all-collection-card';
+          card.dataset.tags = (item.tags || []).join('|');
+
+          const image = item.img || 'img/logo/logo.png';
+          const title = escapeHtml(item.title || 'Untitled');
+          const desc = escapeHtml(item.desc || 'No description available');
+          const alt = escapeHtml(item.alt || item.title || 'Collection item');
+          const rent = escapeHtml(item.price || 'Price on request');
+          const size = escapeHtml(item.size || '');
+          const sellingPrice = escapeHtml(item.sellingPrice || '');
+          const reelUrl = item.reelUrl || '';
+
+          card.innerHTML = `
+            <a class="all-collection-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener" aria-label="View ${title} image">
+              <img src="${escapeHtml(image)}" alt="${alt}" width="320" height="400" loading="lazy" decoding="async" onerror="this.src='img/logo/logo.png'">
+            </a>
+            <div class="collection-content">
+              <h3 class="collection-title">${title}</h3>
+              <p class="collection-description">${desc}</p>
+              <p class="collection-price"><span>Rent:</span> ${rent}</p>
+              ${isVisibleValue(size) ? `<p class="collection-meta"><span>Sizes:</span> ${size}</p>` : ''}
+              ${isVisibleValue(sellingPrice) ? `<p class="collection-meta selling-price"><span>Selling Price:</span> ${sellingPrice}</p>` : ''}
+              ${reelUrl ? `<p class="collection-reel"><a href="${escapeHtml(reelUrl)}" target="_blank" rel="noopener">Watch Reel</a></p>` : ''}
+              <p class="collection-reel"><a href="${escapeHtml(buildWhatsAppUrl(item))}" target="_blank" rel="noopener">WhatsApp Enquiry</a></p>
+            </div>
+          `;
+
+          grid.insertBefore(card, empty || null);
+        });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          activeFilter = tab.dataset.filter || 'all';
+          render();
+        });
+      });
+
+      window.VVCData.loadCollections()
+        .then((items) => {
+          collections = items;
+          render();
+        })
+        .catch((error) => {
+          console.warn('Live collections unavailable:', error);
+        });
     })();
   </script>
 </body>

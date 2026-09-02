@@ -27,6 +27,8 @@
   <link rel="preload" href="animations.js" as="script">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="video-background.css">
+  <script src="vvc-config.js"></script>
+  <script src="vvc-data.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -69,7 +71,7 @@
         <nav class="navbar-nav desktop-nav" id="navbarNav">
           <a class="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#collections">Collections</a>
+          <a class="nav-link" href="/all-collections.html">Collections</a>
           <a class="nav-link" href="#gallery">Gallery</a>
           <a class="nav-link" href="#contact">Contact</a>
           <a class="nav-cta"
@@ -94,7 +96,7 @@
           <div class="mobile-nav-links">
             <a class="mobile-nav-link" href="#home">Home</a>
             <a class="mobile-nav-link" href="#about">About</a>
-            <a class="mobile-nav-link" href="#collections">Collections</a>
+            <a class="mobile-nav-link" href="/all-collections.html">Collections</a>
             <a class="mobile-nav-link" href="#gallery">Gallery</a>
             <a class="mobile-nav-link" href="#contact">Contact</a>
             <div class="mobile-nav-cta">
@@ -316,10 +318,10 @@
         <!-- View More Button -->
         <div class="view-more-container" id="viewMoreContainer"
           style="display: none; text-align: center; margin-top: 2rem;">
-          <button class="btn btn-outline btn-lg view-more-btn" id="viewMoreBtn">
+          <a class="btn btn-outline btn-lg view-more-btn" id="viewMoreBtn" href="/all-collections.html">
             <span>View All Collections</span>
             <i class="fas fa-expand"></i>
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -681,7 +683,7 @@
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#collections">Collections</a></li>
+            <li><a href="/all-collections.html">Collections</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -1047,12 +1049,7 @@
     // Collections functionality
     async function loadCollections() {
       try {
-        const response = await fetch('collections.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        allCollectionsData = data.filter(item => item.active !== false);
+        allCollectionsData = await window.VVCData.loadCollections();
       } catch (error) {
         console.warn('Loading fallback collections:', error);
         allCollectionsData = fallbackCollections;
@@ -1245,11 +1242,10 @@
       const newBtn = btn.cloneNode(true);
       btn.parentNode.replaceChild(newBtn, btn);
 
-      // Add fresh event listener
       newBtn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        openFullscreenView();
+        window.location.href = '/all-collections.html';
       });
     }
 
