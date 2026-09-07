@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "generate:seo": "node generate-all-collections-page.js",
+    "check:seo": "node scripts/seo-audit.js"
   },
   "keywords": ["wedding", "collection", "gallery", "management"],
   "author": "Vivah Villa Collection",

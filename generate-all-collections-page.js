@@ -1,6 +1,12 @@
 const fs = require('fs');
 
 const SITE_URL = 'https://vivahvilla.in';
+const COLLECTIONS_URL = `${SITE_URL}/all-collections.html`;
+const LAST_MODIFIED = new Date(Math.max(
+  fs.statSync('collections.json').mtimeMs,
+  fs.statSync('index.html').mtimeMs,
+  fs.statSync(__filename).mtimeMs
+)).toISOString().slice(0, 10);
 const collections = JSON.parse(fs.readFileSync('collections.json', 'utf8'))
   .filter((item) => item.active !== false);
 
@@ -36,12 +42,12 @@ function normalizeText(value) {
 }
 
 function shortSentence(value, maxLength = 140) {
-  const text = normalizeText(value).replace(/\s*([,.!?;:])\s*/g, '$1 ');
+  const text = normalizeText(value);
   if (!text) return '';
   if (text.length <= maxLength) return text;
-  const clipped = text.slice(0, maxLength);
+  const clipped = text.slice(0, maxLength - 3);
   const lastSpace = clipped.lastIndexOf(' ');
-  return `${clipped.slice(0, lastSpace > 40 ? lastSpace : maxLength).trim()}.`;
+  return `${clipped.slice(0, lastSpace > 40 ? lastSpace : maxLength - 3).replace(/[,:;\s-]+$/, '')}...`;
 }
 
 function absoluteUrl(path) {
@@ -82,15 +88,6 @@ function productUrl(item) {
   return `${SITE_URL}/${productPath(item)}`;
 }
 
-function seoKeywords(item) {
-  const values = [item.title, ...(item.tags || []), item.alt, 'vivah villa', 'vivahvilla.in', 'wedding attire rental rajkot'];
-  return values
-    .filter(Boolean)
-    .join(', ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 function shouldReplaceAltText(value) {
   const text = normalizeText(value);
   if (!text) return true;
@@ -111,23 +108,27 @@ function imageAlt(item) {
 
 function category(item) {
   const tags = item.tags || [];
-  if (tags.includes('women')) return "Women's Traditional Wear";
   if (tags.includes('sherwani')) return "Men's Sherwani";
   if (tags.includes('jodhpuri') || tags.includes('open Jodhpuris')) return "Men's Jodhpuri";
-  if (tags.includes('indowestern')) return "Men's Indowestern";
+  if (tags.includes('indowestern')) return "Men's Indo-Western";
+  if (tags.includes('koti kurta')) return "Men's Koti Kurta";
+  if (tags.includes('suit')) return "Men's Suit";
+  if (tags.includes('lehenga')) return "Women's Lehenga";
+  if (tags.includes('choli')) return "Women's Choli";
+  if (tags.includes('women')) return "Women's Traditional Wear";
   return 'Wedding Attire Rental';
 }
 
 function productTitle(item) {
-  return `${normalizeText(item.title || 'Wedding Outfit')} Rental in Rajkot | Vivah Villa`;
+  return `${normalizeText(item.title || 'Wedding Outfit')} Rental | Vivah Villa Rajkot`;
 }
 
 function productMetaDescription(item) {
   const title = normalizeText(item.title || 'premium wedding outfit');
-  const cat = category(item).replace(/^Men's |^Women's /, '');
-  const price = cleanText(item.price || '');
-  const priceText = isVisibleValue(price) ? ` Rent starts at ${price}.` : '';
-  return shortSentence(`${title} ${cat} available for rent at Vivah Villa Collection in Rajkot.${priceText} ${item.desc || ''}`, 155);
+  const cat = category(item).replace(/^Men's |^Women's /, '').toLowerCase();
+  const price = moneyNumber(item.price);
+  const priceText = price ? ` from Rs. ${Number(price).toLocaleString('en-IN')}` : '';
+  return shortSentence(`${title}, a premium ${cat}, is available for rent at Vivah Villa Collection in Rajkot${priceText}. View photos, sizes and booking details.`, 155);
 }
 
 function card(item, index) {
@@ -137,7 +138,7 @@ function card(item, index) {
   const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
   const alt = imageAlt(item);
   const price = cleanText(item.price || 'Price on request');
-  const eager = index < 6 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+  const eager = index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
   const sizeHtml = isVisibleValue(item.size)
     ? `\n              <p class="collection-meta"><span>Sizes:</span> ${esc(item.size)}</p>`
     : '';
@@ -149,11 +150,11 @@ function card(item, index) {
     : '';
 
   return `          <article class="collection-card visible all-collection-card" data-tags="${esc(tags)}">
-            <a class="all-collection-image-link" href="${esc(productPath(item))}" aria-label="View ${esc(title)} details">
+            <a class="all-collection-image-link" href="/${esc(productPath(item))}" aria-label="View ${esc(title)} details">
               <img src="${esc(img)}" alt="${esc(alt)}" width="320" height="400" ${eager} decoding="async">
             </a>
             <div class="collection-content">
-              <h3 class="collection-title"><a href="${esc(productPath(item))}">${esc(title)}</a></h3>
+              <h3 class="collection-title"><a href="/${esc(productPath(item))}">${esc(title)}</a></h3>
               <p class="collection-description">${esc(desc)}</p>
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
             </div>
@@ -165,18 +166,19 @@ const itemList = collections.map((item, index) => {
   const price = moneyNumber(item.price);
   const product = {
     '@type': 'Product',
+    '@id': `${productUrl(item)}#product`,
+    url: productUrl(item),
     name: item.title || 'Vivah Villa Collection Outfit',
-    description: item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.',
     image: absoluteUrl(img),
-    category: category(item),
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      url: productUrl(item)
-    }
+    category: category(item)
   };
-  if (price) product.offers.price = price;
+  if (price) product.offers = {
+    '@type': 'Offer',
+    priceCurrency: 'INR',
+    price,
+    availability: 'https://schema.org/InStock',
+    url: productUrl(item)
+  };
 
   return {
     '@type': 'ListItem',
@@ -184,15 +186,6 @@ const itemList = collections.map((item, index) => {
     item: product
   };
 });
-
-const imageGallery = collections.map((item, index) => ({
-  '@type': 'ImageObject',
-  position: index + 1,
-  contentUrl: absoluteUrl(item.img || 'img/logo/logo.png'),
-  name: item.title || 'Vivah Villa Collection Outfit',
-  description: item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.',
-  keywords: seoKeywords(item)
-}));
 
 const RELATED_CATEGORY_TAGS = [
   'sherwani',
@@ -262,12 +255,23 @@ function productPage(item) {
   const sellingPriceHtml = isVisibleValue(sellingPrice) ? `<p><span>Selling Price</span>${esc(sellingPrice)}</p>` : '';
   const reelHtml = item.reelUrl ? `<a class="btn btn-outline" href="${esc(item.reelUrl)}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span>Watch Reel</span></a>` : '';
   const related = relatedItems(item);
-  const productSchema = {
-    '@context': 'https://schema.org',
+  const canonicalUrl = productUrl(item);
+  const productId = `${canonicalUrl}#product`;
+  const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const audienceGender = tags.includes('women') ? 'Female' : tags.includes('men') ? 'Male' : undefined;
+  const numericPrice = moneyNumber(price);
+  const productData = {
     '@type': 'Product',
+    '@id': productId,
+    url: canonicalUrl,
     name: title,
     description: desc,
-    image: absoluteUrl(img),
+    image: {
+      '@type': 'ImageObject',
+      url: absoluteUrl(img),
+      caption: imageAlt(item)
+    },
+    sku: `VVC-${item.slug.toUpperCase()}`,
     category: category(item),
     brand: {
       '@type': 'Brand',
@@ -275,16 +279,19 @@ function productPage(item) {
     },
     offers: {
       '@type': 'Offer',
-      url: productUrl(item),
+      url: canonicalUrl,
       priceCurrency: 'INR',
+      price: numericPrice,
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'ClothingStore',
+        '@id': `${SITE_URL}/#store`,
         name: 'Vivah Villa Collection',
+        url: `${SITE_URL}/`,
         telephone: '+919099055844',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Near Ayodhya chowk, 150 Feet Ring Rd',
+          streetAddress: 'Near Ayodhya Chowk, 150 Feet Ring Road',
           addressLocality: 'Rajkot',
           addressRegion: 'Gujarat',
           postalCode: '360006',
@@ -293,23 +300,95 @@ function productPage(item) {
       }
     }
   };
-  const numericPrice = moneyNumber(price);
-  if (numericPrice) productSchema.offers.price = numericPrice;
+  if (audienceGender) {
+    productData.audience = {
+      '@type': 'PeopleAudience',
+      suggestedGender: audienceGender
+    };
+  }
+  if (isVisibleValue(item.size)) productData.size = normalizeText(item.size);
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      productData,
+      {
+        '@type': 'BreadcrumbList',
+        '@id': breadcrumbId,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: `${SITE_URL}/`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'All Collections',
+            item: COLLECTIONS_URL
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: title,
+            item: canonicalUrl
+          }
+        ]
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: productTitle(item),
+        description: productMetaDescription(item),
+        inLanguage: 'en-IN',
+        dateModified: LAST_MODIFIED,
+        isPartOf: {
+          '@id': `${SITE_URL}/#website`
+        },
+        breadcrumb: {
+          '@id': breadcrumbId
+        },
+        mainEntity: {
+          '@id': productId
+        }
+      }
+    ]
+  };
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(productTitle(item))}</title>
   <meta name="description" content="${esc(productMetaDescription(item))}">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="${productUrl(item)}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Vivah Villa Collection">
+  <meta name="theme-color" content="#8b1538">
+  <link rel="canonical" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="en-IN" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="x-default" href="${canonicalUrl}">
   <meta property="og:title" content="${esc(productTitle(item))}">
   <meta property="og:description" content="${esc(productMetaDescription(item))}">
   <meta property="og:type" content="product">
-  <meta property="og:url" content="${productUrl(item)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:site_name" content="Vivah Villa Collection">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:image" content="${absoluteUrl(img)}">
+  <meta property="og:image:secure_url" content="${absoluteUrl(img)}">
+  <meta property="og:image:alt" content="${esc(imageAlt(item))}">
+  <meta property="product:price:amount" content="${numericPrice}">
+  <meta property="product:price:currency" content="INR">
+  <meta property="product:brand" content="Vivah Villa Collection">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(productTitle(item))}">
+  <meta name="twitter:description" content="${esc(productMetaDescription(item))}">
+  <meta name="twitter:image" content="${absoluteUrl(img)}">
+  <meta name="twitter:image:alt" content="${esc(imageAlt(item))}">
+  <link rel="icon" href="../img/logo/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/logo/logo.png">
   <link rel="stylesheet" href="../css2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -352,8 +431,8 @@ function productPage(item) {
   <header class="header" data-anim="fade-down">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-container">
-        <a class="navbar-brand" href="../index.html#home" data-anim="fade-right">
-          <img src="../img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
+        <a class="navbar-brand" href="/" data-anim="fade-right">
+          <img src="../img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo" width="500" height="177">
           <div class="brand-text">
             <span class="brand-title">Vivah Villa</span>
             <span class="brand-subtitle">Collection</span>
@@ -365,11 +444,11 @@ function productPage(item) {
           <span class="hamburger-line"></span>
         </button>
         <nav class="navbar-nav desktop-nav" id="navbarNav">
-          <a class="nav-link" href="../index.html#home">Home</a>
-          <a class="nav-link" href="../index.html#about">About</a>
-          <a class="nav-link" href="../all-collections.html">Collections</a>
-          <a class="nav-link" href="../index.html#gallery">Gallery</a>
-          <a class="nav-link" href="../index.html#contact">Contact</a>
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/#about">About</a>
+          <a class="nav-link" href="/all-collections.html">Collections</a>
+          <a class="nav-link" href="/#gallery">Gallery</a>
+          <a class="nav-link" href="/#contact">Contact</a>
           <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20${encodeURIComponent(title)}" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             <span>WhatsApp</span>
@@ -378,17 +457,17 @@ function productPage(item) {
         <nav class="mobile-nav" id="mobileNav">
           <div class="mobile-nav-header">
             <div class="brand-mobile">
-              <img src="../img/logo/logo.png" alt="Vivah Villa Collection">
+              <img src="../img/logo/logo.png" alt="Vivah Villa Collection" width="500" height="177">
               <span>Vivah Villa Collection</span>
             </div>
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
           </div>
           <div class="mobile-nav-links">
-            <a class="mobile-nav-link" href="../index.html#home">Home</a>
-            <a class="mobile-nav-link" href="../index.html#about">About</a>
-            <a class="mobile-nav-link" href="../all-collections.html">Collections</a>
-            <a class="mobile-nav-link" href="../index.html#gallery">Gallery</a>
-            <a class="mobile-nav-link" href="../index.html#contact">Contact</a>
+            <a class="mobile-nav-link" href="/">Home</a>
+            <a class="mobile-nav-link" href="/#about">About</a>
+            <a class="mobile-nav-link" href="/all-collections.html">Collections</a>
+            <a class="mobile-nav-link" href="/#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="/#contact">Contact</a>
           </div>
         </nav>
       </div>
@@ -398,9 +477,9 @@ function productPage(item) {
     <section class="product-hero">
       <div class="product-wrap">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
-          <a href="../all-collections.html">Collections</a>
+          <a href="/all-collections.html">Collections</a>
           <span>/</span>
           <span>${esc(title)}</span>
         </nav>
@@ -465,23 +544,35 @@ ${JSON.stringify(productSchema, null, 2)}
 }
 
 const page = `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Collections - Vivah Villa Collection Wedding Attire Rental</title>
-  <meta name="description" content="Browse every Vivah Villa Collection rental outfit with crawlable images: sherwanis, indowesterns, Jodhpuris, lehengas, cholis, suits and premium wedding attire in Rajkot.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="googlebot" content="index, follow, max-image-preview:large">
-  <meta name="googlebot-image" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="vivah villa, vivahvilla.in, wedding collection, sherwani rent rajkot, indowestern for groom, jodhpuri suit rental, lehenga rental rajkot, wedding attire rental, bridal dress rental rajkot">
-  <link rel="canonical" href="${SITE_URL}/all-collections.html">
-  <link rel="sitemap" type="application/xml" href="${SITE_URL}/sitemap_collections.xml">
-  <meta property="og:title" content="All Collections - Vivah Villa Collection">
-  <meta property="og:description" content="Complete wedding attire rental collection from Vivah Villa Collection in Rajkot.">
+  <title>Wedding Dress Rentals in Rajkot | All Collections</title>
+  <meta name="description" content="Browse 115 wedding outfits for rent in Rajkot, including sherwanis, Indo-Western outfits, Jodhpuri suits, lehengas, cholis and formal suits.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Vivah Villa Collection">
+  <meta name="theme-color" content="#8b1538">
+  <link rel="canonical" href="${COLLECTIONS_URL}">
+  <link rel="alternate" hreflang="en-IN" href="${COLLECTIONS_URL}">
+  <link rel="alternate" hreflang="x-default" href="${COLLECTIONS_URL}">
+  <meta property="og:title" content="Wedding Dress Rentals in Rajkot | Vivah Villa">
+  <meta property="og:description" content="Browse our complete collection of sherwanis, Indo-Western outfits, Jodhpuri suits, lehengas, cholis and formal suits for rent in Rajkot.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="${SITE_URL}/all-collections.html">
+  <meta property="og:url" content="${COLLECTIONS_URL}">
+  <meta property="og:site_name" content="Vivah Villa Collection">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:image" content="${absoluteUrl(collections[0]?.img || 'img/logo/logo.png')}">
+  <meta property="og:image:secure_url" content="${absoluteUrl(collections[0]?.img || 'img/logo/logo.png')}">
+  <meta property="og:image:alt" content="${esc(imageAlt(collections[0] || {}))}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wedding Dress Rentals in Rajkot | Vivah Villa">
+  <meta name="twitter:description" content="Browse 115 premium wedding outfits for rent at Vivah Villa Collection in Rajkot.">
+  <meta name="twitter:image" content="${absoluteUrl(collections[0]?.img || 'img/logo/logo.png')}">
+  <meta name="twitter:image:alt" content="${esc(imageAlt(collections[0] || {}))}">
+  <link rel="icon" href="img/logo/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/logo/logo.png">
   <link rel="stylesheet" href="css2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -670,8 +761,8 @@ const page = `<!DOCTYPE html>
   <header class="header" data-anim="fade-down">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-container">
-        <a class="navbar-brand" href="index.html#home" data-anim="fade-right">
-          <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo">
+        <a class="navbar-brand" href="/" data-anim="fade-right">
+          <img src="img/logo/logo.png" alt="Vivah Villa Collection" class="brand-logo" width="500" height="177">
           <div class="brand-text">
             <span class="brand-title">Vivah Villa</span>
             <span class="brand-subtitle">Collection</span>
@@ -685,11 +776,11 @@ const page = `<!DOCTYPE html>
         </button>
 
         <nav class="navbar-nav desktop-nav" id="navbarNav">
-          <a class="nav-link" href="index.html#home">Home</a>
-          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/#about">About</a>
           <a class="nav-link" href="/all-collections.html">Collections</a>
-          <a class="nav-link" href="index.html#gallery">Gallery</a>
-          <a class="nav-link" href="index.html#contact">Contact</a>
+          <a class="nav-link" href="/#gallery">Gallery</a>
+          <a class="nav-link" href="/#contact">Contact</a>
           <a class="nav-cta" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             <span>WhatsApp</span>
@@ -699,7 +790,7 @@ const page = `<!DOCTYPE html>
         <nav class="mobile-nav" id="mobileNav">
           <div class="mobile-nav-header">
             <div class="brand-mobile">
-              <img src="img/logo/logo.png" alt="Vivah Villa Collection">
+              <img src="img/logo/logo.png" alt="Vivah Villa Collection" width="500" height="177">
               <span>Vivah Villa Collection</span>
             </div>
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
@@ -707,11 +798,11 @@ const page = `<!DOCTYPE html>
             </button>
           </div>
           <div class="mobile-nav-links">
-            <a class="mobile-nav-link" href="index.html#home">Home</a>
-            <a class="mobile-nav-link" href="index.html#about">About</a>
+            <a class="mobile-nav-link" href="/">Home</a>
+            <a class="mobile-nav-link" href="/#about">About</a>
             <a class="mobile-nav-link" href="/all-collections.html">Collections</a>
-            <a class="mobile-nav-link" href="index.html#gallery">Gallery</a>
-            <a class="mobile-nav-link" href="index.html#contact">Contact</a>
+            <a class="mobile-nav-link" href="/#gallery">Gallery</a>
+            <a class="mobile-nav-link" href="/#contact">Contact</a>
             <div class="mobile-nav-cta">
               <a class="btn-whatsapp" href="https://wa.me/919099055844?text=Hi%20Vivah%20Villa%20Collection%2C%20I%20want%20to%20rent%20an%20outfit" target="_blank" rel="noopener">
                 <i class="fab fa-whatsapp"></i>
@@ -729,14 +820,13 @@ const page = `<!DOCTYPE html>
       <div class="container">
         <div class="section-header" data-anim="fade-up">
           <span class="section-badge">Our Collections</span>
-          <h2 class="section-title">Premium Wedding Attire</h2>
+          <h1 class="section-title">Wedding Dress Rentals in Rajkot</h1>
           <p class="section-description">
             Browse our complete collection of premium wedding outfits. All pieces are available
             for rent and can be pre-booked for your special dates.
           </p>
         </div>
       <div class="fullscreen-panel-content">
-        <h1 class="sr-only">All Wedding Dress Rental Collections in Rajkot</h1>
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
           <button class="fullscreen-filter-tab active" data-filter="all" type="button" role="tab" aria-selected="true">
             <span>All Collections</span>
@@ -791,7 +881,7 @@ ${collections.map(card).join('\n')}
       <div class="footer-content">
         <div class="footer-section footer-brand" data-anim="fade-up">
           <div class="footer-logo">
-            <img src="img/logo/logo.png" alt="Vivah Villa Collection">
+            <img src="img/logo/logo.png" alt="Vivah Villa Collection" width="500" height="177">
             <div class="footer-brand-text">
               <h3>Vivah Villa Collection</h3>
               <p>Traditional style • Modern convenience</p>
@@ -806,11 +896,11 @@ ${collections.map(card).join('\n')}
         <div class="footer-section" data-anim="fade-up">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
             <li><a href="/all-collections.html">Collections</a></li>
-            <li><a href="index.html#gallery">Gallery</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#contact">Contact</a></li>
           </ul>
         </div>
 
@@ -854,17 +944,54 @@ ${collections.map(card).join('\n')}
   <script type="application/ld+json">
 ${JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Vivah Villa Collection Wedding Attire Rentals',
-  url: `${SITE_URL}/all-collections.html`,
-  description: 'Static gallery of wedding attire rental products and images from Vivah Villa Collection in Rajkot.',
-  primaryImageOfPage: absoluteUrl(collections[0]?.img || 'img/logo/logo.png'),
-  mainEntity: {
-    '@type': 'ItemList',
-    numberOfItems: collections.length,
-    itemListElement: itemList
-  },
-  associatedMedia: imageGallery
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${COLLECTIONS_URL}#webpage`,
+      name: 'Wedding Dress Rentals in Rajkot | All Collections',
+      url: COLLECTIONS_URL,
+      description: `Browse ${collections.length} premium wedding outfits for rent at Vivah Villa Collection in Rajkot.`,
+      inLanguage: 'en-IN',
+      dateModified: LAST_MODIFIED,
+      isPartOf: {
+        '@id': `${SITE_URL}/#website`
+      },
+      about: {
+        '@id': `${SITE_URL}/#store`
+      },
+      breadcrumb: {
+        '@id': `${COLLECTIONS_URL}#breadcrumb`
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: absoluteUrl(collections[0]?.img || 'img/logo/logo.png'),
+        caption: imageAlt(collections[0] || {})
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: collections.length,
+        itemListElement: itemList
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${COLLECTIONS_URL}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${SITE_URL}/`
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'All Collections',
+          item: COLLECTIONS_URL
+        }
+      ]
+    }
+  ]
 }, null, 2)}
   </script>
   <script>
@@ -933,35 +1060,6 @@ ${JSON.stringify({
       });
     })();
   </script>
-  <script>
-    (function () {
-      const tabs = document.querySelectorAll('.fullscreen-filter-tab');
-      const cards = document.querySelectorAll('.all-collection-card');
-      const empty = document.getElementById('collectionsEmpty');
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const filter = tab.dataset.filter || 'all';
-          let visibleCount = 0;
-
-          tabs.forEach((item) => {
-            const isActive = item === tab;
-            item.classList.toggle('active', isActive);
-            item.setAttribute('aria-selected', String(isActive));
-          });
-
-          cards.forEach((card) => {
-            const tags = (card.dataset.tags || '').split('|');
-            const shouldShow = filter === 'all' || tags.includes(filter);
-            card.hidden = !shouldShow;
-            if (shouldShow) visibleCount += 1;
-          });
-
-          if (empty) empty.hidden = visibleCount !== 0;
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
 `;
@@ -978,6 +1076,7 @@ const collectionImageSitemap = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>${SITE_URL}/all-collections.html</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
 ${collections.map((item) => `    <image:image>
       <image:loc>${SITE_URL}/${esc(item.img || 'img/logo/logo.png')}</image:loc>
       <image:title>${esc(item.title || 'Vivah Villa Collection Outfit')}</image:title>
@@ -994,7 +1093,7 @@ const productSitemap = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${collections.map((item) => `  <url>
     <loc>${productUrl(item)}</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>${LAST_MODIFIED}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1007,4 +1106,49 @@ ${collections.map((item) => `  <url>
 `;
 
 fs.writeFileSync('sitemap_products.xml', productSitemap);
-console.log(`Generated all-collections.html, sitemap_collections.xml, sitemap_products.xml, and ${collections.length} product pages.`);
+
+const pagesSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>${SITE_URL}/</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>${SITE_URL}/img/gallery/hero.jpg</image:loc>
+      <image:title>Wedding Dress Rental in Rajkot - Vivah Villa Collection</image:title>
+      <image:caption>Premium wedding attire available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>${COLLECTIONS_URL}</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>${absoluteUrl(collections[0]?.img || 'img/logo/logo.png')}</image:loc>
+      <image:title>${esc(collections[0]?.title || 'Vivah Villa Collection Wedding Attire')}</image:title>
+      <image:caption>${esc(collections[0]?.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.')}</image:caption>
+    </image:image>
+  </url>
+</urlset>
+`;
+
+fs.writeFileSync('sitemap_pages.xml', pagesSitemap);
+
+const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${SITE_URL}/sitemap_pages.xml</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${SITE_URL}/sitemap_products.xml</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+  </sitemap>
+</sitemapindex>
+`;
+
+fs.writeFileSync('sitemap.xml', sitemapIndex);
+console.log(`Generated all collection/product pages plus SEO sitemaps for ${collections.length} products.`);
