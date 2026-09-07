@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
+Disallow: /backup/
+Disallow: /database/
+Disallow: /scripts/
+Disallow: /public/
 Sitemap: https://vivahvilla.in/sitemap.xml
-Sitemap: https://vivahvilla.in/sitemap_collections.xml
-Sitemap: https://vivahvilla.in/sitemap_photos.xml
-Sitemap: https://vivahvilla.in/sitemap_products.xml

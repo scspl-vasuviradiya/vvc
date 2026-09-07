@@ -118,58 +118,60 @@
             }
         });
         
+        let userPausedVideo = false;
+
+        function playHeroVideo() {
+            if (!video || userPausedVideo || document.hidden) return;
+            video.play().catch(e => console.log('Auto-play prevented:', e));
+        }
+
+        function updatePlayButton(isPlaying) {
+            if (!playPauseIcon || !pauseBtn) return;
+            playPauseIcon.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+            pauseBtn.setAttribute('aria-label', isPlaying ? 'Pause video' : 'Play video');
+        }
+
         // Play/Pause functionality
         pauseBtn.addEventListener('click', function() {
             if (video.paused) {
+                userPausedVideo = false;
+                video.removeAttribute('data-user-paused');
                 video.play();
-                playPauseIcon.className = 'fas fa-pause';
-                pauseBtn.setAttribute('aria-label', 'Pause video');
+                updatePlayButton(true);
             } else {
-                video.pause();
-                playPauseIcon.className = 'fas fa-play';
-                pauseBtn.setAttribute('aria-label', 'Play video');
-            }
-        });
-        
-        // Auto-pause when page is not visible (performance optimization)
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                video.pause();
-            } else if (!video.paused) {
-                // Only auto-resume if it wasn't manually paused
-                if (!video.hasAttribute('data-user-paused')) {
-                    video.play();
-                }
-            }
-        });
-        
-        // Track user-initiated pause
-        video.addEventListener('pause', function() {
-            if (!document.hidden) {
+                userPausedVideo = true;
                 video.setAttribute('data-user-paused', 'true');
+                video.pause();
+                updatePlayButton(false);
             }
+        });
+        
+        // Browsers may pause background videos when a tab is hidden. Resume it when visible again.
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                playHeroVideo();
+            }
+        });
+        
+        window.addEventListener('focus', playHeroVideo);
+        window.addEventListener('pageshow', playHeroVideo);
+
+        video.addEventListener('pause', function() {
+            updatePlayButton(false);
         });
         
         video.addEventListener('play', function() {
-            video.removeAttribute('data-user-paused');
+            updatePlayButton(true);
         });
         
-        // Intersection Observer to pause video when hero is not visible
+        // Keep the hero video ready while scrolling so it does not stay paused when users return.
         if ('IntersectionObserver' in window) {
             const heroSection = document.querySelector('.hero-section');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Hero section is visible
-                        if (!video.hasAttribute('data-user-paused')) {
-                            video.play().catch(e => {
-                                console.log('Auto-play prevented:', e);
-                            });
-                        }
-                    } else {
-                        // Hero section is not visible - pause for performance
-                        video.pause();
+                        playHeroVideo();
                     }
                 });
             }, {
@@ -180,6 +182,8 @@
                 observer.observe(heroSection);
             }
         }
+
+        playHeroVideo();
         
         // Reduce motion preference
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

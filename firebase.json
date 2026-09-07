@@ -6,7 +6,10 @@
       "**/.*",
       "**/node_modules/**",
       "backup/**",
+      "database/**",
+      "DNS/**",
       "public/**",
+      "scripts/**",
       "package.json",
       "package-lock.json",
       "server.js",
@@ -16,10 +19,44 @@
       "*.md",
       "skills-lock.json"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/all-collections",
+        "destination": "/all-collections.html",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(png|jpg|jpeg|webp|svg|mp4)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
       }
     ]
   }
