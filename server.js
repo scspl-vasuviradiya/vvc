@@ -8,6 +8,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
+const { execFileSync } = require('child_process');
 
 class CollectionServer {
     constructor() {
@@ -128,11 +129,18 @@ class CollectionServer {
                 // Save new collections.json
                 fs.writeFileSync(this.collectionsFile, JSON.stringify(data, null, 2), 'utf8');
 
+                // Keep the public collection page, product pages, and sitemaps in sync.
+                execFileSync(process.execPath, ['generate-all-collections-page.js'], {
+                    cwd: __dirname,
+                    stdio: 'pipe'
+                });
+
                 // Send success response
                 const response = {
                     success: true,
-                    message: 'Collections saved successfully',
+                    message: 'Collections saved and pages regenerated successfully',
                     count: data.length,
+                    pagesRegenerated: true,
                     timestamp: new Date().toLocaleString()
                 };
 

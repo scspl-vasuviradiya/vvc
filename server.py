@@ -11,6 +11,7 @@ import os
 import base64
 import re
 import urllib.parse
+import subprocess
 from datetime import datetime
 import mimetypes
 
@@ -129,12 +130,22 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
             # Save new collections.json
             with open(self.collections_file, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
+
+            # Keep the public collection page, product pages, and sitemaps in sync.
+            subprocess.run(
+                ['node', 'generate-all-collections-page.js'],
+                cwd=os.path.dirname(os.path.abspath(__file__)),
+                check=True,
+                capture_output=True,
+                text=True
+            )
             
             # Send success response
             response = {
                 'success': True,
-                'message': 'Collections saved successfully',
+                'message': 'Collections saved and pages regenerated successfully',
                 'count': len(data),
+                'pagesRegenerated': True,
                 'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             }
             
