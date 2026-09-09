@@ -85,7 +85,7 @@
     "title": "Imperial Ivory Koti kurta",
     "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
     "price": "₹2499/-",
-    "sellingPrice": "₹8499/-",
+    "sellingPrice": "₹7999/-",
     "size": "36, 40",
     "active": true
   },
@@ -130,7 +130,7 @@
     "title": "Black Baron jodhpuri",
     "desc": "A luxurious black Jodhpuri featuring intricate tonal embroidery, crafted for grooms who appreciate timeless elegance with a bold royal presence.",
     "price": "₹2999/-",
-    "sellingPrice": "₹10499/-",
+    "sellingPrice": "₹7999/-",
     "size": "36, 40",
     "active": true
   },
@@ -174,7 +174,7 @@
     "title": "Royal Azure Jodhpuri",
     "desc": "A sleek black Jodhpuri featuring wavy vertical beadwork and a vibrant embroidered turquoise butterfly.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹9999/-",
     "size": "38, 42",
     "active": true,
     "reelUrl": ""
@@ -204,7 +204,7 @@
     "title": "The White Sovereign Jodhpuri",
     "desc": "An off-white Jodhpuri suit featuring heavy silver thread work and geometric mirror embellishments along the borders.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹8999/-",
     "size": "36, 40",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbN6xDvuf03/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -219,7 +219,7 @@
     "title": "Brown Reign Jodhpuri",
     "desc": "This Jodhpuri suit featuring a unique honeycomb pattern of Mirror embellishments.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹8999/-",
     "size": "34, 36, 38, 40, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DaxnKRtpMja/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -264,7 +264,7 @@
     "title": "Heritage Reimagined Jodhpuri",
     "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹9999/-",
     "size": "36, 40",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbnrW3BOfLf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -309,7 +309,7 @@
     "title": "Woven Legacy Koti Kurta",
     "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
     "price": "₹2499/-",
-    "sellingPrice": "₹8499/-",
+    "sellingPrice": "₹7999/-",
     "size": "34, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbBDYMRO6Wb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -489,7 +489,7 @@
     "title": "Maroon Modern King Jodhpuri",
     "desc": "This Jodhpuri suit featuring intricate black bead detailing along the borders.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹7999/-",
     "size": "34, 36, 38, 40, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DaX3dOCMkX3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -1029,7 +1029,7 @@
     "reelUrl": "https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Dusk Bloom Indo-Western",
     "desc": "This deep mauve attire stands out with its intricate white bead detailing and bold floral patterns.",
-    "price": "₹2999/-",
+    "price": "₹3499/-",
     "sellingPrice": "0",
     "size": "36, 40",
     "active": true
@@ -1134,7 +1134,7 @@
     "reelUrl": "https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Floral Royale indowestern",
     "desc": "Luxury floral craftsmanship with a royal touch.",
-    "price": "₹2999/-",
+    "price": "₹3499/-",
     "sellingPrice": "0",
     "size": "36, 38",
     "active": true
@@ -1179,8 +1179,8 @@
     "reelUrl": "",
     "title": "Mirror Luxe Black",
     "desc": "Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.",
-    "price": "₹2999/-",
-    "sellingPrice": "₹10499/-",
+    "price": "₹3499/-",
+    "sellingPrice": "₹8999/-",
     "size": "38, 40",
     "active": true
   },
@@ -1195,7 +1195,7 @@
     "title": "Midnight Bloom Jodhpuri",
     "desc": "It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.",
     "price": "₹3499/-",
-    "sellingPrice": "₹11999/-",
+    "sellingPrice": "₹8999/-",
     "size": "34, 38, 42",
     "active": true
   },
