@@ -4,13 +4,22 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://vivahvilla.in';
 const productDir = path.join(ROOT, 'products');
+const categoryDir = path.join(ROOT, 'collections');
+const productFiles = fs.readdirSync(productDir)
+  .filter((name) => name.endsWith('.html'))
+  .sort()
+  .map((name) => path.join(productDir, name));
+const categoryFiles = fs.existsSync(categoryDir)
+  ? fs.readdirSync(categoryDir)
+    .filter((name) => name.endsWith('.html'))
+    .sort()
+    .map((name) => path.join(categoryDir, name))
+  : [];
 const indexedFiles = [
   path.join(ROOT, 'index.html'),
   path.join(ROOT, 'all-collections.html'),
-  ...fs.readdirSync(productDir)
-    .filter((name) => name.endsWith('.html'))
-    .sort()
-    .map((name) => path.join(productDir, name))
+  ...categoryFiles,
+  ...productFiles
 ];
 
 const errors = [];
@@ -115,9 +124,18 @@ for (const file of indexedFiles) {
   }
 }
 
+const homepageHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+const preRenderedMatch = homepageHtml.match(/<!-- PRE-RENDERED_COLLECTIONS_START -->([\s\S]*?)<!-- PRE-RENDERED_COLLECTIONS_END -->/);
+const preRenderedProductLinks = preRenderedMatch
+  ? (preRenderedMatch[1].match(/href=["']\/products\//g) || []).length
+  : 0;
+if (preRenderedProductLinks !== 6) {
+  errors.push(`index.html: expected 6 pre-rendered product links, found ${preRenderedProductLinks}`);
+}
+
 const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap_products.xml'), 'utf8');
 const sitemapUrls = [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const productCount = indexedFiles.length - 2;
+const productCount = productFiles.length;
 if (sitemapUrls.length !== productCount) {
   errors.push(`sitemap_products.xml: expected ${productCount} product URLs, found ${sitemapUrls.length}`);
 }
@@ -127,7 +145,15 @@ for (const required of ['sitemap_pages.xml', 'sitemap_products.xml']) {
   if (!sitemapIndex.includes(`${SITE_URL}/${required}`)) errors.push(`sitemap.xml: missing ${required}`);
 }
 
-console.log(`SEO audit checked ${indexedFiles.length} indexable pages (${productCount} products).`);
+const pagesSitemap = fs.readFileSync(path.join(ROOT, 'sitemap_pages.xml'), 'utf8');
+for (const file of categoryFiles) {
+  const pageUrl = `${SITE_URL}/${relative(file)}`;
+  if (!pagesSitemap.includes(`<loc>${pageUrl}</loc>`)) {
+    errors.push(`sitemap_pages.xml: missing ${pageUrl}`);
+  }
+}
+
+console.log(`SEO audit checked ${indexedFiles.length} indexable pages (${productCount} products and ${categoryFiles.length} categories).`);
 warnings.forEach((warning) => console.warn(`WARN: ${warning}`));
 errors.forEach((error) => console.error(`ERROR: ${error}`));
 

@@ -2,6 +2,10 @@ const fs = require('fs');
 
 const SITE_URL = 'https://vivahvilla.in';
 const COLLECTIONS_URL = `${SITE_URL}/all-collections.html`;
+const PRODUCTS_LAST_MODIFIED = new Date(Math.max(
+  fs.statSync('collections.json').mtimeMs,
+  fs.statSync(__filename).mtimeMs
+)).toISOString().slice(0, 10);
 const LAST_MODIFIED = new Date(Math.max(
   fs.statSync('collections.json').mtimeMs,
   fs.statSync('index.html').mtimeMs,
@@ -79,6 +83,103 @@ const usedSlugs = new Set();
 collections.forEach((item) => {
   item.slug = uniqueSlug(item, usedSlugs);
 });
+
+const CATEGORY_PAGES = [
+  {
+    slug: 'sherwani',
+    name: 'Sherwani',
+    title: 'Sherwani on Rent in Rajkot | Vivah Villa',
+    heading: 'Sherwani on Rent in Rajkot',
+    description: 'Explore premium wedding sherwanis for rent in Rajkot, with royal embroidery, groom-ready styling, multiple sizes and advance booking at Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('sherwani')
+  },
+  {
+    slug: 'indowestern',
+    name: 'Indo-Western',
+    title: 'Indo-Western on Rent in Rajkot | Vivah Villa',
+    heading: 'Indo-Western Outfits on Rent in Rajkot',
+    description: 'Browse premium Indo-Western outfits for rent in Rajkot for weddings and receptions, with sizes and booking details from Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('indowestern')
+  },
+  {
+    slug: 'jodhpuri',
+    name: 'Jodhpuri',
+    title: 'Jodhpuri Suit on Rent in Rajkot | Vivah Villa',
+    heading: 'Jodhpuri Suits on Rent in Rajkot',
+    description: 'Discover designer Jodhpuri suits on rent in Rajkot for weddings and receptions. View styles, rental prices, sizes and booking details at Vivah Villa Collection.',
+    matches: (item) => {
+      const tags = item.tags || [];
+      return tags.includes('jodhpuri') || tags.includes('open Jodhpuris');
+    }
+  },
+  {
+    slug: 'lehenga',
+    name: 'Lehenga',
+    title: 'Lehenga on Rent in Rajkot | Vivah Villa',
+    heading: 'Designer Lehengas on Rent in Rajkot',
+    description: 'Explore designer bridal and wedding lehengas for rent in Rajkot. Compare colours, styles and rental prices, then book your trial with Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('lehenga')
+  },
+  {
+    slug: 'koti-kurta',
+    name: 'Koti Kurta',
+    title: 'Koti Kurta on Rent in Rajkot | Vivah Villa',
+    heading: 'Koti Kurta Sets on Rent in Rajkot',
+    description: 'Browse designer Koti Kurta sets on rent in Rajkot for weddings and festive events, with sizes, prices and booking details from Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('koti kurta')
+  },
+  {
+    slug: 'choli',
+    name: 'Choli',
+    title: 'Designer Choli on Rent in Rajkot | Vivah Villa',
+    heading: 'Designer Cholis on Rent in Rajkot',
+    description: 'Explore designer cholis for rent in Rajkot for weddings, garba and festive occasions. View styles, rental prices and booking details at Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('choli')
+  },
+  {
+    slug: 'suit',
+    name: 'Suit',
+    title: 'Men’s Suit on Rent in Rajkot | Vivah Villa',
+    heading: 'Men’s Suits on Rent in Rajkot',
+    description: 'Browse stylish men’s suits for rent in Rajkot for weddings, receptions and formal events. View prices, sizes and booking details at Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('suit')
+  },
+  {
+    slug: 'men',
+    name: 'Men',
+    title: 'Men’s Wedding Wear on Rent in Rajkot | Vivah Villa',
+    heading: 'Men’s Wedding Wear on Rent in Rajkot',
+    description: 'Explore sherwanis, Indo-Western outfits, Jodhpuri suits and Koti Kurta sets for men on rent in Rajkot at Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('men')
+  },
+  {
+    slug: 'women',
+    name: 'Women',
+    title: 'Women’s Wedding Wear on Rent in Rajkot | Vivah Villa',
+    heading: 'Women’s Wedding Wear on Rent in Rajkot',
+    description: 'Browse designer lehengas and cholis for women on rent in Rajkot for weddings and festive occasions at Vivah Villa Collection.',
+    matches: (item) => (item.tags || []).includes('women')
+  }
+];
+
+function categoryPagePath(config) {
+  return `collections/${config.slug}.html`;
+}
+
+function categoryPageUrl(config) {
+  return `${SITE_URL}/${categoryPagePath(config)}`;
+}
+
+function productCategoryPage(item) {
+  return CATEGORY_PAGES.find((config) => config.matches(item)) || null;
+}
+
+function categoryNavigation() {
+  return `<nav aria-label="Browse outfit categories" style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:0 auto 28px;">
+          <a class="btn btn-outline" href="/all-collections.html">All Collections</a>
+${CATEGORY_PAGES.map((config) => `          <a class="btn btn-outline" href="/${categoryPagePath(config)}">${esc(config.name)}</a>`).join('\n')}
+        </nav>`;
+}
 
 function productPath(item) {
   return `products/${item.slug}.html`;
@@ -159,6 +260,66 @@ function card(item, index) {
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
             </div>
           </article>`;
+}
+
+const HOMEPAGE_INITIAL_ITEMS = 6;
+
+function homepageCard(item, index) {
+  const title = item.title || 'Vivah Villa Collection Outfit';
+  const img = item.img || 'img/logo/logo.png';
+  const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
+  const tags = (item.tags || []).join(' ');
+  const price = cleanText(item.price || 'Price on request');
+  const imageUrl = absoluteUrl(img);
+  const whatsappMessage = `Hello, I want to rent this outfit.\n\nProduct: ${title}\n${imageUrl}`;
+  const whatsappUrl = `https://wa.me/919099055844?text=${encodeURIComponent(whatsappMessage)}`;
+  const sizeHtml = isVisibleValue(item.size)
+    ? `<div style="font-weight:600; color:#333; font-size:14px; margin-top:4px;"><span style="color:#666; font-weight:600;">Sizes:</span> ${esc(item.size)}</div>`
+    : '';
+  const sellingPriceHtml = isVisibleValue(item.sellingPrice)
+    ? `<div style="font-weight:bold; color:#047857; font-size:16px; margin-top:4px;"><span style="color:#666; font-weight:600;">Selling Price:</span> ${esc(cleanText(item.sellingPrice))}</div>`
+    : '';
+  const reelHtml = item.reelUrl
+    ? `<div style="margin-top:8px;"><a href="${esc(item.reelUrl)}" target="_blank" rel="noopener" aria-label="Watch Reel" style="color:#E1306C; text-decoration:none; font-weight:600;"><i class="fab fa-instagram" aria-hidden="true" style="margin-right:6px;"></i>Watch Reel</a></div>`
+    : '';
+
+  return `          <article class="collection-card visible" data-tags="${esc(tags)}" style="display:block !important; background:white; border:1px solid #ccc; border-radius:8px; padding:16px; box-shadow:0 2px 8px rgba(0,0,0,0.1); min-height:200px; width:100%; max-width:320px; transition:all 0.5s ease; opacity:1; transform:translateY(0);">
+            <a href="/${esc(productPath(item))}" aria-label="View ${esc(title)} details" style="display:block; color:inherit; text-decoration:none;">
+              <div style="margin-bottom:12px;">
+                <img src="${esc(img)}" alt="${esc(imageAlt(item))}" width="320" height="400" style="width:100%; height:auto; max-height:300px; object-fit:contain; border-radius:4px; cursor:pointer;" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">
+              </div>
+              <div style="padding:8px 0;">
+                <h3 style="margin:0 0 8px; font-size:18px; color:#333;">${esc(title)}</h3>
+                <p style="margin:0 0 8px; color:#666; font-size:14px;">${esc(desc)}</p>
+                <div style="font-weight:bold; color:#8b1538; font-size:16px;"><span style="color:#666; font-weight:600;">Rent:</span> ${esc(price)}</div>
+                ${sizeHtml}
+                ${sellingPriceHtml}
+                <div style="margin-top:10px; color:#8b1538; font-weight:700;">View Product Details <i class="fas fa-arrow-right" aria-hidden="true" style="margin-left:4px;"></i></div>
+              </div>
+            </a>
+            <div style="padding:0 0 8px;">
+              ${reelHtml}
+              <div style="margin-top:8px;"><a href="${esc(whatsappUrl)}" target="_blank" rel="noopener" aria-label="Enquire about ${esc(title)} on WhatsApp" style="color:#25D366; text-decoration:none; font-weight:600;"><i class="fab fa-whatsapp" aria-hidden="true" style="margin-right:6px;"></i>WhatsApp Enquiry</a></div>
+            </div>
+          </article>`;
+}
+
+function updateHomepagePreRenderedCards() {
+  const homepagePath = 'index.html';
+  const startMarker = '<!-- PRE-RENDERED_COLLECTIONS_START -->';
+  const endMarker = '<!-- PRE-RENDERED_COLLECTIONS_END -->';
+  const homepage = fs.readFileSync(homepagePath, 'utf8');
+  const start = homepage.indexOf(startMarker);
+  const end = homepage.indexOf(endMarker);
+
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error('Homepage pre-render markers are missing or invalid.');
+  }
+
+  const cards = collections.slice(0, HOMEPAGE_INITIAL_ITEMS).map(homepageCard).join('\n');
+  const replacement = `${startMarker}\n${cards}\n          ${endMarker}`;
+  const updated = homepage.slice(0, start) + replacement + homepage.slice(end + endMarker.length);
+  if (updated !== homepage) fs.writeFileSync(homepagePath, updated);
 }
 
 const itemList = collections.map((item, index) => {
@@ -258,6 +419,38 @@ function productPage(item) {
   const canonicalUrl = productUrl(item);
   const productId = `${canonicalUrl}#product`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const categoryPage = productCategoryPage(item);
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${SITE_URL}/`
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'All Collections',
+      item: COLLECTIONS_URL
+    }
+  ];
+  if (categoryPage) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: categoryPage.name,
+      item: categoryPageUrl(categoryPage)
+    });
+  }
+  breadcrumbItems.push({
+    '@type': 'ListItem',
+    position: categoryPage ? 4 : 3,
+    name: title,
+    item: canonicalUrl
+  });
+  const categoryBreadcrumbHtml = categoryPage
+    ? `\n          <span>/</span>\n          <a href="/${categoryPagePath(categoryPage)}">${esc(categoryPage.name)}</a>`
+    : '';
   const audienceGender = tags.includes('women') ? 'Female' : tags.includes('men') ? 'Male' : undefined;
   const numericPrice = moneyNumber(price);
   const productData = {
@@ -314,26 +507,7 @@ function productPage(item) {
       {
         '@type': 'BreadcrumbList',
         '@id': breadcrumbId,
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: `${SITE_URL}/`
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'All Collections',
-            item: COLLECTIONS_URL
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: title,
-            item: canonicalUrl
-          }
-        ]
+        itemListElement: breadcrumbItems
       },
       {
         '@type': 'WebPage',
@@ -342,7 +516,7 @@ function productPage(item) {
         name: productTitle(item),
         description: productMetaDescription(item),
         inLanguage: 'en-IN',
-        dateModified: LAST_MODIFIED,
+        dateModified: PRODUCTS_LAST_MODIFIED,
         isPartOf: {
           '@id': `${SITE_URL}/#website`
         },
@@ -480,6 +654,7 @@ function productPage(item) {
           <a href="/">Home</a>
           <span>/</span>
           <a href="/all-collections.html">Collections</a>
+          ${categoryBreadcrumbHtml}
           <span>/</span>
           <span>${esc(title)}</span>
         </nav>
@@ -827,6 +1002,7 @@ const page = `<!DOCTYPE html>
           </p>
         </div>
       <div class="fullscreen-panel-content">
+        ${categoryNavigation()}
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
           <button class="fullscreen-filter-tab active" data-filter="all" type="button" role="tab" aria-selected="true">
             <span>All Collections</span>
@@ -1064,7 +1240,101 @@ ${JSON.stringify({
 </html>
 `;
 
+function categoryLandingPage(config) {
+  const items = collections.filter(config.matches);
+  const url = categoryPageUrl(config);
+  const cardsHtml = items.map(card).join('\n');
+  const allCardsHtml = collections.map(card).join('\n');
+  const leadItem = items[0] || {};
+  const leadImage = absoluteUrl(leadItem.img || 'img/logo/logo.png');
+  const listItems = items.map((item, index) => {
+    const product = {
+      '@type': 'Product',
+      '@id': `${productUrl(item)}#product`,
+      url: productUrl(item),
+      name: item.title || 'Vivah Villa Collection Outfit',
+      image: absoluteUrl(item.img || 'img/logo/logo.png'),
+      category: category(item)
+    };
+    const price = moneyNumber(item.price);
+    if (price) {
+      product.offers = {
+        '@type': 'Offer',
+        priceCurrency: 'INR',
+        price,
+        availability: 'https://schema.org/InStock',
+        url: productUrl(item)
+      };
+    }
+    return { '@type': 'ListItem', position: index + 1, item: product };
+  });
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${url}#webpage`,
+        name: config.title,
+        url,
+        description: config.description,
+        inLanguage: 'en-IN',
+        dateModified: LAST_MODIFIED,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        about: { '@id': `${SITE_URL}/#store` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: leadImage,
+          caption: imageAlt(leadItem)
+        },
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: items.length,
+          itemListElement: listItems
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'All Collections', item: COLLECTIONS_URL },
+          { '@type': 'ListItem', position: 3, name: config.name, item: url }
+        ]
+      }
+    ]
+  };
+
+  return page
+    .replace('<title>Wedding Dress Rentals in Rajkot | All Collections</title>', `<title>${esc(config.title)}</title>`)
+    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(config.description)}">`)
+    .replace(`<link rel="canonical" href="${COLLECTIONS_URL}">`, `<link rel="canonical" href="${url}">`)
+    .replace(`<link rel="alternate" hreflang="en-IN" href="${COLLECTIONS_URL}">`, `<link rel="alternate" hreflang="en-IN" href="${url}">`)
+    .replace(`<link rel="alternate" hreflang="x-default" href="${COLLECTIONS_URL}">`, `<link rel="alternate" hreflang="x-default" href="${url}">`)
+    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(config.title)}">`)
+    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(config.description)}">`)
+    .replace(`<meta property="og:url" content="${COLLECTIONS_URL}">`, `<meta property="og:url" content="${url}">`)
+    .replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${leadImage}">`)
+    .replace(/<meta property="og:image:secure_url" content="[^"]*">/, `<meta property="og:image:secure_url" content="${leadImage}">`)
+    .replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${esc(config.title)}">`)
+    .replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${esc(config.description)}">`)
+    .replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${leadImage}">`)
+    .replace('<h1 class="section-title">Wedding Dress Rentals in Rajkot</h1>', `<h1 class="section-title">${esc(config.heading)}</h1>`)
+    .replace(/<p class="section-description">[\s\S]*?<\/p>/, `<p class="section-description">${esc(config.description)}</p>`)
+    .replace(allCardsHtml, cardsHtml)
+    .replace(/        <div class="fullscreen-filter-tabs"[\s\S]*?        <div class="fullscreen-collections-grid"/, '        <div class="fullscreen-collections-grid"')
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`)
+    .replaceAll('src="img/', 'src="/img/')
+    .replace('href="css2.css"', 'href="/css2.css"')
+    .replace('href="styles.css"', 'href="/styles.css"');
+}
+
 fs.writeFileSync('all-collections.html', page);
+
+fs.mkdirSync('collections', { recursive: true });
+CATEGORY_PAGES.forEach((config) => {
+  fs.writeFileSync(categoryPagePath(config), categoryLandingPage(config));
+});
 
 fs.mkdirSync('products', { recursive: true });
 collections.forEach((item) => {
@@ -1093,7 +1363,7 @@ const productSitemap = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${collections.map((item) => `  <url>
     <loc>${productUrl(item)}</loc>
-    <lastmod>${LAST_MODIFIED}</lastmod>
+    <lastmod>${PRODUCTS_LAST_MODIFIED}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1132,6 +1402,21 @@ const pagesSitemap = `<?xml version="1.0" encoding="UTF-8"?>
       <image:caption>${esc(collections[0]?.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.')}</image:caption>
     </image:image>
   </url>
+${CATEGORY_PAGES.map((config) => {
+  const items = collections.filter(config.matches);
+  const leadItem = items[0] || {};
+  return `  <url>
+    <loc>${categoryPageUrl(config)}</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>${absoluteUrl(leadItem.img || 'img/logo/logo.png')}</image:loc>
+      <image:title>${esc(config.heading)}</image:title>
+      <image:caption>${esc(config.description)}</image:caption>
+    </image:image>
+  </url>`;
+}).join('\n')}
 </urlset>
 `;
 
@@ -1145,10 +1430,11 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
   </sitemap>
   <sitemap>
     <loc>${SITE_URL}/sitemap_products.xml</loc>
-    <lastmod>${LAST_MODIFIED}</lastmod>
+    <lastmod>${PRODUCTS_LAST_MODIFIED}</lastmod>
   </sitemap>
 </sitemapindex>
 `;
 
 fs.writeFileSync('sitemap.xml', sitemapIndex);
+updateHomepagePreRenderedCards();
 console.log(`Generated all collection/product pages plus SEO sitemaps for ${collections.length} products.`);

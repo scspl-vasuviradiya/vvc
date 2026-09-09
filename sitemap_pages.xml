@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,13 +14,112 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/all-collections.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat</image:title>
       <image:caption>An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/sherwani.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
+      <image:title>Sherwani on Rent in Rajkot</image:title>
+      <image:caption>Explore premium wedding sherwanis for rent in Rajkot, with royal embroidery, groom-ready styling, multiple sizes and advance booking at Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/indowestern.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/black-legacy-indowestern.jpg</image:loc>
+      <image:title>Indo-Western Outfits on Rent in Rajkot</image:title>
+      <image:caption>Browse premium Indo-Western outfits for rent in Rajkot for weddings and receptions, with sizes and booking details from Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/jodhpuri.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg</image:loc>
+      <image:title>Jodhpuri Suits on Rent in Rajkot</image:title>
+      <image:caption>Discover designer Jodhpuri suits on rent in Rajkot for weddings and receptions. View styles, rental prices, sizes and booking details at Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/lehenga.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg</image:loc>
+      <image:title>Designer Lehengas on Rent in Rajkot</image:title>
+      <image:caption>Explore designer bridal and wedding lehengas for rent in Rajkot. Compare colours, styles and rental prices, then book your trial with Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/koti-kurta.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/imperial-ivory-koti-kurta.jpg</image:loc>
+      <image:title>Koti Kurta Sets on Rent in Rajkot</image:title>
+      <image:caption>Browse designer Koti Kurta sets on rent in Rajkot for weddings and festive events, with sizes, prices and booking details from Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/choli.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/women-choli-1.jpg</image:loc>
+      <image:title>Designer Cholis on Rent in Rajkot</image:title>
+      <image:caption>Explore designer cholis for rent in Rajkot for weddings, garba and festive occasions. View styles, rental prices and booking details at Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/suit.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/classic-men-s-suit.jpg</image:loc>
+      <image:title>Men’s Suits on Rent in Rajkot</image:title>
+      <image:caption>Browse stylish men’s suits for rent in Rajkot for weddings, receptions and formal events. View prices, sizes and booking details at Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/men.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
+      <image:title>Men’s Wedding Wear on Rent in Rajkot</image:title>
+      <image:caption>Explore sherwanis, Indo-Western outfits, Jodhpuri suits and Koti Kurta sets for men on rent in Rajkot at Vivah Villa Collection.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/collections/women.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg</image:loc>
+      <image:title>Women’s Wedding Wear on Rent in Rajkot</image:title>
+      <image:caption>Browse designer lehengas and cholis for women on rent in Rajkot for weddings and festive occasions at Vivah Villa Collection.</image:caption>
     </image:image>
   </url>
 </urlset>
