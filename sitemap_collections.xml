@@ -3,11 +3,16 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/all-collections.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat</image:title>
       <image:caption>An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg</image:loc>
+      <image:title>Rajsi peacock Heritage Indowestern</image:title>
+      <image:caption>A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-mayur-royal.jpg</image:loc>
@@ -138,11 +143,6 @@
       <image:loc>https://vivahvilla.in/img/collections/the-royal-tapestry-indowestern.jpg</image:loc>
       <image:title>The Royal Tapestry Indowestern</image:title>
       <image:caption>A white Indian groom's outfit featuring intricate peacock motifs and ornate gold embroidery.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg</image:loc>
-      <image:title>Rajsi peacock Heritage Indowestern</image:title>
-      <image:caption>A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/midnight-cavalier-indowestern.jpg</image:loc>
