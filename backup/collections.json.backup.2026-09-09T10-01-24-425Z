@@ -17,21 +17,6 @@
   {
     "tags": [
       "men",
-      "indowestern"
-    ],
-    "img": "img/collections/rajsi-peacock-heritage-indowestern.jpg",
-    "alt": "Indo-western for groom, Rajwadi outfit,Wedding wear for men, Luxury ethnic wear, Royal pastel outfit, Groom special collection, Sangeet outfit, Reception wear men,Shahi menswear, Traditional wedding attire, Premium festive wear, Rajkot style outfit, Vivah Villa collection",
-    "title": "Rajsi peacock Heritage Indowestern",
-    "desc": "A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs.",
-    "price": "₹3999/-",
-    "active": true,
-    "sellingPrice": "0",
-    "size": "36, 38, 40",
-    "reelUrl": "https://www.instagram.com/reel/DTXzagNjJYG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-  },
-  {
-    "tags": [
-      "men",
       "sherwani"
     ],
     "img": "img/collections/rajsi-mayur-royal.jpg",
@@ -418,6 +403,21 @@
     "size": "36, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DZzz3f4zSF7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/rajsi-peacock-heritage-indowestern.jpg",
+    "alt": "Indo-western for groom, Rajwadi outfit,Wedding wear for men, Luxury ethnic wear, Royal pastel outfit, Groom special collection, Sangeet outfit, Reception wear men,Shahi menswear, Traditional wedding attire, Premium festive wear, Rajkot style outfit, Vivah Villa collection",
+    "title": "Rajsi peacock Heritage Indowestern",
+    "desc": "A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs.",
+    "price": "₹3999/-",
+    "active": true,
+    "sellingPrice": "0",
+    "size": "36, 38, 40",
+    "reelUrl": "https://www.instagram.com/reel/DTXzagNjJYG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
@@ -1026,7 +1026,7 @@
     ],
     "img": "img/collections/dusk-bloom-indo-western.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "reelUrl": "https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+    "reelUrl": "",
     "title": "Dusk Bloom Indo-Western",
     "desc": "This deep mauve attire stands out with its intricate white bead detailing and bold floral patterns.",
     "price": "₹3499/-",
@@ -1131,7 +1131,7 @@
     ],
     "img": "img/collections/floral-royale-indowestern.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, ModernEthanicWear",
-    "reelUrl": "https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+    "reelUrl": "https://www.instagram.com/reel/DSnEJ7djFoS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     "title": "Floral Royale indowestern",
     "desc": "Luxury floral craftsmanship with a royal touch.",
     "price": "₹3499/-",
