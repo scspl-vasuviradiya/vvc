@@ -431,17 +431,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://vivahvilla.in/products/mehendi-majesty-lehnga.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/women-lehenga-4.jpg</image:loc>
-      <image:title>Mehendi Majesty Lehnga</image:title>
-      <image:caption>A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://vivahvilla.in/products/peach-blossom-charm-lehnga.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -450,6 +439,17 @@
       <image:loc>https://vivahvilla.in/img/collections/women-lehenga-5.jpg</image:loc>
       <image:title>Peach Blossom Charm Lehnga</image:title>
       <image:caption>A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/products/mehendi-majesty-lehnga.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg</image:loc>
+      <image:title>Mehendi Majesty Lehnga</image:title>
+      <image:caption>A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.</image:caption>
     </image:image>
   </url>
   <url>
@@ -1264,17 +1264,6 @@
       <image:loc>https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg</image:loc>
       <image:title>Shahi Safed Elegance</image:title>
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://vivahvilla.in/products/elegant-mehndi-lehenga.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/elegant-mehndi-lehenga.jpg</image:loc>
-      <image:title>Elegant Mehndi Lehenga</image:title>
-      <image:caption>An elegant olive-green lehenga choli featuring intricate all-over jardosi hand work and floral motifs, paired beautifully with a matching sheer dupatta.</image:caption>
     </image:image>
   </url>
   <url>

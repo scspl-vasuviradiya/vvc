@@ -604,12 +604,12 @@
       "women",
       "lehenga"
     ],
-    "img": "img/collections/mehendi-majesty-lehnga.jpg",
+    "img": "img/collections/women-lehenga-4.jpg",
     "alt": "Lehenga, Bridal, Embroidered, Green, Mehndi, Traditional, Ethnic, Festive, Designer, Indian, Choli",
     "title": "Mehendi Majesty Lehnga",
     "desc": "A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.",
     "price": "₹4999/-",
-    "active": true,
+    "active": false,
     "sellingPrice": "0",
     "size": "0",
     "reelUrl": ""
@@ -1752,7 +1752,7 @@
     "price": "4999/-",
     "sellingPrice": "0",
     "size": "free",
-    "active": false
+    "active": true
   },
   {
     "tags": [

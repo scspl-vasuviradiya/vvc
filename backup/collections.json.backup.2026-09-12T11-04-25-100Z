@@ -589,11 +589,11 @@
       "women",
       "lehenga"
     ],
-    "img": "img/collections/women-lehenga-5.jpg",
-    "alt": "Lehenga, Embroidered, Ethnic, Traditional, Bridal, Festive, Indian, Choli, Westurn were",
-    "title": "Peach Blossom Charm Lehnga",
-    "desc": "A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta.",
-    "price": "₹2999/-",
+    "img": "img/collections/women-lehenga-4.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Green, Mehndi, Traditional, Ethnic, Festive, Designer, Indian, Choli",
+    "title": "Mehendi Majesty Lehnga",
+    "desc": "A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.",
+    "price": "₹4999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -604,11 +604,11 @@
       "women",
       "lehenga"
     ],
-    "img": "img/collections/mehendi-majesty-lehnga.jpg",
-    "alt": "Lehenga, Bridal, Embroidered, Green, Mehndi, Traditional, Ethnic, Festive, Designer, Indian, Choli",
-    "title": "Mehendi Majesty Lehnga",
-    "desc": "A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.",
-    "price": "₹4999/-",
+    "img": "img/collections/women-lehenga-5.jpg",
+    "alt": "Lehenga, Embroidered, Ethnic, Traditional, Bridal, Festive, Indian, Choli, Westurn were",
+    "title": "Peach Blossom Charm Lehnga",
+    "desc": "A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta.",
+    "price": "₹2999/-",
     "active": true,
     "sellingPrice": "0",
     "size": "0",
@@ -1752,7 +1752,7 @@
     "price": "4999/-",
     "sellingPrice": "0",
     "size": "free",
-    "active": false
+    "active": true
   },
   {
     "tags": [
