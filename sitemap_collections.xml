@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/all-collections.html</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat</image:title>
@@ -578,6 +578,31 @@
       <image:loc>https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg</image:loc>
       <image:title>Shahi Safed Elegance</image:title>
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/elegant-mehndi-lehenga.jpg</image:loc>
+      <image:title>Elegant Mehndi Lehenga</image:title>
+      <image:caption>An elegant olive-green lehenga choli featuring intricate all-over jardosi hand work and floral motifs, paired beautifully with a matching sheer dupatta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
+      <image:title>Shimmering Ice-Blue Elegance</image:title>
+      <image:caption>A modern ice-blue lehenga featuring all-over linear sequin and beads hand work, scalloped-border net dupatta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg</image:loc>
+      <image:title>Pastel Pink Floral Lehenga</image:title>
+      <image:caption>A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and a soft ruffled border drape.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg</image:loc>
+      <image:title>Teal Blue Embroidered Lehenga</image:title>
+      <image:caption>A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin highlights, perfect for an evening reception.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg</image:loc>
+      <image:title>Shimmering Ice-Blue Ruffled Lehenga</image:title>
+      <image:caption>A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.</image:caption>
     </image:image>
   </url>
 </urlset>
