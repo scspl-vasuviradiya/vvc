@@ -5,6 +5,16 @@
     <loc>https://vivahvilla.in/all-collections.html</loc>
     <lastmod>2026-09-13</lastmod>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
+      <image:title>Imperial Bloom</image:title>
+      <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg</image:loc>
+      <image:title>Golden Heritage Sherwani</image:title>
+      <image:caption>A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat</image:title>
       <image:caption>An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.</image:caption>
@@ -95,6 +105,21 @@
       <image:caption>A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
+      <image:title>Shimmering Ice-Blue Elegance</image:title>
+      <image:caption>A modern ice-blue lehenga featuring all-over linear sequin and beads hand work, scalloped-border net dupatta.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg</image:loc>
+      <image:title>Pastel Pink Floral Lehenga</image:title>
+      <image:caption>A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and a soft ruffled border drape.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg</image:loc>
+      <image:title>Teal Blue Embroidered Lehenga</image:title>
+      <image:caption>A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin highlights, perfect for an evening reception.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/ivory-signature-indowestern.jpg</image:loc>
       <image:title>Ivory Signature indowestern</image:title>
       <image:caption>Crafted in luxurious ivory fabric, this Jodhpuri features intricate floral embroidery and shimmering handcrafted detailing, creating a refined look for weddings and grand celebrations.</image:caption>
@@ -103,6 +128,16 @@
       <image:loc>https://vivahvilla.in/img/collections/royal-sapphire-drape-indowestern.jpg</image:loc>
       <image:title>Royal Sapphire Drape Indowestern</image:title>
       <image:caption>A majestic cobalt-blue look featuring intricate silver glass bead detailing for a high-fashion Sangeet or reception.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg</image:loc>
+      <image:title>Shimmering Ice-Blue Ruffled Lehenga</image:title>
+      <image:caption>A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg</image:loc>
+      <image:title>Mehendi Majesty Lehnga</image:title>
+      <image:caption>A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/woven-legacy-koti-kurta.jpg</image:loc>
@@ -170,14 +205,44 @@
       <image:caption>This Jodhpuri suit featuring intricate black bead detailing along the borders.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/elite-groom-rose-gold-sherwani.jpg</image:loc>
+      <image:title>Elite Groom Rose Gold Sherwani</image:title>
+      <image:caption>A premium rose goldsherwani featuring intricate embroidery, a matching stole, and regal accessories—crafted to deliver a graceful and majestic groom's look for your special day.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/midnight-bloom-jodhpuri.jpg</image:loc>
+      <image:title>Midnight Bloom Jodhpuri</image:title>
+      <image:caption>It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/maroon-monarch.jpg</image:loc>
+      <image:title>Maroon Monarch</image:title>
+      <image:caption>A deep maroon Indo-Western adorned with intricate mirror work and handcrafted detailing, offering a bold royal look for weddings, receptions, and festive celebrations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/mirror-luxe-black.jpg</image:loc>
+      <image:title>Mirror Luxe Black</image:title>
+      <image:caption>Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg</image:loc>
+      <image:title>Lavender Smoke Indowestern</image:title>
+      <image:caption>A sleek monochrome silhouette featuring subtle metallic threadwork and intricate patterns for an evening reception.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg</image:loc>
+      <image:title>Dusk Bloom Indo-Western</image:title>
+      <image:caption>This deep mauve attire stands out with its intricate white bead detailing and bold floral patterns.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg</image:loc>
+      <image:title>Modern Asymmetric Fusion Jodhpuri</image:title>
+      <image:caption>A premium fusion ensemble crafted for the modern groom.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/classic-black-velvet-indowestern.jpg</image:loc>
       <image:title>Classic black Velvet Indowestern</image:title>
       <image:caption>A sleek black Indo-Western outfit featuring striking silver and mint-green floral embroidery alongside elegant swan motifs.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg</image:loc>
-      <image:title>Regal Cream Sherwani</image:title>
-      <image:caption>An ivory groom's sherwani adorned with subtle self-textured embroidery.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/maharani-s-legacy-lehenga.jpg</image:loc>
@@ -205,11 +270,6 @@
       <image:caption>A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg</image:loc>
-      <image:title>Mehendi Majesty Lehnga</image:title>
-      <image:caption>A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/midnight-majesty-lehnga.jpg</image:loc>
       <image:title>Midnight Majesty Lehnga</image:title>
       <image:caption>A navy blue lehenga choli featuring a scalloped geometric skirt pattern and an intricately bordered mint green dupatta.</image:caption>
@@ -228,21 +288,6 @@
       <image:loc>https://vivahvilla.in/img/collections/women-choli-3.jpg</image:loc>
       <image:title>Ethereal Bloom Lehnga</image:title>
       <image:caption>A beige and light pink lehenga choli featuring intricate white popballs work, and detailed peacock embroidery along the flared skirt border.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg</image:loc>
-      <image:title>Lavender Bloom Lehenga</image:title>
-      <image:caption>A slate purple lehenga choli featuring vertical silver bead work, circular white floral motifs, and a matching sheer mauve silk dupatta.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/women-choli-5.jpg</image:loc>
-      <image:title>Mystic Grey Lehenga</image:title>
-      <image:caption>A silver-grey lehenga choli heavily embellished with intricate white beads work.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/the-peacock-prince.jpg</image:loc>
-      <image:title>The Peacock Prince Indowestern</image:title>
-      <image:caption>An off-white Indo-Western featuring multi-colored embroidered peacock motifs flanking the front button placket.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/classic-men-s-suit.jpg</image:loc>
@@ -285,29 +330,9 @@
       <image:caption>Black Indo-Western elevated with elegant mirror work.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg</image:loc>
-      <image:title>Modern Asymmetric Fusion Jodhpuri</image:title>
-      <image:caption>A premium fusion ensemble crafted for the modern groom.</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/ivory-pastel-mirror-indowestern.jpg</image:loc>
       <image:title>Ivory Pastel Mirror Indowestern</image:title>
       <image:caption>Pastel hues elevated with intricate mirror craftsmanship.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg</image:loc>
-      <image:title>Royal White Long Indowestern</image:title>
-      <image:caption>A graceful blend of heritage embroidery and modern silhouette.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg</image:loc>
-      <image:title>Black Crown Long Indowestern</image:title>
-      <image:caption>Designed for men who carry heritage with confidence.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg</image:loc>
-      <image:title>Ocean Dusk Jodhpuri</image:title>
-      <image:caption>A refined long Indo-Western crafted in deep teal elegance.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/neelmayur-royale-indowestern.jpg</image:loc>
@@ -340,11 +365,6 @@
       <image:caption>Focuses on the pristine cream/ivory color palette combined with stately wedding accessories.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg</image:loc>
-      <image:title>Dusk Bloom Indo-Western</image:title>
-      <image:caption>This deep mauve attire stands out with its intricate white bead detailing and bold floral patterns.</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/stealth-luxury-indowestern.jpg</image:loc>
       <image:title>Stealth Luxury Indowestern</image:title>
       <image:caption>A sharp, layered black outfit featuring tone-on-tone embroidery and subtle beadwork highlights.</image:caption>
@@ -358,11 +378,6 @@
       <image:loc>https://vivahvilla.in/img/collections/multicolored-mosaic-jodhpuri.jpg</image:loc>
       <image:title>Multicolored Mosaic Jodhpuri</image:title>
       <image:caption>A sharp ivory silhouette covered in a rich tapestry of multicolored geometric and floral threadwork.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg</image:loc>
-      <image:title>Lavender Smoke Indowestern</image:title>
-      <image:caption>A sleek monochrome silhouette featuring subtle metallic threadwork and intricate patterns for an evening reception.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/royal-azure-peacock-indowestern.jpg</image:loc>
@@ -385,19 +400,9 @@
       <image:caption>Classic tones and premium craftsmanship create a look that never goes out of style.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/elite-groom-rose-gold-sherwani.jpg</image:loc>
-      <image:title>Elite Groom Rose Gold Sherwani</image:title>
-      <image:caption>A premium rose goldsherwani featuring intricate embroidery, a matching stole, and regal accessories—crafted to deliver a graceful and majestic groom's look for your special day.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/mirror-luxe-black.jpg</image:loc>
-      <image:title>Mirror Luxe Black</image:title>
-      <image:caption>Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/midnight-bloom-jodhpuri.jpg</image:loc>
-      <image:title>Midnight Bloom Jodhpuri</image:title>
-      <image:caption>It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.</image:caption>
+      <image:loc>https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg</image:loc>
+      <image:title>Regal Cream Sherwani</image:title>
+      <image:caption>An ivory groom's sherwani adorned with subtle self-textured embroidery.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/the-gajraj-edit.jpg</image:loc>
@@ -418,11 +423,6 @@
       <image:loc>https://vivahvilla.in/img/collections/timeless-maharaja.jpg</image:loc>
       <image:title>Timeless Maharaja</image:title>
       <image:caption>A masterpiece of royal craftsmanship, this sherwani showcases intricate all-over embroidery with heritage-inspired motifs. Paired with a matching stole, regal pearl mala, and elegant safa, it creates a timeless look for the groom who values sophistication and tradition.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/maroon-monarch.jpg</image:loc>
-      <image:title>Maroon Monarch</image:title>
-      <image:caption>A deep maroon Indo-Western adorned with intricate mirror work and handcrafted detailing, offering a bold royal look for weddings, receptions, and festive celebrations.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-noor.jpg</image:loc>
@@ -480,14 +480,29 @@
       <image:caption>A bold and regal name that perfectly complements the all-black embroidered design and luxurious royal appeal of this jodhpuri ensemble</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-peacock-prince.jpg</image:loc>
+      <image:title>The Peacock Prince Indowestern</image:title>
+      <image:caption>An off-white Indo-Western featuring multi-colored embroidered peacock motifs flanking the front button placket.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/off-white-emperor.jpg</image:loc>
       <image:title>Off  white Emperor</image:title>
       <image:caption>A timeless and luxurious name that perfectly reflects the regal Off white tone, intricate embroidery, and royal elegance of this groom's sherwani</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/women-choli-5.jpg</image:loc>
+      <image:title>Mystic Grey Lehenga</image:title>
+      <image:caption>A silver-grey lehenga choli heavily embellished with intricate white beads work.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/celestial-maharaja.jpg</image:loc>
       <image:title>Celestial Maharaja</image:title>
       <image:caption>An exquisitely embroidered sherwani with regal detailing, crafted for a timeless and sophisticated groom's look.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg</image:loc>
+      <image:title>Lavender Bloom Lehenga</image:title>
+      <image:caption>A slate purple lehenga choli featuring vertical silver bead work, circular white floral motifs, and a matching sheer mauve silk dupatta.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/royal-off-white-crest.jpg</image:loc>
@@ -570,44 +585,29 @@
       <image:caption>Grace your wedding day in regal style with this premium ivory embroidered sherwani, paired with a vibrant red stole and traditional safa for a timeless royal look. Perfect for the modern groom.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg</image:loc>
+      <image:title>Black Crown Long Indowestern</image:title>
+      <image:caption>Designed for men who carry heritage with confidence.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg</image:loc>
+      <image:title>Ocean Dusk Jodhpuri</image:title>
+      <image:caption>A refined long Indo-Western crafted in deep teal elegance.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shahi-safed-sherwani.jpg</image:loc>
       <image:title>Shehenshah Sherwani</image:title>
       <image:caption>It perfectly matches the elegant ivory embroidery paired with the traditional red safa and stole, giving a timeless royal groom look.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg</image:loc>
+      <image:title>Royal White Long Indowestern</image:title>
+      <image:caption>A graceful blend of heritage embroidery and modern silhouette.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg</image:loc>
       <image:title>Shahi Safed Elegance</image:title>
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
-      <image:title>Shimmering Ice-Blue Elegance</image:title>
-      <image:caption>A modern ice-blue lehenga featuring all-over linear sequin and beads hand work, scalloped-border net dupatta.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg</image:loc>
-      <image:title>Pastel Pink Floral Lehenga</image:title>
-      <image:caption>A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and a soft ruffled border drape.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg</image:loc>
-      <image:title>Teal Blue Embroidered Lehenga</image:title>
-      <image:caption>A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin highlights, perfect for an evening reception.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg</image:loc>
-      <image:title>Shimmering Ice-Blue Ruffled Lehenga</image:title>
-      <image:caption>A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
-      <image:title>Imperial Bloom</image:title>
-      <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg</image:loc>
-      <image:title>Golden Heritage Sherwani</image:title>
-      <image:caption>A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.</image:caption>
     </image:image>
   </url>
 </urlset>
