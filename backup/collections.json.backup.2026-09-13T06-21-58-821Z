@@ -1828,20 +1828,5 @@
     "sellingPrice": "0",
     "size": "36",
     "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/golden-heritage-sherwani.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "",
-    "title": "Golden Heritage Sherwani",
-    "desc": "A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.",
-    "price": "₹8999/-",
-    "sellingPrice": "0",
-    "size": "42",
-    "active": true
   }
 ]

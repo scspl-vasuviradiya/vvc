@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/all-collections.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat</image:title>
@@ -598,6 +598,16 @@
       <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg</image:loc>
       <image:title>Shimmering Ice-Blue Ruffled Lehenga</image:title>
       <image:caption>A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
+      <image:title>Imperial Bloom</image:title>
+      <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg</image:loc>
+      <image:title>Golden Heritage Sherwani</image:title>
+      <image:caption>A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.</image:caption>
     </image:image>
   </url>
 </urlset>
