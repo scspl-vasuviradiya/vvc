@@ -332,6 +332,21 @@
   {
     "tags": [
       "women",
+      "lehenga"
+    ],
+    "img": "img/collections/elegant-mehndi-lehenga.jpg",
+    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Designer, Regal, Celebration Attire, Vibrant",
+    "reelUrl": "",
+    "title": "Elegant Mehndi Lehenga",
+    "desc": "An elegant olive-green lehenga choli featuring intricate all-over jardosi hand work and floral motifs, paired beautifully with a matching sheer dupatta.",
+    "price": "4999/-",
+    "sellingPrice": "0",
+    "size": "free",
+    "active": false
+  },
+  {
+    "tags": [
+      "women",
       "choli"
     ],
     "img": "img/collections/teal-blue-embroidered-lehenga.jpg",
@@ -1648,21 +1663,6 @@
     "sellingPrice": "0",
     "size": "36, 42",
     "active": true
-  },
-  {
-    "tags": [
-      "women",
-      "lehenga"
-    ],
-    "img": "img/collections/elegant-mehndi-lehenga.jpg",
-    "alt": "Lehenga, Bridal, Embroidered, Traditional, Festive, Grand, Ethnic, Opulent, Indian, Designer, Regal, Celebration Attire, Vibrant",
-    "reelUrl": "",
-    "title": "Elegant Mehndi Lehenga",
-    "desc": "An elegant olive-green lehenga choli featuring intricate all-over jardosi hand work and floral motifs, paired beautifully with a matching sheer dupatta.",
-    "price": "4999/-",
-    "sellingPrice": "0",
-    "size": "free",
-    "active": false
   },
   {
     "tags": [
