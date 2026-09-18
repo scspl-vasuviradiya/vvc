@@ -174,13 +174,6 @@ function productCategoryPage(item) {
   return CATEGORY_PAGES.find((config) => config.matches(item)) || null;
 }
 
-function categoryNavigation() {
-  return `<nav aria-label="Browse outfit categories" style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:0 auto 28px;">
-          <a class="btn btn-outline" href="/all-collections.html">All Collections</a>
-${CATEGORY_PAGES.map((config) => `          <a class="btn btn-outline" href="/${categoryPagePath(config)}">${esc(config.name)}</a>`).join('\n')}
-        </nav>`;
-}
-
 function productPath(item) {
   return `products/${item.slug}.html`;
 }
@@ -1002,7 +995,6 @@ const page = `<!DOCTYPE html>
           </p>
         </div>
       <div class="fullscreen-panel-content">
-        ${categoryNavigation()}
         <div class="fullscreen-filter-tabs" id="fullscreenFilterTabs" role="tablist" aria-label="Collection filters">
           <button class="fullscreen-filter-tab active" data-filter="all" type="button" role="tab" aria-selected="true">
             <span>All Collections</span>
