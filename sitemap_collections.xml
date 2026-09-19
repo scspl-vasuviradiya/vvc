@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/all-collections.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
       <image:title>Imperial Bloom</image:title>
@@ -300,6 +300,11 @@
       <image:caption>A white Jodhpuri suit featuring geometric pastel threadwork panels, and linear mirror-work embellishments.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg</image:loc>
+      <image:title>Ocean Dusk Jodhpuri</image:title>
+      <image:caption>A refined long Indo-Western crafted in deep teal elegance.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg</image:loc>
       <image:title>The Royal Wine jodhpuri</image:title>
       <image:caption>A deep wine Jodhpuri suit featuring striking geometric panels of beads work and subtle sequin embroidery.</image:caption>
@@ -588,11 +593,6 @@
       <image:loc>https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg</image:loc>
       <image:title>Black Crown Long Indowestern</image:title>
       <image:caption>Designed for men who carry heritage with confidence.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg</image:loc>
-      <image:title>Ocean Dusk Jodhpuri</image:title>
-      <image:caption>A refined long Indo-Western crafted in deep teal elegance.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shahi-safed-sherwani.jpg</image:loc>

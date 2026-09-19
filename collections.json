@@ -9,8 +9,8 @@
     "reelUrl": "",
     "title": "Imperial Bloom",
     "desc": "A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look.",
-    "price": "₹5999/-",
-    "sellingPrice": "0",
+    "price": "₹6999/-",
+    "sellingPrice": "₹19999/-",
     "size": "36",
     "active": true
   },
@@ -25,7 +25,7 @@
     "title": "Golden Heritage Sherwani",
     "desc": "A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.",
     "price": "₹8999/-",
-    "sellingPrice": "0",
+    "sellingPrice": "₹27999/-",
     "size": "42",
     "active": true
   },
@@ -207,7 +207,7 @@
     "sellingPrice": "₹11999/-",
     "size": "38, 42",
     "active": true,
-    "reelUrl": ""
+    "reelUrl": "https://www.instagram.com/p/DdVc67NDGaQ/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
   },
   {
     "tags": [
@@ -220,7 +220,7 @@
     "title": "Rajsi Patola",
     "desc": "Rich Patola-inspired embroidery on a vibrant crimson koti, paired with an elegant ivory kurta for a timeless royal look—perfect for weddings and festive celebrations.",
     "price": "₹2999/-",
-    "sellingPrice": "0",
+    "sellingPrice": "₹13499/-",
     "size": "36, 40",
     "active": true
   },
@@ -640,7 +640,7 @@
     "title": "Maroon Monarch",
     "desc": "A deep maroon Indo-Western adorned with intricate mirror work and handcrafted detailing, offering a bold royal look for weddings, receptions, and festive celebrations.",
     "price": "₹2999/-",
-    "sellingPrice": "0",
+    "sellingPrice": "₹10499/-",
     "size": "34, 36, 38, 40, 42",
     "active": true
   },
@@ -651,7 +651,7 @@
     ],
     "img": "img/collections/mirror-luxe-black.jpg",
     "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/DdbjCZLOl2y/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Mirror Luxe Black",
     "desc": "Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.",
     "price": "₹2999/-",
@@ -700,7 +700,7 @@
     "title": "Modern Asymmetric Fusion Jodhpuri",
     "desc": "A premium fusion ensemble crafted for the modern groom.",
     "price": "₹2999/-",
-    "sellingPrice": "0",
+    "sellingPrice": "₹10499/-",
     "size": "34, 36, 38, 40, 42",
     "active": true
   },
@@ -889,14 +889,14 @@
       "men",
       "open Jodhpuris"
     ],
-    "img": "img/collections/navy-blue-beats-jodhpuri.jpg",
-    "alt": "Navy blue, beads work, Jodhpuri, Sherwani, Ethnic, Formal, Traditional, Embroidered, Regal, Indian, Wedding",
-    "title": "Navy blue beats Jodhpuri",
-    "desc": "A deep blue Jodhpuri suit featuring subtle geometric quilted pattern, and dark bead work along the borders and sleeves.",
+    "img": "img/collections/ocean-dusk-jodhpuri.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Blue, Rama",
+    "title": "Ocean Dusk Jodhpuri",
+    "desc": "A refined long Indo-Western crafted in deep teal elegance.",
     "price": "₹1999/-",
-    "active": false,
+    "active": true,
     "sellingPrice": "0",
-    "size": "38, 40, 42",
+    "size": "36, 38, 40",
     "reelUrl": ""
   },
   {
@@ -1789,14 +1789,14 @@
       "men",
       "open Jodhpuris"
     ],
-    "img": "img/collections/ocean-dusk-jodhpuri.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, Blue, Rama",
-    "title": "Ocean Dusk Jodhpuri",
-    "desc": "A refined long Indo-Western crafted in deep teal elegance.",
+    "img": "img/collections/navy-blue-beats-jodhpuri.jpg",
+    "alt": "Navy blue, beads work, Jodhpuri, Sherwani, Ethnic, Formal, Traditional, Embroidered, Regal, Indian, Wedding",
+    "title": "Navy blue beats Jodhpuri",
+    "desc": "A deep blue Jodhpuri suit featuring subtle geometric quilted pattern, and dark bead work along the borders and sleeves.",
     "price": "₹1999/-",
-    "active": true,
+    "active": false,
     "sellingPrice": "0",
-    "size": "36, 38, 40",
+    "size": "38, 40, 42",
     "reelUrl": ""
   },
   {
