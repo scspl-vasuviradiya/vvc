@@ -1254,7 +1254,7 @@
     "reelUrl": "",
     "title": "Shehenshah Ivory",
     "desc": "A luxurious off-white sherwani featuring intricate heritage embroidery, regal pearl layering, and timeless royal elegance, crafted for the modern groom who commands attention.",
-    "price": "₹5999/-",
+    "price": "₹6999/-",
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
     "active": true
@@ -1857,21 +1857,6 @@
     "price": "₹3999/-",
     "sellingPrice": "₹19999/-",
     "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/maharaja-s-legacy-sherwani.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "",
-    "title": "Maharaja’s Legacy Sherwani",
-    "desc": "A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom.",
-    "price": "₹6999/-",
-    "sellingPrice": "₹19999/-",
-    "size": "34, 38, 42",
     "active": true
   }
 ]

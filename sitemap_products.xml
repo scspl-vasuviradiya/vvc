@@ -1332,4 +1332,26 @@
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://vivahvilla.in/products/the-royal-peacock.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
+      <image:title>The Royal Peacock</image:title>
+      <image:caption>A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vivahvilla.in/products/maharaja-s-legacy-sherwani.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg</image:loc>
+      <image:title>Maharaja’s Legacy Sherwani</image:title>
+      <image:caption>A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom.</image:caption>
+    </image:image>
+  </url>
 </urlset>
