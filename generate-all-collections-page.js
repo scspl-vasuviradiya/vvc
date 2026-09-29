@@ -232,6 +232,8 @@ function card(item, index) {
   const desc = item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.';
   const alt = imageAlt(item);
   const price = cleanText(item.price || 'Price on request');
+  const whatsappMessage = `Hello, I want to rent this outfit.\n\nProduct: ${title}\n${absoluteUrl(img)}`;
+  const whatsappUrl = `https://wa.me/919099055844?text=${encodeURIComponent(whatsappMessage)}`;
   const eager = index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
   const sizeHtml = isVisibleValue(item.size)
     ? `\n              <p class="collection-meta"><span>Sizes:</span> ${esc(item.size)}</p>`
@@ -251,6 +253,7 @@ function card(item, index) {
               <h3 class="collection-title"><a href="/${esc(productPath(item))}">${esc(title)}</a></h3>
               <p class="collection-description">${esc(desc)}</p>
               <p class="collection-price"><span>Rent:</span> ${esc(price)}</p>${sizeHtml}${sellingPriceHtml}${reelHtml}
+              <p class="collection-whatsapp"><a href="${esc(whatsappUrl)}" target="_blank" rel="noopener" aria-label="Enquire about ${esc(title)} on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>`;
 }
@@ -892,6 +895,32 @@ const page = `<!DOCTYPE html>
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
