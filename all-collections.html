@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -1980,7 +2005,7 @@
       "url": "https://vivahvilla.in/all-collections.html",
       "description": "Browse 123 premium wedding outfits for rent at Vivah Villa Collection in Rajkot.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-29",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },

@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -179,6 +204,32 @@
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
@@ -290,6 +341,7 @@
               <p class="collection-price"><span>Rent:</span> 7999/-</p>
               <p class="collection-meta"><span>Sizes:</span> free</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DdRP54YOx2N/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shimmering%20Ice-Blue%20Elegance%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshimmering-ice-blue-elegance.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shimmering Ice-Blue Elegance on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -301,6 +353,7 @@
               <p class="collection-description">A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and a soft ruffled border drape.</p>
               <p class="collection-price"><span>Rent:</span> 4999/-</p>
               <p class="collection-meta"><span>Sizes:</span> free</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Pastel%20Pink%20Floral%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fpastel-pink-floral-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Pastel Pink Floral Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -312,6 +365,7 @@
               <p class="collection-description">A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin highlights, perfect for an evening reception.</p>
               <p class="collection-price"><span>Rent:</span> 4999/-</p>
               <p class="collection-meta"><span>Sizes:</span> free</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Teal%20Blue%20Embroidered%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fteal-blue-embroidered-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Teal Blue Embroidered Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -323,6 +377,7 @@
               <p class="collection-description">A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.</p>
               <p class="collection-price"><span>Rent:</span> 5999/-</p>
               <p class="collection-meta"><span>Sizes:</span> free</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shimmering%20Ice-Blue%20Ruffled%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshimmering-ice-blue-ruffled-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shimmering Ice-Blue Ruffled Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -333,6 +388,7 @@
               <h3 class="collection-title"><a href="/products/mehendi-majesty-lehnga.html">Mehendi Majesty Lehnga</a></h3>
               <p class="collection-description">A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a matching net dupatta.</p>
               <p class="collection-price"><span>Rent:</span> ₹4999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Mehendi%20Majesty%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmehendi-majesty-lehnga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Mehendi Majesty Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -344,6 +400,7 @@
               <p class="collection-description">Delicate ivory hues with royal peacock artistry.</p>
               <p class="collection-price"><span>Rent:</span> ₹4999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DR9t4ErE6Vm/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ivory%20Peacock%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fivory-peacock-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ivory Peacock Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -355,6 +412,7 @@
               <p class="collection-description">An elegant ivory lehenga choli featuring intricate Pichwai-inspired panels of traditional cow, elephant, and floral motifs, finished with a multi-colored embroidered border.</p>
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DOTbSNKiN3S/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maharani%E2%80%99s%20Legacy%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaharani-s-legacy-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maharani’s Legacy Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -365,6 +423,7 @@
               <h3 class="collection-title"><a href="/products/pink-designer-lehenga.html">Pink Designer Lehenga</a></h3>
               <p class="collection-description">A vibrant pink lehenga choli adorned with multicolored floral threadwork, geometric panel embroidery, and a scalloped gold border.</p>
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Pink%20Designer%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwomen-lehenga-2.jpg" target="_blank" rel="noopener" aria-label="Enquire about Pink Designer Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -375,6 +434,7 @@
               <h3 class="collection-title"><a href="/products/elegant-red-lehenga.html">Elegant Red Lehenga</a></h3>
               <p class="collection-description">A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and traditional hand-embroidery.</p>
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Elegant%20Red%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Felegant-red-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Elegant Red Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -385,6 +445,7 @@
               <h3 class="collection-title"><a href="/products/peach-blossom-charm-lehnga.html">Peach Blossom Charm Lehnga</a></h3>
               <p class="collection-description">A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta.</p>
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Peach%20Blossom%20Charm%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwomen-lehenga-5.jpg" target="_blank" rel="noopener" aria-label="Enquire about Peach Blossom Charm Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|lehenga">
@@ -395,6 +456,7 @@
               <h3 class="collection-title"><a href="/products/midnight-majesty-lehnga.html">Midnight Majesty Lehnga</a></h3>
               <p class="collection-description">A navy blue lehenga choli featuring a scalloped geometric skirt pattern and an intricately bordered mint green dupatta.</p>
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Midnight%20Majesty%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmidnight-majesty-lehnga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Midnight Majesty Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -405,6 +467,7 @@
               <h3 class="collection-title"><a href="/products/heritage-rose-lehnga.html">Heritage Rose Lehnga</a></h3>
               <p class="collection-description">A bright pink lehenga choli featuring a high-neck blouse, paneled gold embroidery, and a matching sheer net dupatta.</p>
               <p class="collection-price"><span>Rent:</span> ₹1999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Heritage%20Rose%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwomen-choli-1.jpg" target="_blank" rel="noopener" aria-label="Enquire about Heritage Rose Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -415,6 +478,7 @@
               <h3 class="collection-title"><a href="/products/coral-charm-lehnga.html">Coral Charm Lehnga</a></h3>
               <p class="collection-description">A pastel peach lehenga choli featuring intricate ivory threadwork, delicate floral motifs.</p>
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Coral%20Charm%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fcoral-charm-lehnga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Coral Charm Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -426,6 +490,7 @@
               <p class="collection-description">A beige and light pink lehenga choli featuring intricate white popballs work, and detailed peacock embroidery along the flared skirt border.</p>
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DOvuBiZkv0k/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ethereal%20Bloom%20Lehnga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwomen-choli-3.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ethereal Bloom Lehnga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -436,6 +501,7 @@
               <h3 class="collection-title"><a href="/products/mystic-grey-lehenga.html">Mystic Grey Lehenga</a></h3>
               <p class="collection-description">A silver-grey lehenga choli heavily embellished with intricate white beads work.</p>
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Mystic%20Grey%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwomen-choli-5.jpg" target="_blank" rel="noopener" aria-label="Enquire about Mystic Grey Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="women|choli">
@@ -446,11 +512,30 @@
               <h3 class="collection-title"><a href="/products/lavender-bloom-lehenga.html">Lavender Bloom Lehenga</a></h3>
               <p class="collection-description">A slate purple lehenga choli featuring vertical silver bead work, circular white floral motifs, and a matching sheer mauve silk dupatta.</p>
               <p class="collection-price"><span>Rent:</span> ₹1499/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Lavender%20Bloom%20Lehenga%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Flavender-bloom-lehenga.jpg" target="_blank" rel="noopener" aria-label="Enquire about Lavender Bloom Lehenga on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right Women on Rent in Rajkot</h2>
+            <p>Browse designer lehengas and cholis for women on rent in Rajkot for weddings and festive occasions at Vivah Villa Collection. Browse 16 real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include <strong>women wedding dress on rent in Rajkot</strong>, <strong>bridal wear rental</strong>, <strong>women ethnic wear on rent</strong>. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              <a href="/collections/sherwani.html">Sherwani on rent in Rajkot</a><a href="/collections/indowestern.html">Indo-Western on rent in Rajkot</a><a href="/collections/jodhpuri.html">Jodhpuri on rent in Rajkot</a><a href="/collections/lehenga.html">Lehenga on rent in Rajkot</a><a href="/collections/koti-kurta.html">Koti Kurta on rent in Rajkot</a>
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>Women Rental FAQs</h2>
+            <details><summary>Where can I find women on rent in Rajkot?</summary><p>Vivah Villa Collection in Rajkot offers 16 Women styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.</p></details>
+            <details><summary>How can I book a Women outfit for rent?</summary><p>Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.</p></details>
+            <details><summary>Are Women rental sizes and prices shown online?</summary><p>Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.</p></details>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -531,7 +616,7 @@
       "url": "https://vivahvilla.in/collections/women.html",
       "description": "Browse designer lehengas and cholis for women on rent in Rajkot for weddings and festive occasions at Vivah Villa Collection.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },
@@ -558,7 +643,12 @@
               "@id": "https://vivahvilla.in/products/shimmering-ice-blue-elegance.html#product",
               "url": "https://vivahvilla.in/products/shimmering-ice-blue-elegance.html",
               "name": "Shimmering Ice-Blue Elegance",
-              "image": "https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg",
+                "caption": "Shimmering Ice-Blue Elegance. A modern ice-blue lehenga featuring all-over linear sequin and beads hand work, scalloped-border net dupatta. Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -577,7 +667,12 @@
               "@id": "https://vivahvilla.in/products/pastel-pink-floral-lehenga.html#product",
               "url": "https://vivahvilla.in/products/pastel-pink-floral-lehenga.html",
               "name": "Pastel Pink Floral Lehenga",
-              "image": "https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/pastel-pink-floral-lehenga.jpg",
+                "caption": "Pastel Pink Floral Lehenga. A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -596,7 +691,12 @@
               "@id": "https://vivahvilla.in/products/teal-blue-embroidered-lehenga.html#product",
               "url": "https://vivahvilla.in/products/teal-blue-embroidered-lehenga.html",
               "name": "Teal Blue Embroidered Lehenga",
-              "image": "https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg",
+                "caption": "Teal Blue Embroidered Lehenga. A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -615,7 +715,12 @@
               "@id": "https://vivahvilla.in/products/shimmering-ice-blue-ruffled-lehenga.html#product",
               "url": "https://vivahvilla.in/products/shimmering-ice-blue-ruffled-lehenga.html",
               "name": "Shimmering Ice-Blue Ruffled Lehenga",
-              "image": "https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shimmering-ice-blue-ruffled-lehenga.jpg",
+                "caption": "Shimmering Ice-Blue Ruffled Lehenga. A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -634,7 +739,12 @@
               "@id": "https://vivahvilla.in/products/mehendi-majesty-lehnga.html#product",
               "url": "https://vivahvilla.in/products/mehendi-majesty-lehnga.html",
               "name": "Mehendi Majesty Lehnga",
-              "image": "https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/mehendi-majesty-lehnga.jpg",
+                "caption": "Mehendi Majesty Lehnga. A stunning olive green lehenga choli heavily embellished with intricate silver zardozi embroidery and a... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -653,7 +763,12 @@
               "@id": "https://vivahvilla.in/products/ivory-peacock-lehenga.html#product",
               "url": "https://vivahvilla.in/products/ivory-peacock-lehenga.html",
               "name": "Ivory Peacock Lehenga",
-              "image": "https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ivory-peacock-lehenga.jpg",
+                "caption": "Ivory Peacock Lehenga. Delicate ivory hues with royal peacock artistry. Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -672,7 +787,12 @@
               "@id": "https://vivahvilla.in/products/maharani-s-legacy-lehenga.html#product",
               "url": "https://vivahvilla.in/products/maharani-s-legacy-lehenga.html",
               "name": "Maharani’s Legacy Lehenga",
-              "image": "https://vivahvilla.in/img/collections/maharani-s-legacy-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maharani-s-legacy-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maharani-s-legacy-lehenga.jpg",
+                "caption": "Maharani’s Legacy Lehenga. An elegant ivory lehenga choli featuring intricate Pichwai-inspired panels of traditional cow, elephant... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -691,7 +811,12 @@
               "@id": "https://vivahvilla.in/products/pink-designer-lehenga.html#product",
               "url": "https://vivahvilla.in/products/pink-designer-lehenga.html",
               "name": "Pink Designer Lehenga",
-              "image": "https://vivahvilla.in/img/collections/women-lehenga-2.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/women-lehenga-2.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/women-lehenga-2.jpg",
+                "caption": "Pink Designer Lehenga. A vibrant pink lehenga choli adorned with multicolored floral threadwork, geometric panel embroidery, and... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -710,7 +835,12 @@
               "@id": "https://vivahvilla.in/products/elegant-red-lehenga.html#product",
               "url": "https://vivahvilla.in/products/elegant-red-lehenga.html",
               "name": "Elegant Red Lehenga",
-              "image": "https://vivahvilla.in/img/collections/elegant-red-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/elegant-red-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/elegant-red-lehenga.jpg",
+                "caption": "Elegant Red Lehenga. A vibrant crimson red bridal lehenga featuring heavily flared multi-paneled chevron patterns and... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -729,7 +859,12 @@
               "@id": "https://vivahvilla.in/products/peach-blossom-charm-lehnga.html#product",
               "url": "https://vivahvilla.in/products/peach-blossom-charm-lehnga.html",
               "name": "Peach Blossom Charm Lehnga",
-              "image": "https://vivahvilla.in/img/collections/women-lehenga-5.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/women-lehenga-5.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/women-lehenga-5.jpg",
+                "caption": "Peach Blossom Charm Lehnga. A soft pink lehenga choli adorned with multicolored floral embroidery and a scalloped silver border dupatta. Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -748,7 +883,12 @@
               "@id": "https://vivahvilla.in/products/midnight-majesty-lehnga.html#product",
               "url": "https://vivahvilla.in/products/midnight-majesty-lehnga.html",
               "name": "Midnight Majesty Lehnga",
-              "image": "https://vivahvilla.in/img/collections/midnight-majesty-lehnga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/midnight-majesty-lehnga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/midnight-majesty-lehnga.jpg",
+                "caption": "Midnight Majesty Lehnga. A navy blue lehenga choli featuring a scalloped geometric skirt pattern and an intricately bordered mint... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Lehenga",
               "offers": {
                 "@type": "Offer",
@@ -767,7 +907,12 @@
               "@id": "https://vivahvilla.in/products/heritage-rose-lehnga.html#product",
               "url": "https://vivahvilla.in/products/heritage-rose-lehnga.html",
               "name": "Heritage Rose Lehnga",
-              "image": "https://vivahvilla.in/img/collections/women-choli-1.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/women-choli-1.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/women-choli-1.jpg",
+                "caption": "Heritage Rose Lehnga. A bright pink lehenga choli featuring a high-neck blouse, paneled gold embroidery, and a matching sheer... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -786,7 +931,12 @@
               "@id": "https://vivahvilla.in/products/coral-charm-lehnga.html#product",
               "url": "https://vivahvilla.in/products/coral-charm-lehnga.html",
               "name": "Coral Charm Lehnga",
-              "image": "https://vivahvilla.in/img/collections/coral-charm-lehnga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/coral-charm-lehnga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/coral-charm-lehnga.jpg",
+                "caption": "Coral Charm Lehnga. A pastel peach lehenga choli featuring intricate ivory threadwork, delicate floral motifs. Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -805,7 +955,12 @@
               "@id": "https://vivahvilla.in/products/ethereal-bloom-lehnga.html#product",
               "url": "https://vivahvilla.in/products/ethereal-bloom-lehnga.html",
               "name": "Ethereal Bloom Lehnga",
-              "image": "https://vivahvilla.in/img/collections/women-choli-3.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/women-choli-3.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/women-choli-3.jpg",
+                "caption": "Ethereal Bloom Lehnga. A beige and light pink lehenga choli featuring intricate white popballs work, and detailed peacock... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -824,7 +979,12 @@
               "@id": "https://vivahvilla.in/products/mystic-grey-lehenga.html#product",
               "url": "https://vivahvilla.in/products/mystic-grey-lehenga.html",
               "name": "Mystic Grey Lehenga",
-              "image": "https://vivahvilla.in/img/collections/women-choli-5.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/women-choli-5.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/women-choli-5.jpg",
+                "caption": "Mystic Grey Lehenga. A silver-grey lehenga choli heavily embellished with intricate white beads work. Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -843,7 +1003,12 @@
               "@id": "https://vivahvilla.in/products/lavender-bloom-lehenga.html#product",
               "url": "https://vivahvilla.in/products/lavender-bloom-lehenga.html",
               "name": "Lavender Bloom Lehenga",
-              "image": "https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/lavender-bloom-lehenga.jpg",
+                "caption": "Lavender Bloom Lehenga. A slate purple lehenga choli featuring vertical silver bead work, circular white floral motifs, and a... Women available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Women's Choli",
               "offers": {
                 "@type": "Offer",
@@ -878,6 +1043,36 @@
           "position": 3,
           "name": "Women",
           "item": "https://vivahvilla.in/collections/women.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vivahvilla.in/collections/women.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find women on rent in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vivah Villa Collection in Rajkot offers 16 Women styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a Women outfit for rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Women rental sizes and prices shown online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended."
+          }
         }
       ]
     }

@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -179,6 +204,32 @@
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
@@ -290,6 +341,7 @@
               <p class="collection-price"><span>Rent:</span> ₹8999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹27999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Golden%20Heritage%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fgolden-heritage-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Golden Heritage Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -302,6 +354,7 @@
               <p class="collection-price"><span>Rent:</span> ₹13999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DakzFpsM4PC/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Rajsi%20Virasat%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Frajsi-virasat.jpg" target="_blank" rel="noopener" aria-label="Enquire about Rajsi Virasat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -313,6 +366,7 @@
               <p class="collection-description">It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.</p>
               <p class="collection-price"><span>Rent:</span> ₹13999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 42, 44</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Rajsi%20Mayur%20Royal%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Frajsi-mayur-royal.jpg" target="_blank" rel="noopener" aria-label="Enquire about Rajsi Mayur Royal on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -324,6 +378,7 @@
               <p class="collection-description">A luxurious blush off white embroidered sherwani with a royal safa, matching stole, and elegant accessories—crafted for the groom who wants to make a majestic entrance. ✨</p>
               <p class="collection-price"><span>Rent:</span> ₹12999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Off%20White%20Maharaja%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Foff-white-maharaja-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Off White Maharaja Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -336,6 +391,7 @@
               <p class="collection-price"><span>Rent:</span> ₹9999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DdoaetmBo4Z/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ivory%20Crown%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fivory-crown-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ivory Crown Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -347,6 +403,7 @@
               <p class="collection-description">A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires unmatched royal elegance on his special day.</p>
               <p class="collection-price"><span>Rent:</span> ₹9999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Imperial%20Ivory%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fimperial-ivory-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Imperial Ivory Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -359,6 +416,7 @@
               <p class="collection-price"><span>Rent:</span> ₹12999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSK8GVbCRB_/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maharaja%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaharaja-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maharaja Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -371,6 +429,7 @@
               <p class="collection-price"><span>Rent:</span> ₹10999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSK8GVbCRB_/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Elite%20Groom%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fa-royal-entrance-begins-with-the-perfect-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Elite Groom Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -382,6 +441,7 @@
               <p class="collection-description">A pastel lavender groom's sherwani featuring intricate geometric self-textured embroidery.</p>
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Crown%20Prince%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-crown-prince-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Crown Prince Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -394,6 +454,7 @@
               <p class="collection-price"><span>Rent:</span> ₹11999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSK8GVbCRB_/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA%3D%3D" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ethereal%20Groom%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fethereal-groom-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ethereal Groom Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -406,6 +467,7 @@
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DO03pW5Eivp/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Maharaja%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-maharaja-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Maharaja Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -417,6 +479,7 @@
               <p class="collection-description">A premium rose goldsherwani featuring intricate embroidery, a matching stole, and regal accessories—crafted to deliver a graceful and majestic groom's look for your special day.</p>
               <p class="collection-price"><span>Rent:</span> ₹10999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Elite%20Groom%20Rose%20Gold%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Felite-groom-rose-gold-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Elite Groom Rose Gold Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -428,6 +491,7 @@
               <p class="collection-description">Focuses on the pristine cream/ivory color palette combined with stately wedding accessories.</p>
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Imperial%20Ivory%20Elegance%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fimperial-ivory-elegance.jpg" target="_blank" rel="noopener" aria-label="Enquire about Imperial Ivory Elegance on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -439,6 +503,7 @@
               <p class="collection-description">An ivory groom's sherwani adorned with subtle self-textured embroidery.</p>
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Regal%20Cream%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fregal-cream-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Regal Cream Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -450,6 +515,7 @@
               <p class="collection-description">A luxurious off-white sherwani featuring intricate heritage embroidery, regal pearl layering, and timeless royal elegance, crafted for the modern groom who commands attention.</p>
               <p class="collection-price"><span>Rent:</span> ₹5999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shehenshah%20Ivory%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshehenshah-ivory.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shehenshah Ivory on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -461,6 +527,7 @@
               <p class="collection-description">A masterpiece of royal craftsmanship, this sherwani showcases intricate all-over embroidery with heritage-inspired motifs. Paired with a matching stole, regal pearl mala, and elegant safa, it creates a timeless look for the groom who values sophistication and tradition.</p>
               <p class="collection-price"><span>Rent:</span> ₹11999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Timeless%20Maharaja%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Ftimeless-maharaja.jpg" target="_blank" rel="noopener" aria-label="Enquire about Timeless Maharaja on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -472,6 +539,7 @@
               <p class="collection-description">An elegant ivory sherwani featuring intricate handcrafted embroidery, paired with a matching stole and safa for a timeless royal wedding look.</p>
               <p class="collection-price"><span>Rent:</span> ₹8999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 42, 44</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Rajsi%20Noor%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Frajsi-noor.jpg" target="_blank" rel="noopener" aria-label="Enquire about Rajsi Noor on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -484,6 +552,7 @@
               <p class="collection-price"><span>Rent:</span> ₹8999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSz6sc5iMDU/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Pink%20Imperial%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fpink-imperial.jpg" target="_blank" rel="noopener" aria-label="Enquire about Pink Imperial on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -496,6 +565,7 @@
               <p class="collection-price"><span>Rent:</span> ₹8999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTLAZ63DOvf/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Diamond%20Royale%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fdiamond-royale.jpg" target="_blank" rel="noopener" aria-label="Enquire about Diamond Royale on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -508,6 +578,7 @@
               <p class="collection-price"><span>Rent:</span> ₹5999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTF_v9yDGlG/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20golden%20Monarch%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fgolden-monarch.jpg" target="_blank" rel="noopener" aria-label="Enquire about golden Monarch on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -519,6 +590,7 @@
               <p class="collection-description">An elegant golden sherwani with intricate handcrafted embroidery and a matching stole, designed to deliver a timeless royal look for weddings and grand celebrations.</p>
               <p class="collection-price"><span>Rent:</span> ₹5999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20golden%20Heritage%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fgolden-heritage.jpg" target="_blank" rel="noopener" aria-label="Enquire about golden Heritage on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -531,6 +603,7 @@
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTF_v9yDGlG/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Classic%20Groom%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fclassic-groom.jpg" target="_blank" rel="noopener" aria-label="Enquire about Classic Groom on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -543,6 +616,7 @@
               <p class="collection-price"><span>Rent:</span> ₹7999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTDS6CcDDwX/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Off%20%20white%20Emperor%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Foff-white-emperor.jpg" target="_blank" rel="noopener" aria-label="Enquire about Off  white Emperor on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -555,6 +629,7 @@
               <p class="collection-price"><span>Rent:</span> ₹4999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTApTVBDH-9/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Celestial%20Maharaja%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fcelestial-maharaja.jpg" target="_blank" rel="noopener" aria-label="Enquire about Celestial Maharaja on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -567,6 +642,7 @@
               <p class="collection-price"><span>Rent:</span> ₹8999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTDS6CcDDwX/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Off%20white%20Crest%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-off-white-crest.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Off white Crest on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -578,6 +654,7 @@
               <p class="collection-description">A timeless name that reflects the exquisite off white embroidery, refined craftsmanship, and majestic elegance of this premium groom sherwani</p>
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Imperial%20Grace%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fimperial-grace.jpg" target="_blank" rel="noopener" aria-label="Enquire about Imperial Grace on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -589,6 +666,7 @@
               <p class="collection-description">Royal elegance meets timeless craftsmanship in this premium off-white sherwani, crafted for a majestic wedding look.</p>
               <p class="collection-price"><span>Rent:</span> ₹4499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Raj%20Tilak%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fraj-tilak-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Raj Tilak Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -600,6 +678,7 @@
               <p class="collection-description">Grace your wedding day in regal style with this premium ivory embroidered sherwani, paired with a vibrant red stole and traditional safa for a timeless royal look. Perfect for the modern groom.</p>
               <p class="collection-price"><span>Rent:</span> ₹4499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maharaja%20Pearl%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaharaja-pearl-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maharaja Pearl Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -611,6 +690,7 @@
               <p class="collection-description">It perfectly matches the elegant ivory embroidery paired with the traditional red safa and stole, giving a timeless royal groom look.</p>
               <p class="collection-price"><span>Rent:</span> ₹4499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shehenshah%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshahi-safed-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shehenshah Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -622,6 +702,7 @@
               <p class="collection-description">A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day.</p>
               <p class="collection-price"><span>Rent:</span> ₹4499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shahi%20Safed%20Elegance%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshahi-safed-elegance.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shahi Safed Elegance on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|sherwani">
@@ -634,11 +715,30 @@
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maharaja%E2%80%99s%20Legacy%20Sherwani%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaharaja-s-legacy-sherwani.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maharaja’s Legacy Sherwani on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right Sherwani on Rent in Rajkot</h2>
+            <p>Explore premium wedding sherwanis for rent in Rajkot, with royal embroidery, groom-ready styling, multiple sizes and advance booking at Vivah Villa Collection. Browse 31 real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include <strong>groom sherwani on rent in Rajkot</strong>, <strong>wedding sherwani rental</strong>, <strong>designer sherwani for rent</strong>. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              <a href="/collections/indowestern.html">Indo-Western on rent in Rajkot</a><a href="/collections/jodhpuri.html">Jodhpuri on rent in Rajkot</a><a href="/collections/lehenga.html">Lehenga on rent in Rajkot</a><a href="/collections/koti-kurta.html">Koti Kurta on rent in Rajkot</a><a href="/collections/choli.html">Choli on rent in Rajkot</a>
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>Sherwani Rental FAQs</h2>
+            <details><summary>Where can I find sherwani on rent in Rajkot?</summary><p>Vivah Villa Collection in Rajkot offers 31 Sherwani styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.</p></details>
+            <details><summary>How can I book a Sherwani outfit for rent?</summary><p>Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.</p></details>
+            <details><summary>Are Sherwani rental sizes and prices shown online?</summary><p>Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.</p></details>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -719,7 +819,7 @@
       "url": "https://vivahvilla.in/collections/sherwani.html",
       "description": "Explore premium wedding sherwanis for rent in Rajkot, with royal embroidery, groom-ready styling, multiple sizes and advance booking at Vivah Villa Collection.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },
@@ -746,7 +846,12 @@
               "@id": "https://vivahvilla.in/products/golden-heritage-sherwani.html#product",
               "url": "https://vivahvilla.in/products/golden-heritage-sherwani.html",
               "name": "Golden Heritage Sherwani",
-              "image": "https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg",
+                "caption": "Golden Heritage Sherwani. A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -765,7 +870,12 @@
               "@id": "https://vivahvilla.in/products/rajsi-virasat.html#product",
               "url": "https://vivahvilla.in/products/rajsi-virasat.html",
               "name": "Rajsi Virasat",
-              "image": "https://vivahvilla.in/img/collections/rajsi-virasat.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/rajsi-virasat.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/rajsi-virasat.jpg",
+                "caption": "Rajsi Virasat. An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -784,7 +894,12 @@
               "@id": "https://vivahvilla.in/products/rajsi-mayur-royal.html#product",
               "url": "https://vivahvilla.in/products/rajsi-mayur-royal.html",
               "name": "Rajsi Mayur Royal",
-              "image": "https://vivahvilla.in/img/collections/rajsi-mayur-royal.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/rajsi-mayur-royal.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/rajsi-mayur-royal.jpg",
+                "caption": "Rajsi Mayur Royal. It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -803,7 +918,12 @@
               "@id": "https://vivahvilla.in/products/off-white-maharaja-sherwani.html#product",
               "url": "https://vivahvilla.in/products/off-white-maharaja-sherwani.html",
               "name": "Off White Maharaja Sherwani",
-              "image": "https://vivahvilla.in/img/collections/off-white-maharaja-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/off-white-maharaja-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/off-white-maharaja-sherwani.jpg",
+                "caption": "Off White Maharaja Sherwani. A luxurious blush off white embroidered sherwani with a royal safa, matching stole, and elegant... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -822,7 +942,12 @@
               "@id": "https://vivahvilla.in/products/ivory-crown-sherwani.html#product",
               "url": "https://vivahvilla.in/products/ivory-crown-sherwani.html",
               "name": "Ivory Crown Sherwani",
-              "image": "https://vivahvilla.in/img/collections/ivory-crown-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ivory-crown-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ivory-crown-sherwani.jpg",
+                "caption": "Ivory Crown Sherwani. Crafted for the groom who appreciates luxury, this ivory sherwani blends traditional artistry with... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -841,7 +966,12 @@
               "@id": "https://vivahvilla.in/products/imperial-ivory-sherwani.html#product",
               "url": "https://vivahvilla.in/products/imperial-ivory-sherwani.html",
               "name": "Imperial Ivory Sherwani",
-              "image": "https://vivahvilla.in/img/collections/imperial-ivory-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/imperial-ivory-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/imperial-ivory-sherwani.jpg",
+                "caption": "Imperial Ivory Sherwani. A timeless masterpiece featuring intricate handcrafted embroidery, designed for the groom who desires... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -860,7 +990,12 @@
               "@id": "https://vivahvilla.in/products/maharaja-sherwani.html#product",
               "url": "https://vivahvilla.in/products/maharaja-sherwani.html",
               "name": "Maharaja Sherwani",
-              "image": "https://vivahvilla.in/img/collections/maharaja-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maharaja-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maharaja-sherwani.jpg",
+                "caption": "Maharaja Sherwani. A luxurious blush pink embroidered sherwani with a royal safa, matching stole, and elegant... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -879,7 +1014,12 @@
               "@id": "https://vivahvilla.in/products/elite-groom-sherwani.html#product",
               "url": "https://vivahvilla.in/products/elite-groom-sherwani.html",
               "name": "Elite Groom Sherwani",
-              "image": "https://vivahvilla.in/img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/a-royal-entrance-begins-with-the-perfect-sherwani.jpg",
+                "caption": "Elite Groom Sherwani. Exquisitely handcrafted in an elegant ivory shade, this royal sherwani features intricate embroidery and... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -898,7 +1038,12 @@
               "@id": "https://vivahvilla.in/products/the-crown-prince-sherwani.html#product",
               "url": "https://vivahvilla.in/products/the-crown-prince-sherwani.html",
               "name": "The Crown Prince Sherwani",
-              "image": "https://vivahvilla.in/img/collections/the-crown-prince-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-crown-prince-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-crown-prince-sherwani.jpg",
+                "caption": "The Crown Prince Sherwani. A pastel lavender groom's sherwani featuring intricate geometric self-textured embroidery. Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -917,7 +1062,12 @@
               "@id": "https://vivahvilla.in/products/ethereal-groom-sherwani.html#product",
               "url": "https://vivahvilla.in/products/ethereal-groom-sherwani.html",
               "name": "Ethereal Groom Sherwani",
-              "image": "https://vivahvilla.in/img/collections/ethereal-groom-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ethereal-groom-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ethereal-groom-sherwani.jpg",
+                "caption": "Ethereal Groom Sherwani. A premium cream-ivory groom ensemble featuring high-density tone-on-tone embroidery. Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -936,7 +1086,12 @@
               "@id": "https://vivahvilla.in/products/the-maharaja-sherwani.html#product",
               "url": "https://vivahvilla.in/products/the-maharaja-sherwani.html",
               "name": "The Maharaja Sherwani",
-              "image": "https://vivahvilla.in/img/collections/the-maharaja-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-maharaja-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-maharaja-sherwani.jpg",
+                "caption": "The Maharaja Sherwani. An elegant cream-colored groom's sherwani featuring intricate gold embroidery, multi-colored pastel floral... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -955,7 +1110,12 @@
               "@id": "https://vivahvilla.in/products/elite-groom-rose-gold-sherwani.html#product",
               "url": "https://vivahvilla.in/products/elite-groom-rose-gold-sherwani.html",
               "name": "Elite Groom Rose Gold Sherwani",
-              "image": "https://vivahvilla.in/img/collections/elite-groom-rose-gold-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/elite-groom-rose-gold-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/elite-groom-rose-gold-sherwani.jpg",
+                "caption": "Elite Groom Rose Gold Sherwani. A premium rose goldsherwani featuring intricate embroidery, a matching stole, and regal... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -974,7 +1134,12 @@
               "@id": "https://vivahvilla.in/products/imperial-ivory-elegance.html#product",
               "url": "https://vivahvilla.in/products/imperial-ivory-elegance.html",
               "name": "Imperial Ivory Elegance",
-              "image": "https://vivahvilla.in/img/collections/imperial-ivory-elegance.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/imperial-ivory-elegance.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/imperial-ivory-elegance.jpg",
+                "caption": "Imperial Ivory Elegance. Focuses on the pristine cream/ivory color palette combined with stately wedding accessories. Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -993,7 +1158,12 @@
               "@id": "https://vivahvilla.in/products/regal-cream-sherwani.html#product",
               "url": "https://vivahvilla.in/products/regal-cream-sherwani.html",
               "name": "Regal Cream Sherwani",
-              "image": "https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/regal-cream-sherwani.jpg",
+                "caption": "Regal Cream Sherwani. An ivory groom's sherwani adorned with subtle self-textured embroidery. Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1012,7 +1182,12 @@
               "@id": "https://vivahvilla.in/products/shehenshah-ivory.html#product",
               "url": "https://vivahvilla.in/products/shehenshah-ivory.html",
               "name": "Shehenshah Ivory",
-              "image": "https://vivahvilla.in/img/collections/shehenshah-ivory.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shehenshah-ivory.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shehenshah-ivory.jpg",
+                "caption": "Shehenshah Ivory. A luxurious off-white sherwani featuring intricate heritage embroidery, regal pearl layering, and timeless... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1031,7 +1206,12 @@
               "@id": "https://vivahvilla.in/products/timeless-maharaja.html#product",
               "url": "https://vivahvilla.in/products/timeless-maharaja.html",
               "name": "Timeless Maharaja",
-              "image": "https://vivahvilla.in/img/collections/timeless-maharaja.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/timeless-maharaja.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/timeless-maharaja.jpg",
+                "caption": "Timeless Maharaja. A masterpiece of royal craftsmanship, this sherwani showcases intricate all-over embroidery with... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1050,7 +1230,12 @@
               "@id": "https://vivahvilla.in/products/rajsi-noor.html#product",
               "url": "https://vivahvilla.in/products/rajsi-noor.html",
               "name": "Rajsi Noor",
-              "image": "https://vivahvilla.in/img/collections/rajsi-noor.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/rajsi-noor.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/rajsi-noor.jpg",
+                "caption": "Rajsi Noor. An elegant ivory sherwani featuring intricate handcrafted embroidery, paired with a matching stole and... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1069,7 +1254,12 @@
               "@id": "https://vivahvilla.in/products/pink-imperial.html#product",
               "url": "https://vivahvilla.in/products/pink-imperial.html",
               "name": "Pink Imperial",
-              "image": "https://vivahvilla.in/img/collections/pink-imperial.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/pink-imperial.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/pink-imperial.jpg",
+                "caption": "Pink Imperial. A blush ivory sherwani adorned with intricate royal embroidery and elegant elephant motifs, paired with a... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1088,7 +1278,12 @@
               "@id": "https://vivahvilla.in/products/diamond-royale.html#product",
               "url": "https://vivahvilla.in/products/diamond-royale.html",
               "name": "Diamond Royale",
-              "image": "https://vivahvilla.in/img/collections/diamond-royale.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/diamond-royale.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/diamond-royale.jpg",
+                "caption": "Diamond Royale. The name reflects the sherwani's brilliant white tone, sparkling hand embellishments, and regal... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1107,7 +1302,12 @@
               "@id": "https://vivahvilla.in/products/golden-monarch.html#product",
               "url": "https://vivahvilla.in/products/golden-monarch.html",
               "name": "golden Monarch",
-              "image": "https://vivahvilla.in/img/collections/golden-monarch.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/golden-monarch.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/golden-monarch.jpg",
+                "caption": "golden Monarch. This name reflects the sherwani's luxurious golden tone, intricate hand embroidery, pearl accessories, and... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1126,7 +1326,12 @@
               "@id": "https://vivahvilla.in/products/golden-heritage.html#product",
               "url": "https://vivahvilla.in/products/golden-heritage.html",
               "name": "golden Heritage",
-              "image": "https://vivahvilla.in/img/collections/golden-heritage.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/golden-heritage.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/golden-heritage.jpg",
+                "caption": "golden Heritage. An elegant golden sherwani with intricate handcrafted embroidery and a matching stole, designed to deliver... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1145,7 +1350,12 @@
               "@id": "https://vivahvilla.in/products/classic-groom.html#product",
               "url": "https://vivahvilla.in/products/classic-groom.html",
               "name": "Classic Groom",
-              "image": "https://vivahvilla.in/img/collections/classic-groom.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/classic-groom.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/classic-groom.jpg",
+                "caption": "Classic Groom. Classic royal wedding attire with refined craftsmanship, perfect for a sophisticated groom. Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1164,7 +1374,12 @@
               "@id": "https://vivahvilla.in/products/off-white-emperor.html#product",
               "url": "https://vivahvilla.in/products/off-white-emperor.html",
               "name": "Off  white Emperor",
-              "image": "https://vivahvilla.in/img/collections/off-white-emperor.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/off-white-emperor.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/off-white-emperor.jpg",
+                "caption": "Off white Emperor. A timeless and luxurious name that perfectly reflects the regal Off white tone, intricate embroidery, and... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1183,7 +1398,12 @@
               "@id": "https://vivahvilla.in/products/celestial-maharaja.html#product",
               "url": "https://vivahvilla.in/products/celestial-maharaja.html",
               "name": "Celestial Maharaja",
-              "image": "https://vivahvilla.in/img/collections/celestial-maharaja.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/celestial-maharaja.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/celestial-maharaja.jpg",
+                "caption": "Celestial Maharaja. An exquisitely embroidered sherwani with regal detailing, crafted for a timeless and sophisticated groom's... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1202,7 +1422,12 @@
               "@id": "https://vivahvilla.in/products/royal-off-white-crest.html#product",
               "url": "https://vivahvilla.in/products/royal-off-white-crest.html",
               "name": "Royal Off white Crest",
-              "image": "https://vivahvilla.in/img/collections/royal-off-white-crest.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-off-white-crest.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-off-white-crest.jpg",
+                "caption": "Royal Off white Crest. A refined and majestic name that perfectly captures the intricate off white embroidery, regal silhouette... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1221,7 +1446,12 @@
               "@id": "https://vivahvilla.in/products/imperial-grace.html#product",
               "url": "https://vivahvilla.in/products/imperial-grace.html",
               "name": "Imperial Grace",
-              "image": "https://vivahvilla.in/img/collections/imperial-grace.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/imperial-grace.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/imperial-grace.jpg",
+                "caption": "Imperial Grace. A timeless name that reflects the exquisite off white embroidery, refined craftsmanship, and majestic... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1240,7 +1470,12 @@
               "@id": "https://vivahvilla.in/products/raj-tilak-sherwani.html#product",
               "url": "https://vivahvilla.in/products/raj-tilak-sherwani.html",
               "name": "Raj Tilak Sherwani",
-              "image": "https://vivahvilla.in/img/collections/raj-tilak-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/raj-tilak-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/raj-tilak-sherwani.jpg",
+                "caption": "Raj Tilak Sherwani. Royal elegance meets timeless craftsmanship in this premium off-white sherwani, crafted for a majestic... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1259,7 +1494,12 @@
               "@id": "https://vivahvilla.in/products/maharaja-pearl-sherwani.html#product",
               "url": "https://vivahvilla.in/products/maharaja-pearl-sherwani.html",
               "name": "Maharaja Pearl Sherwani",
-              "image": "https://vivahvilla.in/img/collections/maharaja-pearl-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maharaja-pearl-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maharaja-pearl-sherwani.jpg",
+                "caption": "Maharaja Pearl Sherwani. Grace your wedding day in regal style with this premium ivory embroidered sherwani, paired with a vibrant... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1278,7 +1518,12 @@
               "@id": "https://vivahvilla.in/products/shehenshah-sherwani.html#product",
               "url": "https://vivahvilla.in/products/shehenshah-sherwani.html",
               "name": "Shehenshah Sherwani",
-              "image": "https://vivahvilla.in/img/collections/shahi-safed-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shahi-safed-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shahi-safed-sherwani.jpg",
+                "caption": "Shehenshah Sherwani. It perfectly matches the elegant ivory embroidery paired with the traditional red safa and stole, giving a... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1297,7 +1542,12 @@
               "@id": "https://vivahvilla.in/products/shahi-safed-elegance.html#product",
               "url": "https://vivahvilla.in/products/shahi-safed-elegance.html",
               "name": "Shahi Safed Elegance",
-              "image": "https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shahi-safed-elegance.jpg",
+                "caption": "Shahi Safed Elegance. A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1316,7 +1566,12 @@
               "@id": "https://vivahvilla.in/products/maharaja-s-legacy-sherwani.html#product",
               "url": "https://vivahvilla.in/products/maharaja-s-legacy-sherwani.html",
               "name": "Maharaja’s Legacy Sherwani",
-              "image": "https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg",
+                "caption": "Maharaja’s Legacy Sherwani. A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined... Sherwani available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Sherwani",
               "offers": {
                 "@type": "Offer",
@@ -1351,6 +1606,36 @@
           "position": 3,
           "name": "Sherwani",
           "item": "https://vivahvilla.in/collections/sherwani.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vivahvilla.in/collections/sherwani.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find sherwani on rent in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vivah Villa Collection in Rajkot offers 31 Sherwani styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a Sherwani outfit for rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Sherwani rental sizes and prices shown online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended."
+          }
         }
       ]
     }

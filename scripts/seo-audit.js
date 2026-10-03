@@ -136,12 +136,17 @@ if (preRenderedProductLinks !== 6) {
 const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap_products.xml'), 'utf8');
 const sitemapUrls = [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 const productCount = productFiles.length;
-if (sitemapUrls.length !== productCount) {
-  errors.push(`sitemap_products.xml: expected ${productCount} product URLs, found ${sitemapUrls.length}`);
+const activeProductCount = JSON.parse(fs.readFileSync(path.join(ROOT, 'collections.json'), 'utf8'))
+  .filter((item) => item.active !== false).length;
+if (sitemapUrls.length !== activeProductCount) {
+  errors.push(`sitemap_products.xml: expected ${activeProductCount} active product URLs, found ${sitemapUrls.length}`);
+}
+if (productCount > activeProductCount) {
+  warnings.push(`products/: ${productCount - activeProductCount} legacy HTML file(s) are not generated from active collection data`);
 }
 
 const sitemapIndex = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
-for (const required of ['sitemap_pages.xml', 'sitemap_products.xml']) {
+for (const required of ['sitemap_pages.xml', 'sitemap_products.xml', 'sitemap_collections.xml']) {
   if (!sitemapIndex.includes(`${SITE_URL}/${required}`)) errors.push(`sitemap.xml: missing ${required}`);
 }
 
@@ -151,6 +156,17 @@ for (const file of categoryFiles) {
   if (!pagesSitemap.includes(`<loc>${pageUrl}</loc>`)) {
     errors.push(`sitemap_pages.xml: missing ${pageUrl}`);
   }
+}
+
+const collectionSitemap = fs.readFileSync(path.join(ROOT, 'sitemap_collections.xml'), 'utf8');
+for (const file of categoryFiles) {
+  const pageUrl = `${SITE_URL}/${relative(file)}`;
+  if (!collectionSitemap.includes(`<loc>${pageUrl}</loc>`)) {
+    errors.push(`sitemap_collections.xml: missing ${pageUrl}`);
+  }
+  const html = fs.readFileSync(file, 'utf8');
+  if (!html.includes('"@type": "FAQPage"')) errors.push(`${relative(file)}: missing FAQPage schema`);
+  if (!html.includes('class="category-seo"')) errors.push(`${relative(file)}: missing category SEO content`);
 }
 
 console.log(`SEO audit checked ${indexedFiles.length} indexable pages (${productCount} products and ${categoryFiles.length} categories).`);

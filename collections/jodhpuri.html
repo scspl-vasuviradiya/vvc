@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -179,6 +204,32 @@
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
@@ -290,6 +341,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹10499/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Black%20Baron%20jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblack-baron-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Black Baron jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -303,6 +355,7 @@
               <p class="collection-meta"><span>Sizes:</span> 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/p/DdVc67NDGaQ/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Azure%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-azure-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Azure Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -316,6 +369,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DbN6xDvuf03/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20White%20Sovereign%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-white-sovereign-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about The White Sovereign Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -329,6 +383,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DaxnKRtpMja/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Brown%20Reign%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fbrown-reign-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Brown Reign Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -342,6 +397,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DbnrW3BOfLf/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Heritage%20Reimagined%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fheritage-reimagined-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Heritage Reimagined Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -354,6 +410,7 @@
               <p class="collection-price"><span>Rent:</span> ₹5999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Plumage%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-plumage-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Plumage Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -367,6 +424,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DaX3dOCMkX3/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maroon%20Modern%20King%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaroon-modern-king-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maroon Modern King Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -379,6 +437,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Midnight%20Bloom%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmidnight-bloom-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Midnight Bloom Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -392,6 +451,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹10499/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSASZygEkCX/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Maroon%20Monarch%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmaroon-monarch.jpg" target="_blank" rel="noopener" aria-label="Enquire about Maroon Monarch on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -405,6 +465,7 @@
               <p class="collection-meta"><span>Sizes:</span> 38, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹10499/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DdbjCZLOl2y/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Mirror%20Luxe%20Black%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmirror-luxe-black.jpg" target="_blank" rel="noopener" aria-label="Enquire about Mirror Luxe Black on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -418,6 +479,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹10499/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTVQmpRgXZQ/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Modern%20Asymmetric%20Fusion%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmodern-asymmetric-fusion-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Modern Asymmetric Fusion Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -429,6 +491,7 @@
               <p class="collection-description">A white Jodhpuri suit featuring geometric pastel threadwork panels, and linear mirror-work embellishments.</p>
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Reflection%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-reflection-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Reflection Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -440,6 +503,7 @@
               <p class="collection-description">A refined long Indo-Western crafted in deep teal elegance.</p>
               <p class="collection-price"><span>Rent:</span> ₹1999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ocean%20Dusk%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Focean-dusk-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ocean Dusk Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -450,6 +514,7 @@
               <h3 class="collection-title"><a href="/products/the-royal-wine-jodhpuri.html">The Royal Wine jodhpuri</a></h3>
               <p class="collection-description">A deep wine Jodhpuri suit featuring striking geometric panels of beads work and subtle sequin embroidery.</p>
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Royal%20Wine%20jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-royal-wine-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Royal Wine jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -461,6 +526,7 @@
               <p class="collection-description">A teal blue Jodhpuri suit featuring a subtle sheen, elegant floral motifs, and intricate dark embroider.</p>
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Midnight%20Blue%20Grace%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmidnight-blue-grace-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Midnight Blue Grace Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -472,6 +538,7 @@
               <p class="collection-description">Pastel hues elevated with intricate mirror craftsmanship.</p>
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ivory%20Pastel%20Mirror%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fivory-pastel-mirror-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ivory Pastel Mirror Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -483,6 +550,7 @@
               <p class="collection-description">A sharp ivory silhouette covered in a rich tapestry of multicolored geometric and floral threadwork.</p>
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42, 44</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Multicolored%20Mosaic%20Jodhpuri%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmulticolored-mosaic-jodhpuri.jpg" target="_blank" rel="noopener" aria-label="Enquire about Multicolored Mosaic Jodhpuri on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -495,6 +563,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42, 44, 46</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnFGtdjMdU/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Navy%20Renaissance%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fnavy-renaissance.jpg" target="_blank" rel="noopener" aria-label="Enquire about Navy Renaissance on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -507,6 +576,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnFGtdjMdU/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Tapestry%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-tapestry.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Tapestry on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|open Jodhpuris">
@@ -519,11 +589,30 @@
               <p class="collection-price"><span>Rent:</span> ₹2499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42, 44, 46, 48, 50</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnFGtdjMdU/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Black%20Dynasty%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblack-dynasty.jpg" target="_blank" rel="noopener" aria-label="Enquire about Black Dynasty on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right Jodhpuri on Rent in Rajkot</h2>
+            <p>Discover designer Jodhpuri suits on rent in Rajkot for weddings and receptions. View styles, rental prices, sizes and booking details at Vivah Villa Collection. Browse 20 real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include <strong>Jodhpuri suit on rent in Rajkot</strong>, <strong>Jodhpuri dress rental</strong>, <strong>wedding Jodhpuri for men</strong>. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              <a href="/collections/sherwani.html">Sherwani on rent in Rajkot</a><a href="/collections/indowestern.html">Indo-Western on rent in Rajkot</a><a href="/collections/lehenga.html">Lehenga on rent in Rajkot</a><a href="/collections/koti-kurta.html">Koti Kurta on rent in Rajkot</a><a href="/collections/choli.html">Choli on rent in Rajkot</a>
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>Jodhpuri Rental FAQs</h2>
+            <details><summary>Where can I find jodhpuri on rent in Rajkot?</summary><p>Vivah Villa Collection in Rajkot offers 20 Jodhpuri styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.</p></details>
+            <details><summary>How can I book a Jodhpuri outfit for rent?</summary><p>Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.</p></details>
+            <details><summary>Are Jodhpuri rental sizes and prices shown online?</summary><p>Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.</p></details>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -604,7 +693,7 @@
       "url": "https://vivahvilla.in/collections/jodhpuri.html",
       "description": "Discover designer Jodhpuri suits on rent in Rajkot for weddings and receptions. View styles, rental prices, sizes and booking details at Vivah Villa Collection.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },
@@ -631,7 +720,12 @@
               "@id": "https://vivahvilla.in/products/black-baron-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/black-baron-jodhpuri.html",
               "name": "Black Baron jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg",
+                "caption": "Black Baron jodhpuri. A luxurious black Jodhpuri featuring intricate tonal embroidery, crafted for grooms who appreciate... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -650,7 +744,12 @@
               "@id": "https://vivahvilla.in/products/royal-azure-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/royal-azure-jodhpuri.html",
               "name": "Royal Azure Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/royal-azure-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-azure-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-azure-jodhpuri.jpg",
+                "caption": "Royal Azure Jodhpuri. A sleek black Jodhpuri featuring wavy vertical beadwork and a vibrant embroidered turquoise butterfly. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -669,7 +768,12 @@
               "@id": "https://vivahvilla.in/products/the-white-sovereign-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/the-white-sovereign-jodhpuri.html",
               "name": "The White Sovereign Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/the-white-sovereign-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-white-sovereign-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-white-sovereign-jodhpuri.jpg",
+                "caption": "The White Sovereign Jodhpuri. An off-white Jodhpuri suit featuring heavy silver thread work and geometric mirror embellishments along... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -688,7 +792,12 @@
               "@id": "https://vivahvilla.in/products/brown-reign-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/brown-reign-jodhpuri.html",
               "name": "Brown Reign Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/brown-reign-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/brown-reign-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/brown-reign-jodhpuri.jpg",
+                "caption": "Brown Reign Jodhpuri. This Jodhpuri suit featuring a unique honeycomb pattern of Mirror embellishments. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -707,7 +816,12 @@
               "@id": "https://vivahvilla.in/products/heritage-reimagined-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/heritage-reimagined-jodhpuri.html",
               "name": "Heritage Reimagined Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/heritage-reimagined-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/heritage-reimagined-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/heritage-reimagined-jodhpuri.jpg",
+                "caption": "Heritage Reimagined Jodhpuri. A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -726,7 +840,12 @@
               "@id": "https://vivahvilla.in/products/royal-plumage-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/royal-plumage-jodhpuri.html",
               "name": "Royal Plumage Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/royal-plumage-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-plumage-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-plumage-jodhpuri.jpg",
+                "caption": "Royal Plumage Jodhpuri. A pristine white Jodhpuri suit featuring intricate gold lattice embroidery and a side-swept peacock motif. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -745,7 +864,12 @@
               "@id": "https://vivahvilla.in/products/maroon-modern-king-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/maroon-modern-king-jodhpuri.html",
               "name": "Maroon Modern King Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/maroon-modern-king-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maroon-modern-king-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maroon-modern-king-jodhpuri.jpg",
+                "caption": "Maroon Modern King Jodhpuri. This Jodhpuri suit featuring intricate black bead detailing along the borders. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -764,7 +888,12 @@
               "@id": "https://vivahvilla.in/products/midnight-bloom-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/midnight-bloom-jodhpuri.html",
               "name": "Midnight Bloom Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/midnight-bloom-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/midnight-bloom-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/midnight-bloom-jodhpuri.jpg",
+                "caption": "Midnight Bloom Jodhpuri. It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -783,7 +912,12 @@
               "@id": "https://vivahvilla.in/products/maroon-monarch.html#product",
               "url": "https://vivahvilla.in/products/maroon-monarch.html",
               "name": "Maroon Monarch",
-              "image": "https://vivahvilla.in/img/collections/maroon-monarch.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/maroon-monarch.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/maroon-monarch.jpg",
+                "caption": "Maroon Monarch. A deep maroon Indo-Western adorned with intricate mirror work and handcrafted detailing, offering a bold... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -802,7 +936,12 @@
               "@id": "https://vivahvilla.in/products/mirror-luxe-black.html#product",
               "url": "https://vivahvilla.in/products/mirror-luxe-black.html",
               "name": "Mirror Luxe Black",
-              "image": "https://vivahvilla.in/img/collections/mirror-luxe-black.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/mirror-luxe-black.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/mirror-luxe-black.jpg",
+                "caption": "Mirror Luxe Black. Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -821,7 +960,12 @@
               "@id": "https://vivahvilla.in/products/modern-asymmetric-fusion-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/modern-asymmetric-fusion-jodhpuri.html",
               "name": "Modern Asymmetric Fusion Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/modern-asymmetric-fusion-jodhpuri.jpg",
+                "caption": "Modern Asymmetric Fusion Jodhpuri. A premium fusion ensemble crafted for the modern groom. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -840,7 +984,12 @@
               "@id": "https://vivahvilla.in/products/royal-reflection-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/royal-reflection-jodhpuri.html",
               "name": "Royal Reflection Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/royal-reflection-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-reflection-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-reflection-jodhpuri.jpg",
+                "caption": "Royal Reflection Jodhpuri. A white Jodhpuri suit featuring geometric pastel threadwork panels, and linear mirror-work embellishments. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -859,7 +1008,12 @@
               "@id": "https://vivahvilla.in/products/ocean-dusk-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/ocean-dusk-jodhpuri.html",
               "name": "Ocean Dusk Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ocean-dusk-jodhpuri.jpg",
+                "caption": "Ocean Dusk Jodhpuri. A refined long Indo-Western crafted in deep teal elegance. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -878,7 +1032,12 @@
               "@id": "https://vivahvilla.in/products/the-royal-wine-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/the-royal-wine-jodhpuri.html",
               "name": "The Royal Wine jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-royal-wine-jodhpuri.jpg",
+                "caption": "The Royal Wine jodhpuri. A deep wine Jodhpuri suit featuring striking geometric panels of beads work and subtle sequin embroidery. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -897,7 +1056,12 @@
               "@id": "https://vivahvilla.in/products/midnight-blue-grace-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/midnight-blue-grace-jodhpuri.html",
               "name": "Midnight Blue Grace Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/midnight-blue-grace-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/midnight-blue-grace-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/midnight-blue-grace-jodhpuri.jpg",
+                "caption": "Midnight Blue Grace Jodhpuri. A teal blue Jodhpuri suit featuring a subtle sheen, elegant floral motifs, and intricate dark embroider. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -916,7 +1080,12 @@
               "@id": "https://vivahvilla.in/products/ivory-pastel-mirror-indowestern.html#product",
               "url": "https://vivahvilla.in/products/ivory-pastel-mirror-indowestern.html",
               "name": "Ivory Pastel Mirror Indowestern",
-              "image": "https://vivahvilla.in/img/collections/ivory-pastel-mirror-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ivory-pastel-mirror-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ivory-pastel-mirror-indowestern.jpg",
+                "caption": "Ivory Pastel Mirror Indowestern. Pastel hues elevated with intricate mirror craftsmanship. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -935,7 +1104,12 @@
               "@id": "https://vivahvilla.in/products/multicolored-mosaic-jodhpuri.html#product",
               "url": "https://vivahvilla.in/products/multicolored-mosaic-jodhpuri.html",
               "name": "Multicolored Mosaic Jodhpuri",
-              "image": "https://vivahvilla.in/img/collections/multicolored-mosaic-jodhpuri.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/multicolored-mosaic-jodhpuri.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/multicolored-mosaic-jodhpuri.jpg",
+                "caption": "Multicolored Mosaic Jodhpuri. A sharp ivory silhouette covered in a rich tapestry of multicolored geometric and floral threadwork. Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -954,7 +1128,12 @@
               "@id": "https://vivahvilla.in/products/navy-renaissance.html#product",
               "url": "https://vivahvilla.in/products/navy-renaissance.html",
               "name": "Navy Renaissance",
-              "image": "https://vivahvilla.in/img/collections/navy-renaissance.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/navy-renaissance.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/navy-renaissance.jpg",
+                "caption": "Navy Renaissance. A premium midnight navy jodhpuri featuring an artistic mosaic-embroidered jacket with a sleek solid inner... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -973,7 +1152,12 @@
               "@id": "https://vivahvilla.in/products/royal-tapestry.html#product",
               "url": "https://vivahvilla.in/products/royal-tapestry.html",
               "name": "Royal Tapestry",
-              "image": "https://vivahvilla.in/img/collections/royal-tapestry.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-tapestry.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-tapestry.jpg",
+                "caption": "Royal Tapestry. A premium jodhpuri ensemble featuring intricate multicolor embroidery on a sophisticated beige base... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -992,7 +1176,12 @@
               "@id": "https://vivahvilla.in/products/black-dynasty.html#product",
               "url": "https://vivahvilla.in/products/black-dynasty.html",
               "name": "Black Dynasty",
-              "image": "https://vivahvilla.in/img/collections/black-dynasty.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/black-dynasty.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/black-dynasty.jpg",
+                "caption": "Black Dynasty. A bold and regal name that perfectly complements the all-black embroidered design and luxurious royal... Jodhpuri available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Jodhpuri",
               "offers": {
                 "@type": "Offer",
@@ -1027,6 +1216,36 @@
           "position": 3,
           "name": "Jodhpuri",
           "item": "https://vivahvilla.in/collections/jodhpuri.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vivahvilla.in/collections/jodhpuri.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find jodhpuri on rent in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vivah Villa Collection in Rajkot offers 20 Jodhpuri styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a Jodhpuri outfit for rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Jodhpuri rental sizes and prices shown online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended."
+          }
         }
       ]
     }

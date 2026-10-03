@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -179,6 +204,32 @@
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
@@ -289,11 +340,30 @@
               <p class="collection-description">A dusty rose four-piece suit featuring a shawl-lapel blazer, a matching buttoned vest, and a crisp white collared shirt.</p>
               <p class="collection-price"><span>Rent:</span> ₹1499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Classic%20Men's%20Suit%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fclassic-men-s-suit.jpg" target="_blank" rel="noopener" aria-label="Enquire about Classic Men's Suit on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right Suit on Rent in Rajkot</h2>
+            <p>Browse stylish men’s suits for rent in Rajkot for weddings, receptions and formal events. View prices, sizes and booking details at Vivah Villa Collection. Browse 1 real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include <strong>men suit on rent in Rajkot</strong>, <strong>wedding suit rental</strong>, <strong>reception suit for men</strong>. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              <a href="/collections/sherwani.html">Sherwani on rent in Rajkot</a><a href="/collections/indowestern.html">Indo-Western on rent in Rajkot</a><a href="/collections/jodhpuri.html">Jodhpuri on rent in Rajkot</a><a href="/collections/lehenga.html">Lehenga on rent in Rajkot</a><a href="/collections/koti-kurta.html">Koti Kurta on rent in Rajkot</a>
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>Suit Rental FAQs</h2>
+            <details><summary>Where can I find suit on rent in Rajkot?</summary><p>Vivah Villa Collection in Rajkot offers 1 Suit styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.</p></details>
+            <details><summary>How can I book a Suit outfit for rent?</summary><p>Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.</p></details>
+            <details><summary>Are Suit rental sizes and prices shown online?</summary><p>Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.</p></details>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -374,7 +444,7 @@
       "url": "https://vivahvilla.in/collections/suit.html",
       "description": "Browse stylish men’s suits for rent in Rajkot for weddings, receptions and formal events. View prices, sizes and booking details at Vivah Villa Collection.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },
@@ -401,7 +471,12 @@
               "@id": "https://vivahvilla.in/products/classic-men-s-suit.html#product",
               "url": "https://vivahvilla.in/products/classic-men-s-suit.html",
               "name": "Classic Men's Suit",
-              "image": "https://vivahvilla.in/img/collections/classic-men-s-suit.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/classic-men-s-suit.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/classic-men-s-suit.jpg",
+                "caption": "Classic Men's Suit. A dusty rose four-piece suit featuring a shawl-lapel blazer, a matching buttoned vest, and a crisp white... Suit available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Suit",
               "offers": {
                 "@type": "Offer",
@@ -436,6 +511,36 @@
           "position": 3,
           "name": "Suit",
           "item": "https://vivahvilla.in/collections/suit.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vivahvilla.in/collections/suit.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find suit on rent in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vivah Villa Collection in Rajkot offers 1 Suit styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a Suit outfit for rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Suit rental sizes and prices shown online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended."
+          }
         }
       ]
     }

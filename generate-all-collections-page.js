@@ -2,10 +2,9 @@ const fs = require('fs');
 
 const SITE_URL = 'https://vivahvilla.in';
 const COLLECTIONS_URL = `${SITE_URL}/all-collections.html`;
-const PRODUCTS_LAST_MODIFIED = new Date(Math.max(
-  fs.statSync('collections.json').mtimeMs,
-  fs.statSync(__filename).mtimeMs
-)).toISOString().slice(0, 10);
+const PRODUCTS_LAST_MODIFIED = new Date(
+  fs.statSync('collections.json').mtimeMs
+).toISOString().slice(0, 10);
 const LAST_MODIFIED = new Date(Math.max(
   fs.statSync('collections.json').mtimeMs,
   fs.statSync('index.html').mtimeMs,
@@ -161,6 +160,18 @@ const CATEGORY_PAGES = [
     matches: (item) => (item.tags || []).includes('women')
   }
 ];
+
+const CATEGORY_SEARCH_TERMS = {
+  sherwani: ['groom sherwani on rent in Rajkot', 'wedding sherwani rental', 'designer sherwani for rent'],
+  indowestern: ['Indo Western on rent in Rajkot', 'Indo Western dress for men on rent', 'groom Indo Western rental'],
+  jodhpuri: ['Jodhpuri suit on rent in Rajkot', 'Jodhpuri dress rental', 'wedding Jodhpuri for men'],
+  lehenga: ['lehenga on rent in Rajkot', 'bridal lehenga rental', 'designer wedding lehenga on rent'],
+  'koti-kurta': ['Koti Kurta on rent in Rajkot', 'Koti Kurta rental for men', 'wedding Koti Kurta set'],
+  choli: ['choli on rent in Rajkot', 'designer choli rental', 'wedding and garba choli on rent'],
+  suit: ['men suit on rent in Rajkot', 'wedding suit rental', 'reception suit for men'],
+  men: ['men wedding dress on rent in Rajkot', 'groom wear rental', 'men ethnic wear on rent'],
+  women: ['women wedding dress on rent in Rajkot', 'bridal wear rental', 'women ethnic wear on rent']
+};
 
 function categoryPagePath(config) {
   return `collections/${config.slug}.html`;
@@ -887,6 +898,31 @@ const page = `<!DOCTYPE html>
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -1261,6 +1297,49 @@ ${JSON.stringify({
 </html>
 `;
 
+function categoryFaq(config, itemCount) {
+  const label = config.name.toLowerCase();
+  return [
+    {
+      question: `Where can I find ${label} on rent in Rajkot?`,
+      answer: `Vivah Villa Collection in Rajkot offers ${itemCount} ${config.name} styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.`
+    },
+    {
+      question: `How can I book a ${config.name} outfit for rent?`,
+      answer: `Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.`
+    },
+    {
+      question: `Are ${config.name} rental sizes and prices shown online?`,
+      answer: `Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.`
+    }
+  ];
+}
+
+function categorySeoContent(config, items) {
+  const terms = CATEGORY_SEARCH_TERMS[config.slug] || [`${config.name} on rent in Rajkot`];
+  const faq = categoryFaq(config, items.length);
+  const otherCategories = CATEGORY_PAGES
+    .filter((entry) => entry.slug !== config.slug && !['men', 'women'].includes(entry.slug))
+    .slice(0, 5);
+  return `
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right ${esc(config.name)} on Rent in Rajkot</h2>
+            <p>${esc(config.description)} Browse ${items.length} real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include ${terms.map((term) => `<strong>${esc(term)}</strong>`).join(', ')}. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              ${otherCategories.map((entry) => `<a href="/collections/${entry.slug}.html">${esc(entry.name)} on rent in Rajkot</a>`).join('')}
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>${esc(config.name)} Rental FAQs</h2>
+            ${faq.map((item) => `<details><summary>${esc(item.question)}</summary><p>${esc(item.answer)}</p></details>`).join('\n            ')}
+          </div>
+        </section>`;
+}
+
 function categoryLandingPage(config) {
   const items = collections.filter(config.matches);
   const url = categoryPageUrl(config);
@@ -1274,7 +1353,12 @@ function categoryLandingPage(config) {
       '@id': `${productUrl(item)}#product`,
       url: productUrl(item),
       name: item.title || 'Vivah Villa Collection Outfit',
-      image: absoluteUrl(item.img || 'img/logo/logo.png'),
+      image: {
+        '@type': 'ImageObject',
+        url: absoluteUrl(item.img || 'img/logo/logo.png'),
+        contentUrl: absoluteUrl(item.img || 'img/logo/logo.png'),
+        caption: `${imageAlt(item)} ${config.name} available for rent in Rajkot at Vivah Villa Collection.`
+      },
       category: category(item)
     };
     const price = moneyNumber(item.price);
@@ -1322,6 +1406,15 @@ function categoryLandingPage(config) {
           { '@type': 'ListItem', position: 2, name: 'All Collections', item: COLLECTIONS_URL },
           { '@type': 'ListItem', position: 3, name: config.name, item: url }
         ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: categoryFaq(config, items.length).map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer }
+        }))
       }
     ]
   };
@@ -1343,6 +1436,7 @@ function categoryLandingPage(config) {
     .replace('<h1 class="section-title">Wedding Dress Rentals in Rajkot</h1>', `<h1 class="section-title">${esc(config.heading)}</h1>`)
     .replace(/<p class="section-description">[\s\S]*?<\/p>/, `<p class="section-description">${esc(config.description)}</p>`)
     .replace(allCardsHtml, cardsHtml)
+    .replace('          <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>\n        </div>\n      </div>', `          <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>\n        </div>\n      </div>${categorySeoContent(config, items)}`)
     .replace(/        <div class="fullscreen-filter-tabs"[\s\S]*?        <div class="fullscreen-collections-grid"/, '        <div class="fullscreen-collections-grid"')
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`)
     .replaceAll('src="img/', 'src="/img/')
@@ -1365,15 +1459,18 @@ collections.forEach((item) => {
 const collectionImageSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>${SITE_URL}/all-collections.html</loc>
+${CATEGORY_PAGES.map((config) => {
+  const items = collections.filter(config.matches);
+  return `  <url>
+    <loc>${categoryPageUrl(config)}</loc>
     <lastmod>${LAST_MODIFIED}</lastmod>
-${collections.map((item) => `    <image:image>
+${items.map((item) => `    <image:image>
       <image:loc>${SITE_URL}/${esc(item.img || 'img/logo/logo.png')}</image:loc>
-      <image:title>${esc(item.title || 'Vivah Villa Collection Outfit')}</image:title>
-      <image:caption>${esc(item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.')}</image:caption>
+      <image:title>${esc(`${item.title || 'Vivah Villa Collection Outfit'} - ${config.name} on Rent in Rajkot`)}</image:title>
+      <image:caption>${esc(`${item.desc || 'Premium wedding attire.'} ${config.name} available for rent at Vivah Villa Collection in Rajkot.`)}</image:caption>
     </image:image>`).join('\n')}
-  </url>
+  </url>`;
+}).join('\n')}
 </urlset>
 `;
 
@@ -1452,6 +1549,10 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
   <sitemap>
     <loc>${SITE_URL}/sitemap_products.xml</loc>
     <lastmod>${PRODUCTS_LAST_MODIFIED}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${SITE_URL}/sitemap_collections.xml</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
   </sitemap>
 </sitemapindex>
 `;

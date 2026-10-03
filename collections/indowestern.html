@@ -171,6 +171,31 @@
       font-weight: 600;
     }
 
+    .category-seo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 32px;
+      margin: 56px 20px 28px;
+      padding: clamp(24px, 4vw, 48px);
+      background: #fff;
+      border: 1px solid #eadde2;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(36, 21, 26, .08);
+    }
+
+    .category-seo h2 { color: #24151a; margin: 10px 0 16px; }
+    .category-seo p { color: #5c4950; line-height: 1.75; }
+    .category-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 22px; }
+    .category-related span { font-weight: 800; color: #24151a; }
+    .category-related a { color: #8b1538; background: #f9f0f3; padding: 8px 12px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .category-faq details { border-top: 1px solid #eadde2; padding: 14px 0; }
+    .category-faq summary { color: #24151a; cursor: pointer; font-weight: 800; line-height: 1.45; }
+    .category-faq details p { margin: 10px 0 0; font-size: 15px; }
+
+    @media (max-width: 760px) {
+      .category-seo { grid-template-columns: 1fr; margin: 36px 0 20px; }
+    }
+
     .all-collection-card .selling-price {
       color: #047857;
     }
@@ -179,6 +204,32 @@
       color: #E1306C;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .collection-whatsapp {
+      margin: 12px 0 0;
+    }
+
+    .collection-whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .collection-whatsapp a:hover,
+    .collection-whatsapp a:focus-visible {
+      background: #1daa50;
+      transform: translateY(-1px);
     }
 
     .all-collections-empty {
@@ -290,6 +341,7 @@
               <p class="collection-price"><span>Rent:</span> ₹6999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Imperial%20Bloom%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fimperial-bloom.jpg" target="_blank" rel="noopener" aria-label="Enquire about Imperial Bloom on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -302,6 +354,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTXzagNjJYG/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Rajsi%20peacock%20Heritage%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Frajsi-peacock-heritage-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Rajsi peacock Heritage Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -315,6 +368,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹11999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/Dbaz8K6BG2W/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Black%20Legacy%20indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblack-legacy-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Black Legacy indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -327,6 +381,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Noir%20Dynasty%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fnoir-dynasty.jpg" target="_blank" rel="noopener" aria-label="Enquire about Noir Dynasty on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -340,6 +395,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DcBbuQapiiR/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Blue%20Dynasty%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblue-dynasty.jpg" target="_blank" rel="noopener" aria-label="Enquire about Blue Dynasty on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -352,6 +408,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTkt6IFjNy4/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Ivory%20Signature%20indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fivory-signature-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Ivory Signature indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -365,6 +422,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/Dc06i0Xhc1K/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Sapphire%20Drape%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-sapphire-drape-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Sapphire Drape Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -376,6 +434,7 @@
               <p class="collection-description">A sleek black streetwear-inspired look featuring structured tailoring and textured hand-embroidery.</p>
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shadow%20Prince%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshadow-prince-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shadow Prince Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -389,6 +448,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DZzz3f4zSF7/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Royal%20Tapestry%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-royal-tapestry-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Royal Tapestry Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -402,6 +462,7 @@
               <p class="collection-meta"><span>Sizes:</span> 36, 40, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DcoCksnJob3/?utm_source=ig_web_copy_link&amp;igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Midnight%20Cavalier%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmidnight-cavalier-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Midnight Cavalier Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -414,6 +475,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DScn30UDG0q/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Blue%20Dynasty%20Signature%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblue-dynasty-signature-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Blue Dynasty Signature Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -427,6 +489,7 @@
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DcbLNWHpMWd/?utm_source=ig_web_copy_link&amp;igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Signature%20of%20Sovereignty%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fsignature-of-sovereignty-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Signature of Sovereignty Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -439,6 +502,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DS44CIFjFoC/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Lavender%20Smoke%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Flavender-smoke-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Lavender Smoke Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -451,6 +515,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Dusk%20Bloom%20Indo-Western%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fdusk-bloom-indo-western.jpg" target="_blank" rel="noopener" aria-label="Enquire about Dusk Bloom Indo-Western on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -463,6 +528,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnF0rTDJhq/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Classic%20black%20Velvet%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fclassic-black-velvet-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Classic black Velvet Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -475,6 +541,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSASZygEkCX/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Wine%20Emperor%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fwine-emperor-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Wine Emperor Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -486,6 +553,7 @@
               <p class="collection-description">An off-white Indo-Western sherwani featuring detailed Pichwai-inspired embroidery of traditional gold borders.</p>
               <p class="collection-price"><span>Rent:</span> ₹1999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Golden%20Fable%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-golden-fable-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Golden Fable Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -497,6 +565,7 @@
               <p class="collection-description">Black Indo-Western with royal detailing</p>
               <p class="collection-price"><span>Rent:</span> ₹1999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shahi%20Noir%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshahi-noir-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shahi Noir Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -509,6 +578,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSK9pWklYrS/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shahi%20Peacock%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshahi-peacock-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shahi Peacock Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -521,6 +591,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DS7i-HVDHgE/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Mirror%20Bloom%20Fusion%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmirror-bloom-fusion-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Mirror Bloom Fusion Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -533,6 +604,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTIcS4UDCcD/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Neelmayur%20Royale%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fneelmayur-royale-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Neelmayur Royale Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -545,6 +617,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DUDq9e6jL7p/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Midnight%20Groom%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-midnight-groom-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Midnight Groom Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -556,6 +629,7 @@
               <p class="collection-description">A black Indo-Western featuring a subtle metallic sheen and intricate black floral embellished with glossy bead accents.</p>
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Dark%20Knight%20Elegance%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fdark-knight-elegance-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Dark Knight Elegance Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -568,6 +642,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSfYHV-jfNn/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Shahi%20Ashva%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fshahi-ashva-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Shahi Ashva Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -580,6 +655,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnF0rTDJhq/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Stealth%20Luxury%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fstealth-luxury-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Stealth Luxury Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -592,6 +668,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38, 40, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DVnF0rTDJhq/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Modern%20Floral%20Tux-Style%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmodern-floral-tux-style-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Modern Floral Tux-Style Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -604,6 +681,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DSfYHV-jfNn/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20Azure%20Peacock%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-azure-peacock-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal Azure Peacock Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -616,6 +694,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTkt6IFjNy4/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Metallic%20Blush%20Fusion%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fmetallic-blush-fusion-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Metallic Blush Fusion Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -628,6 +707,7 @@
               <p class="collection-price"><span>Rent:</span> ₹2999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DdByjgpp8ML/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Floral%20Royale%20indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Ffloral-royale-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Floral Royale indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -639,6 +719,7 @@
               <p class="collection-description">Royal ivory Indo-Western featuring elegant elephant embroidery, blending heritage craftsmanship with contemporary sophistication for a distinguished groom's look.</p>
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 38, 40</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Gajraj%20Edit%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-gajraj-edit.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Gajraj Edit on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -651,6 +732,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DS44CIFjFoC/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Lavender%20Legacy%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Flavender-legacy.jpg" target="_blank" rel="noopener" aria-label="Enquire about Lavender Legacy on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -663,6 +745,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 40, 50</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTdO5x1jJpj/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Celestial%20Black%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fcelestial-black.jpg" target="_blank" rel="noopener" aria-label="Enquire about Celestial Black on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -675,6 +758,7 @@
               <p class="collection-price"><span>Rent:</span> ₹3499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 38, 42</p>
               <p class="collection-reel"><a href="https://www.instagram.com/reel/DTNiwUfjHEG/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">Watch Reel</a></p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Black%20Sovereign%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblack-sovereign.jpg" target="_blank" rel="noopener" aria-label="Enquire about Black Sovereign on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -686,6 +770,7 @@
               <p class="collection-description">An off-white Indo-Western featuring multi-colored embroidered peacock motifs flanking the front button placket.</p>
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 40, 42, 46</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Peacock%20Prince%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-peacock-prince.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Peacock Prince Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -697,6 +782,7 @@
               <p class="collection-description">Designed for men who carry heritage with confidence.</p>
               <p class="collection-price"><span>Rent:</span> ₹1499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 38, 40, 42</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Black%20Crown%20Long%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fblack-crown-long-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Black Crown Long Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -708,6 +794,7 @@
               <p class="collection-description">A graceful blend of heritage embroidery and modern silhouette.</p>
               <p class="collection-price"><span>Rent:</span> ₹1499/-</p>
               <p class="collection-meta"><span>Sizes:</span> 34, 36, 38</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20Royal%20White%20Long%20Indowestern%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Froyal-white-long-indowestern.jpg" target="_blank" rel="noopener" aria-label="Enquire about Royal White Long Indowestern on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <article class="collection-card visible all-collection-card" data-tags="men|indowestern">
@@ -720,11 +807,30 @@
               <p class="collection-price"><span>Rent:</span> ₹3999/-</p>
               <p class="collection-meta"><span>Sizes:</span> 36, 40</p>
               <p class="collection-meta selling-price"><span>Selling Price:</span> ₹19999/-</p>
+              <p class="collection-whatsapp"><a href="https://wa.me/919099055844?text=Hello%2C%20I%20want%20to%20rent%20this%20outfit.%0A%0AProduct%3A%20The%20Royal%20Peacock%0Ahttps%3A%2F%2Fvivahvilla.in%2Fimg%2Fcollections%2Fthe-royal-peacock.jpg" target="_blank" rel="noopener" aria-label="Enquire about The Royal Peacock on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp Enquiry</a></p>
             </div>
           </article>
           <p class="all-collections-empty" id="collectionsEmpty" hidden>No collections found.</p>
         </div>
       </div>
+        <section class="category-seo" aria-labelledby="category-guide-title">
+          <div class="category-seo-copy">
+            <span class="section-badge">Rajkot Rental Guide</span>
+            <h2 id="category-guide-title">Find the Right Indo-Western on Rent in Rajkot</h2>
+            <p>Browse premium Indo-Western outfits for rent in Rajkot for weddings and receptions, with sizes and booking details from Vivah Villa Collection. Browse 37 real outfit photos, compare designs and open any style to see its rental price, available sizes and booking details.</p>
+            <p>Popular searches for this collection include <strong>Indo Western on rent in Rajkot</strong>, <strong>Indo Western dress for men on rent</strong>, <strong>groom Indo Western rental</strong>. For the best selection, shortlist your favourites and book a trial before your wedding, reception, sangeet or festive event.</p>
+            <nav class="category-related" aria-label="Explore related rental collections">
+              <span>Explore more:</span>
+              <a href="/collections/sherwani.html">Sherwani on rent in Rajkot</a><a href="/collections/jodhpuri.html">Jodhpuri on rent in Rajkot</a><a href="/collections/lehenga.html">Lehenga on rent in Rajkot</a><a href="/collections/koti-kurta.html">Koti Kurta on rent in Rajkot</a><a href="/collections/choli.html">Choli on rent in Rajkot</a>
+            </nav>
+          </div>
+          <div class="category-faq">
+            <h2>Indo-Western Rental FAQs</h2>
+            <details><summary>Where can I find indo-western on rent in Rajkot?</summary><p>Vivah Villa Collection in Rajkot offers 37 Indo-Western styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date.</p></details>
+            <details><summary>How can I book a Indo-Western outfit for rent?</summary><p>Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements.</p></details>
+            <details><summary>Are Indo-Western rental sizes and prices shown online?</summary><p>Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended.</p></details>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -805,7 +911,7 @@
       "url": "https://vivahvilla.in/collections/indowestern.html",
       "description": "Browse premium Indo-Western outfits for rent in Rajkot for weddings and receptions, with sizes and booking details from Vivah Villa Collection.",
       "inLanguage": "en-IN",
-      "dateModified": "2026-09-25",
+      "dateModified": "2026-10-03",
       "isPartOf": {
         "@id": "https://vivahvilla.in/#website"
       },
@@ -832,7 +938,12 @@
               "@id": "https://vivahvilla.in/products/imperial-bloom.html#product",
               "url": "https://vivahvilla.in/products/imperial-bloom.html",
               "name": "Imperial Bloom",
-              "image": "https://vivahvilla.in/img/collections/imperial-bloom.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/imperial-bloom.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/imperial-bloom.jpg",
+                "caption": "Imperial Bloom. A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -851,7 +962,12 @@
               "@id": "https://vivahvilla.in/products/rajsi-peacock-heritage-indowestern.html#product",
               "url": "https://vivahvilla.in/products/rajsi-peacock-heritage-indowestern.html",
               "name": "Rajsi peacock Heritage Indowestern",
-              "image": "https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg",
+                "caption": "Rajsi peacock Heritage Indowestern. A pinkish Indo-Western ensemble embellished with geometric sequin work and detailed peacock motifs. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -870,7 +986,12 @@
               "@id": "https://vivahvilla.in/products/black-legacy-indowestern.html#product",
               "url": "https://vivahvilla.in/products/black-legacy-indowestern.html",
               "name": "Black Legacy indowestern",
-              "image": "https://vivahvilla.in/img/collections/black-legacy-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/black-legacy-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/black-legacy-indowestern.jpg",
+                "caption": "Black Legacy indowestern. Bold, refined, and undeniably royal—this black embroidered Indo-Western is made for grand celebrations. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -889,7 +1010,12 @@
               "@id": "https://vivahvilla.in/products/noir-dynasty.html#product",
               "url": "https://vivahvilla.in/products/noir-dynasty.html",
               "name": "Noir Dynasty",
-              "image": "https://vivahvilla.in/img/collections/noir-dynasty.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/noir-dynasty.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/noir-dynasty.jpg",
+                "caption": "Noir Dynasty. A premium black Indo-Western featuring exquisite silver hand embroidery, a structured silhouette, and... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -908,7 +1034,12 @@
               "@id": "https://vivahvilla.in/products/blue-dynasty.html#product",
               "url": "https://vivahvilla.in/products/blue-dynasty.html",
               "name": "Blue Dynasty",
-              "image": "https://vivahvilla.in/img/collections/blue-dynasty.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/blue-dynasty.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/blue-dynasty.jpg",
+                "caption": "Blue Dynasty. A premium navy blue Indo-Western featuring elegant hand embroidery, a structured open jacket, and a sleek... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -927,7 +1058,12 @@
               "@id": "https://vivahvilla.in/products/ivory-signature-indowestern.html#product",
               "url": "https://vivahvilla.in/products/ivory-signature-indowestern.html",
               "name": "Ivory Signature indowestern",
-              "image": "https://vivahvilla.in/img/collections/ivory-signature-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/ivory-signature-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/ivory-signature-indowestern.jpg",
+                "caption": "Ivory Signature indowestern. Crafted in luxurious ivory fabric, this Jodhpuri features intricate floral embroidery and shimmering... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -946,7 +1082,12 @@
               "@id": "https://vivahvilla.in/products/royal-sapphire-drape-indowestern.html#product",
               "url": "https://vivahvilla.in/products/royal-sapphire-drape-indowestern.html",
               "name": "Royal Sapphire Drape Indowestern",
-              "image": "https://vivahvilla.in/img/collections/royal-sapphire-drape-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-sapphire-drape-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-sapphire-drape-indowestern.jpg",
+                "caption": "Royal Sapphire Drape Indowestern. A majestic cobalt-blue look featuring intricate silver glass bead detailing for a high-fashion Sangeet or... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -965,7 +1106,12 @@
               "@id": "https://vivahvilla.in/products/shadow-prince-indowestern.html#product",
               "url": "https://vivahvilla.in/products/shadow-prince-indowestern.html",
               "name": "Shadow Prince Indowestern",
-              "image": "https://vivahvilla.in/img/collections/shadow-prince-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shadow-prince-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shadow-prince-indowestern.jpg",
+                "caption": "Shadow Prince Indowestern. A sleek black streetwear-inspired look featuring structured tailoring and textured hand-embroidery. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -984,7 +1130,12 @@
               "@id": "https://vivahvilla.in/products/the-royal-tapestry-indowestern.html#product",
               "url": "https://vivahvilla.in/products/the-royal-tapestry-indowestern.html",
               "name": "The Royal Tapestry Indowestern",
-              "image": "https://vivahvilla.in/img/collections/the-royal-tapestry-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-royal-tapestry-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-royal-tapestry-indowestern.jpg",
+                "caption": "The Royal Tapestry Indowestern. A white Indian groom's outfit featuring intricate peacock motifs and ornate gold embroidery. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1003,7 +1154,12 @@
               "@id": "https://vivahvilla.in/products/midnight-cavalier-indowestern.html#product",
               "url": "https://vivahvilla.in/products/midnight-cavalier-indowestern.html",
               "name": "Midnight Cavalier Indowestern",
-              "image": "https://vivahvilla.in/img/collections/midnight-cavalier-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/midnight-cavalier-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/midnight-cavalier-indowestern.jpg",
+                "caption": "Midnight Cavalier Indowestern. A mauve Indo-Western suit featuring a stylized horse motif and intricate black floral embroidery. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1022,7 +1178,12 @@
               "@id": "https://vivahvilla.in/products/blue-dynasty-signature-indowestern.html#product",
               "url": "https://vivahvilla.in/products/blue-dynasty-signature-indowestern.html",
               "name": "Blue Dynasty Signature Indowestern",
-              "image": "https://vivahvilla.in/img/collections/blue-dynasty-signature-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/blue-dynasty-signature-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/blue-dynasty-signature-indowestern.jpg",
+                "caption": "Blue Dynasty Signature Indowestern. A royal navy blue Indo-western crafted for the groom who defines elegance. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1041,7 +1202,12 @@
               "@id": "https://vivahvilla.in/products/signature-of-sovereignty-indowestern.html#product",
               "url": "https://vivahvilla.in/products/signature-of-sovereignty-indowestern.html",
               "name": "Signature of Sovereignty Indowestern",
-              "image": "https://vivahvilla.in/img/collections/signature-of-sovereignty-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/signature-of-sovereignty-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/signature-of-sovereignty-indowestern.jpg",
+                "caption": "Signature of Sovereignty Indowestern. A cream Indo-Western set detailed with intricate antique gold embroidery along the shoulders, cuffs, and... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1060,7 +1226,12 @@
               "@id": "https://vivahvilla.in/products/lavender-smoke-indowestern.html#product",
               "url": "https://vivahvilla.in/products/lavender-smoke-indowestern.html",
               "name": "Lavender Smoke Indowestern",
-              "image": "https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/lavender-smoke-indowestern.jpg",
+                "caption": "Lavender Smoke Indowestern. A sleek monochrome silhouette featuring subtle metallic threadwork and intricate patterns for an evening... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1079,7 +1250,12 @@
               "@id": "https://vivahvilla.in/products/dusk-bloom-indo-western.html#product",
               "url": "https://vivahvilla.in/products/dusk-bloom-indo-western.html",
               "name": "Dusk Bloom Indo-Western",
-              "image": "https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/dusk-bloom-indo-western.jpg",
+                "caption": "Dusk Bloom Indo-Western. This deep mauve attire stands out with its intricate white bead detailing and bold floral patterns. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1098,7 +1274,12 @@
               "@id": "https://vivahvilla.in/products/classic-black-velvet-indowestern.html#product",
               "url": "https://vivahvilla.in/products/classic-black-velvet-indowestern.html",
               "name": "Classic black Velvet Indowestern",
-              "image": "https://vivahvilla.in/img/collections/classic-black-velvet-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/classic-black-velvet-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/classic-black-velvet-indowestern.jpg",
+                "caption": "Classic black Velvet Indowestern. A sleek black Indo-Western outfit featuring striking silver and mint-green floral embroidery alongside... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1117,7 +1298,12 @@
               "@id": "https://vivahvilla.in/products/wine-emperor-indowestern.html#product",
               "url": "https://vivahvilla.in/products/wine-emperor-indowestern.html",
               "name": "Wine Emperor Indowestern",
-              "image": "https://vivahvilla.in/img/collections/wine-emperor-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/wine-emperor-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/wine-emperor-indowestern.jpg",
+                "caption": "Wine Emperor Indowestern. A sleek deep wine Indo-Western outfit, with tone-on-tone beadwork and floral geometric embroidery. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1136,7 +1322,12 @@
               "@id": "https://vivahvilla.in/products/the-golden-fable-indowestern.html#product",
               "url": "https://vivahvilla.in/products/the-golden-fable-indowestern.html",
               "name": "The Golden Fable Indowestern",
-              "image": "https://vivahvilla.in/img/collections/the-golden-fable-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-golden-fable-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-golden-fable-indowestern.jpg",
+                "caption": "The Golden Fable Indowestern. An off-white Indo-Western sherwani featuring detailed Pichwai-inspired embroidery of traditional gold borders. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1155,7 +1346,12 @@
               "@id": "https://vivahvilla.in/products/shahi-noir-indowestern.html#product",
               "url": "https://vivahvilla.in/products/shahi-noir-indowestern.html",
               "name": "Shahi Noir Indowestern",
-              "image": "https://vivahvilla.in/img/collections/shahi-noir-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shahi-noir-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shahi-noir-indowestern.jpg",
+                "caption": "Shahi Noir Indowestern. Black Indo-Western with royal detailing Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1174,7 +1370,12 @@
               "@id": "https://vivahvilla.in/products/shahi-peacock-indowestern.html#product",
               "url": "https://vivahvilla.in/products/shahi-peacock-indowestern.html",
               "name": "Shahi Peacock Indowestern",
-              "image": "https://vivahvilla.in/img/collections/shahi-peacock-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shahi-peacock-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shahi-peacock-indowestern.jpg",
+                "caption": "Shahi Peacock Indowestern. Royal black Indo-Western adorned with peacock elegance. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1193,7 +1394,12 @@
               "@id": "https://vivahvilla.in/products/mirror-bloom-fusion-indowestern.html#product",
               "url": "https://vivahvilla.in/products/mirror-bloom-fusion-indowestern.html",
               "name": "Mirror Bloom Fusion Indowestern",
-              "image": "https://vivahvilla.in/img/collections/mirror-bloom-fusion-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/mirror-bloom-fusion-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/mirror-bloom-fusion-indowestern.jpg",
+                "caption": "Mirror Bloom Fusion Indowestern. Black Indo-Western elevated with elegant mirror work. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1212,7 +1418,12 @@
               "@id": "https://vivahvilla.in/products/neelmayur-royale-indowestern.html#product",
               "url": "https://vivahvilla.in/products/neelmayur-royale-indowestern.html",
               "name": "Neelmayur Royale Indowestern",
-              "image": "https://vivahvilla.in/img/collections/neelmayur-royale-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/neelmayur-royale-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/neelmayur-royale-indowestern.jpg",
+                "caption": "Neelmayur Royale Indowestern. Tradition reimagined with contemporary power and timeless detailing. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1231,7 +1442,12 @@
               "@id": "https://vivahvilla.in/products/the-midnight-groom-indowestern.html#product",
               "url": "https://vivahvilla.in/products/the-midnight-groom-indowestern.html",
               "name": "The Midnight Groom Indowestern",
-              "image": "https://vivahvilla.in/img/collections/the-midnight-groom-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-midnight-groom-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-midnight-groom-indowestern.jpg",
+                "caption": "The Midnight Groom Indowestern. Tradition reimagined with contemporary power and timeless detailing. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1250,7 +1466,12 @@
               "@id": "https://vivahvilla.in/products/dark-knight-elegance-indowestern.html#product",
               "url": "https://vivahvilla.in/products/dark-knight-elegance-indowestern.html",
               "name": "Dark Knight Elegance Indowestern",
-              "image": "https://vivahvilla.in/img/collections/dark-knight-elegance-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/dark-knight-elegance-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/dark-knight-elegance-indowestern.jpg",
+                "caption": "Dark Knight Elegance Indowestern. A black Indo-Western featuring a subtle metallic sheen and intricate black floral embellished with glossy... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1269,7 +1490,12 @@
               "@id": "https://vivahvilla.in/products/shahi-ashva-indowestern.html#product",
               "url": "https://vivahvilla.in/products/shahi-ashva-indowestern.html",
               "name": "Shahi Ashva Indowestern",
-              "image": "https://vivahvilla.in/img/collections/shahi-ashva-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/shahi-ashva-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/shahi-ashva-indowestern.jpg",
+                "caption": "Shahi Ashva Indowestern. black Indo-western intricate horse embroidery Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1288,7 +1514,12 @@
               "@id": "https://vivahvilla.in/products/stealth-luxury-indowestern.html#product",
               "url": "https://vivahvilla.in/products/stealth-luxury-indowestern.html",
               "name": "Stealth Luxury Indowestern",
-              "image": "https://vivahvilla.in/img/collections/stealth-luxury-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/stealth-luxury-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/stealth-luxury-indowestern.jpg",
+                "caption": "Stealth Luxury Indowestern. A sharp, layered black outfit featuring tone-on-tone embroidery and subtle beadwork highlights. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1307,7 +1538,12 @@
               "@id": "https://vivahvilla.in/products/modern-floral-tux-style-indowestern.html#product",
               "url": "https://vivahvilla.in/products/modern-floral-tux-style-indowestern.html",
               "name": "Modern Floral Tux-Style Indowestern",
-              "image": "https://vivahvilla.in/img/collections/modern-floral-tux-style-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/modern-floral-tux-style-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/modern-floral-tux-style-indowestern.jpg",
+                "caption": "Modern Floral Tux-Style Indowestern. An all-black Indo-Western outfit highlighted by intricate pastel pink, blue, and gold threadwork. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1326,7 +1562,12 @@
               "@id": "https://vivahvilla.in/products/royal-azure-peacock-indowestern.html#product",
               "url": "https://vivahvilla.in/products/royal-azure-peacock-indowestern.html",
               "name": "Royal Azure Peacock Indowestern",
-              "image": "https://vivahvilla.in/img/collections/royal-azure-peacock-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-azure-peacock-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-azure-peacock-indowestern.jpg",
+                "caption": "Royal Azure Peacock Indowestern. A deep indigo outfit featuring meticulous bird-and-leaf hand-embroidery over a sharp, textured premium fabric. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1345,7 +1586,12 @@
               "@id": "https://vivahvilla.in/products/metallic-blush-fusion-indowestern.html#product",
               "url": "https://vivahvilla.in/products/metallic-blush-fusion-indowestern.html",
               "name": "Metallic Blush Fusion Indowestern",
-              "image": "https://vivahvilla.in/img/collections/metallic-blush-fusion-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/metallic-blush-fusion-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/metallic-blush-fusion-indowestern.jpg",
+                "caption": "Metallic Blush Fusion Indowestern. A premium three-piece fusion set meticulously crafted for the modern groom. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1364,7 +1610,12 @@
               "@id": "https://vivahvilla.in/products/floral-royale-indowestern.html#product",
               "url": "https://vivahvilla.in/products/floral-royale-indowestern.html",
               "name": "Floral Royale indowestern",
-              "image": "https://vivahvilla.in/img/collections/floral-royale-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/floral-royale-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/floral-royale-indowestern.jpg",
+                "caption": "Floral Royale indowestern. Luxury floral craftsmanship with a royal touch. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1383,7 +1634,12 @@
               "@id": "https://vivahvilla.in/products/the-gajraj-edit.html#product",
               "url": "https://vivahvilla.in/products/the-gajraj-edit.html",
               "name": "The Gajraj Edit",
-              "image": "https://vivahvilla.in/img/collections/the-gajraj-edit.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-gajraj-edit.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-gajraj-edit.jpg",
+                "caption": "The Gajraj Edit. Royal ivory Indo-Western featuring elegant elephant embroidery, blending heritage craftsmanship with... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1402,7 +1658,12 @@
               "@id": "https://vivahvilla.in/products/lavender-legacy.html#product",
               "url": "https://vivahvilla.in/products/lavender-legacy.html",
               "name": "Lavender Legacy",
-              "image": "https://vivahvilla.in/img/collections/lavender-legacy.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/lavender-legacy.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/lavender-legacy.jpg",
+                "caption": "Lavender Legacy. A premium lavender Indo-Western featuring intricate hand embroidery and a regal silhouette, designed for... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1421,7 +1682,12 @@
               "@id": "https://vivahvilla.in/products/celestial-black.html#product",
               "url": "https://vivahvilla.in/products/celestial-black.html",
               "name": "Celestial Black",
-              "image": "https://vivahvilla.in/img/collections/celestial-black.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/celestial-black.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/celestial-black.jpg",
+                "caption": "Celestial Black. An elegant black embroidered jacket featuring intricate detailing, perfect for the modern groom or wedding... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1440,7 +1706,12 @@
               "@id": "https://vivahvilla.in/products/black-sovereign.html#product",
               "url": "https://vivahvilla.in/products/black-sovereign.html",
               "name": "Black Sovereign",
-              "image": "https://vivahvilla.in/img/collections/black-sovereign.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/black-sovereign.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/black-sovereign.jpg",
+                "caption": "Black Sovereign. A sophisticated black Indo-Western sherwani featuring intricate tonal embroidery and subtle... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1459,7 +1730,12 @@
               "@id": "https://vivahvilla.in/products/the-peacock-prince-indowestern.html#product",
               "url": "https://vivahvilla.in/products/the-peacock-prince-indowestern.html",
               "name": "The Peacock Prince Indowestern",
-              "image": "https://vivahvilla.in/img/collections/the-peacock-prince.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-peacock-prince.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-peacock-prince.jpg",
+                "caption": "The Peacock Prince Indowestern. An off-white Indo-Western featuring multi-colored embroidered peacock motifs flanking the front button... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1478,7 +1754,12 @@
               "@id": "https://vivahvilla.in/products/black-crown-long-indowestern.html#product",
               "url": "https://vivahvilla.in/products/black-crown-long-indowestern.html",
               "name": "Black Crown Long Indowestern",
-              "image": "https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/black-crown-long-indowestern.jpg",
+                "caption": "Black Crown Long Indowestern. Designed for men who carry heritage with confidence. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1497,7 +1778,12 @@
               "@id": "https://vivahvilla.in/products/royal-white-long-indowestern.html#product",
               "url": "https://vivahvilla.in/products/royal-white-long-indowestern.html",
               "name": "Royal White Long Indowestern",
-              "image": "https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/royal-white-long-indowestern.jpg",
+                "caption": "Royal White Long Indowestern. A graceful blend of heritage embroidery and modern silhouette. Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1516,7 +1802,12 @@
               "@id": "https://vivahvilla.in/products/the-royal-peacock.html#product",
               "url": "https://vivahvilla.in/products/the-royal-peacock.html",
               "name": "The Royal Peacock",
-              "image": "https://vivahvilla.in/img/collections/the-royal-peacock.jpg",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://vivahvilla.in/img/collections/the-royal-peacock.jpg",
+                "contentUrl": "https://vivahvilla.in/img/collections/the-royal-peacock.jpg",
+                "caption": "The Royal Peacock. A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a... Indo-Western available for rent in Rajkot at Vivah Villa Collection."
+              },
               "category": "Men's Indo-Western",
               "offers": {
                 "@type": "Offer",
@@ -1551,6 +1842,36 @@
           "position": 3,
           "name": "Indo-Western",
           "item": "https://vivahvilla.in/collections/indowestern.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://vivahvilla.in/collections/indowestern.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I find indo-western on rent in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vivah Villa Collection in Rajkot offers 37 Indo-Western styles for rent. Browse the photos and product details online, then contact the store to confirm size, trial and availability for your event date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book a Indo-Western outfit for rent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose a design from this collection and send its name or photo on WhatsApp. The Vivah Villa team will help confirm the rental price, available size, trial appointment and booking requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Indo-Western rental sizes and prices shown online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Available sizes and rental prices are shown on individual outfit pages where provided. Final availability can vary by event date, so advance confirmation with the store is recommended."
+          }
         }
       ]
     }
