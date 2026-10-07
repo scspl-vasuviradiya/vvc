@@ -3,7 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/collections/sherwani.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-grand-rajwada.jpg</image:loc>
+      <image:title>The Grand Rajwada - Sherwani on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani adorned with intricate golden embroidery and striking emerald accents. Crafted for the modern groom, it reflects the grandeur of Rajwada royalty with timeless elegance and majestic charm. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-ivory-rajkumar.jpg</image:loc>
+      <image:title>The Ivory Rajkumar - Sherwani on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani featuring intricate golden embroidery, elegant detailing, and a majestic drape. Designed for the modern Rajkumar, it blends royal heritage with refined sophistication for a truly grand wedding look. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg</image:loc>
       <image:title>Golden Heritage Sherwani - Sherwani on Rent in Rajkot</image:title>
@@ -13,6 +23,11 @@
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat - Sherwani on Rent in Rajkot</image:title>
       <image:caption>An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg</image:loc>
+      <image:title>Maharaja’s Legacy Sherwani - Sherwani on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-mayur-royal.jpg</image:loc>
@@ -154,19 +169,19 @@
       <image:title>Shahi Safed Elegance - Sherwani on Rent in Rajkot</image:title>
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg</image:loc>
-      <image:title>Maharaja’s Legacy Sherwani - Sherwani on Rent in Rajkot</image:title>
-      <image:caption>A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom. Sherwani available for rent at Vivah Villa Collection in Rajkot.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/indowestern.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
       <image:title>Imperial Bloom - Indo-Western on Rent in Rajkot</image:title>
       <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
+      <image:title>The Royal Peacock - Indo-Western on Rent in Rajkot</image:title>
+      <image:caption>A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg</image:loc>
@@ -343,15 +358,10 @@
       <image:title>Royal White Long Indowestern - Indo-Western on Rent in Rajkot</image:title>
       <image:caption>A graceful blend of heritage embroidery and modern silhouette. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
-      <image:title>The Royal Peacock - Indo-Western on Rent in Rajkot</image:title>
-      <image:caption>A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/jodhpuri.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg</image:loc>
       <image:title>Black Baron jodhpuri - Jodhpuri on Rent in Rajkot</image:title>
@@ -455,7 +465,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/lehenga.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
       <image:title>Shimmering Ice-Blue Elegance - Lehenga on Rent in Rajkot</image:title>
@@ -509,7 +519,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/koti-kurta.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-ivory-koti-kurta.jpg</image:loc>
       <image:title>Imperial Ivory Koti kurta - Koti Kurta on Rent in Rajkot</image:title>
@@ -603,7 +613,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/choli.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg</image:loc>
       <image:title>Teal Blue Embroidered Lehenga - Choli on Rent in Rajkot</image:title>
@@ -637,7 +647,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/suit.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/classic-men-s-suit.jpg</image:loc>
       <image:title>Classic Men's Suit - Suit on Rent in Rajkot</image:title>
@@ -646,7 +656,17 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/men.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-grand-rajwada.jpg</image:loc>
+      <image:title>The Grand Rajwada - Men on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani adorned with intricate golden embroidery and striking emerald accents. Crafted for the modern groom, it reflects the grandeur of Rajwada royalty with timeless elegance and majestic charm. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-ivory-rajkumar.jpg</image:loc>
+      <image:title>The Ivory Rajkumar - Men on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani featuring intricate golden embroidery, elegant detailing, and a majestic drape. Designed for the modern Rajkumar, it blends royal heritage with refined sophistication for a truly grand wedding look. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
       <image:title>Imperial Bloom - Men on Rent in Rajkot</image:title>
@@ -661,6 +681,16 @@
       <image:loc>https://vivahvilla.in/img/collections/rajsi-virasat.jpg</image:loc>
       <image:title>Rajsi Virasat - Men on Rent in Rajkot</image:title>
       <image:caption>An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
+      <image:title>The Royal Peacock - Men on Rent in Rajkot</image:title>
+      <image:caption>A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg</image:loc>
+      <image:title>Maharaja’s Legacy Sherwani - Men on Rent in Rajkot</image:title>
+      <image:caption>A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/rajsi-peacock-heritage-indowestern.jpg</image:loc>
@@ -1172,20 +1202,10 @@
       <image:title>Shahi Safed Elegance - Men on Rent in Rajkot</image:title>
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
-      <image:title>The Royal Peacock - Men on Rent in Rajkot</image:title>
-      <image:caption>A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/maharaja-s-legacy-sherwani.jpg</image:loc>
-      <image:title>Maharaja’s Legacy Sherwani - Men on Rent in Rajkot</image:title>
-      <image:caption>A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/women.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
       <image:title>Shimmering Ice-Blue Elegance - Women on Rent in Rajkot</image:title>

@@ -2,6 +2,36 @@
   {
     "tags": [
       "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-grand-rajwada.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
+    "reelUrl": "",
+    "title": "The Grand Rajwada",
+    "desc": "A regal ivory sherwani adorned with intricate golden embroidery and striking emerald accents. Crafted for the modern groom, it reflects the grandeur of Rajwada royalty with timeless elegance and majestic charm.",
+    "price": "₹24999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/the-ivory-rajkumar.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
+    "reelUrl": "",
+    "title": "The Ivory Rajkumar",
+    "desc": "A regal ivory sherwani featuring intricate golden embroidery, elegant detailing, and a majestic drape. Designed for the modern Rajkumar, it blends royal heritage with refined sophistication for a truly grand wedding look.",
+    "price": "₹24999/-",
+    "sellingPrice": "0",
+    "size": "36, 38, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
       "indowestern"
     ],
     "img": "img/collections/imperial-bloom.jpg",
@@ -39,9 +69,39 @@
     "reelUrl": "https://www.instagram.com/reel/DakzFpsM4PC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     "title": "Rajsi Virasat",
     "desc": "An elegant ivory sherwani featuring intricate heritage embroidery and royal motifs, paired with a matching stole and safa for a timeless, regal groom look.",
-    "price": "₹13999/-",
+    "price": "₹14999/-",
     "sellingPrice": "0",
     "size": "34, 36, 38, 40, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-royal-peacock.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
+    "reelUrl": "",
+    "title": "The Royal Peacock",
+    "desc": "A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance.",
+    "price": "₹3999/-",
+    "sellingPrice": "₹19999/-",
+    "size": "36, 40",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "sherwani"
+    ],
+    "img": "img/collections/maharaja-s-legacy-sherwani.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
+    "reelUrl": "",
+    "title": "Maharaja’s Legacy Sherwani",
+    "desc": "A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom.",
+    "price": "₹6999/-",
+    "sellingPrice": "₹19999/-",
+    "size": "34, 38, 42",
     "active": true
   },
   {
@@ -71,7 +131,7 @@
     "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
     "price": "₹13999/-",
     "sellingPrice": "0",
-    "size": "38, 42, 44",
+    "size": "34, 36, 38, 42, 44",
     "active": true
   },
   {
@@ -126,7 +186,7 @@
     ],
     "img": "img/collections/noir-dynasty.jpg",
     "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri, open jodhpuri",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/Dd_mOiwBaIY/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Noir Dynasty",
     "desc": "A premium black Indo-Western featuring exquisite silver hand embroidery, a structured silhouette, and refined craftsmanship—designed for the modern groom who commands attention with effortless elegance.",
     "price": "₹3999/-",
@@ -309,7 +369,7 @@
     "reelUrl": "https://www.instagram.com/reel/DdRP54YOx2N/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Shimmering Ice-Blue Elegance",
     "desc": "A modern ice-blue lehenga featuring all-over linear sequin and beads hand work, scalloped-border net dupatta.",
-    "price": "7999/-",
+    "price": "₹7999/-",
     "sellingPrice": "0",
     "size": "free",
     "active": true
@@ -324,7 +384,7 @@
     "reelUrl": "",
     "title": "Pastel Pink Floral Lehenga",
     "desc": "A chic pastel pink ethnic outfit heavily decorated with reflective works, botanical embroidery motifs, and a soft ruffled border drape.",
-    "price": "4999/-",
+    "price": "₹4999/-",
     "sellingPrice": "0",
     "size": "free",
     "active": true
@@ -339,7 +399,7 @@
     "reelUrl": "",
     "title": "Teal Blue Embroidered Lehenga",
     "desc": "A sophisticated deep teal ethnic ensemble detailed with intricate tonal hand work and subtle sequin highlights, perfect for an evening reception.",
-    "price": "4999/-",
+    "price": "₹4999/-",
     "sellingPrice": "0",
     "size": "free",
     "active": true
@@ -381,10 +441,10 @@
     ],
     "img": "img/collections/shimmering-ice-blue-ruffled-lehenga.jpg",
     "alt": "Ice-Blue, Designer, Lehenga, Lehenga Choli, Traditional, Indian, Embroidered, Festive, Regal, Ethnic, Celebration Attire, Vibrant, Opulent",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/Dd1S9vdBxfx/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     "title": "Shimmering Ice-Blue Ruffled Lehenga",
     "desc": "A modern twist on traditional wear, showcasing a flared pastel-blue skirt with heavy ruffle layers at the bottom and a matching embroidered blouse.",
-    "price": "5999/-",
+    "price": "₹5999/-",
     "sellingPrice": "0",
     "size": "free",
     "active": true
@@ -491,7 +551,7 @@
     "price": "₹6999/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "36, 38",
+    "size": "36, 38, 40, 42",
     "reelUrl": "https://www.instagram.com/reel/DO03pW5Eivp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
@@ -624,7 +684,7 @@
     "reelUrl": "",
     "title": "Midnight Bloom Jodhpuri",
     "desc": "It perfectly complements the elegant black base with floral hand embroidery, giving it a luxurious and modern royal appeal.",
-    "price": "₹3499/-",
+    "price": "₹2999/-",
     "sellingPrice": "₹11999/-",
     "size": "34, 38, 42",
     "active": true
@@ -656,7 +716,7 @@
     "desc": "Elevate your groom look with this royal black mirror-work Jodhpuri, crafted to impress.",
     "price": "₹2999/-",
     "sellingPrice": "₹10499/-",
-    "size": "38, 40",
+    "size": "36, 38, 40",
     "active": true
   },
   {
@@ -671,7 +731,7 @@
     "desc": "A sleek monochrome silhouette featuring subtle metallic threadwork and intricate patterns for an evening reception.",
     "price": "₹3499/-",
     "sellingPrice": "0",
-    "size": "36, 40",
+    "size": "36, 38, 40",
     "active": true
   },
   {
@@ -911,7 +971,7 @@
     "price": "₹2499/-",
     "active": true,
     "sellingPrice": "0",
-    "size": "0",
+    "size": "36, 38",
     "reelUrl": ""
   },
   {
@@ -1151,7 +1211,7 @@
     "desc": "A deep indigo outfit featuring meticulous bird-and-leaf hand-embroidery over a sharp, textured premium fabric.",
     "price": "₹3499/-",
     "sellingPrice": "0",
-    "size": "34, 38, 42",
+    "size": "34, 36, 38, 42",
     "active": true
   },
   {
@@ -1166,7 +1226,7 @@
     "desc": "A premium three-piece fusion set meticulously crafted for the modern groom.",
     "price": "₹3499/-",
     "sellingPrice": "0",
-    "size": "34, 38, 40",
+    "size": "34, 36, 38, 40",
     "active": true
   },
   {
@@ -1181,7 +1241,7 @@
     "desc": "Luxury floral craftsmanship with a royal touch.",
     "price": "₹2999/-",
     "sellingPrice": "0",
-    "size": "36, 38",
+    "size": "34, 36, 38, 40",
     "active": true
   },
   {
@@ -1316,7 +1376,7 @@
     "desc": "The name reflects the sherwani's brilliant white tone, sparkling hand embellishments, and regal craftsmanship, making it an ideal choice for a premium groom's wedding collection.",
     "price": "₹8999/-",
     "sellingPrice": "0",
-    "size": "38",
+    "size": "36, 38, 40",
     "active": true
   },
   {
@@ -1361,7 +1421,7 @@
     "desc": "Classic royal wedding attire with refined craftsmanship, perfect for a sophisticated groom.",
     "price": "₹7999/-",
     "sellingPrice": "0",
-    "size": "36, 40, 42",
+    "size": "36, 38, 40, 42",
     "active": true
   },
   {
@@ -1464,7 +1524,7 @@
     "reelUrl": "https://www.instagram.com/reel/DTDS6CcDDwX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     "title": "Off  white Emperor",
     "desc": "A timeless and luxurious name that perfectly reflects the regal Off white tone, intricate embroidery, and royal elegance of this groom's sherwani",
-    "price": "₹7999/-",
+    "price": "₹6999/-",
     "sellingPrice": "0",
     "size": "36, 42",
     "active": true
@@ -1524,7 +1584,7 @@
     "reelUrl": "https://www.instagram.com/reel/DTDS6CcDDwX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     "title": "Royal Off white Crest",
     "desc": "A refined and majestic name that perfectly captures the intricate off white embroidery, regal silhouette, and timeless elegance of this premium groom sherwani",
-    "price": "₹8999/-",
+    "price": "₹6999/-",
     "sellingPrice": "0",
     "size": "38, 42",
     "active": true
@@ -1541,7 +1601,7 @@
     "desc": "A timeless name that reflects the exquisite off white embroidery, refined craftsmanship, and majestic elegance of this premium groom sherwani",
     "price": "₹6999/-",
     "sellingPrice": "0",
-    "size": "36, 38",
+    "size": "36, 38, 42, 44",
     "active": true
   },
   {
@@ -1842,36 +1902,6 @@
     "price": "₹4499/-",
     "sellingPrice": "0",
     "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "indowestern"
-    ],
-    "img": "img/collections/the-royal-peacock.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "",
-    "title": "The Royal Peacock",
-    "desc": "A sophisticated white Indo-Western featuring intricate golden embroidery, elegant peacock detailing, and a regal silhouette. Designed for the groom who wants a perfect blend of royal tradition and modern elegance.",
-    "price": "₹3999/-",
-    "sellingPrice": "₹19999/-",
-    "size": "36, 40",
-    "active": true
-  },
-  {
-    "tags": [
-      "men",
-      "sherwani"
-    ],
-    "img": "img/collections/maharaja-s-legacy-sherwani.jpg",
-    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "",
-    "title": "Maharaja’s Legacy Sherwani",
-    "desc": "A regal ivory sherwani adorned with intricate all-over embroidery, elegant floral motifs, and refined detailing. Paired with a matching stole and traditional safa, it creates a grand, sophisticated look for the modern groom.",
-    "price": "₹6999/-",
-    "sellingPrice": "₹19999/-",
-    "size": "34, 38, 42",
     "active": true
   }
 ]
