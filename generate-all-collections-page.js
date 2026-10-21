@@ -203,12 +203,15 @@ function shouldReplaceAltText(value) {
 
 function imageAlt(item) {
   const suppliedAlt = normalizeText(item.alt);
-  if (!shouldReplaceAltText(suppliedAlt)) return suppliedAlt;
-
   const title = normalizeText(item.title || 'Vivah Villa collection outfit');
-  const description = shortSentence(item.desc, 110);
-  if (description) return `${title}. ${description}`;
-  return `${title} available for rent at Vivah Villa Collection.`;
+  const rentalContext = `${category(item)} on rent in Rajkot`;
+  const description = shortSentence(
+    !shouldReplaceAltText(suppliedAlt) ? suppliedAlt : item.desc,
+    90
+  );
+  return description
+    ? `${title} – ${rentalContext}. ${description}`
+    : `${title} – ${rentalContext} at Vivah Villa Collection.`;
 }
 
 function category(item) {
@@ -469,7 +472,9 @@ function productPage(item) {
     image: {
       '@type': 'ImageObject',
       url: absoluteUrl(img),
-      caption: imageAlt(item)
+      contentUrl: absoluteUrl(img),
+      caption: imageAlt(item),
+      representativeOfPage: true
     },
     sku: `VVC-${item.slug.toUpperCase()}`,
     category: category(item),
@@ -1486,8 +1491,8 @@ ${collections.map((item) => `  <url>
     <priority>0.8</priority>
     <image:image>
       <image:loc>${absoluteUrl(item.img || 'img/logo/logo.png')}</image:loc>
-      <image:title>${esc(item.title || 'Vivah Villa Collection Outfit')}</image:title>
-      <image:caption>${esc(item.desc || 'Premium wedding attire available for rent at Vivah Villa Collection.')}</image:caption>
+      <image:title>${esc(`${item.title || 'Vivah Villa Collection Outfit'} - ${category(item)} on Rent in Rajkot`)}</image:title>
+      <image:caption>${esc(imageAlt(item))}</image:caption>
     </image:image>
   </url>`).join('\n')}
 </urlset>
