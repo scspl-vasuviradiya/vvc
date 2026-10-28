@@ -6,7 +6,7 @@
     ],
     "img": "img/collections/the-grand-rajwada.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/De_-AcUJEv0/?utm_source=ig_web_copy_link&psln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
     "title": "The Grand Rajwada",
     "desc": "A regal ivory sherwani adorned with intricate golden embroidery and striking emerald accents. Crafted for the modern groom, it reflects the grandeur of Rajwada royalty with timeless elegance and majestic charm.",
     "price": "₹24999/-",
@@ -36,12 +36,12 @@
     ],
     "img": "img/collections/imperial-bloom.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, trending, open jodhapuri",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/DezGBc4Jea8/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
     "title": "Imperial Bloom",
     "desc": "A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look.",
     "price": "₹6999/-",
     "sellingPrice": "₹19999/-",
-    "size": "36",
+    "size": "36, 42",
     "active": true
   },
   {
@@ -56,7 +56,7 @@
     "desc": "A timeless golden sherwani featuring intricate traditional embroidery, rich detailing, and regal craftsmanship, designed for a majestic and sophisticated groom.",
     "price": "₹8999/-",
     "sellingPrice": "₹27999/-",
-    "size": "42",
+    "size": "38, 42",
     "active": true
   },
   {
@@ -221,7 +221,7 @@
     "desc": "A luxurious black Jodhpuri featuring intricate tonal embroidery, crafted for grooms who appreciate timeless elegance with a bold royal presence.",
     "price": "₹2999/-",
     "sellingPrice": "₹10499/-",
-    "size": "36, 40",
+    "size": "36, 40, 46",
     "active": true
   },
   {
@@ -265,7 +265,7 @@
     "desc": "A sleek black Jodhpuri featuring wavy vertical beadwork and a vibrant embroidered turquoise butterfly.",
     "price": "₹3499/-",
     "sellingPrice": "₹11999/-",
-    "size": "38, 42",
+    "size": "34, 38, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/p/DdVc67NDGaQ/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
   },
@@ -506,7 +506,7 @@
     "desc": "A premium cream-ivory groom ensemble featuring high-density tone-on-tone embroidery.",
     "price": "₹11999/-",
     "sellingPrice": "0",
-    "size": "36, 40",
+    "size": "36, 40, 42",
     "active": true
   },
   {
@@ -655,7 +655,7 @@
     "desc": "This Jodhpuri suit featuring intricate black bead detailing along the borders.",
     "price": "₹3499/-",
     "sellingPrice": "₹11999/-",
-    "size": "34, 36, 38, 40, 42",
+    "size": "34, 36, 38, 40, 42, 46",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DaX3dOCMkX3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
