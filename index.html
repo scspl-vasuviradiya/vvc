@@ -44,7 +44,9 @@
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="animations.js" as="script">
   <link rel="stylesheet" href="styles.css">
+  <!-- Temporarily disabled with the hero video; uncomment to restore video styling.
   <link rel="stylesheet" href="video-background.css">
+  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -134,19 +136,18 @@
   <main>
     <section id="home" class="hero-section">
       <div class="hero-background">
-        <!-- Video Background -->
+        <!-- Temporarily disabled hero video; uncomment this block to restore it.
         <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/gallery/hero.webp">
           <source src="hero-video.mp4" type="video/mp4">
-          <!-- Fallback for browsers that don't support video -->
           Your browser does not support the video tag.
         </video>
 
-        <!-- Video Controls -->
         <div class="video-controls">
           <button class="video-pause-btn" id="videoPauseBtn" aria-label="Pause/Play video">
             <i class="fas fa-pause" id="playPauseIcon"></i>
           </button>
         </div>
+        -->
 
         <div class="hero-overlay"></div>
       </div>
@@ -860,7 +861,9 @@
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Temporarily disabled with the hero video; uncomment to restore video controls.
   <script src="video-controls.js"></script>
+  -->
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
