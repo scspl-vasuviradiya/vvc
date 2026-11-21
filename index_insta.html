@@ -108,7 +108,7 @@
     <section id="home" class="hero-section">
       <div class="hero-background">
         <!-- Video Background -->
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/gallery/hero.jpg">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/gallery/hero.webp">
           <source src="hero-video.mp4" type="video/mp4">
           <source src="hero-video.webm" type="video/webm">
           <!-- Fallback for browsers that don't support video -->
@@ -151,7 +151,7 @@
 
           <div class="hero-visual" data-anim="zoom-in">
             <div class="hero-image-container">
-              <img src="img/gallery/hero.jpg" alt="Vivah Villa Collection - Premium Wedding Attire"
+              <img src="img/gallery/hero.webp" alt="Vivah Villa Collection - Premium Wedding Attire"
                 class="hero-image" />
               <div class="hero-stats" data-anim="fade-left">
                 <div class="stat">
@@ -745,7 +745,7 @@
             "name": "Men's Wedding Suits & Sherwanis",
             "category": "Men's Formal Wear",
             "description": "Premium wedding suits, sherwanis, and formal wear for men. Traditional Indian wedding attire with modern tailoring.",
-            "image": "https://vivahvilla.in/img/collections/men-sherwani-1.jpg",
+            "image": "https://vivahvilla.in/img/collections/men-sherwani-1.webp",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "INR",
@@ -786,7 +786,7 @@
             "name": "Women's Lehengas & Cholis",
             "category": "Women's Traditional Wear",
             "description": "Elegant lehengas and cholis for women. Traditional Indian bridal and festive wear with intricate designs and premium fabrics.",
-            "image": "https://vivahvilla.in/img/collections/women-lehenga-1.jpg",
+            "image": "https://vivahvilla.in/img/collections/women-lehenga-1.webp",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "INR",
@@ -850,7 +850,7 @@
       let genderType = document.getElementById("theme-checkbox").checked ? "Male" : "Female";
       galleryImages = [];
       for (let i = 1; i <= MAX_IMAGES; i++) {
-        const url = `img/gallery/${genderType}/${i}.jpg`;
+        const url = `img/gallery/${genderType}/${i}.webp`;
         galleryImages.push(url);
       }
       init();

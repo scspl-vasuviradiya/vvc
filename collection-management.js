@@ -211,25 +211,46 @@
     });
   }
 
-  function handleFileSelect(file){
+  async function handleFileSelect(file){
     if (!file.type.startsWith('image/')){ showToast('Please select an image file', 'error'); return; }
     if (file.size > 5 * 1024 * 1024){ showToast('Image must be <= 5MB', 'error'); return; }
     
-    currentImageFile = file;
-    const reader = new FileReader();
-    reader.onload = (e)=>{
-      currentImageDataURL = e.target.result;
-      previewImg.src = currentImageDataURL;
-      imagePreview.style.display = 'block';
-          const modeText = isLocalhost 
-            ? '<i class="fas fa-server"></i> Will be uploaded to img/collections/ folder'
-            : '<i class="fas fa-github"></i> Will be saved for GitHub export';
-          uploadStatus.innerHTML = `
-        <strong>${file.name}</strong> (${Math.round(file.size/1024)} KB)<br>
-        <small style="color: #16a34a;">${modeText}</small>
-      `;
-    };
-    reader.readAsDataURL(file);
+    try {
+      const bitmap = await createImageBitmap(file);
+      let webpBlob;
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+        canvas.getContext('2d').drawImage(bitmap, 0, 0);
+        webpBlob = await new Promise((resolve, reject) => {
+          canvas.toBlob(result => result ? resolve(result) : reject(new Error('WebP conversion failed')), 'image/webp', 0.84);
+        });
+      } finally {
+        bitmap.close();
+      }
+      const webpFile = new File([webpBlob], `${file.name.replace(/\.[^.]+$/, '')}.webp`, {
+        type: 'image/webp',
+        lastModified: file.lastModified
+      });
+      currentImageFile = webpFile;
+      const reader = new FileReader();
+      reader.onload = (e)=>{
+        currentImageDataURL = e.target.result;
+        previewImg.src = currentImageDataURL;
+        imagePreview.style.display = 'block';
+        const modeText = isLocalhost
+          ? '<i class="fas fa-server"></i> Will be uploaded to img/collections/ folder'
+          : '<i class="fas fa-github"></i> Will be saved for GitHub export';
+        uploadStatus.innerHTML = `
+          <strong>${webpFile.name}</strong> (${Math.round(webpFile.size/1024)} KB, WebP)<br>
+          <small style="color: #16a34a;">${modeText}</small>
+        `;
+      };
+      reader.readAsDataURL(webpFile);
+    } catch (error) {
+      showToast('Could not convert photo to WebP: ' + error.message, 'error');
+    }
   }
 
   function bindForm(){
@@ -269,7 +290,7 @@
       if (currentImageDataURL) {
         // Generate simple filename for img/collections/ folder
         const safeName = slugify(item.title);
-        const fileName = `${safeName || 'image'}.jpg`;
+        const fileName = `${safeName || 'image'}.webp`;
         imgPath = `${IMAGES_DIR}/${fileName}`;
         
         if (isLocalhost) {
@@ -697,9 +718,9 @@
     instructions += `├── collections.json (replace with exported file)\n`;
     instructions += `└── img/\n`;
     instructions += `    └── collections/ (upload all images here)\n`;
-    instructions += `        ├── wine-emperor-indowestern.jpg\n`;
-    instructions += `        ├── regal-cream-sherwani.jpg\n`;
-    instructions += `        ├── maharani-legacy-lehenga.jpg\n`;
+    instructions += `        ├── wine-emperor-indowestern.webp\n`;
+    instructions += `        ├── regal-cream-sherwani.webp\n`;
+    instructions += `        ├── maharani-legacy-lehenga.webp\n`;
     instructions += `        └── ... (all collection images)\n\n`;
     
     instructions += `## After Upload:\n`;
@@ -796,7 +817,7 @@
     return [
       {
         "tags": ["men", "indowestern"],
-        "img": "img/collections/men-indowestern/wine-emperor-indowestern.jpg",
+        "img": "img/collections/men-indowestern/wine-emperor-indowestern.webp",
         "alt": "Wine Emperor Indowestern - Men's wedding suit",
         "title": "Wine Emperor Indowestern",
         "desc": "Tailored fit • 3-piece",
@@ -805,7 +826,7 @@
       },
       {
         "tags": ["men", "sherwani"],
-        "img": "img/collections/men-sherwani/regal-cream-sherwani.jpg",
+        "img": "img/collections/men-sherwani/regal-cream-sherwani.webp",
         "alt": "Regal Cream Sherwani - Men's traditional wear",
         "title": "Regal Cream Sherwani",
         "desc": "Zari work • Dupatta",
@@ -814,7 +835,7 @@
       },
       {
         "tags": ["women", "lehenga"],
-        "img": "img/collections/women-lehenga/maharani-legacy-lehenga.jpg",
+        "img": "img/collections/women-lehenga/maharani-legacy-lehenga.webp",
         "alt": "Maharani's Legacy Lehenga - Bridal collection",
         "title": "Maharani's Legacy Lehenga",
         "desc": "Bridal collection • Heavy work",
@@ -823,7 +844,7 @@
       },
       {
         "tags": ["women", "choli"],
-        "img": "img/collections/women-choli/rajwada-blue-choli.jpg",
+        "img": "img/collections/women-choli/rajwada-blue-choli.webp",
         "alt": "Rajwada Blue Choli - Traditional design",
         "title": "Rajwada Blue Choli",
         "desc": "Traditional design • Comfortable fit",

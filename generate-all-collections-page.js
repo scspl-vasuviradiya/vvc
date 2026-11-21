@@ -1509,7 +1509,7 @@ const pagesSitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>${SITE_URL}/img/gallery/hero.jpg</image:loc>
+      <image:loc>${SITE_URL}/img/gallery/hero.webp</image:loc>
       <image:title>Wedding Dress Rental in Rajkot - Vivah Villa Collection</image:title>
       <image:caption>Premium wedding attire available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>

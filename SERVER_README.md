@@ -40,7 +40,7 @@ This usually means:
 
 ### Gallery Not Loading
 1. Check if `img/gallery/Male/` and `img/gallery/Female/` directories exist
-2. Ensure image files have numeric names (1.jpg, 2.png, etc.)
+2. Ensure image files have numeric names (1.webp, 2.png, etc.)
 3. Check browser console for errors (F12 → Console)
 
 ### Multiple Node Processes
@@ -54,8 +54,8 @@ taskkill /F /IM node.exe
 vvc/
 ├── img/
 │   ├── gallery/
-│   │   ├── Male/              # Male gallery images (1.jpg, 2.jpg, etc.)
-│   │   └── Female/            # Female gallery images (1.jpg, 2.jpg, etc.)
+│   │   ├── Male/              # Male gallery images (1.webp, 2.webp, etc.)
+│   │   └── Female/            # Female gallery images (1.webp, 2.webp, etc.)
 │   └── collections/           # Collection preview images
 ├── server.js                  # Node.js server (full featured)
 ├── Start-NodeJS-Server.bat    # Recommended startup script
@@ -76,6 +76,6 @@ vvc/
 - ✅ Cross-navigation between pages
 - ✅ Upload new gallery images (auto-converts to JPG)
 - ✅ Delete gallery images (single & bulk)
-- ✅ Automatic file sequencing (1.jpg, 2.jpg, etc.)
+- ✅ Automatic file sequencing (1.webp, 2.webp, etc.)
 - ✅ File validation (type, size)
 - ✅ Auto-updating statistics
