@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vivahvilla.in/collections/sherwani.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/the-grand-rajwada.jpg</image:loc>
       <image:title>The Grand Rajwada - Sherwani on Rent in Rajkot</image:title>
@@ -172,11 +172,16 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/indowestern.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
       <image:title>Imperial Bloom - Indo-Western on Rent in Rajkot</image:title>
       <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-royal-eclipse.jpg</image:loc>
+      <image:title>The Royal Eclipse - Indo-Western on Rent in Rajkot</image:title>
+      <image:caption>A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/the-royal-peacock.jpg</image:loc>
@@ -358,15 +363,10 @@
       <image:title>Royal White Long Indowestern - Indo-Western on Rent in Rajkot</image:title>
       <image:caption>A graceful blend of heritage embroidery and modern silhouette. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/the-royal-eclipse.jpg</image:loc>
-      <image:title>The Royal Eclipse - Indo-Western on Rent in Rajkot</image:title>
-      <image:caption>A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression. Indo-Western available for rent at Vivah Villa Collection in Rajkot.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/jodhpuri.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/black-baron-jodhpuri.jpg</image:loc>
       <image:title>Black Baron jodhpuri - Jodhpuri on Rent in Rajkot</image:title>
@@ -470,7 +470,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/lehenga.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
       <image:title>Shimmering Ice-Blue Elegance - Lehenga on Rent in Rajkot</image:title>
@@ -524,7 +524,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/koti-kurta.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/imperial-ivory-koti-kurta.jpg</image:loc>
       <image:title>Imperial Ivory Koti kurta - Koti Kurta on Rent in Rajkot</image:title>
@@ -615,10 +615,15 @@
       <image:title>Midnight Mosaic Koti - Koti Kurta on Rent in Rajkot</image:title>
       <image:caption>It reflects the elegant black base with the intricate multicolor paisley-inspired embroidery, giving the outfit a luxurious and contemporary royal appeal. Koti Kurta available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-golden-rajwada.jpg</image:loc>
+      <image:title>The Golden Rajwada - Koti Kurta on Rent in Rajkot</image:title>
+      <image:caption>A royal ivory Koti Kurta featuring intricate golden embroidery, crafted to bring timeless elegance and a majestic Rajwada charm. Koti Kurta available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/choli.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/teal-blue-embroidered-lehenga.jpg</image:loc>
       <image:title>Teal Blue Embroidered Lehenga - Choli on Rent in Rajkot</image:title>
@@ -652,7 +657,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/suit.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/classic-men-s-suit.jpg</image:loc>
       <image:title>Classic Men's Suit - Suit on Rent in Rajkot</image:title>
@@ -661,7 +666,7 @@
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/men.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/the-grand-rajwada.jpg</image:loc>
       <image:title>The Grand Rajwada - Men on Rent in Rajkot</image:title>
@@ -676,6 +681,11 @@
       <image:loc>https://vivahvilla.in/img/collections/imperial-bloom.jpg</image:loc>
       <image:title>Imperial Bloom - Men on Rent in Rajkot</image:title>
       <image:caption>A regal teal ensemble adorned with intricate floral embroidery and antique-gold detailing, crafted for a sophisticated Maharaja-inspired wedding look. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vivahvilla.in/img/collections/the-royal-eclipse.jpg</image:loc>
+      <image:title>The Royal Eclipse - Men on Rent in Rajkot</image:title>
+      <image:caption>A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/golden-heritage-sherwani.jpg</image:loc>
@@ -1208,14 +1218,14 @@
       <image:caption>A regal ivory sherwani featuring intricate embroidery, paired with a vibrant red stole and traditional safa. Perfect for grooms seeking timeless elegance and royal charm on their special day. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://vivahvilla.in/img/collections/the-royal-eclipse.jpg</image:loc>
-      <image:title>The Royal Eclipse - Men on Rent in Rajkot</image:title>
-      <image:caption>A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
+      <image:loc>https://vivahvilla.in/img/collections/the-golden-rajwada.jpg</image:loc>
+      <image:title>The Golden Rajwada - Men on Rent in Rajkot</image:title>
+      <image:caption>A royal ivory Koti Kurta featuring intricate golden embroidery, crafted to bring timeless elegance and a majestic Rajwada charm. Men available for rent at Vivah Villa Collection in Rajkot.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://vivahvilla.in/collections/women.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <image:image>
       <image:loc>https://vivahvilla.in/img/collections/shimmering-ice-blue-elegance.jpg</image:loc>
       <image:title>Shimmering Ice-Blue Elegance - Women on Rent in Rajkot</image:title>

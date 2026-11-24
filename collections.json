@@ -24,7 +24,7 @@
     "reelUrl": "https://www.instagram.com/reel/Deoy7sAB7hF/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
     "title": "The Ivory Rajkumar",
     "desc": "A regal ivory sherwani featuring intricate golden embroidery, elegant detailing, and a majestic drape. Designed for the modern Rajkumar, it blends royal heritage with refined sophistication for a truly grand wedding look.",
-    "price": "₹24999/-",
+    "price": "₹19999/-",
     "sellingPrice": "0",
     "size": "36, 38, 42",
     "active": true
@@ -42,6 +42,21 @@
     "price": "₹6999/-",
     "sellingPrice": "₹19999/-",
     "size": "36, 42",
+    "active": true
+  },
+  {
+    "tags": [
+      "men",
+      "indowestern"
+    ],
+    "img": "img/collections/the-royal-eclipse.jpg",
+    "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
+    "reelUrl": "https://www.instagram.com/reel/DfZtW_TJ22A/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
+    "title": "The Royal Eclipse",
+    "desc": "A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression.",
+    "price": "₹3999/-",
+    "sellingPrice": "0",
+    "size": "36, 40",
     "active": true
   },
   {
@@ -126,7 +141,7 @@
     ],
     "img": "img/collections/rajsi-mayur-royal.jpg",
     "alt": "Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, IndoWestern, jodhpuri,",
-    "reelUrl": "",
+    "reelUrl": "https://www.instagram.com/reel/DgAV4ethztx/?utm_source=ig_web_copy_link&bqrl=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==",
     "title": "Rajsi Mayur Royal",
     "desc": "It reflects the luxurious ivory base, exquisite peacock motifs, and timeless royal craftsmanship, making it an elegant name for a premium groom's sherwani collection.",
     "price": "₹13999/-",
@@ -176,7 +191,7 @@
     "desc": "Celebrate tradition in style with this premium embroidered Koti Kurta.",
     "price": "₹2499/-",
     "sellingPrice": "₹8499/-",
-    "size": "36, 40",
+    "size": "34, 36, 38, 40, 42",
     "active": true
   },
   {
@@ -265,7 +280,7 @@
     "desc": "A sleek black Jodhpuri featuring wavy vertical beadwork and a vibrant embroidered turquoise butterfly.",
     "price": "₹3499/-",
     "sellingPrice": "₹11999/-",
-    "size": "34, 38, 42",
+    "size": "34, 36, 38, 42, 46",
     "active": true,
     "reelUrl": "https://www.instagram.com/p/DdVc67NDGaQ/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
   },
@@ -281,7 +296,7 @@
     "desc": "Rich Patola-inspired embroidery on a vibrant crimson koti, paired with an elegant ivory kurta for a timeless royal look—perfect for weddings and festive celebrations.",
     "price": "₹2999/-",
     "sellingPrice": "₹13499/-",
-    "size": "36, 40",
+    "size": "34, 36, 38, 40, 42, 44, 46",
     "active": true
   },
   {
@@ -295,7 +310,7 @@
     "desc": "An off-white Jodhpuri suit featuring heavy silver thread work and geometric mirror embellishments along the borders.",
     "price": "₹3499/-",
     "sellingPrice": "₹11999/-",
-    "size": "36, 40",
+    "size": "34, 36, 40",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbN6xDvuf03/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
@@ -355,7 +370,7 @@
     "desc": "A beige Jodhpuri featuring a honeycomb pattern of multicolored geometric patches and gold beadwork.",
     "price": "₹3499/-",
     "sellingPrice": "₹11999/-",
-    "size": "36, 40",
+    "size": "34, 36, 38, 40, 42",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbnrW3BOfLf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
@@ -475,7 +490,7 @@
     "desc": "An elegant off-white kurta set paired with a textured cream koti waistcoat featuring detailed floral, bird, and deer embroidery.",
     "price": "₹2499/-",
     "sellingPrice": "₹8499/-",
-    "size": "34, 38, 42",
+    "size": "34, 36, 38, 40, 42, 44",
     "active": true,
     "reelUrl": "https://www.instagram.com/reel/DbBDYMRO6Wb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
@@ -1151,7 +1166,7 @@
     "desc": "Focuses on the pristine cream/ivory color palette combined with stately wedding accessories.",
     "price": "₹6999/-",
     "sellingPrice": "0",
-    "size": "36, 40",
+    "size": "34, 36, 40",
     "active": true
   },
   {
@@ -1907,16 +1922,16 @@
   {
     "tags": [
       "men",
-      "indowestern"
+      "koti kurta"
     ],
-    "img": "img/collections/the-royal-eclipse.jpg",
+    "img": "img/collections/the-golden-rajwada.jpg",
     "alt": "IndoWestern, Sherwani, Designer Ethnic, Groomwear, Traditional, Wedding, Festive, Luxury, Handcrafted, Elegant, Stylish, Classic, Modern, koti kurta, jodhapuri, golden outfit, groom",
-    "reelUrl": "https://www.instagram.com/reel/DfZtW_TJ22A/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
-    "title": "The Royal Eclipse",
-    "desc": "A statement of royal sophistication, this striking black Indo-Western features intricate golden embellishments that create a luxurious sparkle. Blending modern elegance with timeless royal charm, it's the perfect choice for a groom who wants to make an unforgettable impression.",
-    "price": "₹3999/-",
+    "reelUrl": "https://www.instagram.com/reel/Dfzd9b5JE9X/?utm_source=ig_web_copy_link&dmpr=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==",
+    "title": "The Golden Rajwada",
+    "desc": "A royal ivory Koti Kurta featuring intricate golden embroidery, crafted to bring timeless elegance and a majestic Rajwada charm.",
+    "price": "₹3499/-",
     "sellingPrice": "0",
-    "size": "36, 40",
+    "size": "36, 38, 42",
     "active": true
   }
 ]
