@@ -15,7 +15,7 @@ class CollectionServer {
         this.collectionsFile = 'collections.json';
         this.imagesDir = path.join('img', 'collections');
         this.maxFileSize = 5 * 1024 * 1024; // 5MB
-        this.allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+        this.allowedTypes = ['image/webp'];
         
         // Ensure images directory exists
         if (!fs.existsSync(this.imagesDir)) {
@@ -187,9 +187,9 @@ class CollectionServer {
                 const b64Data = match[2];
 
                 // Validate image type
-                if (!['jpeg', 'jpg', 'png', 'webp'].includes(imageType)) {
+                if (imageType !== 'webp') {
                     res.writeHead(400, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ error: 'Invalid image type' }));
+                    res.end(JSON.stringify({ error: 'Image must be converted to WebP before upload' }));
                     return;
                 }
 
@@ -209,11 +209,8 @@ class CollectionServer {
                     cleanFilename = `collection_${Date.now()}.${imageType}`;
                 }
 
-                // Ensure proper extension
-                const parsed = path.parse(cleanFilename);
-                if (!parsed.ext || !['jpg', 'jpeg', 'png', 'webp'].includes(parsed.ext.toLowerCase().slice(1))) {
-                    cleanFilename = `${parsed.name}.${imageType === 'jpeg' ? 'jpg' : imageType}`;
-                }
+                // Store every uploaded collection photo with the WebP extension.
+                cleanFilename = `${path.parse(cleanFilename).name || `collection_${Date.now()}`}.webp`;
 
                 const targetPath = path.join(this.imagesDir, cleanFilename);
 
@@ -368,7 +365,7 @@ class CollectionServer {
                 try {
                     // Get all image files
                     const files = fs.readdirSync(categoryDir)
-                        .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
+                        .filter(file => /\.webp$/i.test(file))
                         .map(file => path.join(categoryDir, file));
                     
                     files.forEach(filePath => {
@@ -527,10 +524,10 @@ class CollectionServer {
                 }
                 
                 // Validate file type
-                const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+                const allowedTypes = ['image/webp'];
                 if (!allowedTypes.includes(uploadedFile.headers['content-type'])) {
                     res.writeHead(400, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ success: false, error: 'Invalid file type. Only JPG, PNG, and WebP images are allowed (will be converted to JPG).' }));
+                    res.end(JSON.stringify({ success: false, error: 'Please upload a WebP image.' }));
                     return;
                 }
                 
@@ -554,7 +551,7 @@ class CollectionServer {
                 
                 // Find the next sequence number
                 const existingFiles = fs.readdirSync(categoryDir)
-                    .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file))
+                    .filter(file => /\.webp$/i.test(file))
                     .map(file => {
                         const name = path.parse(file).name;
                         const seq = parseInt(name);
@@ -564,8 +561,8 @@ class CollectionServer {
                 
                 const nextSequence = existingFiles.length > 0 ? existingFiles[0] + 1 : 1;
                 
-                // Force all gallery images to be saved as .jpg
-                const filename = `${nextSequence}.jpg`;
+                // The browser converts gallery uploads to WebP before sending them.
+                const filename = `${nextSequence}.webp`;
                 const targetPath = path.join(categoryDir, filename);
                 
                 // Copy the file
@@ -687,7 +684,7 @@ class CollectionServer {
                 const categoryDir = path.join(galleryDir, category);
                 if (fs.existsSync(categoryDir)) {
                     const files = fs.readdirSync(categoryDir)
-                        .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
+                        .filter(file => /\.webp$/i.test(file));
                     manifest[category] = files.length;
                 }
             });

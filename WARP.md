@@ -94,12 +94,12 @@ Get-ChildItem img\gallery\ -Recurse
 ## Content Management
 
 ### Adding New Collections
-1. **Add images** to `img/collections/` following naming convention: `{gender}-{type}-{number}.jpg`
+1. **Add images** to `img/collections/` following naming convention: `{gender}-{type}-{number}.webp`
 2. **Update collections.json** with new item data:
 ```json
 {
   "tags": ["gender", "type"],
-  "img": "img/collections/filename.jpg",
+  "img": "img/collections/filename.webp",
   "alt": "Descriptive alt text",
   "title": "Product Title",
   "desc": "Short description • Features",
@@ -111,12 +111,12 @@ Get-ChildItem img\gallery\ -Recurse
 ### Gallery Management
 - **Male gallery**: Store in `img/gallery/Male/`
 - **Female gallery**: Store in `img/gallery/Female/`
-- **Naming**: Use sequential numbering (1.jpg, 2.jpg, etc.)
+- **Naming**: Use sequential numbering (1.webp, 2.webp, etc.)
 
 ## Performance Considerations
 
 ### Image Optimization
-- **Format**: JPG for photos, PNG for logos with transparency
+- **Format**: WebP for photos, PNG for logos with transparency
 - **Sizing**: Optimize for web delivery (compress but maintain quality)
 - **Loading**: Lazy loading implemented for gallery images
 

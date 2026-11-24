@@ -21,7 +21,7 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
         self.collections_file = 'collections.json'
         self.images_dir = 'img/collections'
         self.max_file_size = 5 * 1024 * 1024  # 5MB
-        self.allowed_types = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp']
+        self.allowed_types = ['image/webp']
         
         # Ensure images directory exists
         os.makedirs(self.images_dir, exist_ok=True)
@@ -187,7 +187,7 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
             b64_data = match.group(2)
             
             # Validate image type
-            if image_type not in ['jpeg', 'jpg', 'png', 'webp']:
+            if image_type != 'webp':
                 self.send_error(400, "Invalid image type")
                 return
             
@@ -210,8 +210,7 @@ class CollectionHandler(http.server.SimpleHTTPRequestHandler):
             
             # Ensure proper extension
             name, ext = os.path.splitext(filename)
-            if not ext or ext.lower()[1:] not in ['jpg', 'jpeg', 'png', 'webp']:
-                filename = f"{name}.{'jpg' if image_type == 'jpeg' else image_type}"
+            filename = f'{name}.webp'
             
             target_path = os.path.join(self.images_dir, filename)
             
@@ -282,7 +281,7 @@ def run_server(port=8888):
                     
                 # Get all image files
                 pattern = os.path.join(category_dir, '*')
-                files = [f for f in glob.glob(pattern) if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+                files = [f for f in glob.glob(pattern) if f.lower().endswith('.webp')]
                 
                 for file_path in files:
                     try:

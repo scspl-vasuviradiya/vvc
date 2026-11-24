@@ -352,8 +352,27 @@
     const totalSize = files.reduce((sum, file) => sum + file.size, 0);
     uploadStatus.innerHTML = `
       <strong>${files.length} file(s) selected</strong> (${formatFileSize(totalSize)})<br>
-      <small style="color: #16a34a;">Ready to upload to gallery</small>
+      <small style="color: #16a34a;">Photos will be converted to WebP and saved to the gallery</small>
     `;
+  }
+
+  async function convertPhotoToWebP(file) {
+    const bitmap = await createImageBitmap(file);
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = bitmap.width;
+      canvas.height = bitmap.height;
+      canvas.getContext('2d').drawImage(bitmap, 0, 0);
+      const blob = await new Promise((resolve, reject) => {
+        canvas.toBlob(result => result ? resolve(result) : reject(new Error('WebP conversion failed')), 'image/webp', 0.84);
+      });
+      return new File([blob], `${file.name.replace(/\.[^.]+$/, '')}.webp`, {
+        type: 'image/webp',
+        lastModified: file.lastModified
+      });
+    } finally {
+      bitmap.close();
+    }
   }
 
   function bindEventListeners() {
@@ -496,7 +515,7 @@
       uploadStatus.innerHTML = `<div style="color: #0066cc;">Uploading ${files.length} image(s)...</div>`;
       
       for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+        const file = await convertPhotoToWebP(files[i]);
         const formData = new FormData();
         formData.append('image', file);
         formData.append('category', category);
