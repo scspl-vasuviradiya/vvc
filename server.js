@@ -82,9 +82,9 @@ class CollectionServer {
             }
         } catch (error) {
             if (error instanceof SyntaxError) {
-                // If file is corrupted, return empty array
-                res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end('[]');
+                // Do not let the editor mistake corrupted data for an empty catalog.
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Collections data is invalid JSON; restore it before editing.' }));
             } else {
                 res.writeHead(500, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ error: `Error loading collections: ${error.message}` }));
@@ -109,6 +109,12 @@ class CollectionServer {
                 if (!Array.isArray(data)) {
                     res.writeHead(400, { 'Content-Type': 'application/json' });
                     res.end(JSON.stringify({ error: 'Collections must be an array' }));
+                    return;
+                }
+
+                if (data.length === 0) {
+                    res.writeHead(400, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: 'Refusing to replace the catalog with an empty collection list' }));
                     return;
                 }
 
